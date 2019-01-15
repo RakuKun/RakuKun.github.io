@@ -1,0 +1,206 @@
+:root {
+    --kon: rgb(15, 37, 64);
+    --sohi: rgb(237, 120, 74);
+    --fade: all 0.75s ease-in-out;
+    --OSRegular: "Open Sans Regular";
+    --OSSemiBold: "Open Sans Semibold";
+    --AHeavy: "Avenir LT Std Heavy";
+}
+
+@font-face {
+    font-family: "Open Sans Regular";
+    src: url('/fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Open Sans Semibold";
+    src: url('/fonts/OpenSans-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Avenir LT Std Heavy";
+    src: url('/fonts/AvenirLTStd-Heavy.otf');
+}
+
+* {
+    box-sizing: border-box;
+
+}
+
+*::selection {
+    background: var(--sohi);
+    color: white;
+}
+
+html {
+    overflow: hidden;
+    width: unset;
+    min-width: 60%;
+    min-height: 100%;
+    font-family: var(--OSSemiBold);
+    color: var(--kon);
+    overflow-y: auto;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#avatar-image {
+    position: fixed;
+    border: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 20%;
+    z-index: 3;
+    background-color: var(--kon);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#home {
+    z-index: 100;
+    color: white;
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    top: 0;
+    margin: 40px;
+    padding: 3px;
+    font: 175% var(--AHeavy);
+    border: 2px solid white;
+}
+
+#home:hover {
+    transition: var(--fade);
+    background: white;
+    color: var(--kon);
+}
+
+#top-nav {
+    width: 100%;
+
+    padding: 3% 3% 0 3%;
+    text-align: center;
+}
+
+#top-nav-title {
+    font-family: var(--AHeavy);
+    font-size: 200%;
+    line-height: 150%;
+}
+
+#top-nav-text {
+    line-height: 150%;
+}
+
+#main-nav {
+    height: auto;
+    width: unset;
+    box-sizing: border-box;
+    float: right;
+    z-index: 0;
+    vertical-align: top;
+    text-align: center;
+}
+
+.main-nav-title {
+    font-family: var(--AHeavy);
+    font-size: 150%;
+    text-align: center;
+}
+
+.main-nav-text {
+    line-height: 150%;
+}
+
+.main-nav-poster {
+    margin: auto;
+    background-size: contain;
+    width: 20%;
+}
+
+.main-nav-poster img {
+    width: 100%;
+}
+
+.main-nav-japan {}
+
+#footer-nav {
+    z-index: 2;
+    position: fixed;
+    height: 40px;
+    width: unset;
+    min-height: 40px;
+    background: var(--kon);
+    bottom: 0%;
+    right: 0%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.footer-nav-box {
+    width: 33%;
+    height: 100%;
+    float: right;
+    position: relative;
+    text-align: center;
+}
+
+.footer-nav-box:hover>ul {
+    visibility: visible;
+    opacity: 1;
+}
+
+.footer-nav-box ul {
+    visibility: hidden;
+    opacity: 0;
+    transition: var(--fade);
+    position: absolute;
+    width: 100%;
+    bottom: 100%;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.footer-nav-box ul li {
+    display: block;
+    padding: 8px;
+    transition: var(--fade);
+}
+
+.footer-nav-title {
+    font-family: "Avenir LT Std Heavy";
+    font-size: 125%;
+    color: white;
+    height: 40px;
+    min-height: 40px;
+    line-height: 40px;
+}
+
+.footer-nav-content {
+    background: white;
+}
+
+.footer-nav-content:hover {
+    color: white;
+    background: var(--kon);
+}

@@ -1,0 +1,204 @@
+:root {
+    --kon: rgb(15, 37, 64);
+    --sohi: rgb(237, 120, 74);
+    --fade: all 0.75s ease-in-out;
+    --OSRegular: "Open Sans Regular";
+    --OSSemiBold: "Open Sans Semibold";
+    --AHeavy: "Avenir LT Std Heavy";
+    --SHSRegular: "Source Hans Sans Regular";
+}
+
+@font-face {
+    font-family: "Open Sans Regular";
+    src: url('/fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Open Sans Semibold";
+    src: url('/fonts/OpenSans-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Avenir LT Std Heavy";
+    src: url('/fonts/AvenirLTStd-Heavy.otf');
+}
+
+@font-face {
+    font-family: "Source Hans Sans Regular";
+    src: url('/fonts/SourceHanSansCN-Regular.otf');
+}
+
+html {
+    overflow: hidden;
+    min-width: 60%;
+    min-height: 100%;
+    font-family: var(--OSSemiBold);
+    color: var(--kon);
+    overflow: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#avatar-image {
+    position: fixed;
+    border: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 3;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#avatar-image img {
+    height: 100%;
+    width: auto;
+}
+
+#home {
+    z-index: 100;
+    color: white;
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    top: 0;
+    margin: 40px;
+    padding: 3px;
+    font: 175% var(--AHeavy);
+    border: 2px solid white;
+}
+
+#home:hover {
+    transition: var(--fade);
+    background: white;
+    color: var(--kon);
+}
+
+#main-nav {
+    float: right;
+    height: auto;
+    width: unset;
+    box-sizing: border-box;
+    padding: 40px 40px 80px 40px;
+    z-index: 0;
+    vertical-align: top;
+}
+
+#main-nav-title {
+    font-family: "Avenir LT Std Heavy";
+    font-size: 175%;
+    display: inline-block;
+    padding-top: 5px;
+    margin-bottom: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.main-button {
+    display: inline-block;
+    width: auto;
+    padding: 3px;
+    border: 2px solid var(--kon);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.main-button:hover {
+    background: var(--kon);
+    transition: var(--fade);
+}
+
+.main-text-cn {
+    display: none;
+    font-family: var(--SHSRegular);
+}
+
+#main-text-en::selection {
+    background: var(--sohi);
+    color: white;
+}
+
+#main-text-cn::selection {
+    background: var(--sohi);
+    color: white;
+}
+
+#footer-nav {
+    z-index: 2;
+    position: fixed;
+    height: 40px;
+    width: unset;
+    min-height: 40px;
+    background: var(--kon);
+    bottom: 0%;
+    right: 0%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.footer-nav-box {
+    width: 33%;
+    height: 100%;
+    float: right;
+    position: relative;
+    text-align: center;
+}
+
+.footer-nav-box:hover>ul {
+    visibility: visible;
+    opacity: 1;
+}
+
+.footer-nav-box ul {
+    visibility: hidden;
+    opacity: 0;
+    transition: var(--fade);
+    position: absolute;
+    width: 100%;
+    bottom: 100%;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.footer-nav-box ul li {
+    display: block;
+    padding: 8px;
+    transition: var(--fade);
+}
+
+.footer-nav-title {
+    font-family: "Avenir LT Std Heavy";
+    font-size: 125%;
+    color: white;
+    height: 40px;
+    min-height: 40px;
+    line-height: 40px;
+}
+
+.footer-nav-content {
+    background: white;
+}
+
+.footer-nav-content:hover {
+    color: white;
+    background: var(--kon);
+}
