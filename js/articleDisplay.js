@@ -1,10 +1,10 @@
-var enButton = document.getElementById('en-lang');
-var cnButton = document.getElementById('cn-lang');
-var selected = null;
-var enText = document.getElementsByClassName('main-text-en');
-var cnText = document.getElementsByClassName('main-text-cn');
-let colorKon = "rgb(17,35,64)";
-let colorWhite = "rgb(255,255,255)";
+var enButton = document.getElementById('en-lang'),
+    cnButton = document.getElementById('cn-lang'),
+    selected = null,
+    enText = document.getElementsByClassName('main-text-en'),
+    cnText = document.getElementsByClassName('main-text-cn');
+let colorKon = "rgb(17,35,64)",
+    colorWhite = "rgb(255,255,255)";
 
 enButton.addEventListener('click', function () {
     SwitchLanguage(true);
@@ -30,8 +30,6 @@ enButton.addEventListener('mouseleave', function () {
     CheckBackground(enButton);
 }, false);
 
-SwitchLanguage(true);
-
 function OnMouseEnter(button) {
     if (button.style.backgroundColor == colorKon) {
         return;
@@ -50,25 +48,32 @@ function CheckBackground(button) {
 
 function SwitchLanguage(toEnglish) {
     selected = null;
+
     if (toEnglish) {
         for (var i = 0; i < enText.length; i++) {
-            enText[i].style.display = 'block';
-            cnText[i].style.display = 'none';
+            enText[i].style.display = "block";
             enButton.style.backgroundColor = colorKon;
             enButton.style.color = colorWhite;
+            selected = enButton;
+        }
+        for (var j = 0; j < cnText.length; j++) {
+            cnText[j].style.display = "none";
             cnButton.style.backgroundColor = colorWhite;
             cnButton.style.color = colorKon;
-            selected = enButton;
         }
     } else {
         for (var i = 0; i < enText.length; i++) {
-            enText[i].style.display = 'none';
-            cnText[i].style.display = 'block';
+            enText[i].style.display = "none";
             enButton.style.backgroundColor = colorWhite;
             enButton.style.color = colorKon;
+            selected = cnButton;
+        }
+        for (var j = 0; j < cnText.length; j++) {
+            cnText[j].style.display = "block";
             cnButton.style.backgroundColor = colorKon;
             cnButton.style.color = colorWhite;
-            selected = cnButton;
         }
     }
 }
+
+SwitchLanguage(true);

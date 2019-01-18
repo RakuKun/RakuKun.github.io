@@ -1,6 +1,6 @@
 import Meteor from "./meteor.js";
 
-let cvs = document.getElementById('canvas'),
+var cvs = document.getElementById('canvas'),
 	ctx = cvs.getContext('2d'),
 	width = window.innerWidth,
 	height = window.innerHeight,
@@ -34,6 +34,8 @@ function updateMeteor() {
 	ctx.fillRect(0, 0, cvs.offsetWidth, cvs.offsetHeight);
 	requestAnimationFrame(updateMeteor)
 }
+
+window.onresize = window.location.reload;
 
 meteorGenerator();
 updateMeteor();

@@ -1,11 +1,4 @@
-:root {
-	--kon: rgb(15, 37, 64);
-	--sohi: rgb(237, 120, 74);
-	--fade: all 0.75s ease-in-out;
-	--OSRegular: "Open Sans Regular";
-	--OSSemiBold: "Open Sans Semibold";
-	--AHeavy: "Avenir LT Std Heavy";
-}
+@import "/css/general.css";
 
 html {
 	overflow: hidden;
@@ -21,16 +14,6 @@ html {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-}
-
-@font-face {
-	font-family: "Open Sans Semibold";
-	src: url('/fonts/OpenSans-SemiBold.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: "Avenir LT Std Heavy";
-	src: url('/fonts/AvenirLTStd-Heavy.otf');
 }
 
 body {
