@@ -97,6 +97,7 @@ canvas {
 	display: inline;
 	bottom: 0%;
 	left: 0%;
+	transition: var(--fade);
 }
 
 .footer-nav-box {
@@ -334,17 +335,17 @@ canvas {
 
 #animate3:hover>#light3-1 {
 	opacity: 1;
-	animation: search 6s ease-in-out infinite;
+	animation: search 5s ease-in-out infinite;
 }
 
 @keyframes search {
 
 	0%,
-	20% {
+	10% {
 		transform: rotate(0);
 	}
 
-	60% {
+	55% {
 		transform: rotate(30deg);
 	}
 }

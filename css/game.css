@@ -1,17 +1,19 @@
 @import "./general.css";
 
 html {
+    width: 100%;
     overflow: hidden;
     min-width: 60%;
     min-height: 100%;
     font-family: var(--OSSemiBold);
+    background: var(--shironeri);
     color: var(--kon);
     overflow: auto;
-    text-align: center;
     scroll-behavior: smooth;
 }
 
 body {
+    width: 100%;
     margin: 0;
 }
 
@@ -28,8 +30,9 @@ a {
     left: 0;
     top: 0;
     height: 100%;
-    width: 20%;
+    width: 16%;
     background-color: var(--kon);
+    text-align: center;
     color: white;
     user-select: none;
     -webkit-user-select: none;
@@ -50,7 +53,7 @@ a {
 
 #side-background {
     position: absolute;
-    right: 0;
+    left: calc(100% - 1px);
     top: 0;
     width: 5%;
     height: calc(100%);
@@ -58,23 +61,22 @@ a {
 }
 
 #side-title {
-    text-align: right;
     font: 200% var(--AHeavy);
-    margin: 20px 20px 0 0;
+    font-size-adjust: initial;
+    margin: 20px 0 0 0;
 }
 
 .side-nav {
-    text-align: right;
     font: 150% var(--AHeavy);
     margin: 20px 0 0 0;
     width: 100%;
 }
 
 .side-nav-list {
+    font-size: 90%;
     display: block;
     width: 100%;
-    height: 50px;
-    padding: 10px 20px 10px 0;
+    padding: 10px 0;
 }
 
 #home {
@@ -95,18 +97,18 @@ a {
 }
 
 #main {
+    text-align: center;
     float: right;
     height: auto;
     width: unset;
     box-sizing: border-box;
-    padding: 80px 120px 120px 120px;
+    padding: 20px 120px 120px 120px;
     z-index: 0;
     vertical-align: top;
 }
 
 #main-nav-title {
-    font-family: "Avenir LT Std Heavy";
-    font-size: 175%;
+    font: 175% var(--AHeavy);
     display: inline-block;
     padding-top: 5px;
     margin-bottom: 20px;
@@ -114,6 +116,10 @@ a {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+#main-nav-text {
+    text-align: left;
 }
 
 .main-button {
@@ -132,68 +138,43 @@ a {
     background: var(--kon);
 }
 
-#footer-nav {
-    z-index: 2;
-    position: fixed;
-    height: 40px;
-    width: unset;
-    min-height: 40px;
-    background: var(--kon);
-    bottom: 0%;
-    right: 0%;
+.main-content-title {
+    font: 175% var(--AHeavy);
+    display: inline-block;
+    padding: 10px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    transition: var(--fade);
 }
 
-.footer-nav-box {
-    width: 33.3%;
-    height: 100%;
-    float: left;
-    position: relative;
+.main-content-description {
+    font: 100% var(--OSSemiBold);
+    text-align: left;
+}
+
+.main-image {
     text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.main-image-link {
+    line-height: 0.4;
+    border: 3px solid var(--sohi);
+    margin: 5px 0;
+    color: var(--sohi);
     transition: var(--fade);
 }
 
-.footer-nav-box:hover>ul {
-    visibility: visible;
-    opacity: 1;
+.main-image-link:hover {
+    background: var(--sohi);
+    color: var(--shironeri);
 }
 
-.footer-nav-box ul {
-    visibility: hidden;
-    opacity: 0;
-    transition: var(--fade);
-    position: absolute;
-    width: 100%;
-    bottom: 100%;
-    text-align: center;
-    padding: 0;
-    margin-bottom: 0;
-}
-
-.footer-nav-box ul li {
-    display: block;
-    padding: 8px;
-    transition: var(--fade);
-}
-
-.footer-nav-title {
-    font-family: "Avenir LT Std Heavy";
-    font-size: 125%;
-    color: white;
-    height: 40px;
-    min-height: 40px;
-    line-height: 40px;
-}
-
-.footer-nav-content {
-    background: white;
-}
-
-.footer-nav-content:hover {
-    color: white;
-    background: var(--kon);
+.main-image img {
+    width: 100% !important;
+    height: auto;
 }

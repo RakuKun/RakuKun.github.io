@@ -1,33 +1,4 @@
-:root {
-    --kon: rgb(15, 37, 64);
-    --ruri: rgb(0, 92, 175);
-    --kurenai: rgb(203, 27, 69);
-    --sohi: rgb(237, 120, 74);
-    --fade: all 0.75s ease-in-out;
-    --OSRegular: "Open Sans Regular";
-    --OSSemiBold: "Open Sans Semibold";
-    --AHeavy: "Avenir LT Std Heavy";
-}
-
-@font-face {
-    font-family: "Open Sans Regular";
-    src: url('/fonts/OpenSans-Regular.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: "Open Sans Semibold";
-    src: url('/fonts/OpenSans-SemiBold.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: "Avenir LT Std Heavy";
-    src: url('/fonts/AvenirLTStd-Heavy.otf');
-}
-
-ul {
-    margin: 0;
-    list-style: none;
-}
+@import "/css/general.css";
 
 html {
     overflow: hidden;
@@ -158,12 +129,12 @@ a {
 .footer-nav-box ul {
     visibility: hidden;
     opacity: 0;
-    transition: var(--fade);
     position: absolute;
     width: 100%;
     bottom: 100%;
     text-align: center;
     padding: 0px;
+    transition: var(--fade);
 }
 
 .footer-nav-box ul li {

@@ -3,6 +3,7 @@
     --ruri: rgb(0, 92, 175);
     --kurenai: rgb(203, 27, 69);
     --sohi: rgb(237, 120, 74);
+    --shironeri: rgb(252, 250, 242);
     --fade: all 0.75s ease-in-out;
     --OSRegular: "Open Sans Regular";
     --OSSemiBold: "Open Sans Semibold";
@@ -32,6 +33,7 @@
 
 * {
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 *::selection {
