@@ -8,9 +8,12 @@
     transition: var(--fade);
 }
 
-ul {
-    list-style: none;
-    text-decoration: none;
+*:link {
+    color: var(--kon);
+}
+
+*:visited {
+    color: var(--kon);
 }
 
 body {

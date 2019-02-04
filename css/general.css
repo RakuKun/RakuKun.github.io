@@ -34,6 +34,7 @@
 * {
     box-sizing: border-box;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 *::selection {
@@ -43,4 +44,81 @@
 
 ul {
     list-style: none;
+}
+
+#side {
+    z-index: 3;
+    position: fixed;
+    border: 0;
+    padding: 0 5px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 16%;
+    background-color: var(--kon);
+    text-align: center;
+    color: white;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+#side-selector {
+    z-index: -1;
+    position: absolute;
+    background: var(--kurenai);
+    width: 100%;
+    height: -1px;
+    left: 0;
+    top: -40px;
+    transition: var(--fade);
+}
+
+#side-background {
+    position: absolute;
+    left: calc(100% - 1px);
+    top: 0;
+    width: 5%;
+    height: calc(100%);
+    background: var(--kurenai);
+}
+
+#side-title {
+    font: 200% var(--AHeavy);
+    font-size-adjust: initial;
+    margin: 20px 0 20px 0;
+}
+
+.side-nav {
+    font: 150% var(--AHeavy);
+    margin: 0;
+    width: 100%;
+}
+
+.side-nav-list {
+    font-size: 90%;
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+}
+
+#home {
+    z-index: 100;
+    color: white;
+    position: fixed;
+    width: 16%;
+    bottom: 0;
+    padding: 3px;
+    font: 175% var(--AHeavy);
+    transition: var(--fade);
+    transform: translateX(-50%);
+}
+
+#home:hover {
+    background: var(--kurenai);
+}
+
+#main {
+    padding: 20px 100px 100px 100px;
 }
