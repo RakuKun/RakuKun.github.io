@@ -16,6 +16,10 @@
     color: var(--kon);
 }
 
+html {
+    background: transparent;
+}
+
 body {
     bottom: 40px;
 }
@@ -42,7 +46,7 @@ body {
 .footer-nav-title {
     font-family: var(--AHeavy);
     font-size: 125%;
-    color: white;
+    color: var(--shironeri);
     min-height: 40px;
     line-height: 340px;
 }
@@ -61,10 +65,11 @@ ul:hover {
     display: block;
     padding: 8px;
     font-family: var(--OSSemiBold);
+    line-height: 0.8;
 }
 
 .footer-nav-content {
-    background: white;
+    background: var(--shironeri);
     color: var(--kon);
 }
 
@@ -73,7 +78,7 @@ ul:hover {
 }
 
 .footer-nav-content:hover a {
-    color: white;
+    color: var(--shironeri);
 }
 
 * :visited {

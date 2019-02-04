@@ -1,15 +1,6 @@
 @import "/css/general.css";
 
-html {
-    overflow: hidden;
-    width: unset;
-    width: 100%;
-    min-width: 60%;
-    min-height: 100%;
-    font-family: var(--OSSemiBold);
-    color: var(--kon);
-    overflow-y: auto;
-}
+html {}
 
 body {
     width: 100%;

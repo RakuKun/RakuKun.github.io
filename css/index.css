@@ -26,6 +26,10 @@ body {
 	padding: 0px;
 }
 
+ul {
+	list-style: none;
+}
+
 #top-nav {
 	z-index: 1;
 	width: 100%;
@@ -43,7 +47,7 @@ body {
 	left: 25px;
 	margin-left: 20px;
 	padding: 8px;
-	background: white;
+	background: var(--shironeri);
 	font-family: "Avenir LT Std Heavy";
 	font-size: 24px;
 	transition: var(--fade);
@@ -51,7 +55,7 @@ body {
 
 #top-name:hover {
 	background: var(--kon);
-	color: white;
+	color: var(--shironeri);
 	transform: scale(1.05);
 }
 
@@ -193,7 +197,7 @@ canvas {
 }
 
 .footer-nav-content:hover {
-	color: white;
+	color: var(--shironeri);
 	background: var(--kon);
 }
 

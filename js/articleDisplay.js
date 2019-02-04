@@ -4,7 +4,7 @@ var enButton = document.getElementById('en-lang'),
     enText = document.getElementsByClassName('main-text-en'),
     cnText = document.getElementsByClassName('main-text-cn');
 let colorKon = "rgb(17,35,64)",
-    colorWhite = "rgb(255,255,255)";
+    colorShironeri = "rgb(252, 250, 242)";
 
 enButton.addEventListener('click', function () {
     SwitchLanguage(true);
@@ -35,13 +35,13 @@ function OnMouseEnter(button) {
         return;
     } else {
         button.style.backgroundColor = colorKon;
-        button.style.color = colorWhite;
+        button.style.color = colorShironeri;
     }
 }
 
 function CheckBackground(button) {
     if (button != selected) {
-        button.style.backgroundColor = colorWhite;
+        button.style.backgroundColor = colorShironeri;
         button.style.color = colorKon;
     }
 }
@@ -53,25 +53,25 @@ function SwitchLanguage(toEnglish) {
         for (var i = 0; i < enText.length; i++) {
             enText[i].style.display = "block";
             enButton.style.backgroundColor = colorKon;
-            enButton.style.color = colorWhite;
+            enButton.style.color = colorShironeri;
             selected = enButton;
         }
         for (var j = 0; j < cnText.length; j++) {
             cnText[j].style.display = "none";
-            cnButton.style.backgroundColor = colorWhite;
+            cnButton.style.backgroundColor = colorShironeri;
             cnButton.style.color = colorKon;
         }
     } else {
         for (var i = 0; i < enText.length; i++) {
             enText[i].style.display = "none";
-            enButton.style.backgroundColor = colorWhite;
+            enButton.style.backgroundColor = colorShironeri;
             enButton.style.color = colorKon;
             selected = cnButton;
         }
         for (var j = 0; j < cnText.length; j++) {
             cnText[j].style.display = "block";
             cnButton.style.backgroundColor = colorKon;
-            cnButton.style.color = colorWhite;
+            cnButton.style.color = colorShironeri;
         }
     }
 }

@@ -24,7 +24,7 @@ a {
 
 #home:hover {
     background: var(--kurenai);
-    color: white;
+    color: var(--shironeri);
 }
 
 #main {
