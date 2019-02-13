@@ -28,10 +28,7 @@ a {
     width: 100%;
     box-sizing: border-box;
     z-index: 0;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    padding: 0;
 }
 
 #main-background {
@@ -44,6 +41,18 @@ a {
     background: var(--sohi);
 }
 
+#main-title {
+    display: inline-block;
+    position: relative;
+    font-family: "Avenir LT Std Heavy";
+    font-size: 250%;
+    color: var(--shironeri);
+    padding-left: 40px;
+    top: 50%;
+    transform: translate(0, -50%);
+    transition: var(--fade);
+}
+
 #resume {
     display: block;
     position: relative;
@@ -51,8 +60,8 @@ a {
     font-family: "Avenir LT Std Heavy";
     font-size: 175%;
     padding: 3px;
-    border: 2px solid white;
-    color: white;
+    border: 2px solid var(--shironeri);
+    color: var(--shironeri);
     float: right;
     text-align: center;
     top: 50%;
@@ -61,7 +70,7 @@ a {
 }
 
 #resume:hover {
-    background: white;
+    background: var(--shironeri);
     color: var(--sohi);
 }
 
@@ -74,16 +83,6 @@ a {
     line-height: 150%;
 }
 
-.main-description::selection {
-    background: var(--sohi);
-    color: white;
-}
-
-.main-description i::selection {
-    background: var(--sohi);
-    color: white;
-}
-
 .main-information {
     display: inline-block;
     font-family: var(--OSRegular);
@@ -91,7 +90,17 @@ a {
 }
 
 .main-information:hover {
-    transition: var(--text-fade);
+    transition: var(--fade);
     background: var(--kon);
-    color: white;
+    color: var(--shironeri);
+}
+
+#main-photo {
+    min-width: 200px;
+    width: 30%;
+    background-size: contain;
+}
+
+#main-photo img {
+    width: 100%;
 }
