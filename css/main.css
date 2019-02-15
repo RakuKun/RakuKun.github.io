@@ -49,7 +49,7 @@ a {
 }
 
 #main-nav-text {
-    text-align: left;
+    margin: 0 0 20px 0;
 }
 
 .main-text-en {
@@ -89,6 +89,15 @@ a {
 .main-content-description {
     font: 100% var(--OSSemiBold);
     text-align: left;
+}
+
+.main-video {
+    width: 80%;
+    display: inline-block;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .main-image {

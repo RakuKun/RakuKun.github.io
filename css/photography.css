@@ -1,29 +1,14 @@
 @import "/css/general.css";
 
-body {
-    width: 100%;
-    margin: 0;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-#top-nav {
-    width: 100%;
-    padding: 3% 3% 0 3%;
-    text-align: center;
-}
-
-#top-nav-title {
+#main-nav-title {
     font-family: var(--AHeavy);
     font-size: 200%;
     line-height: 150%;
 }
 
-#top-nav-text {
+#main-nav-text {
     line-height: 150%;
+    margin: 0 0 20px 0;
 }
 
 #main {
