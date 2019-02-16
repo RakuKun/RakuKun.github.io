@@ -30,7 +30,7 @@ function updateMeteor() {
 			arr.splice(index, 1)
 		}
 	})
-	ctx.fillStyle = 'rgba(255,255,255,0.25)';
+	ctx.fillStyle = "rgba(252, 250, 242,0.26)";
 	ctx.fillRect(0, 0, cvs.offsetWidth, cvs.offsetHeight);
 	requestAnimationFrame(updateMeteor)
 }
