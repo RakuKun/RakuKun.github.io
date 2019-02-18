@@ -78,7 +78,6 @@ a {
 
 .main-content-title {
     font: 175% var(--AHeavy);
-    display: inline-block;
     padding: 10px;
     -webkit-user-select: none;
     -moz-user-select: none;
