@@ -99,7 +99,26 @@ a {
     -ms-user-select: none;
 }
 
+.main-waterfall {
+    width: 100%;
+    column-gap: 0;
+    column-count: 2;
+}
+
+.main-waterfall-content {
+    width: 100%;
+    padding: 20px;
+    break-inside: avoid;
+    position: relative;
+}
+
+.main-waterfall-content img {
+    width: 100%;
+    display: block;
+}
+
 .main-image {
+    width: 80%;
     display: inline-block;
     user-select: none;
     -webkit-user-select: none;
