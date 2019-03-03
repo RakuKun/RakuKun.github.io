@@ -126,7 +126,7 @@ a {
     -ms-user-select: none;
 }
 
-.main-image-link {
+.main-link {
     line-height: 0.4;
     border: 3px solid var(--sohi);
     margin: 5px 0;
@@ -134,7 +134,7 @@ a {
     transition: var(--fade);
 }
 
-.main-image-link:hover {
+.main-link:hover {
     background: var(--sohi);
     color: var(--shironeri);
 }
