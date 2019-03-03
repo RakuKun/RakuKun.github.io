@@ -6,29 +6,29 @@ var enButton = document.getElementById('en-lang'),
 let colorKon = "rgb(17,35,64)",
     colorShironeri = "rgb(252, 250, 242)";
 
-enButton.addEventListener('click', function () {
-    SwitchLanguage(true);
-}, false);
+if (enButton != null) {
+    enButton.addEventListener('click', function () {
+        SwitchLanguage(true);
+    }, false);
+    enButton.addEventListener('mouseenter', function () {
+        OnMouseEnter(enButton);
+    }, false);
+    enButton.addEventListener('mouseleave', function () {
+        CheckBackground(enButton);
+    }, false);
+}
 
-cnButton.addEventListener('click', function () {
-    SwitchLanguage(false);
-}, false);
-
-cnButton.addEventListener('mouseenter', function () {
-    OnMouseEnter(cnButton);
-}, false);
-
-enButton.addEventListener('mouseenter', function () {
-    OnMouseEnter(enButton);
-}, false);
-
-cnButton.addEventListener('mouseleave', function () {
-    CheckBackground(cnButton);
-}, false);
-
-enButton.addEventListener('mouseleave', function () {
-    CheckBackground(enButton);
-}, false);
+if (cnButton != null) {
+    cnButton.addEventListener('click', function () {
+        SwitchLanguage(false);
+    }, false);
+    cnButton.addEventListener('mouseenter', function () {
+        OnMouseEnter(cnButton);
+    }, false);
+    cnButton.addEventListener('mouseleave', function () {
+        CheckBackground(cnButton);
+    }, false);
+}
 
 function OnMouseEnter(button) {
     if (button.style.backgroundColor == colorKon) {
@@ -48,7 +48,6 @@ function CheckBackground(button) {
 
 function SwitchLanguage(toEnglish) {
     selected = null;
-
     if (toEnglish) {
         for (var i = 0; i < enText.length; i++) {
             enText[i].style.display = "block";
