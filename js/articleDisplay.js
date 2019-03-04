@@ -1,8 +1,8 @@
 var enButton = document.getElementById('en-lang'),
     cnButton = document.getElementById('cn-lang'),
     selected = null,
-    enText = document.getElementsByClassName('main-text-en'),
-    cnText = document.getElementsByClassName('main-text-cn');
+    enText = document.getElementsByClassName('en'),
+    cnText = document.getElementsByClassName('cn');
 let colorKon = "rgb(17,35,64)",
     colorShironeri = "rgb(252, 250, 242)";
 

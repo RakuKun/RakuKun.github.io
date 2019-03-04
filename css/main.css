@@ -52,11 +52,12 @@ a {
     margin: 0 0 20px 0;
 }
 
-.main-text-en {
+.main-title {
     text-align: left;
+    font: 150% var(--AHeavy);
 }
 
-.main-text-cn {
+.main-text {
     text-align: left;
 }
 

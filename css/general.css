@@ -8,6 +8,7 @@
     --OSRegular: "Open Sans Regular";
     --OSSemiBold: "Open Sans Semibold";
     --AHeavy: "Avenir LT Std Heavy";
+    --AMedium: "Avenir LT Std Medium";
     --SHSRegular: "Source Hans Sans Regular";
 }
 
@@ -24,6 +25,11 @@
 @font-face {
     font-family: "Avenir LT Std Heavy";
     src: url('/fonts/AvenirLTStd-Heavy.otf');
+}
+
+@font-face {
+    font-family: "Avenir LT Std Medium";
+    src: url('/fonts/AvenirLTStd-Medium.otf');
 }
 
 @font-face {
