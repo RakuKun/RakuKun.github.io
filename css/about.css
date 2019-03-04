@@ -53,14 +53,15 @@ a {
     transition: var(--fade);
 }
 
-#resume {
+.downloadable {
     display: block;
     position: relative;
-    width: 20%;
+    width: 15%;
     font-family: "Avenir LT Std Heavy";
     font-size: 175%;
     padding: 3px;
     border: 2px solid var(--shironeri);
+    margin: 0 0 0 1%;
     color: var(--shironeri);
     float: right;
     text-align: center;
