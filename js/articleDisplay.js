@@ -49,28 +49,36 @@ function CheckBackground(button) {
 function SwitchLanguage(toEnglish) {
     selected = null;
     if (toEnglish) {
-        for (var i = 0; i < enText.length; i++) {
-            enText[i].style.display = "block";
-            enButton.style.backgroundColor = colorKon;
-            enButton.style.color = colorShironeri;
-            selected = enButton;
+        if (enText != null) {
+            for (var i = 0; i < enText.length; i++) {
+                enText[i].style.display = "block";
+                enButton.style.backgroundColor = colorKon;
+                enButton.style.color = colorShironeri;
+                selected = enButton;
+            }
         }
-        for (var j = 0; j < cnText.length; j++) {
-            cnText[j].style.display = "none";
-            cnButton.style.backgroundColor = colorShironeri;
-            cnButton.style.color = colorKon;
+        if (cnText != null) {
+            for (var j = 0; j < cnText.length; j++) {
+                cnText[j].style.display = "none";
+                cnButton.style.backgroundColor = colorShironeri;
+                cnButton.style.color = colorKon;
+            }
         }
     } else {
-        for (var i = 0; i < enText.length; i++) {
-            enText[i].style.display = "none";
-            enButton.style.backgroundColor = colorShironeri;
-            enButton.style.color = colorKon;
-            selected = cnButton;
+        if (enText != null) {
+            for (var i = 0; i < enText.length; i++) {
+                enText[i].style.display = "none";
+                enButton.style.backgroundColor = colorShironeri;
+                enButton.style.color = colorKon;
+                selected = cnButton;
+            }
         }
-        for (var j = 0; j < cnText.length; j++) {
-            cnText[j].style.display = "block";
-            cnButton.style.backgroundColor = colorKon;
-            cnButton.style.color = colorShironeri;
+        if (cnText != null) {
+            for (var j = 0; j < cnText.length; j++) {
+                cnText[j].style.display = "block";
+                cnButton.style.backgroundColor = colorKon;
+                cnButton.style.color = colorShironeri;
+            }
         }
     }
 }
