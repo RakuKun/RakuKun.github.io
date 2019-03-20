@@ -154,3 +154,25 @@ ul {
 #main {
     padding: 20px 100px 100px 100px;
 }
+
+canvas {
+    z-index: -1;
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*#region cursor*/
+#cursor {
+    z-index: 99;
+    background: var(--kon);
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    user-select: none;
+    pointer-events: none;
+}
+
+/*#endregion cursor*/

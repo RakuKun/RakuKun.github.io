@@ -5,10 +5,13 @@ var cvs = document.getElementById('canvas'),
 	width = window.innerWidth,
 	height = window.innerHeight,
 	meteors = [],
-	maxMeteors = 7
-var isUpper = true
-cvs.width = width
-cvs.height = height
+	isUpper = true;
+let maxMeteors = 7;
+
+function ResizeCanvas() {
+	cvs.width = width;
+	cvs.height = height;
+}
 
 const meteorGenerator = () => {
 	let meteorInternal = Math.random() * 1000 + 1200;
@@ -30,12 +33,13 @@ function updateMeteor() {
 			arr.splice(index, 1)
 		}
 	})
-	ctx.fillStyle = "rgba(252, 250, 242,0.26)";
+	ctx.fillStyle = "rgba(252, 250, 242,0.3)";
 	ctx.fillRect(0, 0, cvs.offsetWidth, cvs.offsetHeight);
 	requestAnimationFrame(updateMeteor)
 }
 
 window.onresize = window.location.reload;
 
+ResizeCanvas();
 meteorGenerator();
 updateMeteor();
