@@ -148,6 +148,7 @@ ul {
 
 #home:hover {
     background: var(--kurenai);
+    color: var(--shironeri);
 }
 
 #main {
