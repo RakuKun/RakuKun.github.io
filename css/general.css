@@ -73,8 +73,8 @@ a {
     color: inherit;
 }
 
-ul {
-    list-style: none;
+a:hover {
+    cursor: none;
 }
 
 #side {
@@ -173,6 +173,7 @@ canvas {
     transform: translate(-50%, -50%);
     user-select: none;
     pointer-events: none;
+    display: unset;
 }
 
 /*#endregion cursor*/

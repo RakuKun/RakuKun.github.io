@@ -202,3 +202,7 @@
 .main-button:hover {
     background: var(--kon);
 }
+
+#foot-frame {
+    z-index: 99;
+}

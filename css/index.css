@@ -1,19 +1,11 @@
 @import "/css/general.css";
 
 html {
-	overflow: hidden;
-	width: 100%;
-	min-width: 800px;
-	height: 100%;
-	min-height: auto;
-	font-family: var(--OSSemiBold);
-	color: var(--kon);
-	margin: 0px;
-	padding: 0px;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	cursor: none;
 }
 
 body {
