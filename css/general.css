@@ -73,10 +73,6 @@ a {
     color: inherit;
 }
 
-a:hover {
-    cursor: none;
-}
-
 #side {
     z-index: 3;
     position: fixed;

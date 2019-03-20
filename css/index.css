@@ -5,7 +5,7 @@ html {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	cursor: none;
+
 }
 
 body {
@@ -16,10 +16,15 @@ body {
 	justify-content: center;
 	margin: 0px;
 	padding: 0px;
+	cursor: none;
 }
 
 ul {
 	list-style: none;
+}
+
+a:hover {
+	cursor: none;
 }
 
 #top-nav {
