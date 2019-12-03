@@ -1,11 +1,9 @@
 @import "/css/general.css";
-
 html {
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-
 }
 
 body {
@@ -166,10 +164,7 @@ a {
 	40% {
 		transform: perspective(1000px) translate3d(0, 0, 0) rotateY(-105deg);
 	}
-
-	40%,
-	60% {}
-
+	40%, 60% {}
 	60% {
 		transform: perspective(1000px) translate3d(0, 0, 0) rotateY(-105deg);
 	}
@@ -260,13 +255,11 @@ a {
 	0% {
 		opacity: 0.75;
 	}
-
 	50% {
 		opacity: 0;
 		width: 30px;
 		height: 30px;
 	}
-
 	100% {
 		opacity: 0;
 		width: 20px;
@@ -331,12 +324,9 @@ a {
 }
 
 @keyframes search {
-
-	0%,
-	10% {
+	0%, 10% {
 		transform: rotate(0);
 	}
-
 	55% {
 		transform: rotate(30deg);
 	}

@@ -1,0 +1,43 @@
+:root {
+    --kon: rgb(15, 37, 64);
+    --rurikon: rgb(11, 52, 110);
+    --kurenai: rgb(203, 27, 69);
+    --sohi: rgb(237, 120, 74);
+    --shironeri: rgb(252, 250, 242);
+}
+
+* {
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    background-attachment: fixed;
+    background-image: linear-gradient(var(--rurikon) 10%, var(--kon) 100%);
+}
+
+#cursor, #cursor-outline {
+    pointer-events: none;
+    position: absolute;
+    background: var(--sohi);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    user-select: none;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+#cursor-outline {
+    border: var(--sohi) 3px solid;
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+}
