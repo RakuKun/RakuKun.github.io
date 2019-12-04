@@ -1,4 +1,42 @@
 @import "/css/general2.0.css";
-body {
-    color: var(--shironeri);
+body {}
+
+#name {
+    font-size: 3vw;
+    z-index: 99;
+    position: fixed;
+    left: 1vw;
+    top: 1vw;
+    color: var(--ruri);
+    text-rendering: optimizeLegibility;
+}
+
+.well {
+    transition: ease-in-out 1s;
+}
+
+.section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    font-size: 10vmin;
+    padding: 1em;
+    box-sizing: border-box;
+    color: var(--sohi);
+}
+
+.section:nth-child(2) {
+    background: var(--shironeri);
+}
+
+.section:nth-child(3) {
+    background: var(--ruri);
+}
+
+.section:nth-child(4) {
+    background: var(--kon);
+}
+
+.section:nth-child(5) {
+    background: var(--kurenai);
 }

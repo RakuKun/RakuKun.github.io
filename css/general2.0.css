@@ -1,18 +1,22 @@
+@import "/css/font.css";
 :root {
     --kon: rgb(15, 37, 64);
     --rurikon: rgb(11, 52, 110);
     --kurenai: rgb(203, 27, 69);
     --sohi: rgb(237, 120, 74);
+    --tohoh: rgb(255, 196, 8);
     --shironeri: rgb(252, 250, 242);
+    --EBGRegular: "EBGaramond-Regular";
+    --EBGMedium: "EBGaramond-Medium";
 }
 
 * {
     text-decoration: none;
     scroll-behavior: smooth;
+    cursor: none;
 }
 
 a {
-    text-decoration: none;
     color: inherit;
 }
 
@@ -22,22 +26,29 @@ html {
 }
 
 #cursor, #cursor-outline {
+    z-index: 99;
     pointer-events: none;
     position: absolute;
-    background: var(--sohi);
+    background: var(--tohoh);
     border-radius: 50%;
     width: 10px;
     height: 10px;
     transform: translate(-50%, -50%);
     opacity: 0;
     user-select: none;
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transition: opacity .5s ease-in-out, transform .5s ease-in-out;
 }
 
 #cursor-outline {
-    border: var(--sohi) 3px solid;
+    border: var(--tohoh) 3px solid;
     border-radius: 30px;
     width: 30px;
     height: 30px;
     background: transparent;
+}
+
+body {
+    overflow: hidden;
+    font-family: var(--EBGRegular);
+    margin: 0;
 }
