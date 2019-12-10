@@ -1,7 +1,10 @@
 @import "/css/font.css";
 :root {
+    --kachi: rgb(8, 25, 45);
     --kon: rgb(15, 37, 64);
     --rurikon: rgb(11, 52, 110);
+    --darkerruri: rgb(6, 74, 156);
+    --ruri: rgb(0, 92, 175);
     --kurenai: rgb(203, 27, 69);
     --sohi: rgb(237, 120, 74);
     --tohoh: rgb(255, 196, 8);
@@ -49,6 +52,6 @@ html {
 
 body {
     overflow: hidden;
-    font-family: var(--EBGRegular);
+    font-family: 'Open Sans Condensed', sans-serif;
     margin: 0;
 }

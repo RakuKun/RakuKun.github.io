@@ -7,7 +7,7 @@ body {}
     position: fixed;
     left: 1vw;
     top: 1vw;
-    color: var(--ruri);
+    color: var(--tohoh);
     text-rendering: optimizeLegibility;
 }
 
@@ -18,25 +18,50 @@ body {}
 .section {
     position: relative;
     height: 100vh;
-    overflow: hidden;
-    font-size: 10vmin;
-    padding: 1em;
+    font-size: 12vmin;
+    padding: 5vw;
     box-sizing: border-box;
-    color: var(--sohi);
+    color: var(--kachi);
+    fill: transparent;
+    -webkit-text-stroke: 1px white;
 }
 
 .section:nth-child(2) {
-    background: var(--shironeri);
+    background: var(--kachi);
 }
 
 .section:nth-child(3) {
-    background: var(--ruri);
+    background: linear-gradient(var(--kon) 0%, var(--rurikon) 100%);
 }
 
 .section:nth-child(4) {
-    background: var(--kon);
+    background: linear-gradient(var(--rurikon) 0%, var(--darkerruri) 100%);
 }
 
 .section:nth-child(5) {
-    background: var(--kurenai);
+    background: var(--darkerruri);
+}
+
+.section-title {}
+
+.game-title {
+    position: absolute;
+}
+
+.game-title>img {
+    width: 5vw;
+    transition: ease-in-out 0.5s;
+}
+
+.game-title>img+a {
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
+.game-title>img:hover {
+    width: 7.5vw;
+}
+
+.game-title>img:hover+a {
+    opacity: 1;
 }
