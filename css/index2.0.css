@@ -2,16 +2,12 @@
 body {}
 
 #name {
-    font-size: 3vw;
-    z-index: 99;
-    position: fixed;
-    left: 1vw;
-    top: 1vw;
-    color: var(--tohoh);
     text-rendering: optimizeLegibility;
 }
 
-.well {
+a {}
+
+.main {
     transition: ease-in-out 1s;
 }
 
@@ -21,28 +17,40 @@ body {}
     font-size: 12vmin;
     padding: 5vw;
     box-sizing: border-box;
+    fill: transparent;
+    -webkit-text-stroke: 1px white;
+}
+
+.name-description {
     color: var(--kachi);
     fill: transparent;
     -webkit-text-stroke: 1px white;
 }
 
-.section:nth-child(2) {
+.section:nth-child(1) {
+    -webkit-text-stroke: 1px white;
     background: var(--kachi);
 }
 
-.section:nth-child(3) {
+.section:nth-child(2) {
     background: linear-gradient(var(--kon) 0%, var(--rurikon) 100%);
 }
 
-.section:nth-child(4) {
+.section:nth-child(3) {
     background: linear-gradient(var(--rurikon) 0%, var(--darkerruri) 100%);
 }
 
-.section:nth-child(5) {
+.section:nth-child(4) {
     background: var(--darkerruri);
 }
 
-.section-title {}
+.section:nth-child(4) {
+    background: var(--kon);
+}
+
+.section-title {
+    -webkit-text-stroke: 1px white;
+}
 
 .game-title {
     position: absolute;
