@@ -20,8 +20,7 @@ var cursor = {
     setupEventListeners: function () {
         var self = this;
 
-        // Anchor hovering
-        document.querySelectorAll('a').forEach(function (el) {
+        function registerMouseEvent(el) {
             el.addEventListener('mouseover', function () {
                 self.cursorEnlarged = true;
                 self.toggleCursorSize();
@@ -30,6 +29,14 @@ var cursor = {
                 self.cursorEnlarged = false;
                 self.toggleCursorSize();
             });
+        }
+        // Anchor hovering
+        document.querySelectorAll('a').forEach(function (el) {
+            registerMouseEvent(el);
+        });
+
+        document.querySelectorAll('.top').forEach(function (el) {
+            registerMouseEvent(el);
         });
 
         // Click events

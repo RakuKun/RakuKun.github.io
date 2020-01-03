@@ -1,16 +1,14 @@
-@import "/css/font.css";
 :root {
+    --ro: rgb(12, 12, 12);
     --kachi: rgb(8, 25, 45);
     --kon: rgb(15, 37, 64);
     --rurikon: rgb(11, 52, 110);
-    --darkerruri: rgb(6, 74, 156);
     --ruri: rgb(0, 92, 175);
     --kurenai: rgb(203, 27, 69);
     --sohi: rgb(237, 120, 74);
     --tohoh: rgb(255, 196, 8);
-    --shironeri: rgb(252, 250, 242);
-    --EBGRegular: "EBGaramond-Regular";
-    --EBGMedium: "EBGaramond-Medium";
+    --shironeri: rgba(252, 250, 242, 1);
+    --shironeri-trans: rgba(252, 250, 242, 0.4);
 }
 
 * {
@@ -33,8 +31,8 @@ html {
     position: absolute;
     background: var(--tohoh);
     border-radius: 50%;
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     transform: translate(-50%, -50%);
     opacity: 0;
     user-select: none;
@@ -42,15 +40,8 @@ html {
 }
 
 #cursor-outline {
-    border: var(--tohoh) 3px solid;
-    border-radius: 30px;
+    border: var(--tohoh) 2px solid;
     width: 30px;
     height: 30px;
     background: transparent;
-}
-
-body {
-    overflow: hidden;
-    font-family: 'Open Sans Condensed', sans-serif;
-    margin: 0;
 }

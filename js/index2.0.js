@@ -1,4 +1,3 @@
-
 "use strict";
 var pnls = document.querySelectorAll('.section').length,
     scdir, hold = false;
@@ -28,6 +27,30 @@ function _scrollY(obj, slength) {
         current = 0;
         slength = 0;
     }
+    console.log('current: ' + current);
+    switch (current) {
+        case 0:
+            main.style.backgroundColor = 'rgb(12, 12, 12)';
+            break;
+        case -100:
+            main.style.backgroundColor = 'rgb(11, 52, 110)';
+            break;
+        case -200:
+            main.style.backgroundColor = 'rgb(203, 27, 69)';
+            break;
+        case -300:
+            main.style.backgroundColor = 'rgb(237, 120, 74)';
+            break;
+        case -300:
+            main.style.backgroundColor = 'rgb(237, 120, 74)';
+            break;
+        case -400:
+            main.style.backgroundColor = 'rgb(252, 250, 242)';
+            break;
+        default:
+            main.style.backgroundColor = 'rgb(12, 12, 12)';
+            break;
+    }
     if (hold === false) {
         hold = true;
         setTimeout(function () {
@@ -35,7 +58,7 @@ function _scrollY(obj, slength) {
         }, 1000);
         pan.style.transform = 'translateY(' + current + 'vh)';
     }
-    console.log(scdir + ':' + slength + ':' + plength + ':' + (plength - plength / pnls));
+    console.log('current: ' + current + ' ' + scdir + ':' + slength + ':' + plength + ':' + (plength - plength / pnls));
 }
 /*[swipe detection on touchscreen devices]*/
 function _swipe(obj) {
@@ -93,7 +116,7 @@ function _swipe(obj) {
 
 function registerChildren() {
     for (let i = 1; i < sections - 1; i++) {
-        main.children[0].children[i].addEventListener('click', function () {
+        main.children[0].children[0].children[i].addEventListener('click', function () {
             scdir = 'down';
             _scrollY(main, 100 * (i));
         });
@@ -105,12 +128,11 @@ main.style.transform = 'translateY(0)';
 main.addEventListener('wheel', function (e) {
     if (e.deltaY < 0) {
         scdir = 'up';
-        _scrollY(main, 100);
     }
     if (e.deltaY > 0) {
         scdir = 'down';
-        _scrollY(main, 100);
     }
+    _scrollY(main, 100);
     e.stopPropagation();
 });
 main.addEventListener('wheel', _scrollY);
@@ -123,3 +145,14 @@ for (let i = 0; i < tops.length; i++) {
         _scrollY(main);
     });
 }
+
+window.transitionToPage = function (href) {
+    document.querySelector('body').style.opacity = 0
+    setTimeout(function () {
+        window.location.href = href
+    }, 500)
+}
+
+document.addEventListener('DOMContentLoaded', function (event) {
+    document.querySelector('body').style.opacity = 1
+})

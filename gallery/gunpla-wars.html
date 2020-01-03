@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gunpla Wars designed by Liangzheng Luo and his mate.">
+    <meta name="theme-color" content="#FFFFFF">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Gunpla Wars - Liangzheng Luo</title>
+    <link rel="icon" type="image/png" href="/media/icon.png">
+    <link href="/css/main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="side">
+        <div id="side-background"></div>
+        <div id="side-selector"></div>
+        <div id="side-title">Gunpla Wars</div>
+        <div class="side-nav">
+            <a href="#video" class="side-nav-list">Video</a>
+            <a href="#goals" class="side-nav-list">Goals</a>
+            <a href="#making" class="side-nav-list">Making</a>
+        </div>
+        <a id="home" href="/index.html">Home</a>
+    </div>
+
+    <div id="main">
+        <div id="main-nav-title">Gunpla Wars - The Interactive</div>
+        <div id="main-nav-text">Gunpla Wars is a customized Gunpla model with remote controlling application built on mobile phone. This is a group project on the course "Introduction to Human Interface Technology". I took the part as software designer and my partner Yiming Chen worked as hardware designer.</div>
+        <video id="video" class="main-video" poster="/media/others/gunpla-wars/title.png" controls>
+            <source src="/media/others/gunpla-wars/demo.mp4" type="video/mp4">Unsupported web browser! Please use Chrome instead :(
+        </video>
+        <div class="main-content-title" id="goals">Goals</div>
+        <div class="main-content-description">Gunpla is a name that contains a large number of robot models in Japanese animation series <i>Gundam</i>. I and my partner had a feeling for Gunpla models and wanted it to be controlled to move like in its animation series. So we bought a Gunpla model and developed hardware and software based on it. We basically need to develop a system to send the remote control order and to catch and execute it on the Gunpla model. </div>
+        <div class="main-content-title" id="making">Making</div>
+        <div class="main-content-description">My partner focused on wiring the hardware while I used Unity and Arduino to do software work. Unity application on mobile phone will get the gravity acceleration of the phone and send it via phone's bluetooth. Then a bluetooth receiver module on Gunpla model get the signal and transfer it to Arduino hardware-based orders. Of course, I spent some time building user interface for the application. Coding on Arduino was more difficult than I had expected because it evolves some hardware adaptation and solid math expression. </div>
+        <div class="main-waterfall">
+            <div class="main-waterfall-content">
+                <img src="/media/others/gunpla-wars/making-1.jpg" alt="Making the Model">
+                <div class="main-waterfall-background">
+                    <p>Making the Model</p>
+                </div>
+            </div>
+            <div class="main-waterfall-content">
+                <img src="/media/others/gunpla-wars/making-2.jpg" alt="Testing">
+                <div class="main-waterfall-background">
+                    <p>Testing</p>
+                </div>
+            </div>
+            <div class="main-waterfall-content">
+                <img src="/media/others/gunpla-wars/making-3.jpg" alt="Cellphone's Sacrifice">
+                <div class="main-waterfall-background">
+                    <p>Cellphone's Sacrifice</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <iframe id="foot-frame" style="bottom:0%; right:0%; position:fixed; height:calc(150px + 40px);" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" src="/foot.html">
+    </iframe>
+    <script type="text/javascript" src="/js/navController.js"></script>
+</body>
+
+</html>
