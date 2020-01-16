@@ -27,7 +27,6 @@ function _scrollY(obj, slength) {
         current = 0;
         slength = 0;
     }
-    console.log('current: ' + current);
     switch (current) {
         case 0:
             main.style.backgroundColor = 'rgb(12, 12, 12)';
@@ -60,7 +59,7 @@ function _scrollY(obj, slength) {
     }
     console.log('current: ' + current + ' ' + scdir + ':' + slength + ':' + plength + ':' + (plength - plength / pnls));
 }
-/*[swipe detection on touchscreen devices]*/
+
 function _swipe(obj) {
     var swdir,
         sX,
