@@ -8,8 +8,6 @@ body {
 }
 
 #main {
-    text-rendering: optimizeLegibility;
-    transition: 1s ease-in-out;
     background: var(--ro);
     color: var(--shironeri);
 }
@@ -17,7 +15,6 @@ body {
 .section {
     position: relative;
     height: 100vh;
-    padding: 5vmin 8vmin 0 8vmin;
     box-sizing: border-box;
     fill: transparent;
     user-select: none;

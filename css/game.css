@@ -1,0 +1,51 @@
+@import "./general2.0.css";
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    margin: 0;
+    transition: 1s ease-in-out;
+    background-color: var(--rurikon);
+    color: var(--shironeri);
+    letter-spacing: 1px;
+}
+
+.top-title {
+    user-select: none;
+    font-size: 5em;
+    font-weight: 600;
+}
+
+.top-introduction {
+    font-size: 1em;
+}
+
+.main-title {
+    font-size: 5em;
+    font-weight: 600;
+}
+
+.main-introduction {
+    font-size: 1.5em;
+}
+
+.main-video {}
+
+.main-design-title {
+    font-size: 3em;
+}
+
+.main-design-description {
+    font-size: 1.5em;
+}
+
+.main-design-reflection {
+    font-size: 1.5em;
+}
+
+.bottom-control a:hover {
+    color: var(--tohoh);
+}

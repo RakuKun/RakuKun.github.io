@@ -14,6 +14,10 @@
     --shironeri-trans: rgba(252, 250, 242, 0.4);
 }
 
+::selection {
+    background-color: var(--tohoh);
+}
+
 * {
     text-decoration: none;
     scroll-behavior: smooth;
@@ -47,4 +51,10 @@ html {
     width: 30px;
     height: 30px;
     background: transparent;
+}
+
+#main {
+    text-rendering: optimizeLegibility;
+    transition: 1s ease-in-out;
+    padding: 6vmin 10vmin;
 }
