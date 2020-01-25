@@ -28,6 +28,10 @@ a {
     color: inherit;
 }
 
+a:hover {
+    color: var(--tohoh);
+}
+
 html {
     background-attachment: fixed;
 }
@@ -56,5 +60,5 @@ html {
 #main {
     text-rendering: optimizeLegibility;
     transition: 1s ease-in-out;
-    padding: 6vmin 10vmin;
+    padding: 6vh 10vw;
 }

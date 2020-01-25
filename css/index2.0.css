@@ -13,6 +13,7 @@ body {
 }
 
 .section {
+    white-space: nowrap;
     position: relative;
     height: 100vh;
     box-sizing: border-box;
@@ -22,6 +23,7 @@ body {
 }
 
 .introduction-title {
+    white-space: normal;
     margin: 0;
     font-weight: 400;
     font-size: 6vmin;
@@ -104,6 +106,7 @@ body {
     height: 60vh;
     line-height: 5vmin;
     border: solid 2px var(--shironeri-trans);
+    white-space: normal;
     background-clip: padding-box;
     background-size: cover;
     background-repeat: no-repeat;
@@ -159,10 +162,6 @@ body {
 #literature .section-entry {
     border: none;
     width: 40vw;
-}
-
-.section-entry a:hover {
-    color: var(--tohoh);
 }
 
 .top {

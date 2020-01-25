@@ -1,51 +1,76 @@
-@import "./general2.0.css";
+@import './general2.0.css';
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 400;
-    margin: 0;
-    transition: 1s ease-in-out;
-    background-color: var(--rurikon);
-    color: var(--shironeri);
-    letter-spacing: 1px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  margin: 0;
+  transition: 1s ease-in-out;
+  background-color: var(--rurikon);
+  color: var(--shironeri);
+  letter-spacing: 1px;
+  line-height: 1.25;
+}
+
+#back {
+  position: fixed;
+  left: 5vw;
+  top: 10vh;
+  transform: translateX(-50%);
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.top {
+  height: 100vh;
 }
 
 .top-title {
-    user-select: none;
-    font-size: 5em;
-    font-weight: 600;
+  user-select: none;
+  font-size: 6em;
+  font-weight: 600;
+  margin: 0 0 6vh 0;
 }
 
 .top-introduction {
-    font-size: 1em;
+  display: inline-block;
+  vertical-align: top;
+  width: 49%;
+  font-size: 1.5em;
+}
+
+.top-introduction img {
+  image-rendering: optimizeQuality;
+  width: 100%;
+}
+
+.top-information {
+  position: absolute;
+  bottom: 6vh;
 }
 
 .main-title {
-    font-size: 5em;
-    font-weight: 600;
+  font-size: 5em;
+  font-weight: 600;
 }
 
 .main-introduction {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
-.main-video {}
+.main-video {
+}
 
 .main-design-title {
-    font-size: 3em;
+  font-size: 3em;
 }
 
 .main-design-description {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 .main-design-reflection {
-    font-size: 1.5em;
-}
-
-.bottom-control a:hover {
-    color: var(--tohoh);
+  font-size: 1.5em;
 }
