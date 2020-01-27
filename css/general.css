@@ -56,7 +56,6 @@ html {
     font-family: var(--OSSemiBold);
     background: var(--shironeri);
     color: var(--kon);
-    overflow-y: auto;
 }
 
 body {
@@ -159,6 +158,7 @@ canvas {
 }
 
 /*#region cursor*/
+
 #cursor {
     z-index: 99;
     background: var(--kon);

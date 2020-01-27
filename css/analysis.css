@@ -4,7 +4,7 @@ body {
   font-weight: 400;
   margin: 0;
   transition: 1s ease-in-out;
-  background-color: var(--rurikon);
+  background-color: var(--sohi);
   color: var(--shironeri);
   letter-spacing: 1px;
   line-height: 1.25;
@@ -49,7 +49,7 @@ body {
 .top-information {
   background-color: var(--shironeri);
   border: 1em solid var(--shironeri);
-  color: var(--rurikon);
+  color: var(--sohi);
   font-weight: 600;
   font-size: 1.25em;
   position: absolute;
@@ -71,7 +71,7 @@ body {
   margin: 1vh 0;
   background-color: var(--shironeri);
   border: 1em solid var(--shironeri);
-  color: var(--rurikon);
+  color: var(--sohi);
   font-weight: 600;
   font-size: 1.25em;
 }
@@ -115,12 +115,17 @@ hr {
   border: 0.05em solid var(--shironeri);
 }
 
+.important {
+  font-style: italic;
+  font-weight: 600;
+}
+
 .element-title {
   display: inline-block;
   background-color: var(--shironeri);
   margin: 0.25em 0;
   border: 0.25em solid var(--shironeri);
-  color: var(--rurikon);
+  color: var(--sohi);
   font-weight: 600;
 }
 
