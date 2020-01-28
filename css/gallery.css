@@ -85,6 +85,7 @@ body {
 
 hr {
   width: 90%;
+  margin-bottom: 0;
   float: left;
   border: 0.05em solid var(--shironeri);
 }

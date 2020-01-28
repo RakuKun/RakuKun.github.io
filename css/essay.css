@@ -89,13 +89,14 @@ body {
 
 .main-design-description {
     float: left;
-    padding-top: 2.5em;
+    padding-top: 1.75em;
     width: 49%;
     font-size: 1.5em;
 }
 
 hr {
     width: 90%;
+    margin-bottom: 0;
     float: left;
     border: 0.05em solid var(--ro);
 }
