@@ -21,7 +21,7 @@ body {
 .section {
     white-space: nowrap;
     position: relative;
-    padding-top: 5vh;
+    padding-top: 4vh;
     height: 100vh;
     box-sizing: border-box;
     fill: transparent;
@@ -101,7 +101,7 @@ body {
     bottom: 5vh;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 3vmin;
+    font-size: 3vw;
     color: var(--shironeri-trans);
 }
 
@@ -109,9 +109,9 @@ body {
     display: inline-block;
     vertical-align: top;
     margin: 1vh 1vw;
-    font-size: 5vmin;
+    font-size: 3.5vw;
     height: 65vh;
-    line-height: 5vmin;
+    line-height: 6.5vh;
     border: solid 2px var(--shironeri-trans);
     white-space: normal;
     background-clip: padding-box;
@@ -134,7 +134,6 @@ body {
     top: 50%;
     transform: translateY(-50%);
     text-align: center;
-    top: 50%;
     opacity: 0;
 }
 
@@ -143,7 +142,7 @@ body {
 }
 
 #games .section-entry {
-    width: 15vw;
+    width: 14vw;
 }
 
 #games .section-entry:hover div {
@@ -151,7 +150,7 @@ body {
 }
 
 #gallery .section-entry {
-    width: 25vw;
+    width: 24vw;
 }
 
 #gallery .section-entry:hover div {
@@ -159,7 +158,7 @@ body {
 }
 
 #analysis .section-entry {
-    width: 18vw;
+    width: 17vw;
 }
 
 #analysis .section-entry:hover div {
