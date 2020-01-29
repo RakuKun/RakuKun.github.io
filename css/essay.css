@@ -1,141 +1,148 @@
 @import "./general2.0.css";
 body {
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 500;
-    margin: 0;
-    transition: 1s ease-in-out;
-    background-color: var(--shironeri);
-    color: var(--ro);
-    letter-spacing: 1px;
-    line-height: 1.25;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  margin: 0;
+  transition: 1s ease-in-out;
+  background-color: var(--shironeri);
+  color: var(--ro);
+  letter-spacing: 1px;
+  line-height: 1.25;
+  opacity: 1;
+  transition: 1s opacity;
+}
+
+body.fade-out {
+  opacity: 0;
+  transition: none;
 }
 
 #back {
-    position: fixed;
-    left: 5vw;
-    top: 8vh;
-    transform: translateX(-50%) scale(-1, -1);
-    font-size: 2em;
-    font-weight: 600;
+  position: fixed;
+  left: 5vw;
+  top: 8vh;
+  transform: translateX(-50%) scale(-1, -1);
+  font-size: 2em;
+  font-weight: 600;
 }
 
 #main {
-    text-rendering: optimizeLegibility;
-    transition: 1s ease-in-out;
-    padding: 0 10vw;
+  text-rendering: optimizeLegibility;
+  transition: 1s ease-in-out;
+  padding: 0 10vw;
 }
 
 .top {
-    padding: 0 10vw;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
+  padding: 0 10vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .top-title {
-    user-select: none;
-    font-size: 6em;
-    font-weight: 600;
-    padding: 6vh 0;
+  user-select: none;
+  font-size: 6em;
+  font-weight: 600;
+  padding: 6vh 0;
 }
 
 .top-introduction {
-    display: inline-block;
-    vertical-align: top;
-    width: 49%;
-    font-size: 1.5em;
+  display: inline-block;
+  vertical-align: top;
+  width: 49%;
+  font-size: 1.5em;
 }
 
 .top-information {
-    background-color: var(--shironeri);
-    padding: 1em;
-    border: 2px solid var(--ro);
-    color: var(--ro);
-    font-weight: 600;
-    font-size: 1.25em;
-    position: absolute;
-    bottom: 10vh;
+  background-color: var(--shironeri);
+  padding: 1em;
+  border: 2px solid var(--ro);
+  color: var(--ro);
+  font-weight: 600;
+  font-size: 1.25em;
+  position: absolute;
+  bottom: 10vh;
 }
 
 .main-title {
-    padding: 2vh 0;
-    font-size: 5em;
-    font-weight: 600;
+  padding: 2vh 0;
+  font-size: 5em;
+  font-weight: 600;
 }
 
 .main-introduction {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 .main-information {
-    width: fit-content;
-    margin: 1vh 0;
-    background-color: var(--shironeri);
-    border: 1em solid var(--shironeri);
-    color: var(--sohi);
-    font-weight: 600;
-    font-size: 1.25em;
+  width: fit-content;
+  margin: 1vh 0;
+  background-color: var(--shironeri);
+  border: 1em solid var(--shironeri);
+  color: var(--sohi);
+  font-weight: 600;
+  font-size: 1.25em;
 }
 
 .main-design {
-    float: left;
+  float: left;
 }
 
 .main-design-title {
-    float: left;
-    width: 50%;
-    font-size: 3em;
+  float: left;
+  width: 50%;
+  font-size: 3em;
 }
 
 .main-design-description {
-    float: left;
-    padding-top: 1.75em;
-    width: 49%;
-    font-size: 1.5em;
+  float: left;
+  padding-top: 1.75em;
+  width: 49%;
+  font-size: 1.5em;
 }
 
 hr {
-    width: 90%;
-    margin-bottom: 0;
-    float: left;
-    background-color: var(--shironeri);
-    border: 0.05em solid var(--ro);
+  width: 90%;
+  margin-bottom: 0;
+  float: left;
+  background-color: var(--shironeri);
+  border: 0.05em solid var(--ro);
 }
 
 .important {
-    font-style: italic;
-    font-weight: 600;
+  font-style: italic;
+  font-weight: 600;
 }
 
 .element-title {
-    display: inline-block;
-    background-color: var(--shironeri);
-    margin: 0.25em 0;
-    border: 0.25em solid var(--shironeri);
-    color: var(--sohi);
-    font-weight: 600;
+  display: inline-block;
+  background-color: var(--shironeri);
+  margin: 0.25em 0;
+  border: 0.25em solid var(--shironeri);
+  color: var(--sohi);
+  font-weight: 600;
 }
 
 #bottom {
-    clear: both;
-    height: 10vh;
-    position: relative;
+  clear: both;
+  height: 10vh;
+  position: relative;
 }
 
 #more {
-    position: absolute;
-    left: 5vw;
-    bottom: 5vh;
-    transform: translateX(-50%);
-    font-size: 2em;
-    font-weight: 600;
+  position: absolute;
+  left: 5vw;
+  bottom: 5vh;
+  transform: translateX(-50%);
+  font-size: 2em;
+  font-weight: 600;
 }
 
 #next {
-    position: absolute;
-    right: 5vw;
-    bottom: 5vh;
-    transform: translateX(50%);
-    font-size: 2em;
-    font-weight: 600;
+  position: absolute;
+  right: 5vw;
+  bottom: 5vh;
+  transform: translateX(50%);
+  font-size: 2em;
+  font-weight: 600;
 }

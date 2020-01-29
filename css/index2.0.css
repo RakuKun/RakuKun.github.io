@@ -31,7 +31,7 @@ body {
 
 .introduction-title {
   white-space: normal;
-  margin: 0;
+  padding-top: 6vh;
   font-weight: 400;
   font-size: 6vmin;
   color: var(--shironeri-trans);

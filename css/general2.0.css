@@ -20,11 +20,11 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--shironeri);
+  background: var(--ro);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--ro);
+  background: var(--shironeri);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -58,7 +58,8 @@ html {
   overflow-x: hidden;
 }
 
-#cursor, #cursor-outline {
+#cursor,
+#cursor-outline {
   z-index: 99;
   pointer-events: none;
   position: absolute;
