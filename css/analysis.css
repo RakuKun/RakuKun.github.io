@@ -109,6 +109,7 @@ hr {
   width: 90%;
   margin-bottom: 0;
   float: left;
+  background-color: var(--shironeri);
   border: 0.05em solid var(--shironeri);
 }
 

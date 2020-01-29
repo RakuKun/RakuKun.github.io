@@ -113,6 +113,7 @@ hr {
   width: 90%;
   margin-bottom: 0;
   float: left;
+  background-color: var(--shironeri);
   border: 0.05em solid var(--shironeri);
 }
 
@@ -123,6 +124,17 @@ hr {
   border: 0.25em solid var(--shironeri);
   color: var(--rurikon);
   font-weight: 600;
+}
+
+.element-image {
+  margin: 2vh 0 0 0;
+  width: 100%;
+}
+
+.element-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 #bottom {
