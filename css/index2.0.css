@@ -6,8 +6,13 @@ html {
 body {
   font-family: "Cormorant Garamond", serif;
   font-weight: 400;
+  background-color: var(--shironeri);
   margin: 0;
   transition: 1s ease-in-out;
+}
+
+body.fade-out {
+  transition: none;
 }
 
 #main {
@@ -142,7 +147,7 @@ body {
 }
 
 #games .section-entry {
-  width: 18vw;
+  width: 14vw;
 }
 
 #games .section-entry:hover div {

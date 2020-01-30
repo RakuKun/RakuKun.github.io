@@ -9,7 +9,7 @@ body {
   letter-spacing: 1px;
   line-height: 1.25;
   opacity: 1;
-  transition: 1s opacity;
+  transition: 1s ease-in-out;
 }
 
 body.fade-out {
