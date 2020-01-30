@@ -23,7 +23,9 @@
     <span id="cursor-outline"></span>
     <span id="cursor"></span>
     <script type="module" src="/js/general2.0.js"></script>
-    <div id="back"><a onclick="transitionToPage('../index2.0.html')">➙</a></div>
+    <div id="back">
+      <a onclick="transitionToPage('../index2.0.html','var(--ro)')">➙</a>
+    </div>
 
     <div
       class="top"
@@ -70,7 +72,11 @@
 
     <div id="bottom">
       <div id="more"><a>≡</a></div>
-      <div id="next"><a href="/games/level-design.html">➙</a></div>
+      <div id="next">
+        <a onclick="transitionToPage('level-design.html','var(--rurikon)')"
+          >➙</a
+        >
+      </div>
     </div>
   </body>
 </html>
