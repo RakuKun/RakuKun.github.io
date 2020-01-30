@@ -9,7 +9,7 @@ body {
   letter-spacing: 1px;
   line-height: 1.25;
   opacity: 1;
-  transition: 1s opacity;
+  transition: 0.5s ease-in-out;
 }
 
 body.fade-out {
@@ -65,7 +65,6 @@ body.fade-out {
 }
 
 .main {
-  text-rendering: optimizeLegibility;
   transition: 1s ease-in-out;
   padding: 0 10vw;
 }
@@ -85,7 +84,7 @@ body.fade-out {
   margin: 1vh 0;
   background-color: var(--shironeri);
   border: 1em solid var(--shironeri);
-  color: var(--rurikon);
+  color: var(--kurenai);
   font-weight: 600;
   font-size: 1.25em;
 }

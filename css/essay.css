@@ -9,7 +9,7 @@ body {
   letter-spacing: 1px;
   line-height: 1.25;
   opacity: 1;
-  transition: 1s opacity;
+  transition: 0.5s ease-in-out;
 }
 
 body.fade-out {
@@ -27,7 +27,6 @@ body.fade-out {
 }
 
 #main {
-  text-rendering: optimizeLegibility;
   transition: 1s ease-in-out;
   padding: 0 10vw;
 }
@@ -43,7 +42,7 @@ body.fade-out {
   user-select: none;
   font-size: 6em;
   font-weight: 600;
-  padding: 6vh 0;
+  padding: 5vh 0;
 }
 
 .top-introduction {
@@ -55,8 +54,8 @@ body.fade-out {
 
 .top-information {
   background-color: var(--shironeri);
-  padding: 1em;
   border: 2px solid var(--ro);
+  padding: 1em;
   color: var(--ro);
   font-weight: 600;
   font-size: 1.25em;

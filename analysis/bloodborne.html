@@ -20,13 +20,15 @@
     <span id="cursor-outline"></span>
     <span id="cursor"></span>
     <script type="module" src="/js/general2.0.js"></script>
-    <div id="back"><a onclick="transitionToPage('../index2.0.html')">➙</a></div>
+    <div id="back">
+      <a onclick="transitionToPage('../index2.0.html')">➙</a>
+    </div>
 
     <div
       class="top"
       style="background-image: url(/media/analysis/bloodborne/title.jpg);"
     >
-      <div class="top-title" style="font-size: 5em;">
+      <div class="top-title">
         Bloodborne Analysis
       </div>
       <div class="top-introduction">
@@ -152,9 +154,12 @@
         </span>
       </div>
     </div>
+
     <div id="bottom">
       <div id="more"><a>≡</a></div>
-      <div id="next"><a href="/analysis/inside.html">➙</a></div>
+      <div id="next">
+        <a onclick="transitionToPage('inside.html','var(--sohi)')">➙</a>
+      </div>
     </div>
   </body>
 </html>

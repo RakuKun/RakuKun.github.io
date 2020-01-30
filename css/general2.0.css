@@ -31,6 +31,13 @@
   background: var(--tohoh);
 }
 
+::-webkit-scrollbar-thumb:active {
+  box-shadow: 0 0 10px rgb(255, 196, 8), 0 0 20px rgb(255, 204, 37),
+    0 0 30px rgb(255, 211, 68), 0 0 40px rgb(255, 218, 96),
+    0 0 50px rgb(255, 223, 116), 0 0 60px rgb(255, 227, 135),
+    0 0 70px rgb(255, 230, 147);
+}
+
 ::selection {
   background-color: var(--tohoh);
 }
@@ -39,6 +46,8 @@
   text-decoration: none;
   scroll-behavior: smooth;
   cursor: none;
+  text-rendering: geometricPrecision;
+  image-rendering: optimizeQuality;
 }
 
 a {
@@ -69,7 +78,6 @@ html {
   height: 8px;
   transform: translate(-50%, -50%);
   opacity: 0;
-  user-select: none;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
