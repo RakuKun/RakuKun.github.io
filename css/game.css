@@ -18,15 +18,6 @@ body.fade-out {
   transition: none;
 }
 
-#back {
-  position: fixed;
-  left: 5vw;
-  top: 8vh;
-  transform: translateX(-50%) scale(-1, -1);
-  font-size: 2em;
-  font-weight: 600;
-}
-
 #main {
   transition: 1s ease-in-out;
   padding: 0 10vw;
@@ -135,6 +126,11 @@ hr {
   border: 0.05em solid var(--shironeri);
 }
 
+.important {
+  font-style: italic;
+  font-weight: 600;
+}
+
 .element-title {
   display: inline-block;
   background-color: var(--shironeri);
@@ -159,22 +155,4 @@ hr {
   clear: both;
   height: 10vh;
   position: relative;
-}
-
-#more {
-  position: absolute;
-  left: 5vw;
-  bottom: 5vh;
-  transform: translateX(-50%);
-  font-size: 2em;
-  font-weight: 600;
-}
-
-#next {
-  position: absolute;
-  right: 5vw;
-  bottom: 5vh;
-  transform: translateX(50%);
-  font-size: 2em;
-  font-weight: 600;
 }
