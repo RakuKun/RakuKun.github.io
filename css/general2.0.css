@@ -32,10 +32,7 @@
 }
 
 ::-webkit-scrollbar-thumb:active {
-  box-shadow: 0 0 10px rgb(255, 196, 8), 0 0 20px rgb(255, 204, 37),
-    0 0 30px rgb(255, 211, 68), 0 0 40px rgb(255, 218, 96),
-    0 0 50px rgb(255, 223, 116), 0 0 60px rgb(255, 227, 135),
-    0 0 70px rgb(255, 230, 147);
+  box-shadow: 0 0 10px rgb(255, 196, 8), 0 0 20px rgb(255, 204, 37), 0 0 30px rgb(255, 211, 68), 0 0 40px rgb(255, 218, 96), 0 0 50px rgb(255, 223, 116), 0 0 60px rgb(255, 227, 135), 0 0 70px rgb(255, 230, 147);
 }
 
 ::selection {
@@ -58,6 +55,10 @@ a:hover {
   color: var(--tohoh);
 }
 
+a:active {
+  text-shadow: 0 0 20px rgb(255, 223, 116), 0 0 24px rgb(255, 227, 135), 0 0 28px rgb(255, 230, 147);
+}
+
 u {
   text-decoration: underline;
 }
@@ -67,8 +68,7 @@ html {
   overflow-x: hidden;
 }
 
-#cursor,
-#cursor-outline {
+#cursor, #cursor-outline {
   z-index: 99;
   pointer-events: none;
   position: absolute;
