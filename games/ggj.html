@@ -23,8 +23,8 @@
     <span id="cursor-outline"></span>
     <span id="cursor"></span>
     <script type="module" src="/js/general2.0.js"></script>
-    <div id="back">
-      <a onclick="transitionToPage('../index2.0.html')">➙</a>
+    <div id="home">
+      <a onclick="transitionToPage('../index2.0.html')">◯</a>
     </div>
 
     <div class="top" style="background-image: url(/media/Kirby.png);">
@@ -151,7 +151,12 @@
     </div>
 
     <div id="bottom">
-      <div id="more"><a>≡</a></div>
+      <div id="back">
+        <a
+          onclick="transitionToPage('collection.html','var(--rurikon)')"
+          >➙</a
+        >
+      </div>
       <div id="next">
         <a
           onclick="transitionToPage('../analysis/bloodborne.html','var(--sohi)')"

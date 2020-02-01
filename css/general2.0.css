@@ -93,22 +93,22 @@ html {
   background: transparent;
 }
 
-#back {
+#home {
   user-select: none;
   position: fixed;
   left: 5vw;
   top: 8vh;
-  transform: translateX(-50%) scale(-1, -1);
+  transform: translateX(-50%);
   font-size: 2em;
   font-weight: 600;
 }
 
-#more {
+#back {
   user-select: none;
   position: absolute;
   left: 5vw;
   bottom: 5vh;
-  transform: translateX(-50%);
+  transform: translateX(-50%) scale(-1);
   font-size: 2em;
   font-weight: 600;
 }
