@@ -105,9 +105,9 @@ html {
 
 #back {
   user-select: none;
-  position: absolute;
+  position: fixed;
   left: 5vw;
-  bottom: 5vh;
+  bottom: 8vh;
   transform: translateX(-50%) scale(-1);
   font-size: 2em;
   font-weight: 600;
@@ -115,9 +115,9 @@ html {
 
 #next {
   user-select: none;
-  position: absolute;
+  position: fixed;
   right: 5vw;
-  bottom: 5vh;
+  bottom: 8vh;
   transform: translateX(50%);
   font-size: 2em;
   font-weight: 600;

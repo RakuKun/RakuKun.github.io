@@ -1,0 +1,7 @@
+To do list:
+
+1. Hide file extension:
+https://stackoverflow.com/questions/5730092/how-to-remove-html-from-url
+
+2. Priority:
+Game - Analysis - Art - Essay
