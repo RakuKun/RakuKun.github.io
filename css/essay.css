@@ -1,4 +1,4 @@
-@import "./general2.0.css";
+@import "./general.css";
 
 body {
   font-family: "Cormorant Garamond", serif;
@@ -7,7 +7,7 @@ body {
   transition: 1s ease-in-out;
   background-color: var(--shironeri);
   color: var(--ro);
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   line-height: 1.25;
   opacity: 1;
   transition: 0.5s ease-in-out;
@@ -73,10 +73,6 @@ body.fade-out {
   color: var(--sohi);
   font-weight: 600;
   font-size: 1.25em;
-}
-
-.main-design {
-  float: left;
 }
 
 .main-design-title {
