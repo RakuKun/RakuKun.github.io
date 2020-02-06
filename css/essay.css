@@ -1,7 +1,7 @@
-@import "./general.css";
+@import './general.css';
 
 body {
-  font-family: "Cormorant Garamond", serif;
+  font-family: 'Cormorant Garamond', serif;
   font-weight: 500;
   margin: 0;
   transition: 1s ease-in-out;
@@ -94,11 +94,6 @@ hr {
   float: left;
   background-color: var(--shironeri);
   border: 0.05em solid var(--ro);
-}
-
-.important {
-  font-style: italic;
-  font-weight: 600;
 }
 
 .element-title {
