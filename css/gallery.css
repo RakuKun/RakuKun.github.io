@@ -62,12 +62,18 @@ body.fade-out {
 }
 
 .main-title {
-  padding: 2vh 0;
+  clear: both;
+  text-align: center;
+  position: relative;
+  margin: 0 10vw;
+  padding: 10vh 0 3vh 0;
+  color: var(--shironeri);
   font-size: 5em;
   font-weight: 600;
 }
 
 .main-introduction {
+  width: 100%;
   font-size: 1.5em;
 }
 
@@ -101,11 +107,13 @@ body.fade-out {
 }
 
 .main-information {
+  float: left;
+  max-width: 60%;
   width: fit-content;
   margin: 1vh 0;
   background-color: var(--shironeri);
   border: 1em solid var(--shironeri);
-  color: var(--kurenai);
+  color: var(--ruri);
   font-weight: 600;
   font-size: 1.25em;
 }

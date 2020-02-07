@@ -1,10 +1,10 @@
-@import "/css/general.css";
+@import '/css/general.css';
 html {
   overflow: hidden;
 }
 
 body {
-  font-family: "Cormorant Garamond", serif;
+  font-family: 'Cormorant Garamond', serif;
   font-weight: 400;
   background-color: var(--ro);
   margin: 0;
@@ -89,10 +89,6 @@ body.fade-out {
   color: var(--shironeri);
 }
 
-.introduction-title-contact:hover {
-  color: var(--tohoh);
-}
-
 .section-title {
   font-weight: 600;
   font-size: 12vmin;
@@ -118,10 +114,10 @@ body.fade-out {
 
 .scroll {
   position: absolute;
-  bottom: 5vh;
+  bottom: 6vh;
   left: 50%;
   transform: translateX(-50%) rotateZ(90deg);
-  font-size: 2vw;
+  font-size: 2em;
   color: var(--shironeri-trans);
 }
 
@@ -203,7 +199,7 @@ body.fade-out {
   line-height: 0.5em;
   position: absolute;
   transform: rotateZ(-90deg);
-  bottom: 5vh;
+  bottom: 7vh;
   font-size: 2em;
 }
 

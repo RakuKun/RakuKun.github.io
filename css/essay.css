@@ -56,7 +56,12 @@ body.fade-out {
 }
 
 .main-title {
-  padding: 2vh 0;
+  clear: both;
+  text-align: center;
+  position: relative;
+  margin: 0 10vw;
+  padding: 10vh 0 3vh 0;
+  color: var(--shironeri);
   font-size: 5em;
   font-weight: 600;
 }
