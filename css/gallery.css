@@ -30,12 +30,12 @@ body.fade-out {
   background-repeat: no-repeat;
   background-clip: border-box;
   background-size: cover;
+  font-weight: 600;
 }
 
 .top-title {
   user-select: none;
   font-size: 6em;
-  font-weight: 600;
   padding: 5vh 0;
 }
 
@@ -50,7 +50,6 @@ body.fade-out {
   background-color: var(--shironeri);
   border: 1em solid var(--shironeri);
   color: var(--kurenai);
-  font-weight: 600;
   font-size: 1.25em;
   position: absolute;
   bottom: 10vh;
@@ -75,6 +74,7 @@ body.fade-out {
 .main-introduction {
   width: 100%;
   font-size: 1.5em;
+  font-weight: 600;
 }
 
 .main-video {

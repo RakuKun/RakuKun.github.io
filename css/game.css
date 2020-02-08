@@ -28,12 +28,12 @@ body.fade-out {
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
+  font-weight: 600;
 }
 
 .top-title {
   user-select: none;
   font-size: 6em;
-  font-weight: 600;
   padding: 5vh 0;
 }
 
@@ -48,7 +48,6 @@ body.fade-out {
   background-color: var(--shironeri);
   border: 1em solid var(--shironeri);
   color: var(--ruri);
-  font-weight: 600;
   font-size: 1.25em;
   position: absolute;
   bottom: 10vh;
@@ -81,6 +80,7 @@ body.fade-out {
   float: left;
   width: 60%;
   font-size: 1.5em;
+  font-weight: 600;
 }
 
 .main-information {
