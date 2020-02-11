@@ -161,6 +161,8 @@ hr {
 .element-image-flex img {
   margin: 1vh 1vw 1vh 0;
   width: 49%;
+  height: 100%;
+  object-fit: contain;
 }
 
 #bottom {
