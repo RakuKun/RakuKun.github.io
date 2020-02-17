@@ -49,20 +49,19 @@
 
     <div id="main">
       <div class="main-title">
-        2D Top-Down Stealth
+        Third Person Stealth
       </div>
       <div class="main-image">
-        <img src="/media/games/level-design/title.png" />
+        <img src="/media/games/level-design/stealth/2d-outside.png" />
       </div>
       <div class="main-introduction">
         From the experience of several stealth games I want to analyze what
         makes them fun and try making a brief stealth level by myself.
       </div>
       <div class="main-information">
-        <span style="color:var(--ro); ">duration</span> ~ 5 minutes <br />
-        <span style="color:var(--ro);">theme</span> stealth
-        <br />
-        <span style="color:var(--ro);">genre</span> 2D top-down <br />
+        <span style="color:var(--ro); ">duration</span> ~ 6 minutes <br />
+        <span style="color:var(--ro);">theme</span> stealth<br />
+        <span style="color:var(--ro);">gameplay</span> 3D third person <br />
       </div>
       <div class="main-design-title">
         <hr />
@@ -71,13 +70,13 @@
       <div class="main-design-description">
         Just like other games, there are some fundamental elements in stealth
         games: a start, a goal, game rules, and obstacles.<br />
-        <span class="element-title">start</span><br />in stealth games usually
-        The start point is a relatively safe place that is far away from
-        destination. No challenges at the beginning means players have
-        sufficient time to get prepared such as grabbing some equipments and
-        inspecting the level at a higher location. To make the game more
+        <span class="element-title">start</span><br />
+        In stealth games, usually, the start point is a relatively safe place
+        distant from destination. No challenges at the beginning means players
+        have sufficient time to get prepared such as grabbing some equipments
+        and inspecting the level to make a plan. To make the game more
         challenging, the players may not be able to come back once they set off,
-        just like other linear level flow. <br />
+        so each run needs to be well prepared. <br />
         <span class="element-title">goal</span><br />
         The goal in stealth game is very diverse but has something in common:
         mostly some fixed points (treasure, exit, important person, etc.). Some
@@ -104,18 +103,17 @@
       </div>
       <div class="main-design-description">
         Here are some pitfalls I find before or after playtesting my level.<br />
-        <span class="element-title">the avoid-'em-all path</span><br />
-        The avoid-'em-all path is a route by which the character have zero
-        chance of being noticed. It usually happens when all enemies' patrol
-        routes don't overlap with the character's route. This bad design could
-        make the level very boring as the players don't need to think, they just
-        go and win.<br />
+        <span class="element-title">god path</span><br />
+        The god path is a route by which the character have zero chance of being
+        noticed. It usually happens when all enemies' patrol routes don't
+        overlap with the character's route. This bad design could make the level
+        very boring as the players don't need to think, they just go and win.<br />
         <span class="element-title">unpredictable AI</span><br />
         Unpredictable AI is that pre-scripted enemies don't follow a fixed path,
         or have sudden turn back, or moves too fast. Unpredictable AI makes the
         game hard in an annoying not challenging way, as the random events would
         kill player's plan and mess up the level.<br />
-        <span class="element-title">the forced way</span><br />
+        <span class="element-title">forced gameplay</span><br />
         Many stealth games let playable character have items or weapons. This is
         nice as the players are granted a variety of ways to beat the level. But
         this could also be a pain when some items are designed very specifically
@@ -141,11 +139,46 @@
       </div>
       <div class="main-design-title">
         <hr />
+        core mechanism
+      </div>
+      <div class="main-design-description">
+        Core mechanism will cover the stealth game's basic rules and gameplay,
+        including the action set the character has, enemy types and most
+        importantly, the goal and walkthrough of the game.
+        <br /><span class="element-title">character's actions</span><br />
+        -Character can walk and run (2 times the speed of walking).<br />
+        -Character can knock down enemies in melee range.<br />
+        -Character will have to interact with the trigger item.<br />
+        <span class="element-title">enemy AI</span><br />
+        -Enemies have fixed patrol, mostly continuous with some stopping over
+        time.<br />
+        -Enemies have fixed vision range.<br />
+        -Enemies will engage when they spot player's character.<br />
+        -Enemies will be alerted when they find a body.<br />
+        <span class="element-title">goal</span><br />
+        -The game consists of two sequential goals.<br />
+        -The first goal is to get to the destination and trigger the mission
+        item. The second goal is to eliminate an important target silently.<br />
+        - Two goals are using the same map, but with different scenes and
+        dealing with different enemy AI.<br />
+        After deciding the core gameplay, I could begin sketching the level in
+        2D illustration which determines the basic layout and possible routes
+        for players.
+      </div>
+      <div class="main-design-title">
+        <hr />
         2D Layout
       </div>
       <div class="main-design-description">
         At pre-engine phase I use Adobe Illustrator to block out the level and
-        use some legends for the playable character, enemies and goal.
+        use some legends for the playable character, enemies and goal. I would
+        like to make 2 major scenes in the game: the outdoor scene and the
+        indoor scene. The first goal only requires actions outdoors while the
+        second goal needs the character intrude the house and stealth in a more
+        dangerous situation.
+        <div class="element-image">
+          <img src="/media/games/level-design/stealth/2d-outside.png" />
+        </div>
       </div>
 
       <div class="main-title">
@@ -156,7 +189,7 @@
       </div>
       <div class="main-introduction">
         This is a level specifically developed for exploring the third person
-        experience driven by a story. The design is currently in early sketch
+        experience driven by a story. The design is currently in early ideation
         phase.
       </div>
       <div class="main-information">
