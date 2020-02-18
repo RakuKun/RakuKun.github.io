@@ -21,7 +21,7 @@
     <span id="cursor"></span>
     <script type="module" src="/js/general.js"></script>
     <div id="home">
-      <a onclick="transitionToPage('../index.html')">◯</a>
+      <a onclick="transitionToPage('../')">◯</a>
     </div>
 
     <div
@@ -51,12 +51,11 @@
       <div class="main-title">
         Third Person Stealth
       </div>
-      <div class="main-image">
-        <img src="/media/games/level-design/stealth/2d-outside.png" />
-      </div>
-      <div class="main-introduction">
-        From the experience of several stealth games I want to analyze what
-        makes them fun and try making a brief stealth level by myself.
+      <div class="main-introduction" style="width: 100%;">
+        Stealth game became a serious game genre after Metal Gear Solid came
+        out. Its third person perspective gameplay, combined with dramatic plot
+        and the thrilling feeling taking down enemies, fascinates players who
+        want something different from a shoot-'em-up.
       </div>
       <div class="main-information">
         <span style="color:var(--ro); ">duration</span> ~ 6 minutes <br />
@@ -68,8 +67,10 @@
         element analysis
       </div>
       <div class="main-design-description">
-        Just like other games, there are some fundamental elements in stealth
-        games: a start, a goal, game rules, and obstacles.<br />
+        From the experience of several stealth games I want to analyze what
+        makes them fun and try making a brief stealth level by myself. Just like
+        other games, there are some fundamental elements in stealth games: a
+        start, a goal, game rules, and obstacles.<br />
         <span class="element-title">start</span><br />
         In stealth games, usually, the start point is a relatively safe place
         distant from destination. No challenges at the beginning means players
@@ -124,21 +125,6 @@
       </div>
       <div class="main-design-title">
         <hr />
-        fundamental rules
-      </div>
-      <div class="main-design-description">
-        It is always good to determine the basic mechanics and components that
-        will be used in the level before blocking it out.
-        <br /><span class="element-title">interactions</span><br />
-        The player controls a character that basically can walk (at a constant
-        speed), crouch, do interaction with map objectives.
-        <br /><span class="element-title">components</span><br />
-        All enemies have some attributes including speed and vision range. Since
-        the level has a stealth theme, it will have walls, doors, stairs and map
-        objectives.
-      </div>
-      <div class="main-design-title">
-        <hr />
         core mechanism
       </div>
       <div class="main-design-description">
@@ -150,35 +136,58 @@
         -Character can knock down enemies in melee range.<br />
         -Character will have to interact with the trigger item.<br />
         <span class="element-title">enemy AI</span><br />
-        -Enemies have fixed patrol, mostly continuous with some stopping over
-        time.<br />
-        -Enemies have fixed vision range.<br />
-        -Enemies will engage when they spot player's character.<br />
-        -Enemies will be alerted when they find a body.<br />
+        -Enemies have fixed patrol. They switch between standing still and
+        walking.<br />
+        -Enemies have fixed vision cone inside which the character will be
+        detected.<br />
+        -Enemies will engage when they spot the character.<br />
+        -Enemies will be alerted if they find a body.<br />
         <span class="element-title">goal</span><br />
         -The game consists of two sequential goals.<br />
-        -The first goal is to get to the destination and trigger the mission
-        item. The second goal is to eliminate an important target silently.<br />
-        - Two goals are using the same map, but with different scenes and
-        dealing with different enemy AI.<br />
+        -The first goal is to get to the map point and trigger the objective -
+        to cut off electricity. The second goal is to get the intel located
+        inside the mansion.<br />
+        - Two goals are in the same map, but in different scenes and enemy AI
+        will change once the first goal is achieved.<br />
         After deciding the core gameplay, I could begin sketching the level in
         2D illustration which determines the basic layout and possible routes
         for players.
       </div>
       <div class="main-design-title">
         <hr />
-        2D Layout
+        2D layout
       </div>
       <div class="main-design-description">
-        At pre-engine phase I use Adobe Illustrator to block out the level and
-        use some legends for the playable character, enemies and goal. I would
-        like to make 2 major scenes in the game: the outdoor scene and the
-        indoor scene. The first goal only requires actions outdoors while the
-        second goal needs the character intrude the house and stealth in a more
-        dangerous situation.
+        At pre-programming phase I use Adobe Illustrator to block out the level
+        and use some legends for the playable character, enemies and goal. I
+        would like to make 2 major scenes in the game: the outdoor scene and the
+        indoor scene. The first goal only requires outdoor actions while the
+        second goal needs the character sneak into the mansion and stealth in a
+        more limited space.
         <div class="element-image">
-          <img src="/media/games/level-design/stealth/2d-outside.png" />
+          <img src="/media/games/level-design/stealth/2d-outdoor.png" />
+          <img src="/media/games/level-design/stealth/2d-indoor.png" />
         </div>
+      </div>
+      <div class="main-design-title">
+        <hr />
+        3D prototyping
+      </div>
+      <div class="main-design-description">
+        After having a sketch of the map layout, I could start prototyping and
+        iterating the experience in third person perspective in a 3D environment
+        with the help of game engine.
+        <br /><span class="element-title">translating</span><br />
+        Putting a 2D map into 3D is not simply replacing everything with cubes.
+        With a higher dimension, I need to think of how to translate faithfully
+        and efficiently:<br />
+        -Pay special attention to the height difference. Height difference would
+        matter a lot in determining the visibility, and engaging enemies from a
+        higher place is possible but is almost impossible from a lower place.<br />
+        -Lines in 3D world have height and thickness. Walls are key components
+        in stealth games as they block sights.<br />
+        -Consider in a dynamic point of view. Enemies have vision cones and as
+        they move, they are observing different places.<br />
       </div>
 
       <div class="main-title">
@@ -246,12 +255,12 @@
 
     <div id="bottom">
       <div id="back">
-        <a onclick="transitionToPage('stadia-project.html','var(--rurikon)')"
+        <a onclick="transitionToPage('stadia-project','var(--rurikon)')"
           >➙</a
         >
       </div>
       <div id="next">
-        <a onclick="transitionToPage('cosmos.html','var(--rurikon)')">➙</a>
+        <a onclick="transitionToPage('cosmos','var(--rurikon)')">➙</a>
       </div>
     </div>
   </body>
