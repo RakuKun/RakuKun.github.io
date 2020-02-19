@@ -135,16 +135,5 @@ hr {
 }
 
 .element-title {
-  display: inline-block;
-  background-color: var(--shironeri);
-  margin: 0.25em 0;
-  border: 0.25em solid var(--shironeri);
   color: var(--rurikon);
-  font-weight: 600;
-}
-
-#bottom {
-  clear: both;
-  height: 10vh;
-  position: relative;
 }

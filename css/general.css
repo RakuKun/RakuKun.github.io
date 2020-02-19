@@ -129,6 +129,14 @@ html {
   font-weight: 600;
 }
 
+.element-title {
+  display: inline-block;
+  background-color: var(--shironeri);
+  margin: 0.5em 0 0.25em 0;
+  border: 0.25em solid var(--shironeri);
+  font-weight: 600;
+}
+
 .element-image {
   margin: 2vh 0 0 0;
   width: 100%;
@@ -151,4 +159,10 @@ html {
   width: 49%;
   height: 100%;
   object-fit: contain;
+}
+
+#bottom {
+  clear: both;
+  height: 10vh;
+  position: relative;
 }
