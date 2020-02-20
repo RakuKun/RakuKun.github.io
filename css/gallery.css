@@ -24,28 +24,6 @@ body.fade-out {
   background-repeat: no-repeat;
 }
 
-.top {
-  padding: 0 10vw;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-clip: border-box;
-  background-size: cover;
-  font-weight: 600;
-}
-
-.top-title {
-  user-select: none;
-  font-size: 6em;
-  padding: 5vh 0;
-}
-
-.top-introduction {
-  display: inline-block;
-  vertical-align: top;
-  width: 49%;
-  font-size: 1.5em;
-}
-
 .top-information {
   background-color: var(--shironeri);
   border: 1em solid var(--shironeri);
@@ -53,11 +31,6 @@ body.fade-out {
   font-size: 1.25em;
   position: absolute;
   bottom: 10vh;
-}
-
-.main {
-  transition: 1s ease-in-out;
-  padding: 0 10vw;
 }
 
 .main-title {
@@ -77,22 +50,6 @@ body.fade-out {
   font-weight: 600;
 }
 
-.main-video {
-  margin: 1vh 0;
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%;
-}
-
-.main-video iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
 .main-design-title {
   float: left;
   width: 38.2%;
@@ -107,23 +64,7 @@ body.fade-out {
 }
 
 .main-information {
-  float: left;
-  max-width: 60%;
-  width: fit-content;
-  margin: 1vh 0;
-  background-color: var(--shironeri);
-  border: 1em solid var(--shironeri);
-  color: var(--ruri);
-  font-weight: 600;
-  font-size: 1.25em;
-}
-
-hr {
-  width: 90%;
-  margin-bottom: 0;
-  float: left;
-  background-color: var(--shironeri);
-  border: 0.05em solid var(--shironeri);
+  color: var(--kurenai);
 }
 
 .element-title {

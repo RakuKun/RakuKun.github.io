@@ -17,13 +17,6 @@ body.fade-out {
   transition: none;
 }
 
-#main {
-  transition: 1s ease-in-out;
-  padding: 0 10vw;
-  background: var(--ro);
-  color: var(--shironeri);
-}
-
 .section {
   white-space: nowrap;
   position: relative;
@@ -100,11 +93,11 @@ body.fade-out {
   color: var(--ro);
 }
 
-.section:nth-child(5) .top {
+.section:nth-child(5) .go-top {
   color: var(--ro);
 }
 
-.section:nth-child(5) .top:hover {
+.section:nth-child(5) .go-top:hover {
   color: var(--tohoh);
 }
 
@@ -135,6 +128,7 @@ body.fade-out {
 }
 
 .section-entry div {
+  color: var(--shironeri);
   transition: 0.5s ease-in-out;
   position: relative;
   width: 100%;
@@ -191,24 +185,21 @@ body.fade-out {
   line-height: 5vmin;
 }
 
-.top {
+.go-top {
   user-select: none;
   line-height: 0.5em;
   position: absolute;
   transform: rotateZ(-90deg);
   bottom: 7vh;
   font-size: 2em;
+  color: var(--shironeri);
 }
 
-.top:nth-child(4) {
-  color: var(--ro);
-}
-
-.top:hover {
+.go-top:hover {
   color: var(--tohoh);
 }
 
-.top:active {
+.go-top:active {
   text-shadow: 0 0 16px rgb(255, 218, 96), 0 0 20px rgb(255, 223, 116),
     0 0 24px rgb(255, 227, 135), 0 0 28px rgb(255, 230, 147);
 }

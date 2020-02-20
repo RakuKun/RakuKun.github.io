@@ -18,32 +18,6 @@ body.fade-out {
   transition: none;
 }
 
-#main {
-  transition: 1s ease-in-out;
-  padding: 0 10vw;
-}
-
-.top {
-  padding: 0 10vw;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-weight: 600;
-}
-
-.top-title {
-  user-select: none;
-  font-size: 6em;
-  padding: 5vh 0;
-}
-
-.top-introduction {
-  display: inline-block;
-  vertical-align: top;
-  width: 49%;
-  font-size: 1.5em;
-}
-
 .top-information {
   background-color: var(--shironeri);
   border: 2px solid var(--ro);
@@ -71,13 +45,9 @@ body.fade-out {
 }
 
 .main-information {
-  width: fit-content;
-  margin: 1vh 0;
-  background-color: var(--shironeri);
-  border: 1em solid var(--shironeri);
-  color: var(--sohi);
-  font-weight: 600;
-  font-size: 1.25em;
+  background-color: var(--ro);
+  border: 1em solid var(--ro);
+  color: var(--ro);
 }
 
 .main-design-title {
@@ -91,14 +61,6 @@ body.fade-out {
   padding-top: 1.75em;
   width: 61.8%;
   font-size: 1.5em;
-}
-
-hr {
-  width: 90%;
-  margin-bottom: 0;
-  float: left;
-  background-color: var(--shironeri);
-  border: 0.05em solid var(--ro);
 }
 
 .element-title {
