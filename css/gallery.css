@@ -25,29 +25,7 @@ body.fade-out {
 }
 
 .top-information {
-  background-color: var(--shironeri);
-  border: 1em solid var(--shironeri);
   color: var(--kurenai);
-  font-size: 1.25em;
-  position: absolute;
-  bottom: 10vh;
-}
-
-.main-title {
-  clear: both;
-  text-align: center;
-  position: relative;
-  margin: 0 10vw;
-  padding: 10vh 0 3vh 0;
-  color: var(--shironeri);
-  font-size: 5em;
-  font-weight: 600;
-}
-
-.main-introduction {
-  width: 100%;
-  font-size: 1.5em;
-  font-weight: 600;
 }
 
 .main-design-title {

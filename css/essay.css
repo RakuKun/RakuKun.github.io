@@ -19,29 +19,13 @@ body.fade-out {
 }
 
 .top-information {
-  background-color: var(--shironeri);
   border: 2px solid var(--ro);
   padding: 1em;
   color: var(--ro);
-  font-size: 1.25em;
-  position: absolute;
-  bottom: 10vh;
 }
 
 .main-title {
-  clear: both;
-  text-align: center;
-  position: relative;
-  margin: 0 10vw;
-  padding: 10vh 0 3vh 0;
-  color: var(--shironeri);
-  font-size: 5em;
-  font-weight: 600;
-}
-
-.main-introduction {
-  font-size: 1.5em;
-  font-weight: 600;
+  color: var(--ro);
 }
 
 .main-information {
