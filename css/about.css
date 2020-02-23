@@ -1,11 +1,11 @@
-@import "./general.css";
+@import './general.css';
 
 html {
   overflow: hidden;
 }
 
 body {
-  font-family: "Cormorant Garamond", serif;
+  font-family: 'Cormorant Garamond', serif;
   font-weight: 400;
   margin: 0;
   transition: 1s ease-in-out;
@@ -38,7 +38,8 @@ body.fade-out {
 
 .main-title {
   position: fixed;
-  top: 30vh;
+  top: 20vh;
+  left: 5vw;
   user-select: none;
   font-size: 6em;
   font-weight: 600;
@@ -47,8 +48,9 @@ body.fade-out {
 .main-introduction {
   position: fixed;
   top: 45vh;
+  left: 35vw;
   vertical-align: top;
-  width: 40%;
+  max-width: 40%;
   font-size: 1.5em;
 }
 
