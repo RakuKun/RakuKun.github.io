@@ -7,7 +7,7 @@
       name="description"
       content="How to Create Side Missions for MMORPG by Liangzheng Luo."
     />
-    <meta name="theme-color" content="#FFFFFF" />
+    <meta name="theme-color" content="#005DAF" />
     <meta name="author" content="Liangzheng Luo" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Creating Missions for MMORPG - Liangzheng Luo</title>
@@ -23,7 +23,7 @@
     <span id="cursor-outline"></span>
     <span id="cursor"></span>
     <script type="module" src="/js/general.js"></script>
-    <div id="home"><a onclick="transitionToPage('../')">◯</a></div>
+    <div id="home"><a onclick="transitionToPage('../')"> ◯ </a></div>
 
     <div
       class="top"
@@ -35,11 +35,10 @@
       <div class="top-introduction">
         I worked during the summer vacation of 2018 as a game design intern for
         Revelation Online Mobile, an MMORPG developed by Pangu Studio of
-        NetEase. Under the supervision of lead designer and a system designer
-        fellow, I created several side missions with a focus on fun features
-        that would make players feel really immersed in the world. The ideal
-        side missions don’t have to be very long yet the innovation of gameplay
-        and storytelling is highly valued.
+        NetEase. Under supervision of the lead designer and a system designer
+        mentor, I created several side quests focusing on the narrative and
+        gameplay that would make players feel immersed in the high fantasy
+        world.
       </div>
       <div class="top-information">
         <span style="color:var(--ro);">time</span> summer 2018 <br />
@@ -53,37 +52,50 @@
         Methodology
       </div>
       <div class="main-description">
-        Before setting off the production, it is very important to have an
-        overview of what the game ‘feels like’ and how we deliver side missions.
-        It is a high fantasy world with many imaginary creatures and magic.
+        Before setting off on the adventure, it is very important to have an
+        overview of what the game ‘feels like’ and how we should deliver side
+        missions. Revelation's backstory is pretty much like the extension of
+        traditional Chinese legend: Classic of Mountains and Seas (Shanhaijing),
+        a high fantasy world with many imaginary creatures. This means a large
+        scale of possibility to implement new gameplay under a more conservative
+        theme. <br />Since the game has already gone through 5 iteration cycle
+        by the time I joined, I was able to concentrate on design with a fairly
+        complete system framework.
       </div>
       <div class="main-design-title">
         <hr />
         system overview
       </div>
       <div class="main-design-description">
-        <span class="element-title">adventure system</span><br />
-        Adventure System is a collection of gameplay, content and reward. It
-        aims to encourage players to explore the game by providing nice single
-        player focused experience. Most missions in Adventure System are not
-        compulsory, about 5 minutes long, and challenging but also rewarding.
-        <br /><span class="element-title">transformation system</span><br />
-        Transformation System is a very special one by which character can
-        transform into another creature in the game, replacing the original
-        models, animations, skills, even the camp. For instance, if a character
-        becomes a crab, they walk sideways, use claws to attack, and become
-        friends with other AI crabs. The system grants designers brand new ways
-        to think about how living things in the game interact with each other,
-        and how to implement unforgettable experience using it.
-        <br /><span class="element-title">camera system</span><br />
+        System in MMORPG context refers to the framework that takes charge of a
+        certain gameplay. Revelation contains a bunch of systems ranging from
+        very basic ones such Character Growth, Equipment, Mission (just as other
+        MMORPGs do) to more specific ones like Adventure, Transformation and
+        Camera. The following are those that I mainly worked on.<br />
+        <span class="element-title">Adventure System</span><br />
+        I mostly worked in creating content for Adventure System, which provides
+        unique experience to amplify the feeling of "freedom" and "depth". It
+        aims to encourage players to explore the world by providing engaging
+        single-player focused experience. Missions in Adventure System are not
+        compulsory and are designed for those who like to spend more time in
+        game.
+        <br /><span class="element-title">Transformation System</span><br />
+        Transformation System allows character to transform into another
+        creature in the game by replacing their models, animations, skills, even
+        the faction. For instance, if a character becomes a crab, they walk
+        sideways, use claws to attack, and become friends with other AI crabs.
+        The system grants designers brand new ways to think about how living
+        things in the game interact with each other, and inspires me to
+        implement an unforgettable experience.
+        <br /><span class="element-title">Camera System</span><br />
         Camera System is not a rare one in MMO games, but the one in Revelation
-        has some cool features such as capturing ghost creatures and recognizing
-        NPC. This opens opportunity to implement it into missions.
-        <br /><span class="element-title">audio system</span><br />
-        There is a special item to play sounds in the game, and player collects
-        sound under the framework of Audio System. It offers interaction with
-        the sound, such as affecting some creatures, adding buff, and triggering
-        events.
+        has some cool features such as capturing ghost creatures (that are
+        unseen normally) and recognizing the name of anything in the frame.
+        <br /><span class="element-title">Audio System</span><br />
+        Player can collect some sound and use a special item to play sounds
+        thanks to Audio System. It is special in a way that it records the sound
+        ID thus allowing triggering events that have sounds as parameters, which
+        means more options to choose from when designing side quests.
       </div>
       <div class="main-design-title">
         <hr />
@@ -91,32 +103,41 @@
       </div>
       <div class="main-design-description">
         <span class="element-title">combining systems</span><br />
-        My mentor and I both agree that the most fun comes from the
-        cross-product of multiple systems. There are 4 special ones listed
-        above, and of course many basic systems (economy, battle, mission,
-        achievement) are so fundamental that we cannot go without them.
-        <br />One of the practical ways is to think of the components of
-        gameplay and try finding some possible options for each. The formula is:
-        <br /><span class="important"
-          >Interaction Function * Entity * Fantasy * Reward = Complete
-          Mission</span
-        >
+        My mentor and I both agree that the most fun comes from the crosspoint
+        of multiple systems. There are 4 special ones listed above, and of
+        course many basic systems (economy, battle, mission, achievement) are
+        also open to offer fundamental gameplay.
+        <br />After getting familiar with systems, I figured out a pratical way
+        to create quests: observe the components of gameplay and try finding
+        some possible options for each. The formula is: <br /><span
+          class="important"
+          >Interactive Feature * Entity * Fantasy * Reward = Complete
+          Mission.</span
+        ><br />
+        Interactive feature comes from the functions that game system could
+        offer. Entity is the subject (usually the player) and object of the
+        interaction. Fantasy is the narrative logic behind the interaction: why
+        is it happening and why the player should take the challenge? And reward
+        is of course, what you will get.
         <div class="element-image">
           <img src="/media/analysis/mmorpg/mission-elements.png" />
         </div>
         <br /><span class="element-title">reward</span><br />
-        It is better to reward players for exploring Adventure System as the
-        missions are additional and optional. We decided to use a unique
-        currency (called "Rainbow Jade") for missions so it won't affect in-game
-        economic balance and is easier to determine the price of items.
+        Players need feedback and reward for exploring Adventure System and
+        doing optional quests. We decided to use a unique currency (called
+        "Rainbow Jade") only for buying items in Adventure System so it won't
+        affect in-game economic balance and is easier to determine the price of
+        items.
       </div>
 
       <div class="main-title">
         Production
       </div>
       <div class="main-description">
-        During the internship I analysed existing gameplay and created many new
-        ones.
+        When it comes to production, my major work was filling Excel sheets and
+        adjusting things directly in Unity. I created side quests, did rounds of
+        debugging and iteration, and helped organize playtests with naive
+        guests.
       </div>
       <div class="main-design-title">
         <hr />
@@ -144,7 +165,7 @@
         Side mission: Crab Wars lets players transform into a crab and go
         through a bizarre experience in fighting with and against crabs. This
         mission fully uses the Transform System and uses trick in switching
-        camps.<br />
+        factions.<br />
         <div class="element-image">
           <img src="/media/analysis/mmorpg/crab-wars.png" />
         </div>
@@ -186,12 +207,10 @@
         document
       </div>
       <div class="main-design-description">
-        I wrote a design document as the summation of my internship. It is
-        available
+        As the grande finale of my internship, I wrote a design documentation on
+        how to implement design features for future use. It is available
         <span class="important"
-          ><a
-            href="/media/analysis/mmorpg/Methodology on Adventure System.xlsx"
-            target="_blank"
+          ><a href="/media/analysis/mmorpg/methodology.xlsx" target="_blank"
             >Here.</a
           ></span
         >

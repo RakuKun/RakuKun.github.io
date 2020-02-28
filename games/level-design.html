@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, user-scalable=0" />
     <meta name="description" content="Level Design by Liangzheng Luo." />
-    <meta name="theme-color" content="#FFFFFF" />
+    <meta name="theme-color" content="#005DAF" />
     <meta name="author" content="Liangzheng Luo" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Level Design - Liangzheng Luo</title>
@@ -21,7 +21,7 @@
     <span id="cursor"></span>
     <script type="module" src="/js/general.js"></script>
     <div id="home">
-      <a onclick="transitionToPage('../')">◯</a>
+      <a onclick="transitionToPage('../')"> ◯ </a>
     </div>
 
     <div
@@ -33,17 +33,17 @@
       </div>
       <div class="top-introduction">
         As a game designer I pay special attention to level design and how it
-        works with other game elements such as quest and story. This page
-        showcases some of my ongoing level design work. The complete level runs
-        in Unreal Engine and I use Adobe Illustrator and Maya for layout.
-        <br />I am still designing and from time to time more content will be
-        added.
+        works with other game elements such as quest system and narrative. This
+        page showcases some of my ongoing level design work. The complete level
+        runs in Unreal Engine or Unity, and I use Adobe Illustrator and Maya for
+        layout.
+        <br />From time to time more content will be added.
       </div>
       <div class="top-information">
         <span style="color:var(--ro);">time</span> spring 2020 - <br />
         <span style="color:var(--ro);">platform</span> Unreal Engine, Unity
         <br />
-        <span style="color:var(--ro);">work</span> level design, environment art
+        <span style="color:var(--ro);">work</span> individual work
       </div>
     </div>
 
@@ -58,9 +58,10 @@
         want something different from a shoot-'em-up.
       </div>
       <div class="main-information">
-        <span style="color:var(--ro); ">duration</span> ~ 6 minutes <br />
-        <span style="color:var(--ro);">theme</span> stealth<br />
-        <span style="color:var(--ro);">gameplay</span> 3D third person <br />
+        <span style="color:var(--ro); ">duration</span> about 6 minutes <br />
+        <span style="color:var(--ro);">genre</span> 3D third person stealth
+        <br />
+        <span style="color:var(--ro);">platform</span> Unity <br />
       </div>
       <div class="main-design-title">
         <hr />
@@ -125,7 +126,7 @@
       </div>
       <div class="main-design-title">
         <hr />
-        core mechanism
+        core mechanics
       </div>
       <div class="main-design-description">
         Core mechanism will cover the stealth game's basic rules and gameplay,
@@ -136,34 +137,34 @@
         -Character can knock down enemies in melee range.<br />
         -Character will have to interact with the trigger item.<br />
         <span class="element-title">enemy AI</span><br />
-        -Enemies have fixed patrol. They switch between standing still and
-        walking.<br />
+        -Enemies have fixed patrol. Their move pattern will be one of three:
+        looping, ping-pong, or being still.<br />
         -Enemies have fixed vision cone inside which the character will be
         detected.<br />
-        -Enemies will engage when they spot the character.<br />
+        -Enemies will engage when they find character in a very close
+        distance.<br />
         -Enemies will be alerted if they find a body.<br />
         <span class="element-title">goal</span><br />
         -The game consists of two sequential goals.<br />
         -The first goal is to get to the map point and trigger the objective -
         to cut off electricity. The second goal is to get the intel located
         inside the mansion.<br />
-        - Two goals are in the same map, but in different scenes and enemy AI
-        will change once the first goal is achieved.<br />
-        After deciding the core gameplay, I could begin sketching the level in
-        2D illustration which determines the basic layout and possible routes
-        for players.
+        - Two goals use same map, but in different scenes.<br />
+        After deciding the core gameplay, I began sketching the level in 2D
+        illustration which indicates the level layout and possible routes for
+        players.
       </div>
       <div class="main-design-title">
         <hr />
         layout in 2d
       </div>
       <div class="main-design-description">
-        At pre-programming phase I use Adobe Illustrator to block out the level
-        and use some legends for the playable character, enemies and goal. I
-        would like to make 2 major scenes in the game: the outdoor scene and the
-        indoor scene. The first goal only requires outdoor actions while the
-        second goal needs the character sneak into the mansion and stealth in a
-        more limited space.
+        During design phase I used Adobe Illustrator to block out the level and
+        use some legends for the playable character, enemies and goal. I would
+        like to make 2 major scenes in the game: the outdoor scene and the
+        indoor scene. The first goal is set outside the mansion while the second
+        goal needs the character to sneak into the mansion and stealth in a more
+        constraint area.
         <div class="element-image">
           <img src="/media/games/level-design/stealth/2d-outdoor.png" />
           <img src="/media/games/level-design/stealth/2d-indoor.png" />
@@ -174,20 +175,23 @@
         prototyping in 3d
       </div>
       <div class="main-design-description">
-        After having a sketch of the map layout, I could start prototyping and
-        iterating the experience in third person perspective in a 3D environment
-        with the help of game engine.
+        After having a layout sketch, I started prototyping and iterating the
+        experience in third person perspective in a 3D environment with the help
+        of the game engine.
         <br /><span class="element-title">translating</span><br />
-        Putting a 2D map into 3D is not simply replacing everything with cubes.
-        With a higher dimension, I need to think of how to translate faithfully
-        and efficiently:<br />
+        Putting 2D maps into a 3D world is not simply replacing lines with
+        cubes. Given an additional space dimension, I need to think of how to
+        translate the design faithfully and efficiently:<br />
         -Pay special attention to the height difference. Height difference would
         matter a lot in determining the visibility, and engaging enemies from a
         higher place is possible but is almost impossible from a lower place.<br />
-        -Lines in 3D world have height and thickness. Walls are key components
-        in stealth games as they block sights.<br />
-        -Consider in a dynamic point of view. Enemies have vision cones and as
-        they move, they are observing different places.<br />
+        -Lines in 3D world have height and thickness. Wall is a key component in
+        3D stealth games as it blocks sights and gives space for players to hide
+        and ambush, so it plays a key role in game balance, and that's why the
+        height and thickness is so important.<br />
+        -Think in a dynamic point of view. Enemies have vision cones and as they
+        move, they are observing different places. As I programmed the whole
+        game system, there are way more details that needs careful thoughts.<br />
       </div>
 
       <div class="main-title">
@@ -203,9 +207,9 @@
       </div>
       <div class="main-information">
         <span style="color:var(--ro); ">duration</span> ~ 5 minutes <br />
-        <span style="color:var(--ro);">theme</span> exploration, story driven
+        <span style="color:var(--ro);">genre</span> thirf person action
         <br />
-        <span style="color:var(--ro);">genre</span> third person action <br />
+        <span style="color:var(--ro);">platform</span> Unreal Engine <br />
       </div>
       <div class="main-design-title">
         <hr />
