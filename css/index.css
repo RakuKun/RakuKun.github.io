@@ -5,7 +5,6 @@ html {
 
 body {
   font-family: 'Cormorant Garamond', serif;
-  font-weight: 400;
   background-color: var(--ro);
   margin: 0;
   opacity: 1;
@@ -125,7 +124,7 @@ body.fade-out {
   font-size: 3.5vw;
   font-weight: 600;
   height: 65vh;
-  line-height: 6.5vh;
+  line-height: 6.5vmin;
   border: solid 2px var(--shironeri-trans);
   white-space: normal;
   background-clip: padding-box;
@@ -189,6 +188,7 @@ body.fade-out {
   vertical-align: top;
   margin: 1vh 0;
   font-size: 5vmin;
+  font-weight: 600;
   line-height: 5vmin;
 }
 

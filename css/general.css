@@ -171,6 +171,7 @@ hr {
 #main {
   transition: 1s ease-in-out;
   padding: 0 10vw;
+  font-weight: 500;
 }
 
 .main-title {

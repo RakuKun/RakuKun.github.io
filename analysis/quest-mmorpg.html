@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, user-scalable=0" />
     <meta
       name="description"
-      content="How to Create Side Missions for MMORPG by Liangzheng Luo."
+      content="How to Create Side Quests for MMORPG by Liangzheng Luo."
     />
     <meta name="theme-color" content="#005DAF" />
     <meta name="author" content="Liangzheng Luo" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Creating Missions for MMORPG - Liangzheng Luo</title>
+    <title>Creating Quests for MMORPG - Liangzheng Luo</title>
     <link rel="icon" type="image/png" href="/media/icon.png" />
     <link href="/css/analysis.css" rel="stylesheet" type="text/css" />
     <link
@@ -30,7 +30,7 @@
       style="background-image: url(/media/analysis/mmorpg/title.jpg);"
     >
       <div class="top-title" style="font-size: 5em;">
-        Creating Missions for MMORPG
+        Creating Quests for MMORPG
       </div>
       <div class="top-introduction">
         I worked during the summer vacation of 2018 as a game design intern for
@@ -54,7 +54,7 @@
       <div class="main-description">
         Before setting off on the adventure, it is very important to have an
         overview of what the game ‘feels like’ and how we should deliver side
-        missions. Revelation's backstory is pretty much like the extension of
+        quests. Revelation's backstory is pretty much like the extension of
         traditional Chinese legend: Classic of Mountains and Seas (Shanhaijing),
         a high fantasy world with many imaginary creatures. This means a large
         scale of possibility to implement new gameplay under a more conservative
@@ -69,14 +69,14 @@
       <div class="main-design-description">
         System in MMORPG context refers to the framework that takes charge of a
         certain gameplay. Revelation contains a bunch of systems ranging from
-        very basic ones such Character Growth, Equipment, Mission (just as other
+        very basic ones such Character Growth, Equipment, quest (just as other
         MMORPGs do) to more specific ones like Adventure, Transformation and
         Camera. The following are those that I mainly worked on.<br />
         <span class="element-title">Adventure System</span><br />
         I mostly worked in creating content for Adventure System, which provides
         unique experience to amplify the feeling of "freedom" and "depth". It
         aims to encourage players to explore the world by providing engaging
-        single-player focused experience. Missions in Adventure System are not
+        single-player focused experience. Quests in Adventure System are not
         compulsory and are designed for those who like to spend more time in
         game.
         <br /><span class="element-title">Transformation System</span><br />
@@ -105,14 +105,14 @@
         <span class="element-title">combining systems</span><br />
         My mentor and I both agree that the most fun comes from the crosspoint
         of multiple systems. There are 4 special ones listed above, and of
-        course many basic systems (economy, battle, mission, achievement) are
-        also open to offer fundamental gameplay.
+        course many basic systems (economy, battle, quest, achievement) are also
+        open to offer fundamental gameplay.
         <br />After getting familiar with systems, I figured out a pratical way
         to create quests: observe the components of gameplay and try finding
         some possible options for each. The formula is: <br /><span
           class="important"
           >Interactive Feature * Entity * Fantasy * Reward = Complete
-          Mission.</span
+          quest.</span
         ><br />
         Interactive feature comes from the functions that game system could
         offer. Entity is the subject (usually the player) and object of the
@@ -134,10 +134,10 @@
         Production
       </div>
       <div class="main-description">
-        When it comes to production, my major work was filling Excel sheets and
-        adjusting things directly in Unity. I created side quests, did rounds of
-        debugging and iteration, and helped organize playtests with naive
-        guests.
+        When it comes to production, my major work was filling Excel
+        spreadsheets to implement quest logic and adjusting things directly in
+        Unity. I created side quests, did rounds of debugging and iteration, and
+        helped organize playtests with naive guests.
       </div>
       <div class="main-design-title">
         <hr />
@@ -146,61 +146,81 @@
       <div class="main-design-description">
         <span class="element-title">problems of former ones</span><br />
         Before I joined, the team already had some prototype design for
-        Adventure System. After playing all of them, I did sense the
-        disconnection between the quests and the world. Here is my analysis.
-        <br /><span class="element-title">improvement direction</span><br />
-        I managed to figure out what is the right track of fixing the problem
-        and creating new side missions. For the old ones, I try to find ways to
-        put them in a larger context (to fit the backstory, to combine more
-        systems, to be more challening and rewarding) so the core fun of
-        Adventure System is well reflected in those missions. For the new ones,
-        I stick to the design principles concluded in Methodology session.
+        Adventure System. After playing all of them, I talked with my mentor on
+        the feeling of disconnection between the quests and the world. Many
+        quests only uses one specific system feature just to show that feature,
+        not to serve the world's narrative. This made me feel I am playing a
+        collection of mini games, each game was fun but they actually didn't
+        help the players know more about the world.
+        <br /><span class="element-title">direction of improvement</span><br />
+        From the former experience and a "all-for-one" faith, I managed to
+        figure out what could be the correct direction of fixing the problem and
+        creating new side quests. For the old ones, I wanted to find ways to put
+        them in a larger context (to fit the backstory, to combine more systems,
+        to be more challening and rewarding) so the core fun of Adventure System
+        is well reflected in those quests. For the new ones, I stick to the
+        design principles concluded in Methodology session.<br />
+        <div class="element-title">typical workflow</div>
+        The majority of "design" work is done with the combination of several
+        spreadsheets each of which implements a system in the game. Generally to
+        create a quest, I will need to modify quite a few number of
+        spreadsheets. Also, as the tool programmers have developed in-engine
+        plugins that allows the direct control of in-game entity, I was able to
+        place NPC, their patrol routes (if applicable) and modify a small scale
+        of terrain.
+        <div class="element-image">
+          <img src="/media/analysis/mmorpg/systems.png" />
+        </div>
       </div>
       <div class="main-design-title">
         <hr />
-        mission examples
+        quest examples
       </div>
       <div class="main-design-description">
         <span class="element-title">Crab Wars</span><br />
-        Side mission: Crab Wars lets players transform into a crab and go
-        through a bizarre experience in fighting with and against crabs. This
-        mission fully uses the Transform System and uses trick in switching
-        factions.<br />
+        Side quest: Crab Wars asks players to transform into crabs and go
+        through a bizarre experience joining in a fight of crabs. This quest
+        fully uses the Transform System and is possible with faction switching
+        feature.<br />
         <div class="element-image">
           <img src="/media/analysis/mmorpg/crab-wars.png" />
         </div>
-        Mission Procedure: 1. Character (as human) notices some blue crabs
+        Quest Procedure: 1. Character (as human) notices some blue crabs
         fighting with red ones. 2. If the character uses transformation tool to
         transform into a crab with either color, they can talk to the crab
         commander and choose to fight for their species. 3. After killing some
         enemy crabs the character can talk to the commander again to finish the
-        mission and get reward from crab's gratitude.<br />
+        quest and get reward from crab's gratitude.<br />
         The interesting part in gameplay is that the player could actually do
-        mission 2 times for the both team, and have different conversation and
-        receive achievement. I think this mission does a good job in encouraging
+        quest 2 times for the both team, and have different conversation and
+        receive achievement. I think this quest does a good job in encouraging
         players to explore the world, and crabs fighting is an interesting and
-        rare point so transforming and getting a mission meets player's
-        curiosity.
+        rare point so transforming and getting a quest meets player's curiosity.
         <br /><span class="element-title">Unseen Love</span><br />
-        Side mission: Unseen Love tells a story between a woman and her ghost
-        lover using the feature of Camera System. <br />
+        Side quest: Unseen Love tells a story between a woman and her ghost
+        lover featuring Camera System and branching narratives. <br />
         <div class="element-image">
           <img src="/media/analysis/mmorpg/unseen-love.png" />
         </div>
-        Mission Procedure: 1. Character wanders on the street and finds a
-        weeping woman under a peach tree. 2. As the character talks to the
-        woman, she tells that she's missing her dead husband. She has a feeling
-        that her husband is still around there. 3. If the character uses camera,
-        they will find a ghost man under the peach tree, looking at the woman.
-        The ghost says that he's been dead for some time and even his ghost
-        figure is fading away, and he wants the woman to live happy without her.
-        4. If the character takes a photo of the man and shows to the woman, the
-        woman get relieved as she knows now he's always here with her.<br />
+        Quest Procedure: 1. Character finds a weeping woman standing under a
+        peach tree. 2. As the character talks to the woman, she says that she's
+        just missing her husband who set off fishing a month ago and never came
+        back. She presumes he's already dead but can't see a fact. The quest is
+        not formally given out but the player may search for an answer. 3. If
+        the character moves the camera towards the tree, they will find a ghost
+        man under the peach tree, looking at the woman. The ghost says that he's
+        been dead for some time and even his ghost figure is fading away, and
+        his last wish is that the woman may live happy without him. 4. If the
+        character takes a photo of the tree and shows to the woman, the woman
+        get relieved as she knows now he's always here with her even though she
+        cannot see him in the picture.<br />
         I spent some time researching the love story between human and ghost and
-        designed this mission using the Camera System that allows the ghost to
-        appear in frame. I want to use dialogue clues as indirect control for
-        those who are eager to solve problems. The most surprising moment should
-        be turning on the camera to see a person right in front of you!
+        designed this quest using the Camera System that allows the ghost to
+        appear in photo frame. I wanted to use dialogue clues as indirect
+        control for those who are eager to interact with the world. The most
+        surprising moment should be turning on the camera to see a person right
+        in front of you, and branching narratives give everyone a chance to
+        choose the story they want.
       </div>
       <div class="main-design-title">
         <hr />
