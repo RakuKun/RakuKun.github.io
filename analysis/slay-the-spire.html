@@ -24,12 +24,12 @@
     <span id="cursor"></span>
     <script type="module" src="/js/general.js"></script>
     <div id="home">
-      <a onclick="transitionToPage('../')">◯</a>
+      <a onclick="transitionToPage('../')"> ◯ </a>
     </div>
 
     <div
       class="top"
-      style="background-image: url(/media/analysis/inside/title.jpg);"
+      style="background-image: url(/media/analysis/slay-the-spire/title.jpg);"
     >
       <div class="top-title">
         Slay the Spire: Engagement and Balance (ongoing)
@@ -47,124 +47,70 @@
 
     <div id="main">
       <div class="main-title">
-        Basic Elements
+        Design the Uncommon
       </div>
       <div class="main-description">
-        Slay the Spire is a roguelike, deck-building, and turn-based game.
+        Slay the Spire is a roguelike, deck-building game. Just by the genre it
+        is far from being so engaging and fun to play, absolutely there is some
+        magic in game design that makes the common things uncommon.
       </div>
       <div class="main-design-title">
         <hr />
         roguelike
       </div>
       <div class="main-design-description">
-        <span class="element-title">refresh!</span><br />
-        Each scene in INSIDE is connected by puzzles, usually at most one puzzle
-        for one scene. So the puzzle in form is not connected, and as the result
-        each is not very complicated. INSIDE makes its puzzles feel "connected"
-        with the continuity of the world and items - like the submarine in
-        underwater levels.<br />
-        <span class="element-title">death is hard</span><br />
-        Generally there are two prospective to start thinking of puzzles: making
-        difficult one that offers unlimited time for thinking, and simpler one
-        that requires correct input under time limitation. The two kinds of
-        puzzles could balance the game difficulty and serve the narrative: when
-        the character faces a puzzle where no one is here, it could be rather
-        large scaled and complicated. If he is being chased by a hound, the
-        puzzle is more like an adventure as time for reaction is short as he
-        keeps running. After all, puzzle design serves the story. If it is
-        annoyingly hard the story flow will be interrupted.
+        Though today the definition of roguelike is quickly changing as new
+        roguelikes arise and old ones uncategorized, the long-time popular game
+        genre has some elements unchanged.
+        <span class="element-title">procedurally generated levels</span><br />
+        Slay the Spire uses randomly generated level to dramatically increase
+        replayability since every one is unique. <br />
+        But is it really "random"? The answer is "NO". I would rather name it's
+        semi-randomly creating levels. The choice is right since making levels
+        should be designer's work, not computer's. So far as I have noticed, the
+        game tries to keep a balance in different routes so you won't meet
+        elites in a row and you can hardly find two campfires with nothing in
+        between. And there are three certain things in the level:<br />
+        The beginning of each stage is always a counter against normal
+        enemies.<br />
+        On about half way through each stage you will always run into a chest
+        room.<br />
+        Before fighting the boss of each stage (which is random) you have a
+        chance of visiting a campfire.<br />
+        The first one just sounds reasonable. The last two things really help
+        decrease the chaos and let players take a precious rest when they really
+        feel need to.
+        <div class="element-image-flex">
+          <img src="/media/analysis/slay-the-spire/spire-1.png" />
+          <img src="/media/analysis/slay-the-spire/spire-2.png" />
+        </div>
+        <span class="element-title">permadeath</span><br />
+        I don't think permadeath is should be a must in roguelike games, in the
+        modern context. The concept Roguelike started late '80s where games were
+        considered a male sport and procedurally generated maps and permadeath
+        were invented as effective ways to deal with the limitation in memory
+        capability.<br />
+        Slay the Spire also has permadeath, however, on the other hand, it does
+        offer ways (seemingly consciously) for players to cope with failure in
+        the game, by saving and loading. By replaying the combat the player got
+        a chance to make up their mistakes and calculate their cards again. It
+        is even not a glitch since the feature is too obviously to be considered
+        as a program bug.
+        <div class="element-image">
+          <img src="/media/analysis/slay-the-spire/death.png" />
+        </div>
+        <span class="element-title">turn-based</span><br />
+        Turn-based gameplay is another optional feature of roguelikes. The good
+        thing for any turn-based games is that at least it is friendly for all
+        players regardless of their "reflection speed" or "fighting instinct",
+        so it is potentially designed for all ages.
       </div>
       <div class="main-design-title">
         <hr />
         deck-building
       </div>
-      <div class="main-design-description">
-        <span class="element-title">storytelling</span><br />
-        Almost a direct contrast to text-rich game like Firewatch, INSIDE tells
-        the story using only environment. The approach is suitable for players
-        who likes the openness of the narrative, but not those who prefer a
-        clear explanation - all except developers can only guess what the story
-        is, but probably never 100% clear.<br />
-        <span class="element-title">pace</span><br />
-        INSIDE keeps its pace balanced by adding transition scenes between
-        puzzles: the character would walk a little bit after solving a puzzle
-        and before running into a new one. Like mentioned above, time
-        constrained puzzles offers more nervosity while unlimited time puzzle is
-        a good chance to slow down the pace and is a good save point.
-      </div>
-      <div class="main-design-title">
-        <hr />
-        turn-based
-      </div>
       <div class="main-design-description"></div>
-
-      <div class="main-title">
-        Graphics
-      </div>
-      <div class="main-description">
-        The graphics in INSIDE is impressive - it keeps Limbo's dark ambience,
-        but with the transition from black-white to fully colored world, the
-        game has much stronger feeling of a dystopian world.
-      </div>
-      <div class="main-design-title">
-        <hr />
-        color
-      </div>
-      <div class="main-design-description">
-        <span class="element-title">desaturated world</span><br />
-        Everything in INSIDE has less saturated color than normal, and this
-        feels like we are seeing the world through fog, which matches feeling of
-        a dystopian world.<br />
-        <div class="element-image-flex">
-          <img src="/media/analysis/inside/color-1.jpg" />
-          <img src="/media/analysis/inside/color-2.jpg" />
-        </div>
-        Warm colors generally give a feeling of hope and empowered. However,
-        even in rare occasions in INSIDE where we can see warm lights, it is
-        hard to feel the character's situation is getting better. The reasons is
-        that first, the warm color is much less saturated than it should be
-        naturally; second, the scene is blurred, indicating a unknown and
-        fragile hope.
-      </div>
-      <div class="main-design-title">
-        <hr />
-        shape
-      </div>
-      <div class="main-design-description">
-        Everything in INSIDE is not complicated in shape, what makes it feel
-        good to watch is the good use of contrast and pattern. INSIDE is
-        successful in using large shape volume and darker color to make the
-        feeling of distance between the boy and the machine world.
-        <br /><span class="element-title">contrast</span><br />
-        INSIDE uses highly contrasted graphics to help add ambience to its
-        story. One of the basic combination is darkness and light. Darkness
-        means unknown and danger and makes major part in background and the path
-        ahead. Light means certainty and hope so is shown for hints around the
-        character. However, the neon light from a dark panel serves as one of
-        the exceptions where light can also be evil.
-        <div class="element-image">
-          <img src="/media/analysis/inside/contrast-1.jpg" />
-        </div>
-        Loneliness is also everywhere in the game. In the picture above the boy
-        drives a submarine whose light is pointing at a naked figure with long
-        hair (it). It is dangerous but afraid of light, so to beat the level
-        player needs to control the boy and the direction of light so it is
-        always lighting it. In this strange situation, the light connects the
-        only two characters lone in the level, yet they keep a hostile
-        relationship. Such scene really triggers the inner loneliness of me.
-        <br /><span class="element-title">pattern</span><br />
-        Pattern is the group of shapes. INSIDE uses the arrangement of repeated
-        shapes to show the characteristic of a dystopian world.
-        <div class="element-image-flex">
-          <img src="/media/analysis/inside/pattern-1.jpg" />
-          <img src="/media/analysis/inside/pattern-2.jpg" />
-        </div>
-        These two pictures depict a place where human figures are eerily hanged
-        inside some fluid. The composition is strange in nature as the fluid
-        seems floating not affected by the gravity force. The pattern of human
-        figure and machines there makes the scene even scarier, indicating the
-        large scale of human experiment.
-      </div>
+      <div class="main-design-description"></div>
     </div>
 
     <div id="bottom">
@@ -172,7 +118,7 @@
         <a onclick="transitionToPage('bloodborne','var(--sohi)')">➙</a>
       </div>
       <div id="next">
-        <a onclick="transitionToPage('the-plan','var(--sohi)')">➙</a>
+        <a onclick="transitionToPage('inside','var(--sohi)')">➙</a>
       </div>
     </div>
   </body>

@@ -259,3 +259,7 @@ hr {
   height: 10vh;
   position: relative;
 }
+
+.bold {
+  font-weight: 700;
+}

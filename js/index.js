@@ -4,7 +4,7 @@ var pnls = document.querySelectorAll('.section').length,
   hold = false;
 var current = 0;
 var main = document.getElementById('main');
-var sections = main.childElementCount - 1;
+var sections = main.childElementCount;
 
 function _scrollY(obj, slength) {
   var plength,

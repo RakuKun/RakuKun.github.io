@@ -77,6 +77,15 @@ body.fade-out {
     0 0 24px rgb(202, 81, 110), 0 0 28px rgb(201, 93, 118);
 }
 
+.introduction-title-entry:nth-of-type(5) a:hover {
+  color: var(--shironeri);
+}
+
+.introduction-title-entry:nth-of-type(5) a:active {
+  text-shadow: 0 0 20px rgb(77, 77, 77), 0 0 24px rgb(107, 107, 107),
+    0 0 28px rgb(126, 126, 126), 0 0 32px rgb(151, 151, 151);
+}
+
 .introduction-title-entry2 {
   letter-spacing: 1px;
   font-weight: 600;
@@ -121,10 +130,10 @@ body.fade-out {
   vertical-align: top;
   margin: 1vh 2vw 1vh 0;
   letter-spacing: 1px;
-  font-size: 3.5vw;
+  font-size: 3vw;
   font-weight: 600;
   height: 65vh;
-  line-height: 6.5vmin;
+  line-height: 6vmin;
   border: solid 2px var(--shironeri-trans);
   white-space: normal;
   background-clip: padding-box;
@@ -177,11 +186,6 @@ body.fade-out {
 
 #gallery .section-entry:hover div {
   background-color: var(--kurenai-trans);
-}
-
-#essay .section-entry {
-  border: none;
-  width: 40vw;
 }
 
 .essay-entry {

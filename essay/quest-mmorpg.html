@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Creating Quests for MMORPG - Liangzheng Luo</title>
     <link rel="icon" type="image/png" href="/media/icon.png" />
-    <link href="/css/analysis.css" rel="stylesheet" type="text/css" />
+    <link href="/css/essay.css" rel="stylesheet" type="text/css" />
     <link
       href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,500,500i,600,600i,700,700i&display=swap"
       rel="stylesheet"
@@ -27,7 +27,7 @@
 
     <div
       class="top"
-      style="background-image: url(/media/analysis/mmorpg/title.jpg);"
+      style="background-image: url(/media/essay/mmorpg/title.jpg); color: var(--shironeri);"
     >
       <div class="top-title" style="font-size: 5em;">
         Creating Quests for MMORPG
@@ -51,7 +51,7 @@
       <div class="main-title">
         Methodology
       </div>
-      <div class="main-description">
+      <div class="main-text">
         Before setting off on the adventure, it is very important to have an
         overview of what the game ‘feels like’ and how we should deliver side
         quests. Revelation's backstory is pretty much like the extension of
@@ -60,57 +60,55 @@
         scale of possibility to implement new gameplay under a more conservative
         theme. <br />Since the game has already gone through 5 iteration cycle
         by the time I joined, I was able to concentrate on design with a fairly
-        complete system framework.
+        complete system framework. But before that, as a quest design working in
+        a system design team, I needed to figure out how Relevation's systems
+        work.
       </div>
-      <div class="main-design-title">
-        <hr />
+      <div class="main-paragraph-title">
         system overview
       </div>
-      <div class="main-design-description">
+      <div class="main-text">
         System in MMORPG context refers to the framework that takes charge of a
         certain gameplay. Revelation contains a bunch of systems ranging from
         very basic ones such Character Growth, Equipment, quest (just as other
         MMORPGs do) to more specific ones like Adventure, Transformation and
         Camera. The following are those that I mainly worked on.<br />
-        <span class="element-title">Adventure System</span><br />
-        I mostly worked in creating content for Adventure System, which provides
-        unique experience to amplify the feeling of "freedom" and "depth". It
-        aims to encourage players to explore the world by providing engaging
+        I mostly worked in creating content for
+        <span class="bold">Adventure System,</span> which provides unique
+        experience to amplify the feeling of "freedom" and "depth". It aims to
+        encourage players to explore the world by providing engaging
         single-player focused experience. Quests in Adventure System are not
         compulsory and are designed for those who like to spend more time in
-        game.
-        <br /><span class="element-title">Transformation System</span><br />
-        Transformation System allows character to transform into another
-        creature in the game by replacing their models, animations, skills, even
-        the faction. For instance, if a character becomes a crab, they walk
-        sideways, use claws to attack, and become friends with other AI crabs.
-        The system grants designers brand new ways to think about how living
-        things in the game interact with each other, and inspires me to
-        implement an unforgettable experience.
-        <br /><span class="element-title">Camera System</span><br />
-        Camera System is not a rare one in MMO games, but the one in Revelation
-        has some cool features such as capturing ghost creatures (that are
-        unseen normally) and recognizing the name of anything in the frame.
-        <br /><span class="element-title">Audio System</span><br />
+        game. <br />
+        <span class="bold">Transformation System</span> allows character to
+        transform into another creature in the game by replacing their models,
+        animations, skills, even the faction. For instance, if a character
+        becomes a crab, they walk sideways, use claws to attack, and become
+        friends with other AI crabs. The system grants designers brand new ways
+        to think about how living things in the game interact with each other,
+        and inspires me to implement an unforgettable experience. <br />
+        <span class="bold">Camera System</span> is not a rare one in MMO games,
+        but the one in Revelation has some cool features such as capturing ghost
+        creatures (that are unseen normally) and recognizing the name of
+        anything in the frame. <br />
         Player can collect some sound and use a special item to play sounds
-        thanks to Audio System. It is special in a way that it records the sound
-        ID thus allowing triggering events that have sounds as parameters, which
-        means more options to choose from when designing side quests.
+        thanks to <span class="bold">Audio System.</span> It is special in a way
+        that it records the sound ID thus allowing triggering events that have
+        sounds as parameters, which means more options to choose from when
+        designing side quests.
       </div>
-      <div class="main-design-title">
-        <hr />
+      <div class="main-paragraph-title">
         design principle
       </div>
-      <div class="main-design-description">
-        <span class="element-title">combining systems</span><br />
+      <div class="main-text">
         My mentor and I both agree that the most fun comes from the crosspoint
-        of multiple systems. There are 4 special ones listed above, and of
-        course many basic systems (economy, battle, quest, achievement) are also
-        open to offer fundamental gameplay.
-        <br />After getting familiar with systems, I figured out a pratical way
-        to create quests: observe the components of gameplay and try finding
-        some possible options for each. The formula is: <br /><span
-          class="important"
+        of multiple system, in other word,
+        <span class="bold">combining systems</span>. There are 4 special ones
+        listed above, and of course many basic systems (economy, battle, quest,
+        achievement) are also open to offer fundamental gameplay. <br />After
+        getting familiar with systems, I figured out a pratical way to create
+        quests: observe the components of gameplay and try finding some possible
+        options for each. The formula is: <br /><span class="important"
           >Interactive Feature * Entity * Fantasy * Reward = Complete
           quest.</span
         ><br />
@@ -120,31 +118,28 @@
         is it happening and why the player should take the challenge? And reward
         is of course, what you will get.
         <div class="element-image">
-          <img src="/media/analysis/mmorpg/mission-elements.png" />
+          <img src="/media/essay/mmorpg/mission-elements.png" />
         </div>
-        <br /><span class="element-title">reward</span><br />
-        Players need feedback and reward for exploring Adventure System and
-        doing optional quests. We decided to use a unique currency (called
-        "Rainbow Jade") only for buying items in Adventure System so it won't
-        affect in-game economic balance and is easier to determine the price of
-        items.
+        Players need <span class="bold">feedback and reward</span> for exploring
+        Adventure System and doing optional quests. We decided to use a unique
+        currency (called "Rainbow Jade") only for buying items in Adventure
+        System so it won't affect in-game economic balance and is easier to
+        determine the price of items.
       </div>
 
       <div class="main-title">
         Production
       </div>
-      <div class="main-description">
+      <div class="main-text">
         When it comes to production, my major work was filling Excel
         spreadsheets to implement quest logic and adjusting things directly in
         Unity. I created side quests, did rounds of debugging and iteration, and
         helped organize playtests with naive guests.
       </div>
-      <div class="main-design-title">
-        <hr />
+      <div class="main-paragraph-title">
         ideation
       </div>
-      <div class="main-design-description">
-        <span class="element-title">problems of former ones</span><br />
+      <div class="main-text">
         Before I joined, the team already had some prototype design for
         Adventure System. After playing all of them, I talked with my mentor on
         the feeling of disconnection between the quests and the world. Many
@@ -152,7 +147,7 @@
         not to serve the world's narrative. This made me feel I am playing a
         collection of mini games, each game was fun but they actually didn't
         help the players know more about the world.
-        <br /><span class="element-title">direction of improvement</span><br />
+        <br /><span class="bold">direction of improvement</span><br />
         From the former experience and a "all-for-one" faith, I managed to
         figure out what could be the correct direction of fixing the problem and
         creating new side quests. For the old ones, I wanted to find ways to put
@@ -160,7 +155,7 @@
         to be more challening and rewarding) so the core fun of Adventure System
         is well reflected in those quests. For the new ones, I stick to the
         design principles concluded in Methodology session.<br />
-        <div class="element-title">typical workflow</div>
+        <div class="bold">typical workflow</div>
         The majority of "design" work is done with the combination of several
         spreadsheets each of which implements a system in the game. Generally to
         create a quest, I will need to modify quite a few number of
@@ -169,21 +164,20 @@
         place NPC, their patrol routes (if applicable) and modify a small scale
         of terrain.
         <div class="element-image">
-          <img src="/media/analysis/mmorpg/systems.png" />
+          <img src="/media/essay/mmorpg/systems.png" />
         </div>
       </div>
-      <div class="main-design-title">
-        <hr />
+      <div class="main-paragraph-title">
         quest examples
       </div>
-      <div class="main-design-description">
-        <span class="element-title">Crab Wars</span><br />
+      <div class="main-text">
+        <span class="bold">Crab Wars</span><br />
         Side quest: Crab Wars asks players to transform into crabs and go
         through a bizarre experience joining in a fight of crabs. This quest
         fully uses the Transform System and is possible with faction switching
         feature.<br />
         <div class="element-image">
-          <img src="/media/analysis/mmorpg/crab-wars.png" />
+          <img src="/media/essay/mmorpg/crab-wars.png" />
         </div>
         Quest Procedure: 1. Character (as human) notices some blue crabs
         fighting with red ones. 2. If the character uses transformation tool to
@@ -196,11 +190,11 @@
         receive achievement. I think this quest does a good job in encouraging
         players to explore the world, and crabs fighting is an interesting and
         rare point so transforming and getting a quest meets player's curiosity.
-        <br /><span class="element-title">Unseen Love</span><br />
+        <br /><span class="bold">Unseen Love</span><br />
         Side quest: Unseen Love tells a story between a woman and her ghost
         lover featuring Camera System and branching narratives. <br />
         <div class="element-image">
-          <img src="/media/analysis/mmorpg/unseen-love.png" />
+          <img src="/media/essay/mmorpg/unseen-love.png" />
         </div>
         Quest Procedure: 1. Character finds a weeping woman standing under a
         peach tree. 2. As the character talks to the woman, she says that she's
@@ -222,15 +216,14 @@
         in front of you, and branching narratives give everyone a chance to
         choose the story they want.
       </div>
-      <div class="main-design-title">
-        <hr />
+      <div class="main-paragraph-title">
         document
       </div>
-      <div class="main-design-description">
+      <div class="main-text">
         As the grande finale of my internship, I wrote a design documentation on
         how to implement design features for future use. It is available
         <span class="important"
-          ><a href="/media/analysis/mmorpg/methodology.xlsx" target="_blank"
+          ><a href="/media/essay/mmorpg/methodology.xlsx" target="_blank"
             >Here.</a
           ></span
         >
@@ -239,10 +232,12 @@
 
     <div id="bottom">
       <div id="back">
-        <a onclick="transitionToPage('the-plan','var(--sohi)')">➙</a>
+        <a onclick="transitionToPage('../gallery/design','var(--kurenai)')"
+          >➙</a
+        >
       </div>
       <div id="next">
-        <a onclick="transitionToPage('../gallery/art','var(--kurenai)')">➙</a>
+        <a onclick="transitionToPage('design-diary','var(--shironeri)')">➙</a>
       </div>
     </div>
   </body>
