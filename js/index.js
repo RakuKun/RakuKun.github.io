@@ -1,64 +1,64 @@
-'use strict';
+'use strict'
 var pnls = document.querySelectorAll('.section').length,
   scdir,
-  hold = false;
-var current = 0;
-var main = document.getElementById('main');
-var sections = main.childElementCount;
+  hold = false
+var current = 0
+var main = document.getElementById('main')
+var sections = main.childElementCount
 
 function _scrollY(obj, slength) {
   var plength,
     pan,
     vh = window.innerHeight / 100,
-    vmin = Math.min(window.innerHeight, window.innerWidth) / 100;
-  if (hold === true) return;
+    vmin = Math.min(window.innerHeight, window.innerWidth) / 100
+  if (hold === true) return
   if (
     (this !== undefined && this.id === 'main') ||
     (obj !== undefined && obj.id === 'main')
   ) {
-    pan = this || obj;
-    plength = parseInt(pan.offsetHeight / vh);
+    pan = this || obj
+    plength = parseInt(pan.offsetHeight / vh)
   }
   if (pan === undefined) {
-    return;
+    return
   }
-  plength = plength || parseInt(pan.offsetHeight / vmin);
-  if (scdir === 'down' && current != -100 * sections) {
-    current -= slength;
-    slength *= -1;
+  plength = plength || parseInt(pan.offsetHeight / vmin)
+  if (scdir === 'down' && current != -100 * (sections - 1)) {
+    current -= slength
+    slength *= -1
   } else if (scdir === 'up' && current < 0) {
-    current += slength;
+    current += slength
   } else if (scdir === 'top') {
-    current = 0;
-    slength = 0;
+    current = 0
+    slength = 0
   }
   switch (current) {
     case 0:
-      main.style.backgroundColor = 'rgb(12, 12, 12)';
-      break;
+      main.style.backgroundColor = 'rgb(12, 12, 12)'
+      break
     case -100:
-      main.style.backgroundColor = 'rgb(11, 52, 110)';
-      break;
+      main.style.backgroundColor = 'rgb(11, 52, 110)'
+      break
     case -200:
-      main.style.backgroundColor = 'rgb(237, 120, 74)';
-      break;
+      main.style.backgroundColor = 'rgb(237, 120, 74)'
+      break
     case -300:
-      main.style.backgroundColor = 'rgb(203, 27, 69)';
-      break;
+      main.style.backgroundColor = 'rgb(203, 27, 69)'
+      break
     case -400:
-      main.style.backgroundColor = 'rgb(252, 250, 242)';
-      break;
+      main.style.backgroundColor = 'rgb(252, 250, 242)'
+      break
     default:
-      main.style.backgroundColor = 'rgb(12, 12, 12)';
-      break;
+      main.style.backgroundColor = 'rgb(12, 12, 12)'
+      break
   }
-  document.body.style.backgroundColor = main.style.backgroundColor;
+  document.body.style.backgroundColor = main.style.backgroundColor
   if (hold === false) {
-    hold = true;
+    hold = true
     setTimeout(function() {
-      hold = false;
-    }, 1000);
-    pan.style.transform = 'translateY(' + current + 'vh)';
+      hold = false
+    }, 1000)
+    pan.style.transform = 'translateY(' + current + 'vh)'
   }
   console.log(
     'current: ' +
@@ -71,7 +71,7 @@ function _scrollY(obj, slength) {
       plength +
       ':' +
       (plength - plength / pnls)
-  );
+  )
 }
 
 function _swipe(obj) {
@@ -87,58 +87,58 @@ function _swipe(obj) {
     alT = 500,
     /*[max time allowed to travel that distance]*/
     elT /*[elapsed time]*/,
-    stT; /*[start time]*/
+    stT /*[start time]*/
   obj.addEventListener(
     'touchstart',
     function(e) {
-      var tchs = e.changedTouches[0];
-      swdir = 'none';
-      sX = tchs.pageX;
-      sY = tchs.pageY;
-      stT = new Date().getTime();
+      var tchs = e.changedTouches[0]
+      swdir = 'none'
+      sX = tchs.pageX
+      sY = tchs.pageY
+      stT = new Date().getTime()
       //e.preventDefault();
     },
     false
-  );
+  )
 
   obj.addEventListener(
     'touchmove',
     function(e) {
-      e.preventDefault(); /*[prevent scrolling when inside DIV]*/
+      e.preventDefault() /*[prevent scrolling when inside DIV]*/
     },
     false
-  );
+  )
 
   obj.addEventListener(
     'touchend',
     function(e) {
-      var tchs = e.changedTouches[0];
-      dX = tchs.pageX - sX;
-      dY = tchs.pageY - sY;
-      elT = new Date().getTime() - stT;
+      var tchs = e.changedTouches[0]
+      dX = tchs.pageX - sX
+      dY = tchs.pageY - sY
+      elT = new Date().getTime() - stT
       if (elT <= alT) {
         if (Math.abs(dX) >= threshold && Math.abs(dY) <= slack) {
-          swdir = dX < 0 ? 'left' : 'right';
+          swdir = dX < 0 ? 'left' : 'right'
         } else if (Math.abs(dY) >= threshold && Math.abs(dX) <= slack) {
-          swdir = dY < 0 ? 'down' : 'up';
+          swdir = dY < 0 ? 'down' : 'up'
         }
         if (obj.id === 'main') {
           if (swdir === 'down') {
-            scdir = swdir;
-            _scrollY(obj);
+            scdir = swdir
+            _scrollY(obj)
           } else if (
             swdir === 'up' &&
             obj.style.transform !== 'translateY(0)'
           ) {
-            scdir = swdir;
-            _scrollY(obj);
+            scdir = swdir
+            _scrollY(obj)
           }
-          e.stopPropagation();
+          e.stopPropagation()
         }
       }
     },
     false
-  );
+  )
 }
 
 function registerChildren() {
@@ -146,29 +146,29 @@ function registerChildren() {
     main.children[0].children[0].children[i].addEventListener(
       'click',
       function() {
-        scdir = 'down';
-        _scrollY(main, 100 * i);
+        scdir = 'down'
+        _scrollY(main, 100 * i)
       }
-    );
+    )
   }
 }
-registerChildren();
+registerChildren()
 
-main.style.transform = 'translateY(0)';
+main.style.transform = 'translateY(0)'
 main.addEventListener('wheel', function(e) {
   if (e.deltaY < 0) {
-    scdir = 'up';
-  } else scdir = 'down';
-  _scrollY(main, 100);
-  e.stopPropagation();
-});
-main.addEventListener('wheel', _scrollY);
-_swipe(main);
-var tops = document.querySelectorAll('.go-top');
+    scdir = 'up'
+  } else scdir = 'down'
+  _scrollY(main, 100)
+  e.stopPropagation()
+})
+main.addEventListener('wheel', _scrollY)
+_swipe(main)
+var tops = document.querySelectorAll('.go-top')
 for (let i = 0; i < tops.length; i++) {
   tops[i].addEventListener('click', function() {
-    console.log(tops[i].parentElement);
-    scdir = 'top';
-    _scrollY(main);
-  });
+    console.log(tops[i].parentElement)
+    scdir = 'top'
+    _scrollY(main)
+  })
 }
