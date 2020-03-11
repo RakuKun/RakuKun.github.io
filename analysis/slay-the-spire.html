@@ -23,8 +23,108 @@
     <span id="cursor-outline"></span>
     <span id="cursor"></span>
     <script type="module" src="/js/general.js"></script>
-    <div id="home">
-      <a onclick="transitionToPage('../')"> ◯ </a>
+    <div id="nav">
+      <div id="home">
+        <a onclick="transitionToPage('../')"> ◯ </a>
+      </div>
+      <div id="menu">
+        <a> ≡ </a>
+      </div>
+      <div id="menu-page">
+        <div class="category">
+          <div class="entry-title">Games</div>
+          <a
+            class="entry"
+            onclick="transitionToPage('../games/bvw','var(--rurikon)')"
+            >Building Virtual Worlds</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../games/ditto','var(--rurikon)')"
+            >Ditto</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../games/level-design','var(--rurikon)')"
+            >Level Design</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../games/cosmos','var(--rurikon)')"
+            >COSMOS</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../games/collection','var(--rurikon)')"
+            >Collection</a
+          >
+        </div>
+        <div class="category">
+          <div class="entry-title">Analysis</div>
+          <a
+            class="entry"
+            onclick="transitionToPage('../analysis/bloodborne','var(--sohi)')"
+            >Bloodborne's Design</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../analysis/slay-the-spire','var(--sohi)')"
+            >Slay the Spire: Engagement and Balancing</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../analysis/inside','var(--sohi)')"
+            >INSIDE</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../analysis/the-plan','var(--sohi)')"
+            >The Plan</a
+          >
+        </div>
+        <div class="category">
+          <div class="entry-title">Gallery</div>
+          <a
+            class="entry"
+            onclick="transitionToPage('../gallery/art','var(--kurenai)')"
+            >Art</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../gallery/photography','var(--kurenai)')"
+            >Photography</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../gallery/design','var(--kurenai)')"
+            >Design</a
+          >
+        </div>
+        <div class="category">
+          <div class="entry-title">Essay</div>
+          <a
+            class="entry"
+            onclick="transitionToPage('../essay/quest-mmorpg','var(--shironeri)')"
+            >Creating Quests for MMORPG</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../essay/design-diary','var(--shironeri)')"
+            >Design Diary</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../essay/another-inferno','var(--shironeri)')"
+            >Another Inferno</a
+          >
+        </div>
+      </div>
+      <div id="back">
+        <a onclick="transitionToPage('bloodborne','var(--sohi)')">➙</a>
+      </div>
+      <div id="next">
+        <a onclick="transitionToPage('inside','var(--sohi)')">➙</a>
+      </div>
     </div>
 
     <div
@@ -36,9 +136,9 @@
       </div>
       <div class="top-introduction">
         Slay the Spire is a roguelike video game developed by American studio
-        MegaCrit. The game was officially released in January 2019. This article
-        will focus on the game's way to keep players engaged and how the game is
-        balanced.
+        MegaCrit, officially released in January 2019. This article will try
+        analyzing game's approach to keep a high engagement whilst balanced at
+        the same time.
       </div>
       <div class="top-information">
         <span style="color:var(--ro);">time</span> spring 2020
@@ -47,12 +147,23 @@
 
     <div id="main">
       <div class="main-title">
-        Design the Uncommon
+        Creating the Uncommon
       </div>
       <div class="main-description">
-        Slay the Spire is a roguelike, deck-building game. Just by the genre it
-        is far from being so engaging and fun to play, absolutely there is some
-        magic in game design that makes the common things uncommon.
+        Slay the Spire is a roguelike, deck-building game. According to
+        <a
+          class="important"
+          target="_blank"
+          href="https://www.gamasutra.com/blogs/JoshBycer/20200306/359140/The_Importance_of_a_Well_Defined_Core_Gameplay_Loop.php"
+          >an article on Gamasutra,</a
+        >
+        roguelike games benefit from "compartmentalizing their core gameplay
+        loop while still providing long-term value" so many of them stands out
+        in today's video game environment where "customers don't have the time
+        to find the fun of a title". Slay the Spire has a great pick-up-and-play
+        feel, given that players know they will either win or lose usually in
+        less an hour.<br />
+        So the question is, what exactly makes each run feel so engaging?
       </div>
       <div class="main-design-title">
         <hr />
@@ -64,38 +175,34 @@
         genre has some elements unchanged.<br />
         <span class="element-title">procedurally generated levels</span><br />
         Slay the Spire uses randomly generated level to dramatically increase
-        replayability since every one is unique. <br /><br />
-        But is it really "random"? The answer is "NO". I would rather name it's
-        semi-randomly creating levels. The choice is right since making levels
-        should be designer's work, not computer's. So far as I have noticed, the
-        game tries to keep a balance in different routes so you won't meet
-        elites in a row and you can hardly find two campfires with nothing in
-        between. And there are three certain things in the level:<br />
-        - The beginning of each stage is always an encounter against normal
-        enemies.<br />
-        - On about half way through each stage you will always run into a chest
-        room.<br />
-        - Before fighting the boss of each stage (which is random) you will
-        always be visiting a campfire.<br /><br />
-        The first one just sounds reasonable. The last two things really help
-        decrease the chaos and let players take a precious rest when they really
-        feel need to.
-        <div class="element-image-flex">
-          <img src="/media/analysis/slay-the-spire/spire-1.png" />
-          <img src="/media/analysis/slay-the-spire/spire-2.png" />
-        </div>
+        its replayability. In a relatively simple way, each run is slightly
+        different from any previous one, and players meet different enemies and
+        bosses, get different cards and relics, which eventually makes players'
+        combat choice and overall strategy. Randomness is a great help when
+        designers want to build an entertainment that can then be repeated with
+        variance and new challenges again and again. <br /><br />
+        The magic of having randomness is that it fits the essence of "game" and
+        the nature of human desire for an unknown adventure. Games are an
+        entertainment both challenging and rewarding. In Slay the spire players
+        face different challenging situation as they start a run and go deeper,
+        but the game keeps rewarding them with more powerful cards and relics,
+        which forms an ideal engagement curve.<br />
         <span class="element-title">permadeath</span><br />
         I don't think permadeath should be a must in roguelike games, especially
         in the modern context. The concept Roguelike started late '80s where
-        games were considered a male sport and procedurally generated maps and
-        permadeath were invented as effective ways to deal with the limitation
-        in memory capability.<br /><br />
-        Slay the Spire also has permadeath, however, on the other hand, it does
-        offer ways (seemingly consciously) for players to cope with failure in
-        the game, by saving and loading. By replaying the combat the player got
-        a chance to make up their mistakes and calculate their cards again. It
-        is even not a glitch since the feature is too obviously to be considered
-        as a program bug.
+        games were considered an exclusive sport for male and that procedurally
+        generated maps and permadeath were invented as effective ways to deal
+        with the limitation in computer's memory capability. Today, almost every
+        home PC can run a card game like Slay the Spire, but the game still uses
+        permadeath to remind players of the importance of their choices so as to
+        put some nervosity on each move. And when the players start to think of
+        their actions seriously, they are been already dragged into the world
+        and keep the high commitment.<br /><br />
+        The game, however, on the other hand, has left ways (seemingly on
+        purpose) for players to cope with permadeath in the game, by saving and
+        loading. By replaying the combat the player got a chance to make up
+        their mistakes and calculate their cards again. It is a glitch that
+        everyone uses to save time and play better.
         <div class="element-image">
           <img src="/media/analysis/slay-the-spire/death.png" />
         </div>
@@ -110,61 +217,217 @@
         deck-building
       </div>
       <div class="main-design-description">
-        Deck building is one of the things that make Slay the Spire engaging and
+        Deck building is another thing that makes Slay the Spire engaging and
         addicting. The ultimate reason for this, in my opinion, is the same
-        thing as RPG - the feeling of growth. From a very weak start to
-        eventually beating the final boss, it is deck that makes up the majority
-        of visible growth.
+        motivation for playing an RPG - the feeling of growth. Starting with
+        basic cards to eventually beating the final boss, it is deck that makes
+        up the majority of visible growth in the game.
         <br /><span class="element-title">playing with randomness</span><br />
-        Still, you need to choose from three random cards after every battle,
-        meaning that the three cards may be all useless or super tempting.
+        Players have the chance to choose from three random cards of your color
+        after every battle. Again, all three random cards may be just useless,
+        but players can choose skip the cards. The designers want players on
+        different level all feel good about their choices, so giving optional
+        choices is still important. People all like to see what the system
+        offers - it always feels great to gamble without concerning losing
+        money, right?
+        <div class="element-image">
+          <img src="/media/analysis/slay-the-spire/choose-a-card.jpg" />
+        </div>
+        And it even feels better when system drops upgraded cards, which gives a
+        feeling that "whatever I pick I hit pay dirt".
+        <div class="element-image">
+          <img src="/media/analysis/slay-the-spire/event.jpg" />
+        </div>
+        The same design philosophy applies to the events, too. Events happening
+        in ? rooms share the high risk - high reward trait, and the ability to
+        accept the offer or not is granted to the players: new players may skip
+        the risk (and reward) while experienced players could play in a more
+        exciting pace. Gambling is mankind's nature - Slay the Spire manipulates
+        that.
+        <br /><span class="element-title">the changing strategy</span><br />
+        Slay the Spire, like many other games, has short goals and long-term
+        goals. Finding a best strategy to beat the next enemy fight is the short
+        goal, and beating a run is the long goal. This brings the discussion
+        about the altering strategy. In early phases picking up a card is very
+        worth considering since they are almost all better than basic cards, but
+        in late phases having a new card is no longer that tempting once their
+        deck is stable enough where one new card could break the synergy and the
+        potential of bad draws.<br /><br />
+        The dynamic is in fact happening in every choice in Slay the Spire,
+        which explains why late games in Slay the Spire bring more intensity as
+        players reach their long-term goal.
       </div>
 
       <div class="main-title">
-        Balancing the Chaos
+        Fighting the Chaos
       </div>
       <div class="main-description">
-        If Slay the Spire only had features above, it would have been far from a
-        balanced card game since every run would still be very chaotic and
-        players would easily lose track of what they are doing in the game,
-        which is really frustrating. The solution to this, would be balancing
-        the uncertainty brought by the roguelike elements while not damaging
-        them meanwhile.
+        Comes along the pure randomness the pure chaos. Players' expectation
+        would be ruined as the game is totally out of their control. Players
+        would easily lose track of what they are doing in the game as what they
+        did will prove not applicable for later combats. The solution to this,
+        would be balancing the uncertainty brought by the roguelike elements
+        while not damaging them meanwhile.
       </div>
       <div class="main-design-title">
         <hr />
         strategy
       </div>
       <div class="main-design-description">
-        <span class="element-title">intention system</span><br />
-        Intention system is probably the most important feature the developer
-        has added to the game so far (actually from their talks this is their
-        proudest thing).
+        <span class="element-title">levels</span><br />
+        Apparently, levels are not created by a single function -
+        CreateRandomLevels(). I would name it semi-random levels since creating
+        levels should be designer's work where algorithms are used to repeat
+        their design choices. So far as I have noticed, the game tries to keep a
+        balance in different routes so you won't meet elites in a row and you
+        can hardly find two campfires with nothing in between. And there are
+        three certain things in the level:<br />
+        - The beginning of each stage is always an encounter against normal
+        enemies.<br />
+        - On about half way through each stage you will always run into a chest
+        room.<br />
+        - Before fighting the boss of each stage (which is random) you will
+        always be visiting a campfire.<br /><br />
+        The first one just sounds reasonable. The last two things really help
+        decrease the chaos and let players take a precious rest when they really
+        feel need to.
+        <div class="element-image-flex">
+          <img src="/media/analysis/slay-the-spire/spire-1.png" />
+          <img src="/media/analysis/slay-the-spire/spire-2.png" />
+        </div>
+        <span class="element-title">intent system</span><br />
+        Intent system is probably the most important feature developers has put
+        in the game so far (actually from their talks this is their proudest
+        thing). In Slay the Spire's early version, players could not see what
+        enemies' next move is, and the result was very frustrating since the
+        computer instead of players controls the result of each combat.
+        <div class="element-image">
+          <img src="/media/analysis/slay-the-spire/intent.jpg" />
+        </div>
+        Luckily the designers created the enemies' intent to balance the
+        uncertainty.
       </div>
       <div class="main-design-title">
         <hr />
-        cards
+        resources
       </div>
       <div class="main-design-description">
-        <span class="element-title">colored and colorless</span>
-        <br /><span class="element-title">beyond costs</span>
+        There are by category three kinds of first-level resources in the game
+        that adds on to the real combat capability. Money is another very useful
+        resource, but it is a second-level resource that needs to be converted
+        into first-level resources to make it really work.<br /><br />
+        Since each combat is the minimum compartment of a run, most resources
+        are used during the combat. There are, on the other hand, some resources
+        that could affect different parts of the game.
+        <br /><span class="element-title">cards</span> <br />
+        Cards are permanent resources that come into effect every combat and
+        serve as the most fundamental and important resources in the game. As
+        mentioned, players can choose to pick one from three cards to their deck
+        after each battle. The game tries to keep the balance between the deck
+        and enemies at a dynamic pace.<br /><br />
+        Cards' cost and effect in Slay the Spire is a very interesting topic.
+        There is believed to be a standard model for basic cards - 1 energy for
+        6 attack or 5 defense. If any card fails to exceed this cost-effect
+        ratio, it would generally be considered not useful.
+        <div class="element-image-flex">
+          <img src="/media/analysis/slay-the-spire/basic-model.png" />
+        </div>
+        It is a clear model. But in most cases it is hard to determine the
+        effect without putting it under an actual environment. For instance, 1
+        energy to draw 3 (4) cards is extremely powerful in late games where you
+        have high energy and many cards whose synergy can produce much more than
+        one energy, but you probably don't want to have lots of this card in the
+        first Phase since your deck is far from stable and powerful. Good thing
+        is, there are some easier ways to tweak the balance (roughly).<br /><br />
+        There are three basic attributes in a card: cost, rarity, and effect.
+        Generally cards with high rarity and cost have better effect. There is
+        an inherent balanced between the two, and on the crossroad is the
+        trigger limitation. With this in mind, designers could avoid overtuning
+        or undertuning cards in a large scale.
+        <div class="element-image">
+          <img src="/media/analysis/slay-the-spire/balance.png" />
+        </div>
+        <span class="element-title">relics</span><br />
+        Relics are permanent resources that are triggered passively to influence
+        the combat, or to give other one-time benefits. Roguelikes likes to give
+        players chances to gain equipments because in most cases, they give
+        players <span class="bold">general</span> buff so they can cope with
+        everchanging and increasingly difficult levels. Relics are general so
+        however players' deck is composed, they are possibly effective, and the
+        effect in fact multiples with more relics, not adds up. <br /><br />
+        Slay the Spire wants more out of that. There are drops character-only
+        relics that specifically powers up a certain character's ability, and
+        some seemingly strange ones that are powerful in odd situations.
+        <div class="element-image">
+          <img src="/media/analysis/slay-the-spire/relics.png" />
+        </div>
+        These relics are very contradictory - they can enable a deck, but they
+        are useless as well if picked up in late game where the deck doesn't
+        need the features any longer.
+        <br /><span class="element-title">potions</span><br />
+        Potions are consumable resources that are used in the combat. The
+        designers want the potions to be more powerful in combats, so they
+        actually created a few relics that centers the using of potions.
+        <div class="element-image">
+          <img src="/media/analysis/slay-the-spire/potions.png" />
+        </div>
+        The relic-potion combo may be the most easy-to-understand build in the
+        game, but the relics are not so easy to find - especially when you have
+        already targeted at one build. Many new players, including me, want a
+        build that is strong, stable, and easy to get at the same time. but the
+        game teaches us the lesson: everything is changing fast, and adjusting
+        the strategy according to the cards and relics received is a must-learn.
+        It is just like our life.
       </div>
       <div class="main-design-title">
         <hr />
-        relics
+        data
+      </div>
+      <div class="main-design-description">
+        So how to balance such a number of cards? Designers can let players help
+        with the work. There is
+        <a
+          class="important"
+          target="_blank"
+          href="https://www.gamasutra.com/view/news/314975/How_Slay_the_Spires_devs_use_data_to_balance_their_roguelike_deckbuilder.php"
+          >another title on Gamasutra</a
+        >
+        about using the player data to balance their game.
+        <br /><span class="element-title">why data</span><br />
+        Playtesting have been among the highest priority in modern game
+        development since games are less like personal expressions but more
+        collective commercial products, where catering to players' expectation
+        becomes most significant thing. And modern games are enormous - systems,
+        programming, animations, sounds... The easiest way to find bugs is just
+        to let someone play the game.<br /><br />
+        This is especially true in Slay the Spire, the game with only two
+        full-time developers. And there are so many cards with different
+        abilities. Asking the players to play and treating them as playtesters
+        by collecting their in-game data, is a smart move for designers.
+        <br /><span class="element-title">metrics</span><br />
+        According to the article, the two most important metrics, are "how often
+        a player picks a card when given the choice, and how often a card
+        appears in a winning deck." From a designer's perspective, every card in
+        the game should be unique and function at least under some
+        circumstances. But for players, cards have a usage hierarchy and that
+        determines if the card is well designed or not: if no one chooses to
+        pick up a card, then it is basically not a card in game at that point.
+        If a card appears too often in the winning decks, it is probably
+        overpowered which also breaks the balance.
       </div>
       <div class="main-design-title">
         <hr />
-        potions
+        beyond balance
       </div>
-    </div>
-
-    <div id="bottom">
-      <div id="back">
-        <a onclick="transitionToPage('bloodborne','var(--sohi)')">➙</a>
-      </div>
-      <div id="next">
-        <a onclick="transitionToPage('inside','var(--sohi)')">➙</a>
+      <div class="main-design-description">
+        Overall, the game should be fun. The fact that the game is a
+        single-player roguelike makes balancing a lot easier than for most
+        competitive card games. Players are not competing against each other, so
+        decks do not need to be equally powerful, and the designers could make
+        changes for entertainment value rather than in the name of pure balance.
+        The randomness and deck-building offers major source of fun, while
+        balancing the cards ensures the fun is controlled in a reasonable range.
+        Chaos and order come dancing together.
       </div>
     </div>
   </body>

@@ -111,6 +111,46 @@ hr {
   font-weight: 600;
 }
 
+#menu {
+  user-select: none;
+  position: fixed;
+  right: 6vw;
+  top: 8vh;
+  transform: translateX(-50%);
+  font-size: 3em;
+  font-weight: 600;
+  z-index: 2;
+}
+
+#menu-page {
+  user-select: none;
+  position: fixed;
+  flex-wrap: wrap;
+  align-content: center;
+
+  padding: 0 10vw;
+  height: 100vh;
+  color: var(--shironeri);
+  font-weight: 700;
+  z-index: 1;
+  transition: 0.5s ease-in-out;
+}
+
+.category {
+  margin: 2.5vh 2.5vw;
+  width: 40%;
+  max-height: 40%;
+}
+
+.entry-title {
+  font-size: 8em;
+}
+
+.entry {
+  display: inline-block;
+  font-size: 2em;
+}
+
 #back {
   user-select: none;
   position: fixed;
@@ -241,7 +281,7 @@ hr {
 }
 
 .element-image {
-  margin: 2vh 0 0 0;
+  margin: 0.5em 0 0 0;
   width: 100%;
 }
 
@@ -258,16 +298,10 @@ hr {
 
 .element-image-flex img {
   border: solid 2px var(--shironeri);
-  margin: 1vh 1vw 1vh 0;
+  margin: 0.25em 0.5em 0.25em 0;
   width: 49%;
   height: 100%;
   object-fit: contain;
-}
-
-#bottom {
-  clear: both;
-  height: 10vh;
-  position: relative;
 }
 
 .bold {

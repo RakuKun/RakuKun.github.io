@@ -18,6 +18,10 @@ body.fade-out {
   transition: none;
 }
 
+#menu-page {
+  background-color: rgba(11, 52, 110, 0.75);
+}
+
 .top-information {
   color: var(--rurikon);
 }

@@ -18,6 +18,10 @@ body.fade-out {
   transition: none;
 }
 
+#menu-page {
+  background-color: rgba(203, 27, 69, 0.75);
+}
+
 .intro {
   height: 100vh;
   background-size: cover;

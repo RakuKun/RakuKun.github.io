@@ -23,8 +23,108 @@
     <span id="cursor-outline"></span>
     <span id="cursor"></span>
     <script type="module" src="/js/general.js"></script>
-    <div id="home">
-      <a onclick="transitionToPage('../')">◯</a>
+    <div id="nav">
+      <div id="home">
+        <a onclick="transitionToPage('../')"> ◯ </a>
+      </div>
+      <div id="menu">
+        <a> ≡ </a>
+      </div>
+      <div id="menu-page">
+        <div class="category">
+          <div class="entry-title">Games</div>
+          <a
+            class="entry"
+            onclick="transitionToPage('../games/bvw','var(--rurikon)')"
+            >Building Virtual Worlds</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../games/ditto','var(--rurikon)')"
+            >Ditto</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../games/level-design','var(--rurikon)')"
+            >Level Design</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../games/cosmos','var(--rurikon)')"
+            >COSMOS</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../games/collection','var(--rurikon)')"
+            >Collection</a
+          >
+        </div>
+        <div class="category">
+          <div class="entry-title">Analysis</div>
+          <a
+            class="entry"
+            onclick="transitionToPage('../analysis/bloodborne','var(--sohi)')"
+            >Bloodborne's Design</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../analysis/slay-the-spire','var(--sohi)')"
+            >Slay the Spire: Engagement and Balancing</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../analysis/inside','var(--sohi)')"
+            >INSIDE</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../analysis/the-plan','var(--sohi)')"
+            >The Plan</a
+          >
+        </div>
+        <div class="category">
+          <div class="entry-title">Gallery</div>
+          <a
+            class="entry"
+            onclick="transitionToPage('../gallery/art','var(--kurenai)')"
+            >Art</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../gallery/photography','var(--kurenai)')"
+            >Photography</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../gallery/design','var(--kurenai)')"
+            >Design</a
+          >
+        </div>
+        <div class="category">
+          <div class="entry-title">Essay</div>
+          <a
+            class="entry"
+            onclick="transitionToPage('../essay/quest-mmorpg','var(--shironeri)')"
+            >Creating Quests for MMORPG</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../essay/design-diary','var(--shironeri)')"
+            >Design Diary</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../essay/another-inferno','var(--shironeri)')"
+            >Another Inferno</a
+          >
+        </div>
+      </div>
+      <div id="back">
+        <a onclick="transitionToPage('level-design','var(--rurikon)')">➙</a>
+      </div>
+      <div id="next">
+        <a onclick="transitionToPage('collection','var(--rurikon)')">➙</a>
+      </div>
     </div>
 
     <div
@@ -297,15 +397,6 @@
         no testing, I want to try establishing a mathematical model for cards'
         costs, values and special abilities so I can stick to the pattern and
         avoid making big mistakes.
-      </div>
-    </div>
-
-    <div id="bottom">
-      <div id="back">
-        <a onclick="transitionToPage('level-design','var(--rurikon)')">➙</a>
-      </div>
-      <div id="next">
-        <a onclick="transitionToPage('collection','var(--rurikon)')">➙</a>
       </div>
     </div>
   </body>

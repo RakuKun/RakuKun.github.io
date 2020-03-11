@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, user-scalable=0" />
-    <meta name="description" content="Project Ditto by Liangzheng Luo." />
+    <meta name="description" content="Project Ditto by Liangzheng Luo in the Team." />
     <meta name="theme-color" content="#005DAF" />
     <meta name="author" content="Liangzheng Luo" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -20,8 +20,108 @@
     <span id="cursor-outline"></span>
     <span id="cursor"></span>
     <script type="module" src="/js/general.js"></script>
-    <div id="home">
-      <a onclick="transitionToPage('../')">◯</a>
+    <div id="nav">
+      <div id="home">
+        <a onclick="transitionToPage('../')"> ◯ </a>
+      </div>
+      <div id="menu">
+        <a> ≡ </a>
+      </div>
+      <div id="menu-page">
+        <div class="category">
+          <div class="entry-title">Games</div>
+          <a
+            class="entry"
+            onclick="transitionToPage('../games/bvw','var(--rurikon)')"
+            >Building Virtual Worlds</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../games/ditto','var(--rurikon)')"
+            >Ditto</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../games/level-design','var(--rurikon)')"
+            >Level Design</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../games/cosmos','var(--rurikon)')"
+            >COSMOS</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../games/collection','var(--rurikon)')"
+            >Collection</a
+          >
+        </div>
+        <div class="category">
+          <div class="entry-title">Analysis</div>
+          <a
+            class="entry"
+            onclick="transitionToPage('../analysis/bloodborne','var(--sohi)')"
+            >Bloodborne's Design</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../analysis/slay-the-spire','var(--sohi)')"
+            >Slay the Spire: Engagement and Balancing</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../analysis/inside','var(--sohi)')"
+            >INSIDE</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../analysis/the-plan','var(--sohi)')"
+            >The Plan</a
+          >
+        </div>
+        <div class="category">
+          <div class="entry-title">Gallery</div>
+          <a
+            class="entry"
+            onclick="transitionToPage('../gallery/art','var(--kurenai)')"
+            >Art</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../gallery/photography','var(--kurenai)')"
+            >Photography</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../gallery/design','var(--kurenai)')"
+            >Design</a
+          >
+        </div>
+        <div class="category">
+          <div class="entry-title">Essay</div>
+          <a
+            class="entry"
+            onclick="transitionToPage('../essay/quest-mmorpg','var(--shironeri)')"
+            >Creating Quests for MMORPG</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../essay/design-diary','var(--shironeri)')"
+            >Design Diary</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../essay/another-inferno','var(--shironeri)')"
+            >Another Inferno</a
+          >
+        </div>
+      </div>
+      <div id="back">
+        <a onclick="transitionToPage('bvw','var(--rurikon)')">➙</a>
+      </div>
+      <div id="next">
+        <a onclick="transitionToPage('level-design','var(--rurikon)')">➙</a>
+      </div>
     </div>
 
     <div
@@ -175,15 +275,6 @@
         The production phase is set to start after Week 8 (the halves
         presentation). We will begin the production work once we settle down on
         a concept that we all are interested and confident to build.
-      </div>
-    </div>
-
-    <div id="bottom">
-      <div id="back">
-        <a onclick="transitionToPage('bvw','var(--rurikon)')">➙</a>
-      </div>
-      <div id="next">
-        <a onclick="transitionToPage('level-design','var(--rurikon)')">➙</a>
       </div>
     </div>
   </body>
