@@ -8,7 +8,6 @@ body {
   background-color: var(--sohi);
   color: var(--shironeri);
   letter-spacing: 1px;
-  line-height: 1.25;
   opacity: 1;
   transition: 0.5s ease-in-out;
 }
