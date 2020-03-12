@@ -216,6 +216,8 @@ hr {
   transition: 1s ease-in-out;
   padding: 0 10vw 10vh 10vw;
   font-weight: 400;
+  letter-spacing: 0;
+  word-spacing: 0.1em;
 }
 
 .main-title {
@@ -271,8 +273,6 @@ hr {
   padding: 1.75em 0 0 0;
   width: 61.8%;
   font-size: 1.5em;
-  letter-spacing: 0;
-  word-spacing: 0.1em;
 }
 
 .element-title {
@@ -297,12 +297,13 @@ hr {
 
 .element-image-flex {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .element-image-flex img {
   border: solid 2px var(--shironeri);
   margin: 0.25em 0.5em 0.25em 0;
-  width: 49%;
+  width: calc(49% - 0.25em);
   height: 100%;
   object-fit: contain;
 }
