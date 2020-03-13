@@ -32,12 +32,6 @@ body.fade-out {
   color: var(--kurenai);
 }
 
-.main-design-title {
-  float: left;
-  width: 38.2%;
-  font-size: 3em;
-}
-
 .main-information {
   color: var(--kurenai);
 }

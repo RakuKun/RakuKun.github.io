@@ -169,7 +169,6 @@ _swipe(main);
 var tops = document.querySelectorAll('.go-top');
 for (let i = 0; i < tops.length; i++) {
   tops[i].addEventListener('click', function() {
-    console.log(tops[i].parentElement);
     scdir = 'top';
     _scrollY(main);
   });

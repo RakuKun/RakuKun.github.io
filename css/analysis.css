@@ -29,13 +29,6 @@ body.fade-out {
   color: var(--sohi);
 }
 
-.main-design-title {
-  clear: both;
-  float: left;
-  width: 38.2%;
-  font-size: 3em;
-}
-
 .element-title {
   color: var(--sohi);
 }

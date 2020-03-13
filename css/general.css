@@ -76,14 +76,6 @@ body {
   line-height: 1.25;
 }
 
-hr {
-  width: 90%;
-  margin-bottom: 0;
-  float: left;
-  background-color: var(--shironeri);
-  border: 0.05em solid var(--shironeri);
-}
-
 #cursor,
 #cursor-outline {
   z-index: 99;
@@ -103,6 +95,10 @@ hr {
   width: 30px;
   height: 30px;
   background: transparent;
+}
+
+#nav {
+  z-index: 1;
 }
 
 #home {
@@ -131,12 +127,10 @@ hr {
   position: fixed;
   flex-wrap: wrap;
   align-content: center;
-
   padding: 0 10vw;
   height: 100vh;
   color: var(--shironeri);
   font-weight: 700;
-  z-index: 1;
   transition: 0.5s ease-in-out;
 }
 
@@ -231,16 +225,6 @@ hr {
   font-weight: 600;
 }
 
-.main-description {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 61.8%;
-  font-size: 1.5em;
-  font-weight: 600;
-  margin: 2vh 0;
-}
-
 .main-information {
   position: relative;
   left: 50%;
@@ -251,6 +235,23 @@ hr {
   border: 1em solid var(--shironeri);
   font-weight: 600;
   font-size: 1.25em;
+}
+
+hr {
+  width: 90%;
+  margin: 0.5em 0 auto 0;
+  background-color: var(--shironeri);
+  border: 0.05em solid var(--shironeri);
+}
+
+.main-description {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 61.8%;
+  font-size: 1.5em;
+  font-weight: 600;
+  margin: 0.5em 0;
 }
 
 .main-video {
@@ -268,9 +269,16 @@ hr {
   height: 100%;
 }
 
+.main-design-title {
+  clear: both;
+  float: left;
+  width: 38.2%;
+  font-size: 3em;
+}
+
 .main-design-description {
   float: left;
-  padding: 1.75em 0 0 0;
+  padding-top: 1.5em;
   width: 61.8%;
   font-size: 1.5em;
 }
@@ -278,34 +286,30 @@ hr {
 .element-title {
   display: inline-block;
   background-color: var(--shironeri);
-  margin: 0.5em 0 0.25em 0;
+  margin: 0.25em 0;
   border: 0.25em solid var(--shironeri);
   font-weight: 600;
 }
 
 .element-image {
-  margin: 0.5em 0 0 0;
-  width: 100%;
+  margin-top: 0.25em;
 }
 
 .element-image img {
-  border: solid 2px var(--shironeri);
+  border: solid 0.05em var(--shironeri);
   width: 100%;
   height: 100%;
-  object-fit: contain;
 }
 
 .element-image-flex {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .element-image-flex img {
-  border: solid 2px var(--shironeri);
+  border: solid 0.05em var(--shironeri);
   margin: 0.25em 0.5em 0.25em 0;
   width: calc(49% - 0.25em);
-  height: 100%;
-  object-fit: contain;
 }
 
 .bold {

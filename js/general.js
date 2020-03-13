@@ -140,14 +140,19 @@ function RemoveClass() {
   document.body.classList.remove('fade-out');
 }
 
-var menu = document.getElementById('menu').getElementsByTagName('a')[0];
-var menuPage = document.getElementById('menu-page');
-menuPage.style.display = 'none';
-
-menu.onclick = function() {
-  if (menuPage.style.display == 'none') {
-    menuPage.style.display = 'flex';
-  } else {
+function RegisterMenu() {
+  var menu = document.getElementById('menu').getElementsByTagName('a')[0];
+  var menuPage = document.getElementById('menu-page');
+  if (menu) {
     menuPage.style.display = 'none';
+    menu.onclick = function() {
+      if (menuPage.style.display == 'none') {
+        menuPage.style.display = 'flex';
+      } else {
+        menuPage.style.display = 'none';
+      }
+    };
   }
-};
+}
+
+RegisterMenu();

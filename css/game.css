@@ -26,10 +26,8 @@ body.fade-out {
 }
 
 .main-image {
-  position: relative;
-  max-width: 100vw;
-  left: 50%;
-  margin-left: -50vw;
+  width: 100vw;
+  margin-left: -10vw;
 }
 
 .main-image img {
@@ -40,13 +38,6 @@ body.fade-out {
 
 .main-information {
   color: var(--rurikon);
-}
-
-.main-design-title {
-  clear: both;
-  float: left;
-  width: 38.2%;
-  font-size: 3em;
 }
 
 .element-title {
