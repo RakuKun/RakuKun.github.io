@@ -97,10 +97,6 @@ body {
   background: transparent;
 }
 
-#nav {
-  z-index: 1;
-}
-
 #home {
   user-select: none;
   position: fixed;
@@ -131,7 +127,8 @@ body {
   height: 100vh;
   color: var(--shironeri);
   font-weight: 700;
-  transition: 0.5s ease-in-out;
+  white-space: nowrap;
+  z-index: 1;
 }
 
 .category {
@@ -200,7 +197,6 @@ body {
 .top-information {
   background-color: var(--shironeri);
   border: 1em solid var(--shironeri);
-  color: var(--ruri);
   font-size: 1.25em;
   position: absolute;
   bottom: 10vh;
@@ -226,11 +222,8 @@ body {
 }
 
 .main-information {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
   max-width: 60%;
-  margin: 2vh 0;
+  margin: 2vh auto;
   background-color: var(--shironeri);
   border: 1em solid var(--shironeri);
   font-weight: 600;
@@ -245,13 +238,10 @@ hr {
 }
 
 .main-description {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
   max-width: 61.8%;
   font-size: 1.5em;
   font-weight: 600;
-  margin: 0.5em 0;
+  margin: 0.5em auto;
 }
 
 .main-video {
@@ -263,8 +253,6 @@ hr {
 
 .main-video iframe {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -310,6 +298,8 @@ hr {
   border: solid 0.05em var(--shironeri);
   margin: 0.25em 0.5em 0.25em 0;
   width: calc(49% - 0.25em);
+  height: 100%;
+  object-fit: contain;
 }
 
 .bold {
