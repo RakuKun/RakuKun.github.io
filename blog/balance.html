@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=0" />
+    <meta
+      name="description"
+      content="Aspects of Game Balance by Liangzheng Luo."
+    />
+    <meta name="theme-color" content="#005DAF" />
+    <meta name="author" content="Liangzheng Luo" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Aspects of Game Balance - Liangzheng Luo</title>
+    <link rel="icon" type="image/png" href="/media/icon.png" />
+    <link href="/css/blog.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,500,500i,600,600i,700,700i&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <span id="cursor-outline"></span>
+    <span id="cursor"></span>
+    <script type="module" src="/js/general.js"></script>
+    <div id="nav">
+      <div id="home">
+        <a onclick="transitionToPage('../')"> ◯ </a>
+      </div>
+      <div id="menu">
+        <a> ≡ </a>
+      </div>
+      <div id="menu-page">
+        <div class="category">
+          <div class="entry-title">Games</div>
+          <a
+            class="entry"
+            onclick="transitionToPage('../games/bvw','var(--rurikon)')"
+            >Building Virtual Worlds</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../games/ditto','var(--rurikon)')"
+            >Ditto</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../games/level-design','var(--rurikon)')"
+            >Level Design</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../games/cosmos','var(--rurikon)')"
+            >COSMOS</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../games/collection','var(--rurikon)')"
+            >Collection</a
+          >
+        </div>
+        <div class="category">
+          <div class="entry-title">Analysis</div>
+          <a
+            class="entry"
+            onclick="transitionToPage('../analysis/bloodborne','var(--sohi)')"
+            >Bloodborne's Design</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../analysis/slay-the-spire','var(--sohi)')"
+            >Slay the Spire: Engagement and Balancing</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../analysis/inside','var(--sohi)')"
+            >INSIDE</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../analysis/the-plan','var(--sohi)')"
+            >The Plan</a
+          >
+        </div>
+        <div class="category">
+          <div class="entry-title">Gallery</div>
+          <a
+            class="entry"
+            onclick="transitionToPage('../gallery/art','var(--kurenai)')"
+            >Art</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../gallery/photography','var(--kurenai)')"
+            >Photography</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../gallery/design','var(--kurenai)')"
+            >Design</a
+          >
+        </div>
+        <div class="category">
+          <div class="entry-title">blog</div>
+          <a
+            class="entry"
+            onclick="transitionToPage('../blog/quest-mmorpg','var(--shironeri)')"
+            >Creating Quests for MMORPG</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../blog/balance','var(--shironeri)')"
+            >Aspects of Game Balance</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../blog/design-diary','var(--shironeri)')"
+            >Design Diary</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../blog/another-inferno','var(--shironeri)')"
+            >Another Inferno</a
+          >
+        </div>
+      </div>
+      <div id="back">
+        <a onclick="transitionToPage('quest-mmorpg','var(--kurenai)')">➙</a>
+      </div>
+      <div id="next">
+        <a onclick="transitionToPage('design-diary','var(--shironeri)')">➙</a>
+      </div>
+    </div>
+
+    <div class="top" style="background-image: url();">
+      <div class="top-title" style="font-size: 5em;">
+        Aspects of Game Balance
+      </div>
+      <div class="top-introduction">
+        Balancing a game means lots of things. In an intuitive way it's about
+        numbers, but that's only the micro side of balancing. The macro side -
+        game flow - also should always be at a significant place in the process
+        of game making.
+      </div>
+      <div class="top-information">
+        <span style="color:var(--ro);">time</span> spring 2020 <br />
+      </div>
+    </div>
+
+    <div id="main">
+      <div class="main-title">
+        Macro: A Balanced Game Flow
+      </div>
+      <div class="main-text">
+        The game flow I recently played a little decent game:
+        <span class="important"
+          ><a href="https://drasnus.itch.io/first-cut">First Cut</a></span
+        >
+        on itch.io, and I would like to use this game as the analysis object. It
+        is not perfectly balanced, which makes the analysis more meaningful and
+        targeted.
+      </div>
+      <div class="main-paragraph-title">
+        Setup
+      </div>
+      <div class="main-text">
+        A balanced setup means the balanced start and goal, and in skill-based
+        games, more precisely,
+        <span class="bold"
+          >the start and goal of each side should be the same.</span
+        >
+        Both sides spawn with the same ability on symmetrical sides on the
+        stage. Their goal is also the same: to one-shot each other. The only
+        difference they can make to the characters is the characters' appearance
+        but since the change is only decorational and not confusing, it is far
+        from breaking the visual balance. So I could say its setup is well
+        balanced.
+      </div>
+      <div class="main-paragraph-title">
+        Dynamic
+      </div>
+      <div class="main-text">
+        A balanced dynamic means that in one round<span class="bold"
+          >the passive side still has the chance to strike back</span
+        >, and in each separate round
+        <span class="bold">players compete under the same condition.</span>
+        In this game I call the attacking side the aggressive side and the
+        defending side the passive. There is an important rule that helps the
+        passive side strike back: If you press attack immediately after blocking
+        you will perform a counter attack. This makes counter-attack strategy
+        possible and rewarding.<br /><br />
+        The game won’t nerf the previous winner or buff the loser, every new
+        round starts the same with previous ones. This ensures that if two
+        players are on the same skill level, after many rounds their chance of
+        winning should be near 50-50. I was playing this game with my classmate
+        Aiden and we’ve played for around 300 rounds and our winrate is almost
+        equal. We struggled to understand how every line of rule meant in the
+        game, and as we proceeded to figure that out, we just found more fun in
+        the mechanism.
+      </div>
+      <div class="main-paragraph-title">
+        Choices
+      </div>
+      <div class="main-text">
+        Balanced choices mean that all choices given are equally useful and
+        effective. In general, there are several movesets with some slightly
+        different attributes. There are three types of attack exactly as the
+        rules explained. Since all attacks are one-shot, the difference between
+        them is range and speed.<br /><br />
+        As Aiden and I tested out, in fact the most effective defending style in
+        game is still blocking since it does not require any additional input
+        and allows counter-attack right after. We found sidestep less useful
+        because it disallows dodging while executing the action, and moved the
+        character a short distance which may confuse players because their
+        relative positions may flip (after sidestepping A may goes behind B).
+      </div>
+      <div class="main-paragraph-title">
+        Interaction
+      </div>
+      <div class="main-text">
+        Balanced interaction means the interaction between human and computer is
+        fair among hardware. The game allows its multiplayer mode to be played
+        by 1 keyboard and 1 gamepad, and that is probably the most unbalanced
+        element in this game due to the nature of different hardware. We all
+        know that many games have strict constraints with regard to
+        cross-platform playing because either mouse-keyboard or gamepad may have
+        strong hardware advantage over the others, especially in shooting games
+        (CoD, Battlefield, Apex, etc.) and fighting games. In this game, we did
+        feel that gamepad and mouse-keyboard differ in the game feel, especially
+        when we were trying to direction and dodging.
+      </div>
+
+      <div class="main-title">
+        Micro: A Balanced Model
+      </div>
+      <div class="main-text">
+        From a micro perspective the word "balance" means the mathematical model
+        for each player is expected to be equal.
+      </div>
+      <div class="main-paragraph-title">
+        mathematical model
+      </div>
+      <div class="main-text">
+        More detailed discussion will be added soon.
+      </div>
+      <div class="main-paragraph-title">
+        document
+      </div>
+    </div>
+  </body>
+</html>

@@ -78,7 +78,7 @@ body.fade-out {
 }
 
 .introduction-title-entry:nth-of-type(5) a:hover {
-  color: var(--shironeri);
+  color: rgba(252, 250, 242, 0.7);
 }
 
 .introduction-title-entry:nth-of-type(5) a:active {
@@ -93,7 +93,7 @@ body.fade-out {
 }
 
 .section-title {
-  letter-spacing: 5px;
+  letter-spacing: 4px;
   font-weight: 600;
   font-size: 12vmin;
   font-variant: small-caps;
@@ -188,7 +188,7 @@ body.fade-out {
   background-color: var(--kurenai-trans);
 }
 
-.essay-entry {
+.blog-entry {
   vertical-align: top;
   margin: 1vh 0;
   font-size: 5vmin;
