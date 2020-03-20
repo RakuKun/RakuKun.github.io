@@ -238,13 +238,67 @@
         for each player is expected to be equal.
       </div>
       <div class="main-paragraph-title">
-        mathematical model
+        To Avoid Blurriness
       </div>
       <div class="main-text">
-        More detailed discussion will be added soon.
+        When I introspects the reasons for encountering design hardship and
+        failures, for many times I was designing only with intuitive thoughts
+        instead of the analysis of the real problem. Intuitive thoughts come
+        from the preexisting game experience, and appear like "if I am designing
+        this I would use the way XXX uses since that feels great". A symbolic
+        example: when people complain a hero in a MOBA is overpowered, they are
+        talking their own match experience, while for different ranks a same
+        hero may perform much differently.<br /><br />
+        Intuitive thoughts feels plausible and are easy to think of, but the
+        downside is that they often come blurred and off the track. The
+        blurriness comes from our tricky memory that does not always serve 100%
+        accurate. For game amateurs that may be sufficient, but dangerous
+        especially for game designers who should instead use their professional
+        knowledge to analyze and solve the problem. Game designers have rich
+        experience in games which may deceive them as a side effect.<br /><br />
+        Balancing a game, as a job of game designers', should always stick to
+        the common sense of designing: to define a problem, to disintegrate its
+        parts, to do research, and to come up with multiple ways from which
+        designers choose the most suitable one. It is a highly rational, logical
+        process with careful concerns over any possibility of deteriorating the
+        situation. That highlights the significance of having a balanced
+        mathematical model for a game.
       </div>
       <div class="main-paragraph-title">
-        document
+        Mathematical Model
+      </div>
+      <div class="main-text">
+        First to clarify: games don't necessarily originates from a math model.
+        There are basically two types of game design method: Bottom-up and
+        Top-down. While bottom-up approach pieces together of mechanics to give
+        rise to a more complex system, top-down approach has a theme/idea formed
+        first and breaks it down to gain insight into details. But every game
+        will eventually come to a stage where the process of establishing a math
+        model should occur.<br /><br />
+        Even the simplest games have some rules for which the designers and
+        programmers set up a series of variables to handle the input and output.
+        For instance, Snake.<br /><br />
+      </div>
+      <div class="main-paragraph-title">
+        Complex Situation
+      </div>
+      <div class="main-text">
+        In more complex circumstance, designers may spend more time setting up
+        an appropriate model. Let's say we have an action game like Furi and we
+        need to
+        <span class="bold"> balance the boss's hitpoints.</span> Generally the
+        first thing is to lay out the combat setup:<br />
+        - A hero who can do basic attack and perform skills with separate
+        cooldowns. The hero also has some items that could boost up
+        themselves.<br />
+        - A boss the death of whom signals the victory of combat. The boss also
+        has its own skills.<br />
+        - A limited combat arena disallowing anybody to flee.<br />
+        Then we determine key variables that will definitely influence the game
+        experience:<br />
+        - Hero's attack damage, skill damage and cooldowns.<br />
+        - The possible time we would like the combat to be.<br />
+        Boss hp = (Sum of [((optimal dps + item dps) * Suboptimal)]) * Cycles
       </div>
     </div>
   </body>
