@@ -265,7 +265,7 @@
         mathematical model for a game.
       </div>
       <div class="main-paragraph-title">
-        Mathematical Model
+        Establishing Models
       </div>
       <div class="main-text">
         First to clarify: games don't necessarily originates from a math model.
@@ -277,7 +277,43 @@
         model should occur.<br /><br />
         Even the simplest games have some rules for which the designers and
         programmers set up a series of variables to handle the input and output.
-        For instance, Snake.<br /><br />
+        For instance, Flappy Bird where all players can do is touching the
+        screen within the correct time period. <br /><br />
+        To start off, as the game designer, we need to figure out
+        <span class="bold"
+          >what parameter is ultimately impacting the game experience</span
+        >
+        (which is usually a dependent variable): <br />
+        - <span class="bold">The "grace" time </span> during which the fly input
+        is successful.<br />
+        And there are the independent variables that we have actually
+        control:<br />
+        - The bird's flying speed.<br />
+        - How fast the bird drops and how far can bird jump upwards.<br />
+        - The distance between pillars that allows the bird to fly through.<br />
+        - The distance between two stops.<br />
+        With these parameters set up, and say we start right between the first
+        pair of pillars, we can easily know the time it takes to travel to the
+        next challenge:<br />
+        - TravelTime = Distance / FlySpeed;<br />
+        And if we assume the bird falls at a constant speed, we can know how far
+        it falls traveling:<br />
+        - FallDistance = FallSpeed * TravelTime;<br />
+        As we observe in the game, usually the bird needs to flap wings multiple
+        times in between each level in order not to fall, so we also have: -
+        FlyDistance = FlapDistance * FlapTimes.<br />
+        Now we come to the final answer, <br />
+        - GraceDistance = PillarDistance - (FallDistance - FlyDistance)<br />
+        -
+        <span class="bold"
+          >GraceTimePeriod = GraceDistance / FlapDistance;</span
+        >
+        <br /><br />
+        With our key variable being represented by independent variables the
+        designers can start tweaking the value and add more variables should
+        they like. One thing worth noting is that we start designing under the
+        ideal situation to better expose the core design problem and add
+        complexity step by step.
       </div>
       <div class="main-paragraph-title">
         Complex Situation
@@ -287,7 +323,7 @@
         an appropriate model. Let's say we have an action game like Furi and we
         need to
         <span class="bold"> balance the boss's hitpoints.</span> Generally the
-        first thing is to lay out the combat setup:<br />
+        first thing is to lay out the component of combat:<br />
         - A hero who can do basic attack and perform skills with separate
         cooldowns. The hero also has some items that could boost up
         themselves.<br />
@@ -297,8 +333,25 @@
         Then we determine key variables that will definitely influence the game
         experience:<br />
         - Hero's attack damage, skill damage and cooldowns.<br />
-        - The possible time we would like the combat to be.<br />
-        Boss hp = (Sum of [((optimal dps + item dps) * Suboptimal)]) * Cycles
+        And it's common sense that we don't want the characters to just one-shot
+        the boss, so in long-term there will be the so-called DPS cycles that
+        makes the boss feel "tanky":<br />
+        <span class="bold"
+          >Boss HP = (Sum of [((optimal DPS + item DPS) * Suboptimal)]) *
+          Cycles.</span
+        >
+        <br /><br />
+        The formula itself is seemingly easier to understand and has even fewer
+        variables than the Flappy Bird's. But again we started off with least
+        variables as possible, such as optimal DPS as we know in game it's
+        impossible to follow the optimal pattern because boss also has skills
+        and forces heroes to sacrifice some of DPS for survival. And in an
+        action game there are a lot more choices every moment that designers
+        should be able to predict. With this in mind, when we are designing
+        boss's skills we can always refer to the formula above and see what
+        impact it could bring to the existing variables, and that process can be
+        very tricky as all variables are dependent on others and changing one
+        value could possibly break the experience.
       </div>
     </div>
   </body>
