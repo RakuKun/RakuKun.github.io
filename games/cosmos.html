@@ -107,7 +107,7 @@
             onclick="transitionToPage('../blog/quest-mmorpg','var(--shironeri)')"
             >Creating Quests for MMORPG</a
           ><br />
-                    <a
+          <a
             class="entry"
             onclick="transitionToPage('../blog/balance','var(--shironeri)')"
             >Aspects of Game Balance</a
@@ -141,66 +141,26 @@
       </div>
       <div class="top-introduction">
         COSMOS is a board game I am working on as the course project for Stone
-        Librande's Game Design Fundamentals class. In general, it is a 1v1v1
-        deck building game with three different camps and unique cards for each.
+        Librande's Game Design Fundamentals. In general, it is a 1v1v1 resource
+        gathering game where players compete to be the first person to reach the
+        high score.
       </div>
       <div class="top-information">
-        <span style="color:var(--ro);">time</span> spring 2020 <br />
-        <span style="color:var(--ro);">genre</span> deck-building board game<br />
-        <span style="color:var(--ro);">work</span> game design, art
+        <span style="color: var(--ro);">time</span> spring 2020 <br />
+        <span style="color: var(--ro);">genre</span> board game<br />
+        <span style="color: var(--ro);">work</span> game design, art
       </div>
     </div>
 
     <div id="main">
       <div class="main-title">
-        Principle
-      </div>
-      <div class="main-description" style="width: 100%;">
-        Stone teaches his Game Design Fundamentals class in a way both
-        theoretical and practical. There is quite a few theories I learn from
-        his lecture and I consider them very as important game design principles
-        as they work for basically all kinds of games (board game or digital
-        game).
-      </div>
-      <div class="main-design-title">
-        <hr />
-        game elements
-      </div>
-      <div class="main-design-description">
-        All good games have something in common without which the game just
-        breaks or is not as fun. These are basic elements.
-        <br /><span class="element-title">goals</span><br />
-        A game cannot run without goals. The ultimate reason to have a goal is
-        that nobody wants to waste time doing something confused without an end.
-        Also, a goal helps define when the game should end, and how should
-        players reach the goal.
-        <br /><span class="element-title">start</span><br />
-        Start is where and how players begin a game. All games have start
-        naturally, but start is also a key component of game as an imbalanced
-        start might ruin the experience. And start controls the "distance"
-        between itself and the goal, which also needs good tweaking for the good
-        game flow.
-        <br /><span class="element-title">obstacle</span><br />
-        Obstacle defines the challenge part which separates game design from
-        experience design. A game should always be challenging in some ways to
-        ask players to spend time either thinking or executing, while an
-        experience does not need to. A good obstacle could be a well controlled
-        balance between "skill" factor and "luck" factor.
-        <br /><span class="element-title">rules</span><br />
-        Rules control how a game goes, and basically it is the wide collection
-        of all the interactive parts: how game response to a decision? What and
-        how can players do to each other? How should the game end? These
-        questions should all be answered in rules.
-      </div>
-
-      <div class="main-title">
         Ideation
       </div>
       <div class="main-description" style="width: 100%;">
-        Since I am a big fan of Slay the Spire, I decide to make a competitive
-        deck-building game. I start my design by studying some board games of
-        the same genre. Learning from those titles, I am able to construct the
-        basic framework of my board game.
+        I initially decided to try making a competitive deck-building game. I
+        started the ideation phase by studying similar games that have proven
+        commercially and critically successful. After that, I outlined some of
+        the key elements that I would love to implement in my own game.
       </div>
       <div class="main-design-title">
         <hr />
@@ -216,20 +176,26 @@
         </div>
         <span class="element-title">Slay the Spire</span><br />
         Slay the Spire is a deck-building roguelike made by Mega Crit. A single
-        player game, Slay the Spire features procedurally generated maps and
-        semi-randomly dropped cards and power-ups as the base of its
-        replayability. Its four predetermined characters can their unique deck
-        inspires me of how to create card synergy and balance cards: to create a
-        standard mathematical model for the cost and effect, then add more
-        uncertainty and variety.
+        player game, Slay the Spire features four playable characters, each of
+        whom has their unique deck where many examples can be found for learning
+        card synergy and balancing. What's more, Slay the Spire also does a good
+        job in balancing the skill and luck factor using procedurally generated
+        maps and semi-randomly dropped cards and power-ups as the base of its
+        replayability. There's the link to my detailed analysis of the game:
+        <a
+          class="important"
+          onclick="transitionToPage('../analysis/slay-the-spire','var(--sohi)')"
+          >Slay the Spire: Engagement and Balance.</a
+        >
         <br /><span class="element-title">Star Realms</span><br />
         Star Realms is a deck-building board game pitting players against each
-        other in a fight for dominance over the entire galaxy. As a multiplayer
+        other in a fight for dominance over the entire galaxy. A multiplayer
         card game with four Factions (camps), Star Realms does a good job
-        designing the deck-building mechanism in offering a shared trade row
-        which is fair for both sides. In this fast paced game the deck grows
-        stronger in a significant quick way, so learning to balance the early
-        game and late game is also a lesson for me.
+        designing the deck-building mechanism by offering a shared trade row,
+        fair enough for both sides. The game uses a very straight forward way to
+        make sure players pick the cards of same Faction: the powerful Ally
+        ability can only be triggered if the player have another card of that
+        faction in-play.
       </div>
       <div class="main-design-title">
         <hr />
@@ -238,37 +204,38 @@
       <div class="main-design-description">
         <span class="element-title">backstory</span><br />
         A star in a faraway galaxy is to explode in supernova soon, which will
-        kill every living thing in its range. Three civilizations begin the
-        exodus: <br />
-        red civilization are aggressive and always want to wipe out other
+        kill every living thing in its range. Three civilizations embark on the
+        great exodus: <br />
+        Red civilization is aggressive and always wants to wipe out other
         civilization in the galaxy; <br />
-        yellow civilization are successful colonizing and work closely among
-        multiple stars;<br />
-        blue civilization never lack scientists and philosophers because they
+        Yellow civilization is successful colonizing and works closely among
+        multiple stars; <br />
+        Blue civilization never lacks scientists and philosophers because they
         are so eager to learn new knowledge. <br />
-        <span class="element-title">basic structure</span><br />
-        COSMOS is a 1v1v1 deck-building turn-bases card game, but different from
-        most games where everyone has "health" and needs to decrease other
-        player's health, in this game each player takes turns to get and play
-        cards to get to the destination on the map.
+        <span class="element-title">gameplay overview</span><br />
+        COSMOS is a 1v1v1 turn-based deck-building card game where each player
+        tries to move their mothership to the destination point on the map. The
+        game offers ways to move your own mothership and also to impede other
+        motherships' moving process. The ship's movement is similar to the
+        health in many competitive games, but with real blocks on the map more
+        gameplay tricks can be designed.
         <br /><span class="element-title">game components</span><br />
+        The game uses cards and tokens. <br /><br />
         The cards are in 3 colors: blue, red and yellow, each standing for one
         civilization. Each civilization has their unique cards that suits its
-        backstory. Each player has a Mothership which needs to be carried to the
-        destination. There are 3 basic collections of ships:<br />
-        Explorers: The collection of ships mainly for getting resources on the
-        map.<br />
-        Fighters: The collection of ships mainly for deteriorating the power of
-        other camps, for instance, move their Motherships back or destroy
-        ships.<br />
-        Boosters: The collection of ships mainly for moving Mothership. Below is
-        the first draft of the game map. The map is divided into many blocks,
-        and all players have the same start point and destination while each
-        other block has a number in it which means the resources.
+        background. Each player has a Mothership which needs to move to the
+        destination to win. There are three basic collections of ships:<br />
+        Explorers: The units mainly for getting resources on the map.<br />
+        Fighters: The units that have diverse abilities from boosting own camp's
+        mothership to impeding other camps, for instance, moving their
+        Motherships back or destroying ships.<br />
+        Boosters: The units that mainly move the Mothership. <br /><br />
+        Tokens will be put on the map to represent all the units and
+        Motherships.
       </div>
 
       <div class="main-title">
-        Prototype Alpha Version
+        Prototype Version Alpha
       </div>
       <div class="main-description">
         Iteration is absolutely a key faction in game design, and even more
@@ -340,13 +307,6 @@
         Buff or nerf some cards but pay more to more attention to card synergy.
       </div>
 
-      <div class="main-title">
-        Prototype Beta Version
-      </div>
-      <div class="main-description">
-        Beta phase is mainly for improving game flow, adding new content and
-        adjusting balance.
-      </div>
       <div class="main-design-title">
         <hr />
         cards
@@ -367,7 +327,11 @@
         principle for designing cards.
         <br /><span
           class="element-title"
-          style="background-color: var(--kurenai); border: 0.25em solid var(--kurenai); color: var(--shironeri);"
+          style="
+            background-color: var(--kurenai);
+            border: 0.25em solid var(--kurenai);
+            color: var(--shironeri);
+          "
           >Red Camp</span
         ><br />
         Keyword: Glory, Sacrifice<br />
@@ -376,7 +340,11 @@
         Sacrifice: Some units can sacrifice itself for the greater merit.<br />
         <span
           class="element-title"
-          style="background-color: var(--ruri); border: 0.25em solid var(--ruri); color: var(--shironeri);"
+          style="
+            background-color: var(--ruri);
+            border: 0.25em solid var(--ruri);
+            color: var(--shironeri);
+          "
           >Blue Camp</span
         ><br />
         Keyword: Synergy, Control<br />
@@ -385,7 +353,11 @@
         Control: Disable target ship’s abilities.<br />
         <span
           class="element-title"
-          style="background-color: var(--tohoh); border: 0.25em solid var(--tohoh); color: var(--shironeri);"
+          style="
+            background-color: var(--tohoh);
+            border: 0.25em solid var(--tohoh);
+            color: var(--shironeri);
+          "
           >Yellow Camp</span
         ><br />
         Keyword: Evolution, Telekinesis<br />
@@ -402,6 +374,22 @@
         no testing, I want to try establishing a mathematical model for cards'
         costs, values and special abilities so I can stick to the pattern and
         avoid making big mistakes.
+      </div>
+
+      <div class="main-title">
+        Prototype Version Beta
+      </div>
+      <div class="main-description">
+        With the takeaways gained from the alpha version, I decided to design a
+        beta version with different core mechanism.
+      </div>
+      <div class="main-design-title">
+        <hr />
+        going virtual
+      </div>
+      <div class="main-design-title">
+        <hr />
+        top-down design
       </div>
       <div style="clear: both;"></div>
     </div>
