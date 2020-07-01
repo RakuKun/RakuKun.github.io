@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=0" />
+    <meta name="description" content="Balancing a Game by Liangzheng Luo." />
+    <meta name="theme-color" content="#005DAF" />
+    <meta name="author" content="Liangzheng Luo" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Formulas in Combat Design - Liangzheng Luo</title>
+    <link rel="icon" type="image/png" href="/media/icon.png" />
+    <link href="/css/blog.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,500,500i,600,600i,700,700i&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <span id="cursor-outline"></span>
+    <span id="cursor"></span>
+    <script type="module" src="/js/general.js"></script>
+    <div id="nav">
+      <div id="home">
+        <a onclick="transitionToPage('../')"> ◯ </a>
+      </div>
+      <div id="menu">
+        <a> ≡ </a>
+      </div>
+      <div id="menu-page">
+        <div class="category">
+          <div class="entry-title">Games</div>
+          <a
+            class="entry"
+            onclick="transitionToPage('../games/bvw','var(--rurikon)')"
+            >Building Virtual Worlds</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../games/ditto','var(--rurikon)')"
+            >Ditto</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../games/level-design','var(--rurikon)')"
+            >Level Design</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../games/cosmos','var(--rurikon)')"
+            >COSMOS</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../games/collection','var(--rurikon)')"
+            >Collection</a
+          >
+        </div>
+        <div class="category">
+          <div class="entry-title">Analysis</div>
+          <a
+            class="entry"
+            onclick="transitionToPage('../analysis/bloodborne','var(--sohi)')"
+            >Bloodborne: Story in Levels</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../analysis/slay-the-spire','var(--sohi)')"
+            >Slay the Spire: Engagement and Balancing</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../analysis/inside','var(--sohi)')"
+            >INSIDE: Narrative and Visuals</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../analysis/the-plan','var(--sohi)')"
+            >The Plan: An Experiment</a
+          >
+        </div>
+        <div class="category">
+          <div class="entry-title">Gallery</div>
+          <a
+            class="entry"
+            onclick="transitionToPage('../gallery/art','var(--kurenai)')"
+            >Art</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../gallery/photography','var(--kurenai)')"
+            >Photography</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../gallery/design','var(--kurenai)')"
+            >Design</a
+          >
+        </div>
+        <div class="category">
+          <div class="entry-title">Blog</div>
+          <a
+            class="entry"
+            onclick="transitionToPage('../blog/quest-mmorpg','var(--shironeri)')"
+            >Creating Quests for MMORPG</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../blog/formulas','var(--shironeri)')"
+            >Formulas in Combat Design</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../blog/balance','var(--shironeri)')"
+            >Balancing a Game</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../blog/design-diary','var(--shironeri)')"
+            >Design Diary</a
+          ><br />
+          <a
+            class="entry"
+            onclick="transitionToPage('../blog/another-inferno','var(--shironeri)')"
+            >Another Inferno</a
+          >
+        </div>
+      </div>
+      <div id="back">
+        <a onclick="transitionToPage('quest-mmorpg','var(--kurenai)')">➙</a>
+      </div>
+      <div id="next">
+        <a onclick="transitionToPage('design-diary','var(--shironeri)')">➙</a>
+      </div>
+    </div>
+
+    <div class="top" style="background-image: url();">
+      <div class="top-title" style="font-size: 5em;">
+        Formulas in Combat Design
+      </div>
+      <div class="top-introduction">
+        Whenever a game is involved with a combat system, it is essentially
+        asking designers to develop a solid "attack-damage" relationship to make
+        the combat process fun and reasonable for players, as well as
+        controllable for the designer's end. This article discusses three widely
+        used and proven formulas (and their pros and cons) in combat system.
+      </div>
+      <div class="top-information">
+        <span style="color: var(--ro);">time</span> summer 2020 <br />
+      </div>
+    </div>
+
+    <div id="main">
+      <div class="main-title">
+        Attributes
+      </div>
+      <div class="main-text">
+        Before jumping into the formula part I think it's necessary to talk
+        about the attributes involved in the combat system because they serve as
+        the parameters in formulas.
+      </div>
+      <div class="main-paragraph-title">
+        Attack
+      </div>
+      <div class="main-text">
+        Attack is one of the two core attributes in any formulas. A combat
+        system cannot run without defining what attack is - from a complex
+        attribute influenced by multiple factors such as weapons and character
+        strength, to the most refined form where one shot guarantees one kill,
+        attack is something that designers must clearly define because it
+        practically affects everything in a combat.
+      </div>
+      <div class="main-paragraph-title">
+        Health
+      </div>
+      <div class="main-text">
+        Health serves as the second core attribute. Technically speaking, a
+        combat is a continued process for multiple entities until someone's
+        health gets reduced below or at zero. Health can come in multiple forms
+        - in most games it's a integer while in one-shot-one-kill games it may
+        be several lives a character possesses.
+      </div>
+      <div class="main-paragraph-title">
+        Defense
+      </div>
+      <div class="main-text">
+        This is what makes combat system complicated but fun as well! Defense
+        can counteract (at least) part of the impact an attack deals, and this
+        is where the magic happens. Finding a well-balanced, intuitive, regular
+        formula that explains the relationship between attack and defense is
+        what game designers are trying to do - and there seems no perfect
+        answer. For the three formulas this article is going to discuss, they
+        each has some ideal and bad situations. Picking the right formula for
+        the game and continuing making adjustment has to be a hard but fun work
+        to do!
+      </div>
+      <div class="main-paragraph-title">
+        Critical Hit Rate, Dodge Rate, etc.
+      </div>
+      <div class="main-text">
+        Finally, in many modern games there are many rates that come along with
+        the character. They are not required, but they do add fun factor for the
+        game since players love to see some interesting randomness in the game
+        that doesn't break it. The fun thing list can be actually much longer:
+        skill effects, cooldown & cooldown reduction, elemental damage... you
+        name it.
+      </div>
+
+      <div class="main-title">
+        Formula One: DMG = ATK - DEF
+      </div>
+      <div class="main-text">
+        This one has a extended version:<br />
+        DMG = (ATK - DEF) * c, where c is a constant value provided by skill or
+        equipment.<br />
+        Known as the "Subtract Formula", this formula has a long history
+        (probably longer than any other formulas) thanks to its intuitive
+        demonstration of the relationship between attack and defense.
+      </div>
+      <div class="main-paragraph-title">
+        Pros
+      </div>
+      <div class="main-text">
+        Subtract Formula is arguably the most natural formula designers could
+        think of. Given that the change of attack and defense results in linear
+        change of damage, and they contribute the same for the damage change, it
+        is relatively easy for designers to calculate.<br /><br />
+        Plus, Subtract Formula gets sensitive when the attack and the defense
+        parameter get closer. Consider a guy with 100 health points and 1
+        defense. When the attack increases from 1, the turns it takes to kill
+        the guy drastically decreases from 100 to 50, then to 33. This means
+        that even the slightest change in this formula may have a whole
+        different consequence. In some way players want this feeling of
+        "changing a bit changes everything", and tweaking the value becomes a
+        very interesting job.<br /><br />
+        The relationship where one counters another cannot be simply passed to
+        the third player. If A wins B in a turn-based fight, and B wins C, it
+        doesn't mean A always wins C. Consider the following three groups of
+        figures: <br />
+        A: ATK=75, DEF=20, HP=200;<br />
+        B: ATK=35, DEF=45, HP=300;<br />
+        C: ATK=50, DEF=30, HP=300.<br />
+        In this case if A fights C, it takes the same number of turns (6.7) for
+        one to kill each. We get the same result if B fights C (60 turns). But
+        when we consider A and B, A actually outperforms B from the fact that it
+        takes 13.3 attacks for B to kill A but only 10 attacks for A to kill
+        B.<br /><br />
+        What I am trying to demonstrate is that, thanks to the unpredictable
+        chain effect of Subtract Formula, the designers are able to create a
+        counter chain like rock paper scissors. This is especially useful in
+        some tactical games like Blizzard's StarCraft.
+      </div>
+      <div class="main-paragraph-title">
+        Cons
+      </div>
+      <div class="main-text">
+        In extreme situation when the defense value is higher than the attack
+        value, one gets literally invulnerable. This could ruin the attacking
+        side's confidence if happens in a PvP game: "I use my full power to
+        attack but even unable to break their defense?? This game is absolutely
+        broken." To avoid undesired invulnerability, designers need to carefully
+        balance the values.<br /><br />
+        Subtract Formula highlights the importance of defense, but probably too
+        much. When someone gets attacked by multiple people, the system
+        calculates the damage individually, so the same guy's defense gets used
+        multiple times in the formula, just like they gets additional defense on
+        the house.
+      </div>
+      <div class="main-paragraph-title">
+        Usage
+      </div>
+      <div class="main-text">
+        From what I know, Subtract Formula and its variations are commonly used
+        in earlier RPGs, turn-based tactical games and almost all FPS. Subtract
+        Formula is particularly suitable for those which have a relatively
+        simple and clear combat system and also want the players understand with
+        minimal efforts. In many turn-based strategy games like Fire Emblem
+        series, thanks to the limited numeric change, Subtract Formula is both
+        player and designer friendly.<br /><br />
+        Many FPS games don't emphasize on the defense; instead they tend to
+        introduce the damage reduction mechanics. FPS games want players to
+        focus on It feels kind of understandable that different parts of human
+        bodies absorb different portions of damage, and bullet-proof vests can
+        absorb some hit too. In this case the Subtract Formula can be simplified
+        to: DMG = ATK * c, where c is a percentage between 0 and 100% or higher
+        (headshot). Headshot is a special case where game system reward highly
+        skilled (or lucky) players for their effort of aiming at a such small
+        area. <br /><br />
+        On the other hand, Subtract Formula is also widely applied to
+        intentionally stimulate people to focus on the attack and defense. There
+        are people willing to pay a lot in return for the chance of being
+        invulnerable, which no other formula can offer. Of course, this breaks
+        the game and is very controversial over others' experience.
+      </div>
+      <div class="main-title">
+        Formula Two: DMG = ATK * (100% - f(DEF))
+      </div>
+      <div class="main-text">
+        I want to call this Multiply Formula as the final damage is from attack
+        multiplying a value influenced by the defense. Generically, f(DEF) =
+        DEF/c+DEF, where c is a constant value defined by game, to make f(DEF)
+        always smaller than one. The Multiply Formula also has lots of
+        variations, e.g. the ATK can be ATK*2, or there can be other parameter
+        in f(DEF), but the sense of this formula is that attack is partly
+        blocked but always deals some damage.
+      </div>
+      <div class="main-paragraph-title">
+        Pros
+      </div>
+      <div class="main-text">
+        The biggest perk for the designers may be that despite the usage of
+        multiplying, this formula actually makes calculating the combat ability
+        for each side easier. In Multiply Formula ATK is a pure parameter of the
+        attacking side while defense and HP are pure defending side parameters.
+        When designing ATK we don't need to worry about the defending side, vice
+        versa. As for Subtract Formula, since ATK may or may not be larger than
+        DEF, designer have to spend more time balancing the both sides.<br /><br />
+        Another important advantage for Multiply Formula is that attacks always
+        deal damage. There won't be scenarios where someone stacks up defense
+        and becomes literally invulnerable.<br /><br />
+        Multiply Formula is balanced for both the attacking and defending side.
+        It is super clear that the change in ATK brings the same proportional
+        change in DMG. Let's consider what this formula tells by changing the
+        defense. <br />
+      </div>
+      <div class="main-paragraph-title">
+        Cons
+      </div>
+      <div class="main-text">
+        Despite the fact that attacks alway deal damage, this could still result
+        in disappointment if defense side has healers who can heal even more
+        than the damage after getting absorbed. To prevent this, games may set a
+        damage absorb threshold, like 75% or some number around that.<br /><br />
+        Comparing to Subtract Formula, Multiply Formula gets less sensitive when
+        parameters get larger. Unlike Subtract Formula, ATK/DEF/HP is
+        independent from each other in Multiply Formula which avoids the players
+        putting money for a very high defense - in fact, Multiply Formula makes
+        people invest in attack more than defense. I put this in cons because
+        this makes the model harder to monetize the attributes.<br /><br />
+        The combat could be too long if ATK and DEF increase linearly. This
+        could be explained with the concept of diminishing marginal utility: the
+        marginal damage actually decreases, so in late game the damage will only
+        increase at a very slow rate, and turns it takes to take down the enemy
+        gets more and more. Of course there are some ways to cope with that:
+        changing the c value in the formula could work; setting a damage absorb
+        threshold works too; many games (MOBA especially) uses critical hit to
+        increase the effect of attack.
+      </div>
+      <div class="main-paragraph-title">
+        Usage
+      </div>
+      <div class="main-text">
+        I want to call this Multiply Formula as the final damage is from attack
+        multiplying a value influenced by the defense.
+      </div>
+      <div class="main-title">
+        Formula Three: DMG = ATK / DEF
+      </div>
+      <div class="main-text">
+        This formula is called by me Divide Formula for that it puts DEF in
+        divisor's place. This formula's got many variations too, for example:<br />
+        DMG = ATK^2 / DEF, or: <br />
+        DMG = ATK^2 / (ATK + DEF).<br />
+        These two variations are also being used and I think it's interesting to
+        analyze them too.
+      </div>
+      <div class="main-paragraph-title">
+        Pros
+      </div>
+      <div class="main-text">
+        Just like Multiply Formula, Divide Formula also avoids the situation
+        where attacker cannot even break through the defense. ATK is a total
+        attacker's parameter and has no relationship with DEF, providing
+        designers with space to individually calculate for the two sides, which
+        is very important in real work.<br /><br />
+        Divide Formula is controllable thanks to its natural adjustment for high
+        attack and high defense. Even if someone has a very high ATK or DEF, the
+        chance this guy breaks the whole game is rare.
+      </div>
+      <div class="main-paragraph-title">
+        Cons
+      </div>
+      <div class="main-text">
+        Players generally would prefer increasing ATK over DEF because the
+        marginal value of ATK increases, while the marginal value of defense
+        decreases. <br /><br />
+        Like Multiply Formula, Divide Formula lack a point where the change of
+        ATK/DEF brings significant change to the DMG. Generally in games with
+        Divide Formula, characters have higher attack value than defense, so
+        changes in attack result in relatively smooth change in damage. This may
+        discourage someone who want to invest a lot in leveling up their
+        attributes.
+      </div>
+      <div class="main-paragraph-title">
+        Variations
+      </div>
+      <div class="main-text">
+        Some game uses DMG = ATK^2 / DEF. One of the major problem is that
+        players in this game would definitely pursue for higher attack since
+        it's mathematically clear that attack is more important in such formula.
+        And when ATK>DEF, DMG is actually higher than ATK which seems not so
+        intuitive. The attack value feels more like a "reference value".<br /><br />
+        Some game uses DMG = ATK^2 / (ATK + DEF).
+      </div>
+      <div class="main-paragraph-title">
+        Usage
+      </div>
+      <div class="main-text">
+        I want to call this Multiply Formula as the final damage is from attack
+        multiplying a value influenced by the defense.
+      </div>
+    </div>
+  </body>
+</html>

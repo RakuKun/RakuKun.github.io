@@ -100,9 +100,8 @@ body {
 #home {
   user-select: none;
   position: fixed;
-  left: 6vw;
+  left: 5vw;
   top: 8vh;
-  transform: translateX(-50%);
   font-size: 2em;
   font-weight: 600;
 }
@@ -110,7 +109,7 @@ body {
 #menu {
   user-select: none;
   position: fixed;
-  right: 6vw;
+  right: 5vw;
   top: 8vh;
   transform: translateX(-50%);
   font-size: 3em;
@@ -132,13 +131,13 @@ body {
 }
 
 .category {
-  margin: 2.5vh 2.5vw;
+  margin: -2.5vh 2.5vw 5vh 2.5vw;
   width: 40%;
   max-height: 40%;
 }
 
 .entry-title {
-  font-size: 8em;
+  font-size: 7em;
 }
 
 .entry {
@@ -149,9 +148,9 @@ body {
 #back {
   user-select: none;
   position: fixed;
-  left: 6vw;
+  left: 5vw;
   bottom: 8vh;
-  transform: translateX(-50%) scale(-1);
+  transform: scale(-1);
   font-size: 2em;
   font-weight: 600;
 }
@@ -159,9 +158,8 @@ body {
 #next {
   user-select: none;
   position: fixed;
-  right: 6vw;
+  right: 5vw;
   bottom: 8vh;
-  transform: translateX(50%);
   font-size: 2em;
   font-weight: 600;
 }
