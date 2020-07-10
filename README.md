@@ -1,3 +1,3 @@
 # RakuKun.github.io
 
-Liangzheng Luo's personal online portfolio.
+Liangzheng Luo's personal portfolio.

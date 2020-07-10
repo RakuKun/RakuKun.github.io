@@ -38,7 +38,7 @@
           <a
             class="entry"
             onclick="transitionToPage('../games/ditto','var(--rurikon)')"
-            >Ditto</a
+            >Project Ditto</a
           ><br />
           <a
             class="entry"
@@ -276,21 +276,20 @@
         simple and clear combat system and also want the players understand with
         minimal efforts. In many turn-based strategy games like Fire Emblem
         series, thanks to the limited numeric change, Subtract Formula is both
-        player and designer friendly.<br /><br />
-        Many FPS games don't emphasize on the defense; instead they tend to
-        introduce the damage reduction mechanics. FPS games want players to
-        focus on It feels kind of understandable that different parts of human
-        bodies absorb different portions of damage, and bullet-proof vests can
-        absorb some hit too. In this case the Subtract Formula can be simplified
-        to: DMG = ATK * c, where c is a percentage between 0 and 100% or higher
-        (headshot). Headshot is a special case where game system reward highly
-        skilled (or lucky) players for their effort of aiming at a such small
-        area. <br /><br />
-        On the other hand, Subtract Formula is also widely applied to
-        intentionally stimulate people to focus on the attack and defense. There
-        are people willing to pay a lot in return for the chance of being
-        invulnerable, which no other formula can offer. Of course, this breaks
-        the game and is very controversial over others' experience.
+        player and designer friendly.
+        <div class="element-image">
+          <img src="/media/blog/formulas/subtract-fe.gif" />
+        </div>
+        Some early tactical game, such as StarCraft, use Subtract Formula to
+        give players a clear vision of how the damage is inflicted.
+        <div class="element-image">
+          <img src="/media/blog/formulas/subtract-sc2.jpg" />
+        </div>
+        Subtract Formula is also widely applied to intentionally stimulate
+        people to focus on higher up their defense. There are people willing to
+        pay a lot in return for the chance of being "invulnerable" which no
+        other formula can compete to offer. Of course, this breaks the game and
+        is very controversial over others' experience.
       </div>
       <div class="main-title">
         Formula Two: DMG = ATK * (100% - f(DEF))
@@ -350,19 +349,49 @@
         Usage
       </div>
       <div class="main-text">
-        I want to call this Multiply Formula as the final damage is from attack
-        multiplying a value influenced by the defense.
+        Real Time Strategy (RTS) games later on tend to use Multiply Formula,
+        for instance, the usual WarCraft 3 formula is DMG =
+        ATK*[1-(0.06*DEF)/(1+0.06*DEF)], where DEF is shown as armor value. And
+        there are various attack types that inflict different percent of damage
+        based on the armor type.
+        <div class="element-image" style="width: 75%; margin: auto;">
+          <img src="/media/blog/formulas/multiply-wc3.png" />
+        </div>
+        Dota (and Dota 2), which originates from the original Warcraft, uses a
+        similar formula: DMG = ATK * ( 0.052 * Armor ) / ( 0.9+ 0.048 * Armor).
+        League of Legends, another example of MOBA games, uses a similar
+        formula: DMG = ATK * (100/100+DEF). The good point of this formula is
+        that we can directly calculate the hero's effective health as Effective
+        health = health * (1 + DEF/100).
+        <div class="element-image">
+          <img src="/media/blog/formulas/multiply-dota2.jpg" />
+        </div>
+        Many FPS games don't emphasize on the defense; instead they tend to
+        introduce the damage reduction mechanics. FPS games want players to
+        focus on It feels kind of understandable that different parts of human
+        bodies absorb different portions of damage, and bullet-proof vests can
+        absorb some hit too. In this case the Subtract Formula can be simplified
+        to: DMG = ATK * c, where c is a percentage between 0 and 100% or higher
+        (headshot). Headshot is a special case where game system reward highly
+        skilled (or lucky) players for their effort of aiming at such small
+        area. Here's the percentage of damage caused hitting different parts of
+        light/medium/heavy armored body, in Rainbow 6: Siege.
+        <div class="element-image">
+          <img src="/media/blog/formulas/multiply-r6.jpg" />
+        </div>
       </div>
       <div class="main-title">
         Formula Three: DMG = ATK / DEF
       </div>
       <div class="main-text">
         This formula is called by me Divide Formula for that it puts DEF in
-        divisor's place. This formula's got many variations too, for example:<br />
+        divisor's place. This formula can actually be considered varied from
+        Multiply Formula: DMG = ATK * (1/DEF), and it's got many variations too,
+        for example:<br />
         DMG = ATK^2 / DEF, or: <br />
         DMG = ATK^2 / (ATK + DEF).<br />
-        These two variations are also being used and I think it's interesting to
-        analyze them too.
+        These two variations are also widely being used and I think it's
+        interesting to analyze them too.
       </div>
       <div class="main-paragraph-title">
         Pros
@@ -398,16 +427,41 @@
         Some game uses DMG = ATK^2 / DEF. One of the major problem is that
         players in this game would definitely pursue for higher attack since
         it's mathematically clear that attack is more important in such formula.
-        And when ATK>DEF, DMG is actually higher than ATK which seems not so
-        intuitive. The attack value feels more like a "reference value".<br /><br />
-        Some game uses DMG = ATK^2 / (ATK + DEF).
+        And when ATK is higher than DEF, DMG actually grows even faster than ATK
+        which seems not so intuitive. The attack value feels more like a
+        "reference value".<br /><br />
+        Some game uses DMG = ATK^2 / (ATK + DEF). This variation helps attack
+        count more when it's low. When ATK is lower than or equal to DEF, this
+        variation still guarantee that DMG is not too low (at least higher than
+        1). And when ATK grows significantly larger than DEF, we can find that
+        DMG is almost equal to ATK, such that DEF seems ignored. This is, in
+        some way, intuitive and similar to the situation in Subtract Formula.
+        The nature of Divide Formula encourages players to invest more in attack
+        and play in an aggressive way.
       </div>
       <div class="main-paragraph-title">
         Usage
       </div>
       <div class="main-text">
-        I want to call this Multiply Formula as the final damage is from attack
-        multiplying a value influenced by the defense.
+        The origin version of Divide Formula is pretty rough that it's rarely
+        applied to any games, but some of its variations are popular now. Some
+        Japanese RPGs like Final Fantasy series have a glorious history for the
+        long, complicated, multi-attribute-based formula. For example, here's
+        what I found the said damage formula for FFXV: Damage = (WeaponDMG ×
+        (Attack − EnemyDefense) × 1.5 + (STR − EnemyVIT)×2)/25.
+      </div>
+      <div class="main-title">
+        A Simple Conclusion
+      </div>
+      <div class="main-text">
+        Video games have a proud history of more than 50 years and it's growing
+        even faster today. The three formulas listed above, in my opinion, serve
+        more like a tool that help designers determine what situation the real
+        combat in their own game should follow. Many modern games tend to have a
+        combination of formulas and/or many variations that take more attributes
+        into account. There's no theoretically perfect formulas, obviously, and
+        it's up to designers to create something that fits the nature of the
+        game.
       </div>
     </div>
   </body>

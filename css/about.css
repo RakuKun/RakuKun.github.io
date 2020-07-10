@@ -38,7 +38,8 @@ body.fade-out {
 .main-title {
   position: fixed;
   top: 20vh;
-  left: 5vw;
+  left: 10vw;
+  margin: 0;
   user-select: none;
   font-size: 6em;
   font-weight: 600;
@@ -47,7 +48,7 @@ body.fade-out {
 .main-description {
   position: fixed;
   top: 45vh;
-  left: 35vw;
+  left: 10vw;
   vertical-align: top;
   max-width: 40%;
   font-size: 1.5em;
