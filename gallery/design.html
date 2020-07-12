@@ -17,123 +17,16 @@
   </head>
 
   <body>
-    <span id="cursor-outline"></span>
-    <span id="cursor"></span>
+    <script type="module" src="/js/nav.js"></script>
     <script type="module" src="/js/general.js"></script>
-    <div id="nav">
-      <div id="home">
-        <a onclick="transitionToPage('../')"> ◯ </a>
-      </div>
-      <div id="menu">
-        <a> ≡ </a>
-      </div>
-      <div id="menu-page">
-               <div class="category">
-          <div class="entry-title">Games</div>
-          <a
-            class="entry"
-            onclick="transitionToPage('../games/bvw','var(--rurikon)')"
-            >Building Virtual Worlds</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../games/ditto','var(--rurikon)')"
-            >Project Ditto</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../games/level-design','var(--rurikon)')"
-            >Level Design</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../games/cosmos','var(--rurikon)')"
-            >COSMOS</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../games/collection','var(--rurikon)')"
-            >Collection</a
-          >
-        </div>
-        <div class="category">
-          <div class="entry-title">Analysis</div>
-          <a
-            class="entry"
-            onclick="transitionToPage('../analysis/bloodborne','var(--sohi)')"
-            >Bloodborne: Story in Levels</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../analysis/slay-the-spire','var(--sohi)')"
-            >Slay the Spire: Engagement and Balancing</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../analysis/inside','var(--sohi)')"
-            >INSIDE: Narrative and Visuals</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../analysis/the-plan','var(--sohi)')"
-            >The Plan: An Experiment</a
-          >
-        </div>
-        <div class="category">
-          <div class="entry-title">Gallery</div>
-          <a
-            class="entry"
-            onclick="transitionToPage('../gallery/art','var(--kurenai)')"
-            >Art</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../gallery/photography','var(--kurenai)')"
-            >Photography</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../gallery/design','var(--kurenai)')"
-            >Design</a
-          >
-        </div>
-        <div class="category">
-          <div class="entry-title">Blog</div>
-          <a
-            class="entry"
-            onclick="transitionToPage('../blog/quest-mmorpg','var(--shironeri)')"
-            >Creating Quests for MMORPG</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../blog/formulas','var(--shironeri)')"
-            >Formulas in Combat Design</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../blog/balance','var(--shironeri)')"
-            >Balancing a Game</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../blog/design-diary','var(--shironeri)')"
-            >Design Diary</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../blog/another-inferno','var(--shironeri)')"
-            >Another Inferno</a
-          >
-        </div>
-      </div>
-      <div id="back">
-        <a onclick="transitionToPage('photography','var(--kurenai)')">➙</a>
-      </div>
-      <div id="next">
-        <a onclick="transitionToPage('../blog/quest-mmorpg','var(--shironeri)')"
-          >➙</a
-        >
-      </div>
+    <div id="nav"></div>
+    <div id="back">
+      <a onclick="transitionToPage('photography','var(--kurenai)')">➙</a>
+    </div>
+    <div id="next">
+      <a onclick="transitionToPage('../blog/quest-mmorpg','var(--shironeri)')"
+        >➙</a
+      >
     </div>
 
     <div
@@ -217,19 +110,24 @@
         Portfolio
       </div>
       <div class="main-description">
-        I write the HTML/CSS/JavaScript code and create assets for this website,
-        the second version of my portfolio.
+        I did all the design, art, and technical work for my portfolio. I
+        consider the working process fun and challenging, even though web
+        development has never been my major. As long as it keeps interesting me,
+        I will keep updating the content and layout of portfolio.
       </div>
       <div class="main-design-title">
         <hr />
         portfolio 2.0
       </div>
       <div class="main-design-description">
-        What you are seeing is the version 2.0 of my online portfolio. In this
-        version, I mainly work on adding more fun in feedback, make the webpage
-        more responsive but also keeps the layout simple as possible.
+        I started coding portfolio 2.0 (current framework) in January 2020.
+        Based on the experience building portfolio 1.0, I wanted my new personal
+        website more responsive, and layout simpler but easy to use. The whole
+        website is deployed using GitHub's page service. Unfortunately, as the
+        mobile adaptation is still work-in-progress and problems are queueing to
+        be solved, the website may not function as expected on mobile devices.
         <br /><span class="element-title">color palettes</span><br />
-        The color of the website comes from an online palette
+        The colors of the website come from an online palette
         <span class="important"
           ><a href="https://nipponcolors.com/" target="_blank"
             >Nipponcolors,</a
@@ -249,7 +147,7 @@
         portfolio 1.0
       </div>
       <div class="main-design-description">
-        In 2018 I started to code my portfolio and this is what version 1.0 is
+        In 2018 I started to code my portfolio and this is what version 1.0 was
         like. You can check the index page of the old portfolio (the hyperlink
         is no longer updated)
         <span class="important"

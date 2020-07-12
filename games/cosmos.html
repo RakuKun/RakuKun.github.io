@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, user-scalable=0" />
     <meta
       name="description"
-      content="COSMOS the board game by Liangzheng Luo."
+      content="Cosmos, a board game by Liangzheng Luo."
     />
     <meta name="theme-color" content="#005DAF" />
     <meta name="author" content="Liangzheng Luo" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>COSMOS - Liangzheng Luo</title>
+    <title>Cosmos - Liangzheng Luo</title>
     <link rel="icon" type="image/png" href="/media/icon.png" />
     <link href="/css/game.css" rel="stylesheet" type="text/css" />
     <link
@@ -20,121 +20,14 @@
   </head>
 
   <body>
-    <span id="cursor-outline"></span>
-    <span id="cursor"></span>
+    <script type="module" src="/js/nav.js"></script>
     <script type="module" src="/js/general.js"></script>
-    <div id="nav">
-      <div id="home">
-        <a onclick="transitionToPage('../')"> ◯ </a>
-      </div>
-      <div id="menu">
-        <a> ≡ </a>
-      </div>
-      <div id="menu-page">
-               <div class="category">
-          <div class="entry-title">Games</div>
-          <a
-            class="entry"
-            onclick="transitionToPage('../games/bvw','var(--rurikon)')"
-            >Building Virtual Worlds</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../games/ditto','var(--rurikon)')"
-            >Project Ditto</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../games/level-design','var(--rurikon)')"
-            >Level Design</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../games/cosmos','var(--rurikon)')"
-            >COSMOS</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../games/collection','var(--rurikon)')"
-            >Collection</a
-          >
-        </div>
-        <div class="category">
-          <div class="entry-title">Analysis</div>
-          <a
-            class="entry"
-            onclick="transitionToPage('../analysis/bloodborne','var(--sohi)')"
-            >Bloodborne: Story in Levels</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../analysis/slay-the-spire','var(--sohi)')"
-            >Slay the Spire: Engagement and Balancing</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../analysis/inside','var(--sohi)')"
-            >INSIDE: Narrative and Visuals</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../analysis/the-plan','var(--sohi)')"
-            >The Plan: An Experiment</a
-          >
-        </div>
-        <div class="category">
-          <div class="entry-title">Gallery</div>
-          <a
-            class="entry"
-            onclick="transitionToPage('../gallery/art','var(--kurenai)')"
-            >Art</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../gallery/photography','var(--kurenai)')"
-            >Photography</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../gallery/design','var(--kurenai)')"
-            >Design</a
-          >
-        </div>
-        <div class="category">
-          <div class="entry-title">Blog</div>
-          <a
-            class="entry"
-            onclick="transitionToPage('../blog/quest-mmorpg','var(--shironeri)')"
-            >Creating Quests for MMORPG</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../blog/formulas','var(--shironeri)')"
-            >Formulas in Combat Design</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../blog/balance','var(--shironeri)')"
-            >Balancing a Game</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../blog/design-diary','var(--shironeri)')"
-            >Design Diary</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../blog/another-inferno','var(--shironeri)')"
-            >Another Inferno</a
-          >
-        </div>
-      </div>
-      <div id="back">
-        <a onclick="transitionToPage('level-design','var(--rurikon)')">➙</a>
-      </div>
-      <div id="next">
-        <a onclick="transitionToPage('collection','var(--rurikon)')">➙</a>
-      </div>
+    <div id="nav"></div>
+    <div id="back">
+      <a onclick="transitionToPage('level-design','var(--rurikon)')">➙</a>
+    </div>
+    <div id="next">
+      <a onclick="transitionToPage('collection','var(--rurikon)')">➙</a>
     </div>
 
     <div
@@ -142,10 +35,10 @@
       style="background-image: url(/media/games/cosmos/title.png);"
     >
       <div class="top-title">
-        COSMOS (ongoing)
+        Cosmos
       </div>
       <div class="top-introduction">
-        COSMOS is a board game I am working on as the course project for Stone
+        Cosmos is a board game I am working on as the course project for Stone
         Librande's Game Design Fundamentals. In general, it is a 1v1v1 resource
         gathering game where players compete to be the first person to reach the
         high score.
@@ -218,7 +111,7 @@
         Blue civilization never lacks scientists and philosophers because they
         are so eager to learn new knowledge. <br />
         <span class="element-title">gameplay overview</span><br />
-        COSMOS is a 1v1v1 turn-based deck-building card game where each player
+        Cosmos is a 1v1v1 turn-based deck-building card game where each player
         tries to move their mothership to the destination point on the map. The
         game offers ways to move your own mothership and also to impede other
         motherships' moving process. The ship's movement is similar to the

@@ -177,6 +177,10 @@ body {
   background-clip: border-box;
   background-size: cover;
   font-weight: 600;
+  box-shadow: 0 0 8px rgb(255, 255, 255), 0 0 16px rgb(245, 245, 245),
+    0 0 24px rgb(230, 230, 230), 0 0 32px rgb(216, 216, 216),
+    0 0 40px rgb(204, 204, 204), 0 0 48px rgb(194, 194, 194),
+    0 0 56px rgb(180, 180, 180);
 }
 
 .top-title {

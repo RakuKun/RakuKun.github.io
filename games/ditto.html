@@ -20,147 +20,39 @@
   </head>
 
   <body>
-    <span id="cursor-outline"></span>
-    <span id="cursor"></span>
+    <script type="module" src="/js/nav.js"></script>
     <script type="module" src="/js/general.js"></script>
-    <div id="nav">
-      <div id="home">
-        <a onclick="transitionToPage('../')"> ◯ </a>
-      </div>
-      <div id="menu">
-        <a> ≡ </a>
-      </div>
-      <div id="menu-page">
-        <div class="category">
-          <div class="entry-title">Games</div>
-          <a
-            class="entry"
-            onclick="transitionToPage('../games/bvw','var(--rurikon)')"
-            >Building Virtual Worlds</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../games/ditto','var(--rurikon)')"
-            >Project Ditto</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../games/level-design','var(--rurikon)')"
-            >Level Design</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../games/cosmos','var(--rurikon)')"
-            >COSMOS</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../games/collection','var(--rurikon)')"
-            >Collection</a
-          >
-        </div>
-        <div class="category">
-          <div class="entry-title">Analysis</div>
-          <a
-            class="entry"
-            onclick="transitionToPage('../analysis/bloodborne','var(--sohi)')"
-            >Bloodborne: Story in Levels</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../analysis/slay-the-spire','var(--sohi)')"
-            >Slay the Spire: Engagement and Balancing</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../analysis/inside','var(--sohi)')"
-            >INSIDE: Narrative and Visuals</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../analysis/the-plan','var(--sohi)')"
-            >The Plan: An Experiment</a
-          >
-        </div>
-        <div class="category">
-          <div class="entry-title">Gallery</div>
-          <a
-            class="entry"
-            onclick="transitionToPage('../gallery/art','var(--kurenai)')"
-            >Art</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../gallery/photography','var(--kurenai)')"
-            >Photography</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../gallery/design','var(--kurenai)')"
-            >Design</a
-          >
-        </div>
-        <div class="category">
-          <div class="entry-title">Blog</div>
-          <a
-            class="entry"
-            onclick="transitionToPage('../blog/quest-mmorpg','var(--shironeri)')"
-            >Creating Quests for MMORPG</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../blog/formulas','var(--shironeri)')"
-            >Formulas in Combat Design</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../blog/balance','var(--shironeri)')"
-            >Balancing a Game</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../blog/design-diary','var(--shironeri)')"
-            >Design Diary</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../blog/another-inferno','var(--shironeri)')"
-            >Another Inferno</a
-          >
-        </div>
-      </div>
-      <div id="back">
-        <a onclick="transitionToPage('bvw','var(--rurikon)')">➙</a>
-      </div>
-      <div id="next">
-        <a onclick="transitionToPage('level-design','var(--rurikon)')">➙</a>
-      </div>
+    <div id="nav"></div>
+    <div id="back">
+      <a onclick="transitionToPage('bvw','var(--rurikon)')">➙</a>
+    </div>
+    <div id="next">
+      <a onclick="transitionToPage('level-design','var(--rurikon)')">➙</a>
     </div>
 
     <div
       class="top"
-      style="background-image: url(/media/games/ditto/title.jpg);"
+      style="background-image: url(/media/games/ditto/title.png);"
     >
-      <div class="top-title" style="font-size: 4em; color: var(--ro);">
+      <div class="top-title">
         Project Ditto
       </div>
-      <div class="top-introduction" style="color: var(--ro);">
-        Project Ditto is a client project between Google Stadia and
-        Entertainment Technology Center (SV Campus) where I am working in a team
-        of five as game designer to explore possible game prototypes for Stadia
-        platform. The semester-long project is under development and more
-        detailed discussion will be added on a quite regular basis. <br /><br />
-        Our team include: Liam Philiben, Jue Wang, Siyu (Tracy) Chen, Wenyu Mao,
-        and me.<br /><br />
-        Please pay a visit to
+      <div class="top-introduction">
+        Ditto is a collaboration project between Google Stadia and the ETC
+        (Silicon Valley Campus) where I worked in a great team of five
+        developing multiplayer game prototypes for Stadia platform. (title
+        picture by Jue Wang)
+        <br /><br />
+        The team members are: Liam Philiben, Jue Wang, Siyu (Tracy) Chen, Wenyu
+        Mao, and me.<br /><br />
+        We've built a
         <span class="important"
           ><a href="https://www.etc.cmu.edu/projects/ditto/" target="_blank"
-            >project website</a
+            >project website.</a
           ></span
         >
-        if interested in more details.<br />
-        I also write design documentation for the project to record our process
-        and design takeaways, check our
+        I've also written design documentation to record design process and
+        takeaways, check it here:
         <span class="important"
           ><a href="https://etc-ditto.github.io" target="_blank"
             >online design documentation.</a
@@ -170,7 +62,7 @@
       <div class="top-information">
         <span style="color: var(--ro);">time</span> spring 2020 <br />
         <span style="color: var(--ro);">platform</span> Unity, Stadia<br />
-        <span style="color: var(--ro);">work</span> game design, programming
+        <span style="color: var(--ro);">work</span> game/level design, modelling
       </div>
     </div>
 
@@ -178,26 +70,26 @@
       <div class="main-title">Background</div>
       <div class="main-description">
         Stadia is a cloud gaming service operated by Google, advertised to be
-        capable of streaming video games up to 4K/60FPS to players via the
+        capable of streaming high-quality video games to players via the
         company's numerous data centers across the globe. The service is
-        accessible through most smart ends including iOS, Android, PC, provided
-        the users are using a sufficiently high-speed Internet connection.<br /><br />
-        In March 2019 Stadia announced a platform exclusive feature called State
-        Share, which leverages cloud game hosting to enable players to share a
-        complete game state (not just a specified save state) instantly to
-        others. The project explores the possibility of this feature
-        specifically for the discovery of new kinds of game design patterns and
-        new game genres that are inherently viral and require to elaborate
-        player cooperation across massive scale audiences.
+        accessible through most smart ends like cell phones and PC, provided the
+        users are using a sufficiently high-speed Internet connection.<br /><br />
+        In March 2019, Stadia announced a platform exclusive feature called
+        State Share, which leverages cloud game hosting to enable players to
+        share a complete game state (not just a specified save state) instantly
+        to others. The goal for project Ditto is to explore the possibility of
+        this feature specifically for the discovery of new kinds of game design
+        patterns and new game genres that are inherently viral and require to
+        elaborate player cooperation across massive scale audience.
       </div>
       <div class="main-title">
         Pre-production
       </div>
       <div class="main-description">
-        Pre-production witnesses our first two months during which we spent
-        about three weeks doing initial research and pitching ideas during the
-        ideation phase, and we used the rest five weeks developing paper and
-        digital prototypes.
+        Pre-production witnessed our first two months during which we spent
+        about three weeks doing initial research and pitching ideas in the
+        ideation phase, and the rest five weeks developing paper and digital
+        prototypes.
       </div>
       <div class="main-design-title">
         <hr />
@@ -251,10 +143,9 @@
       </div>
       <div class="main-design-description">
         <span class="element-title">paper prototype</span><br />
-        We each created one paper prototype for the five ideas as designing on
-        paper is technically easier and could expose the core mechanics well.
-        The one I designed, "Bomb Express" explores the concept "delivering the
-        state".
+        We each created one paper prototype from the five ideas as designing on
+        paper could expose the core mechanics well. The one I designed, "Bomb
+        Express" explores the concept "delivering the state".
         <div class="element-image-flex">
           <img src="/media/games/ditto/paper-1.jpg" />
           <img src="/media/games/ditto/bomb-express.png" />
@@ -286,34 +177,144 @@
         up three design criteria:<br />
         - Asymmetrical gameplay is suitable for streamer and audience and well
         conveys State Share’s idea.<br />
-        - Having a persistent world (like mmo) is state sharable and could let
-        players feel more immersed.<br />
+        - Having a persistent world (like MMO games) is state sharable and could
+        let players feel more immersed.<br />
         - To make a multiplicative distribution rather than transferring a
         single branch to new players.<br /><br />
         Now that we were pretty clear about how to keep moving forward, we
         stepped into the digital prototyping phase.
         <br /><span class="element-title">digital prototype</span><br />
-        Starting week 5 (March 9) the team will be working on making two digital
-        prototypes till week 8. The first and the one we put major work on is
-        Virus vs. Cells theme which utilizes State Share as the core mechanism:
-        without State Share the game will be unplayable. The second one uses
-        State Share as a way solely for exchanging information and game
-        progress, so the mechanism could be more conservative. The main purpose
-        for doing two is that we try to explore further in two directions of
-        which we don't know for sure what will be the hit.<br />
-        My major job is designing levels for the Virus one and helping with the
-        second one's design.
-        <br /><span class="element-title">moving forward</span><br />
-        After the discussion with out client, we realized that we are in fact
-        building two types of games, the first one being skill-based game (Virus
-        vs. Cells), and the second one being expressive game (treehouse). Given
-        no more than eight weeks in the second half of semester, we
+        We built a digital prototype for the Virus vs. Cell theme which utilized
+        State Share well as the core mechanism - without State Share the game
+        will be unplayable. <br /><br />
+        My major job was designing and modelling levels for the prototype. I
+        spent some time researching levels in LocoRoco for inspiration.
+        <div class="element-image">
+          <img src="/media/games/ditto/pvp-level-1.png" />
+        </div>
+        <span class="element-title">moving forward</span><br />
+        While developing the digital prototype, we came up with another paper
+        prototype: growing a treehouse. After discussing with our client, we
+        realized that we are in fact building two types of games, the first one
+        being skill-based game (Virus vs. Cells), and the second one being
+        expressive game (treehouse). Having no more than eight weeks for
+        developing a high fidelity prototype, we wanted to move forward with the
+        Virus vs. Cell one since we believed it had a more feasible scope. This
+        did not mean the time spent on treehouse prototype was meaningless: we
+        recorded it in the design documentation in case anyone is interested in
+        the future.
       </div>
-      <div class="main-title">Production</div>
+      <div class="main-title">Production and Pivoting</div>
       <div class="main-description">
-        The production phase is set to start after Week 8 (the halves
-        presentation). We will begin the production work once we settle down on
-        a concept that we all are interested and confident to build.
+        The second half of the semester was pretty dramatic: we experienced some
+        setback adjusting the project to work-from-home style, but were also
+        granted a chance to pivot the game's theme and gameplay. The final
+        product is called: Immunoo!
+      </div>
+      <div class="main-design-title">
+        <hr />
+        Changing to PVE
+      </div>
+      <div class="main-design-description">
+        We experienced a pivoting in the foci of project soon after the second
+        half of the semester began. From then on, the game would focus on its
+        PVE content rather than PVP, asking designers to come up with new ways
+        to let players call their friends to join the game. The original theme,
+        Virus vs. Cell remained intact, but we did want the players to play as
+        the guarding cells in the human body to experience the excitement and
+        sense of achievement while fighting the evil, chaotic viruses.<br /><br />
+        During internal meetings, we realized the limitation in time and decided
+        that we should start from a single scene, a single type of player, and a
+        single type of enemy: the player will act as white blood cell trying to
+        wipe out viruses inside a man's heart, the feeling of gameplay should be
+        cute and dangerous.<br /><br />
+        As the game and level designer on the team, after determining several
+        environmental effects in the level, I started working on the level
+        layout.
+      </div>
+      <div class="main-design-title">
+        <hr />
+        Level Design
+      </div>
+      <div class="main-design-description">
+        <span class="element-title">level mechanics</span><br />
+        Since the game happens inside the heart, we wanted to use some unique
+        environmental mechanics to propel the players into challenges. Then the
+        rhythm bloodstream came to mind: both the virus and the white blood cell
+        will move with the blood stream. However, the virus will be largely
+        influenced by the blood flow, while the white blood cell will have some
+        control over its movement. This could make the "chase" part fun and
+        strategic, and made controlling the level flow easier.<br /><br />
+        The game should still highlight the interaction between players because
+        they now can see each other in the game, and fit the spirit of State
+        Share.
+        <br /><span class="element-title">level layout</span><br />
+        Inspired by our client’s suggestion, we use a method called IPM
+        (Introduce, Practice, Master) as a principle in designing the levels.
+        All chambers are designed for multiplayer experience, with increasing
+        demands for skill mastery from players. The increasing difficulty mainly
+        means more enemies and more complex mechanics in the later chambers. The
+        following shows the final level layout:
+        <div class="element-image-flex">
+          <img src="/media/games/ditto/chamber-1.png" />
+          <img src="/media/games/ditto/chamber-2.png" />
+        </div>
+        <div class="element-image-flex">
+          <img src="/media/games/ditto/chamber-3.png" />
+          <img src="/media/games/ditto/chamber-4.png" />
+        </div>
+        The last chamber was designed to be the boss fight room, with a
+        preparation room in front of it which technically serves as a place for
+        players to invite their friends/audience and team up before entering the
+        boss room.<br /><br />
+
+        The boss fight’s mechanics are partly different from previous experience
+        because we wanted to make it feel more intense and highlight the
+        connection between each player and the necessity of sharing and helping
+        others. The powerful mother virus is in invulnerable at the beginning,
+        players will have to eat all the surrounding child viruses in order to
+        make it vulnerable and surround it again to disintegrate and “kill” it.
+      </div>
+      <div class="main-design-title">
+        <hr />
+        Level Dressing
+      </div>
+      <div class="main-design-description">
+        As the 3D artist, I was responsible for creating all 3D assets for the
+        level. Working with 2D artist, I converted what was believed as
+        "cuteness" to 3D, bringing a unified art style for the game.
+        <div class="element-image">
+          <img src="/media/games/ditto/level-dressing.png" />
+        </div>
+        I used Blender to prepare 3D models.
+      </div>
+      <div class="main-design-title">
+        <hr />
+        Future Updates
+      </div>
+      <div class="main-design-description">
+        The team has thought over the future updates for the game if possible.
+        We created different environment effects, enemies, unique skills that
+        can be applied to different parts of human body.
+        <div class="element-image-flex">
+          <img src="/media/games/ditto/stomach.png" />
+          <img src="/media/games/ditto/lungs.png" />
+        </div>
+        <div class="element-image-flex">
+          <img src="/media/games/ditto/kidney.png" />
+          <img src="/media/games/ditto/brain.png" />
+        </div>
+      </div>
+      <div class="main-title">Post-Mortem</div>
+      <div class="main-description">
+        This is my first client project at the ETC. The project involved lots of
+        researching, prototyping, and rounds of iteration, which I enjoyed doing
+        as the process always inspires me to be a better game designer.
+        <br /><br />
+        The project was not flawless, of course. We could have done more if the
+        schedule was not interrupted by the outbreak, and we lost some
+        productivity due to work-from-home. Many features we designed were still
+        on the paper because we didn't have time to implement them.
       </div>
       <div style="clear: both;"></div>
     </div>

@@ -17,121 +17,14 @@
   </head>
 
   <body>
-    <span id="cursor-outline"></span>
-    <span id="cursor"></span>
+    <script type="module" src="/js/nav.js"></script>
     <script type="module" src="/js/general.js"></script>
-    <div id="nav">
-      <div id="home">
-        <a onclick="transitionToPage('../')"> ◯ </a>
-      </div>
-      <div id="menu">
-        <a> ≡ </a>
-      </div>
-      <div id="menu-page">
-        <div class="category">
-          <div class="entry-title">Games</div>
-          <a
-            class="entry"
-            onclick="transitionToPage('../games/bvw','var(--rurikon)')"
-            >Building Virtual Worlds</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../games/ditto','var(--rurikon)')"
-            >Project Ditto</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../games/level-design','var(--rurikon)')"
-            >Level Design</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../games/cosmos','var(--rurikon)')"
-            >COSMOS</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../games/collection','var(--rurikon)')"
-            >Collection</a
-          >
-        </div>
-        <div class="category">
-          <div class="entry-title">Analysis</div>
-          <a
-            class="entry"
-            onclick="transitionToPage('../analysis/bloodborne','var(--sohi)')"
-            >Bloodborne: Story in Levels</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../analysis/slay-the-spire','var(--sohi)')"
-            >Slay the Spire: Engagement and Balancing</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../analysis/inside','var(--sohi)')"
-            >INSIDE: Narrative and Visuals</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../analysis/the-plan','var(--sohi)')"
-            >The Plan: An Experiment</a
-          >
-        </div>
-        <div class="category">
-          <div class="entry-title">Gallery</div>
-          <a
-            class="entry"
-            onclick="transitionToPage('../gallery/art','var(--kurenai)')"
-            >Art</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../gallery/photography','var(--kurenai)')"
-            >Photography</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../gallery/design','var(--kurenai)')"
-            >Design</a
-          >
-        </div>
-        <div class="category">
-          <div class="entry-title">Blog</div>
-          <a
-            class="entry"
-            onclick="transitionToPage('../blog/quest-mmorpg','var(--shironeri)')"
-            >Creating Quests for MMORPG</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../blog/formulas','var(--shironeri)')"
-            >Formulas in Combat Design</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../blog/balance','var(--shironeri)')"
-            >Balancing a Game</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../blog/design-diary','var(--shironeri)')"
-            >Design Diary</a
-          ><br />
-          <a
-            class="entry"
-            onclick="transitionToPage('../blog/another-inferno','var(--shironeri)')"
-            >Another Inferno</a
-          >
-        </div>
-      </div>
-      <div id="back">
-        <a onclick="transitionToPage('ditto','var(--rurikon)')">➙</a>
-      </div>
-      <div id="next">
-        <a onclick="transitionToPage('cosmos','var(--rurikon)')">➙</a>
-      </div>
+    <div id="nav"></div>
+    <div id="back">
+      <a onclick="transitionToPage('ditto','var(--rurikon)')">➙</a>
+    </div>
+    <div id="next">
+      <a onclick="transitionToPage('cosmos','var(--rurikon)')">➙</a>
     </div>
 
     <div
@@ -145,13 +38,13 @@
         As a game designer I pay special attention to level design and how it
         works with other game elements such as quest system and narrative. This
         page showcases some of my ongoing level design work. The complete level
-        runs in Unreal Engine or Unity, and I use Adobe Illustrator and Maya for
+        runs in Unreal Engine 4, and I use Adobe Illustrator and Maya for
         layout.
         <br />From time to time more content will be added.
       </div>
       <div class="top-information">
-        <span style="color: var(--ro);">time</span> spring 2020 - <br />
-        <span style="color: var(--ro);">platform</span> Unreal Engine, Unity
+        <span style="color: var(--ro);">time</span> spring 2020 - present <br />
+        <span style="color: var(--ro);">platform</span> Unreal Engine 4
         <br />
         <span style="color: var(--ro);">work</span> individual work
       </div>
@@ -159,19 +52,14 @@
 
     <div id="main">
       <div class="main-title">
-        Third Person Stealth
+        Stealth Design Theory
       </div>
-      <div class="main-description" style="width: 100%;">
+      <div class="main-description">
         Stealth game became a serious game genre after Metal Gear Solid came
         out. Its third person perspective gameplay, combined with dramatic plot
         and the thrilling feeling taking down enemies, fascinates players who
         want something different from a shoot-'em-up.
-      </div>
-      <div class="main-information">
-        <span style="color: var(--ro);">duration</span> about 6 minutes <br />
-        <span style="color: var(--ro);">genre</span> 3D third person stealth
         <br />
-        <span style="color: var(--ro);">platform</span> Unity <br />
       </div>
       <div class="main-design-title">
         <hr />
@@ -181,7 +69,7 @@
         From the experience of several stealth games I want to analyze what
         makes them fun and try making a brief stealth level by myself. Just like
         other games, there are some fundamental elements in stealth games: a
-        start, a goal, game rules, and obstacles.<br />
+        start, a goal, game rules, and obstacles.
         <span class="element-title">start</span><br />
         In stealth games, usually, the start point is a relatively safe place
         distant from destination. No challenges at the beginning means players
@@ -236,7 +124,26 @@
       </div>
       <div class="main-design-title">
         <hr />
-        core mechanics
+        game reference
+      </div>
+      <div class="main-design-description">
+        <span class="element-title">Splinter Cell: Blacklist</span><br />
+        <br />
+        <span class="element-title">MGS V: Phantom Pain</span><br />
+        <br />
+        <span class="element-title">Uncharted 4</span><br />
+      </div>
+
+      <div class="main-title">
+        Planning
+      </div>
+      <div class="main-design-title">
+        <hr />
+        theme
+      </div>
+      <div class="main-design-title">
+        <hr />
+        mechanics
       </div>
       <div class="main-design-description">
         Core mechanism will cover the stealth game's basic rules and gameplay,
@@ -266,7 +173,16 @@
       </div>
       <div class="main-design-title">
         <hr />
-        layout in 2d
+        layout reference
+      </div>
+      <div class="main-design-description">
+        When designing, I searched many pictures of real world mansion to better
+        understand the layout.
+      </div>
+
+      <div class="main-design-title">
+        <hr />
+        2d layout
       </div>
       <div class="main-design-description">
         During design phase I used Adobe Illustrator to block out the level and
@@ -280,9 +196,13 @@
           <img src="/media/games/level-design/stealth/2d-indoor.png" />
         </div>
       </div>
+
+      <div class="main-title">
+        Process
+      </div>
       <div class="main-design-title">
         <hr />
-        prototyping in 3d
+        3d modelling
       </div>
       <div class="main-design-description">
         After having a layout sketch, I started prototyping and iterating the
@@ -302,69 +222,25 @@
         -Think in a dynamic point of view. Enemies have vision cones and as they
         move, they are observing different places. As I programmed the whole
         game system, there are way more details that needs careful thoughts.<br />
+
+        <div class="element-image-flex">
+          <img src="/media/games/level-design/stealth/process-1.png" />
+          <img src="/media/games/level-design/stealth/process-2.png" />
+        </div>
+        <div class="element-image-flex">
+          <img src="/media/games/level-design/stealth/process-3.png" />
+          <img src="/media/games/level-design/stealth/process-4.png" />
+        </div>
+      </div>
+      <div class="main-design-title">
+        <hr />
+        in-engine development
+      </div>
+      <div class="main-design-title">
+        <hr />
+        prototyping in 3d
       </div>
 
-      <div class="main-title">
-        Third Person Story Driven
-      </div>
-      <div class="main-image">
-        <img src="/media/games/level-design/title.png" />
-      </div>
-      <div class="main-description">
-        This is a level specifically developed for exploring the third person
-        experience driven by a story. The design is currently in early ideation
-        phase.
-      </div>
-      <div class="main-information">
-        <span style="color: var(--ro);">duration</span> ~ 5 minutes <br />
-        <span style="color: var(--ro);">genre</span> thirf person action
-        <br />
-        <span style="color: var(--ro);">platform</span> Unreal Engine <br />
-      </div>
-      <div class="main-design-title">
-        <hr />
-        element analysis
-      </div>
-      <div class="main-design-description">
-        I consider it very important to analyze the level element and how it
-        connects the story before sketching.<br />
-        <span class="element-title">start</span><br />In this level, the
-        playable character is spawned at a place where they can have a overview
-        of the first part of the level and are able to draw a very rough sketch
-        of routes they will be taking. Compared to stealth level, there is more
-        unknown at the beginning, leaving room for a surprising story.<br />
-        <span class="element-title">goal</span><br />
-        The first and told goal in this level is to reach a space where treasure
-        locates. After getting the treasure, the place start to collapse and the
-        character needs to escape which means to get to another place. I try
-        this two-step goal to see how level and goal influences player's emotion
-        flow.<br />
-        <span class="element-title">rules</span><br />
-        In the planned early demo, the only actions playable character can do is
-        running and jumping. The basic movement allows players to get to most
-        places they see, and it is easier for me to do layout as I don't need to
-        consider the interaction between enemies for now.<br />
-        <span class="element-title">obstacles</span><br />
-        Traditionally games would put puzzles before treasure so the player
-        would feel very satisfied to get the treasure. In my case, the puzzle is
-        replaced with a long path and some puzzle-like mechanism. After getting
-        the treasure, the scene will change and the character need to escape
-        where they are within limited time.
-      </div>
-      <div class="main-design-title">
-        <hr />
-        layout
-      </div>
-      <div class="main-design-description">
-        <span class="element-title">2D layout</span><br />
-        I start design doing 2D layout as it is the fastest way for iteration
-        and prototyping. The 2D sketch mainly shows the path and possible
-        enemies and items. Up and downs in terrain is marked with different
-        color.
-        <br /><span class="element-title">3D layout</span><br />
-        Once the basic level structure and narrative element is determined, I
-        will start doing 3D layout. The content is to be added soon!
-      </div>
       <div style="clear: both;"></div>
     </div>
   </body>
