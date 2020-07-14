@@ -43,8 +43,9 @@
         <br />From time to time more content will be added.
       </div>
       <div class="top-information">
-        <span style="color: var(--ro);">time</span> spring 2020 - present <br />
-        <span style="color: var(--ro);">platform</span> Unreal Engine 4
+        <span style="color: var(--ro);">time</span> summer 2020 <br />
+        <span style="color: var(--ro);">software</span> Unreal Engine 4, Maya,
+        Illustrator
         <br />
         <span style="color: var(--ro);">work</span> individual work
       </div>
@@ -102,17 +103,20 @@
         pitfalls
       </div>
       <div class="main-design-description">
-        Here are some pitfalls I find before or after playtesting my level.<br />
         <span class="element-title">god path</span><br />
         The god path is a route by which the character have zero chance of being
         noticed. It usually happens when all enemies' patrol routes don't
         overlap with the character's route. This bad design could make the level
-        very boring as the players don't need to think, they just go and win.<br />
+        very boring as the players don't need to think, they just go and win.<br /><br />
+        Another example of god path is the unfair vantage point, where players
+        are allowed to attack enemy from distance while they cannot fight back.
+        Again, every game need to balance its challenge and reward. God path
+        avoids all challenges, thus causing a broken game setup.<br />
         <span class="element-title">unpredictable AI</span><br />
-        Unpredictable AI is that pre-scripted enemies don't follow a fixed path,
+        Unpredictable AI means pre-scripted enemies don't follow a fixed path,
         or have sudden turn back, or moves too fast. Unpredictable AI makes the
-        game hard in an annoying not challenging way, as the random events would
-        kill player's plan and mess up the level.<br />
+        game hard in an annoying but not challenging way, as the random events
+        would kill every plan and mess up the level.<br />
         <span class="element-title">forced gameplay</span><br />
         Many stealth games let playable character have items or weapons. This is
         nice as the players are granted a variety of ways to beat the level. But
@@ -211,8 +215,7 @@
         goal needs the character to sneak into the mansion and stealth in a more
         constraint area.
         <div class="element-image">
-          <img src="/media/games/level-design/stealth/2d-outdoor.png" />
-          <img src="/media/games/level-design/stealth/2d-indoor.png" />
+          <img src="/media/games/level-design/stealth/2d.png" />
         </div>
       </div>
 
@@ -224,13 +227,9 @@
         3d modelling
       </div>
       <div class="main-design-description">
-        After having a layout sketch, I started prototyping and iterating the
-        experience in third person perspective in a 3D environment with the help
-        of the game engine.
-        <br /><span class="element-title">translating</span><br />
-        Putting 2D maps into a 3D world is not simply replacing lines with
-        cubes. Given an additional space dimension, I need to think of how to
-        translate the design faithfully and efficiently:<br />
+        After having a layout sketch, I started 3d modelling with Maya. Putting
+        2D maps into a 3D world is not simply replacing lines with cubes. I need
+        to think how to translate the design faithfully and efficiently:<br />
         -Pay special attention to the height difference. Height difference would
         matter a lot in determining the visibility, and engaging enemies from a
         higher place is possible but is almost impossible from a lower place.<br />
@@ -240,8 +239,7 @@
         height and thickness is so important.<br />
         -Think in a dynamic point of view. Enemies have vision cones and as they
         move, they are observing different places. As I programmed the whole
-        game system, there are way more details that needs careful thoughts.<br />
-
+        game system, there are way more details that needs careful thoughts.
         <div class="element-image-flex">
           <img src="/media/games/level-design/stealth/process-1.png" />
           <img src="/media/games/level-design/stealth/process-2.png" />
@@ -253,21 +251,66 @@
       </div>
       <div class="main-design-title">
         <hr />
-        in-engine development
+        level design
+      </div>
+      <div class="main-design-description">
+        I used Blueprint to do all the game logic, including enemy AI,
+        patrolling system, and game start/over. And it's also a step where I can
+        watch how level runs and adjust accordingly.
+        <br /><span class="element-title">patrol system</span><br />
+        <div class="element-image-flex">
+          <img src="/media/games/level-design/stealth/patrol-1.png" />
+          <img src="/media/games/level-design/stealth/patrol-2.png" />
+        </div>
+        <br /><span class="element-title">enemy AI</span><br />
+        <div class="element-image-flex">
+          <img src="/media/games/level-design/stealth/ai-1.png" />
+          <img src="/media/games/level-design/stealth/ai-2.png" />
+        </div>
+        <br /><span class="element-title">mesh & color</span><br />
+        Although the purpose of this level is not to make an environment design
+        portfolio, I built the level in medium details, especially for places
+        that should attract more attention. Coloring the mesh is also important,
+        as it gives a sense of what function the mesh serves.
+        <br /><span class="element-title">lighting</span><br />
+        Lighting plays an significant role in night scenes. In the level
+        lighting was used mostly to indicate important locations and direct the
+        players. I tried to use different colors for different purposes: yellow
+        means common places, white can be seen at the entrance of large area,
+        light yellow is used for enemies' flashlights.
+        <br /><span class="element-title">collectibles</span><br />
+        Collectibles are commonly used in games to reward those who have
+        curiosity and patience to explore every corner of the world. To fill the
+        world with more content, I also use collectibles to enrich some not very
+        eye-catching routes.
       </div>
       <div class="main-design-title">
         <hr />
         playtesting
       </div>
       <div class="main-design-description">
-        I used Blueprint to do all the game logic, including enemy AI,
-        patrolling system, and game start/over. And it's also a step where I can
-        watch how level runs and adjust accordingly.
-      </div>
-      <div class="main-design-description">
         I consider playtesting a crucial part of level design, especially when I
         realized the magic it plays to bring a 6/10 level to 8 points. (or
         higher!)
+        <div class="element-image">
+          <img src="/media/games/level-design/stealth/iteration-1.png" />
+        </div>
+        The first feedback from a professional includes changing the position of
+        vantage point and adding more direction along the level so the player
+        can keep track of where they are and know where is the destination. I
+        also noticed that enemy patrol routes are so easy that there's actually
+        "god path" which is mentioned earlier as a pitfall in stealth level. As
+        a result, I re-designed exterior area and enemy patrol routes.
+      </div>
+      <div class="main-design-title">
+        <hr />
+        special thanks
+      </div>
+      <div class="main-design-description">
+        I want to thank the following people:<br />
+        Ketul Majmudar, who helped answer many questions and gave valuable
+        professional feedback.<br />
+        My parents, who've been supporting me but asking for nothing.
       </div>
 
       <div style="clear: both;"></div>

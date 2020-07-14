@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=0" />
+    <meta
+      name="description"
+      content="Level design analysis by Liangzheng Luo."
+    />
+    <meta name="theme-color" content="#005DAF" />
+    <meta name="author" content="Liangzheng Luo" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Level Design Analysis - Liangzheng Luo</title>
+    <link rel="icon" type="image/png" href="/media/icon.png" />
+    <link href="/css/analysis.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,500,500i,600,600i,700,700i&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <script type="module" src="/js/nav.js"></script>
+    <script type="module" src="/js/general.js"></script>
+    <div id="nav"></div>
+    <div id="back">
+      <a onclick="transitionToPage('bloodborne','var(--sohi)')">➙</a>
+    </div>
+    <div id="next">
+      <a onclick="transitionToPage('slay-the-spire','var(--sohi)')">➙</a>
+    </div>
+
+    <div
+      class="top"
+      style="
+        background-image: url(/media/analysis/level-analysis/index-title.png);
+      "
+    >
+      <div class="top-title">
+        Level Design Analysis
+      </div>
+      <div class="top-introduction">
+        This page contains how I think about level design.
+      </div>
+      <div class="top-information">
+        <span style="color: var(--ro);">time</span> spring 2020 - present
+      </div>
+    </div>
+    <div id="main">
+      <div class="main-title">
+        Uncharted 4: A Thief's End
+      </div>
+      <div class="main-description">
+        Uncharted series are probably the most famous action adventure games
+        exclusively on PlayStation.
+      </div>
+      <div class="main-design-title">
+        <hr />
+        level design
+      </div>
+      <div class="main-design-description">
+        <span class="element-title">difficulty curve</span><br />
+        Just like the soul series made by From Software, the level of Bloodborne
+        is beautiful and challenging as well. Waking up in a vast world with few
+        hints for where to go next already is already harsh for any players, let
+        alone there are numbers of monsters along the way that can kill you in
+        three or four blows. <br />
+        The way Bloodborne does the tutorial is a quite linear map at the
+        beginning where enemies are deadly but also easy to deal with. And
+        whatever players do, they will eventually come to a stage where they
+        need to face the first storyline boss. It is almost unavoidable that
+        many deaths are to come, but that will be a very important lesson for
+        players to accept failures and get familiar with the map. It is just
+        fair that players use life - usually not very valuable in the early game
+        - to learn some basic rules and routines. As the story moves on, the
+        game offers more options to choose from and as players have better
+        equipment, higher level and more combat experience, it will not be so
+        overwhelming. The game in this way ask players in a polite way to think
+        carefully and choose a route they feel comfortable, leaving space to
+        choose for both new players and veterans.
+        <br /><span class="element-title">level's functions</span><br />
+        The levels have functions. One of the key things in Bloodborne's map is
+        the shortcut which drastically reduces the time needed to travel between
+        places. This can have several positive results. <br />
+        First, from a feedback perspective, shortcut could ease the negative
+        feeling of death because once opened the players don't have to fight
+        unnecessary monsters, they can just speedrun. <br />
+        Second, from a goal perspective, shortcuts serve as small goals for
+        players in their run. Due to the difficulty most people cannot finish
+        bosses in one shot, so opening a shortcut whenever entering a new area
+        becomes a preferable choice for players. This design as well in the
+        experience aspect intrigues player's curiosity and keeps their eyes
+        open. <br />
+        Third, From Software decompose the large world into smaller areas and
+        use shortcuts to connect them all, making them feel larger than they
+        really are. Doors, hidden ladders, stairways just make Bloodborne a real
+        3-dimensional world connecting the lower and higher places.<br />
+        Last but not least, shortcuts are also event triggers for dynamically
+        loading map. It takes several seconds to play the open door animation,
+        leaving time to load the map of next area.
+        <div class="element-image-flex">
+          <img src="/media/analysis/bloodborne/shortcut-1.PNG" />
+          <img src="/media/analysis/bloodborne/shortcut-2.PNG" />
+        </div>
+      </div>
+
+      <div style="clear: both;"></div>
+    </div>
+  </body>
+</html>

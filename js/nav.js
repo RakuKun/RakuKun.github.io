@@ -17,6 +17,12 @@ var tmpl = CommentDoc(function () {
         <div class='entry-title'>Games</div>
         <a
           class='entry'
+          onclick="transitionToPage('../games/level-design','var(--rurikon)')">
+          Stealth Level Design
+        </a>
+        <br />
+        <a
+          class='entry'
           onclick="transitionToPage('../games/bvw','var(--rurikon)')">
           Building Virtual Worlds
         </a>
@@ -25,12 +31,6 @@ var tmpl = CommentDoc(function () {
           class='entry'
           onclick="transitionToPage('../games/ditto','var(--rurikon)')">
           Project Ditto
-        </a>
-        <br />
-        <a
-          class='entry'
-          onclick="transitionToPage('../games/level-design','var(--rurikon)')">
-          Level Design
         </a>
         <br />
         <a
@@ -55,6 +55,12 @@ var tmpl = CommentDoc(function () {
         <br />
         <a
           class='entry'
+          onclick="transitionToPage('../analysis/bloodborne','var(--sohi)')">
+          Level Analysis
+        </a>
+        <br />
+        <a
+          class='entry'
           onclick="transitionToPage('../analysis/slay-the-spire','var(--sohi)')">
           Slay the Spire: Engagement and Balancing
         </a>
@@ -62,7 +68,7 @@ var tmpl = CommentDoc(function () {
         <a
           class='entry'
           onclick="transitionToPage('../analysis/inside','var(--sohi)')">
-          INSIDE: Narrative and Visuals
+          INSIDE: Visual Language
         </a>
         <br />
         <a
