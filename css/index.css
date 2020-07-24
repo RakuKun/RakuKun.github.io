@@ -128,7 +128,7 @@ body.fade-out {
 .section-entry {
   display: inline-block;
   vertical-align: top;
-  margin: 1vh 2vw 1vh 0;
+  margin: 1vh 1vw 1vh 0;
   letter-spacing: 1px;
   font-size: 3vw;
   font-weight: 600;
@@ -164,28 +164,28 @@ body.fade-out {
   opacity: 1;
 }
 
-#games .section-entry {
-  width: 14vw;
-}
-
 #games .section-entry:hover div {
   background-color: var(--rurikon-trans);
-}
-
-#analysis .section-entry {
-  width: 14vw;
 }
 
 #analysis .section-entry:hover div {
   background-color: var(--sohi-trans);
 }
 
-#gallery .section-entry {
-  width: 25vw;
-}
-
 #gallery .section-entry:hover div {
   background-color: var(--kurenai-trans);
+}
+
+#games .section-entry {
+  width: 12.75vw;
+}
+
+#analysis .section-entry {
+  width: 15.5vw;
+}
+
+#gallery .section-entry {
+  width: 27vw;
 }
 
 .blog-entry {

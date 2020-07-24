@@ -206,7 +206,7 @@ body {
 
 #main {
   transition: 1s ease-in-out;
-  padding: 0 10vw 10vh 10vw;
+  padding: 0 8vw 10vh 8vw;
   font-weight: 400;
   letter-spacing: 0;
   word-spacing: 0.1em;

@@ -17,8 +17,14 @@ var tmpl = CommentDoc(function () {
         <div class='entry-title'>Games</div>
         <a
           class='entry'
-          onclick="transitionToPage('../games/level-design','var(--rurikon)')">
+          onclick="transitionToPage('../games/stealth-level','var(--rurikon)')">
           Stealth Level Design
+        </a>
+        <br />
+        <a
+          class='entry'
+          onclick="transitionToPage('../games/combat-zone','var(--rurikon)')">
+          Multiplayer Combat Zone Design
         </a>
         <br />
         <a
