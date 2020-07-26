@@ -141,7 +141,7 @@ var tmpl = CommentDoc(function () {
 
 var newHtml = tmpl.substring(5, tmpl.length - 5);
 
-console.log(newHtml);
+//console.log(newHtml);
 
 var nav = document.getElementById('nav');
 

@@ -36,11 +36,12 @@
       </div>
       <div class="top-introduction">
         Designing multiplayer combat experience has alway been a very
-        interesting topic for me.
+        interesting topic for me, so I want this page to cover some thoughts and
+        trying of designing small-scale multiplayer combat zone, preferably 1v1.
       </div>
       <div class="top-information">
         <span style="color: var(--ro);">time</span> summer 2020 <br />
-        <span style="color: var(--ro);">length</span> ~ 10 minutes <br />
+        <span style="color: var(--ro);">length</span> 1 minute <br />
         <span style="color: var(--ro);">software</span> Unreal Engine 4, Maya,
         Illustrator
         <br />
@@ -50,335 +51,108 @@
 
     <div id="main">
       <div class="main-title">
-        Stealth Design Theory
+        Inspiration
       </div>
       <div class="main-description">
-        Stealth game became a serious game genre after Metal Gear Solid came
-        out. Its third person perspective gameplay, combined with dramatic plot
-        and the thrilling feeling taking down enemies, fascinates players who
-        want something different from a shoot-'em-up.
+        I have been watching some top streamers on Twitch playing Call of Duty:
+        Warzone quite a bit recently. Among many interesting game mechanics, the
+        desperate 1v1 gunfight in a fictional gulag attracts me most for its
+        dramatically fast-paced combat and the rule that only the winner can
+        step back into the battlefield.
         <br />
       </div>
       <div class="main-design-title">
         <hr />
-        element analysis
+        analysis
       </div>
       <div class="main-design-description">
-        From the experience of several stealth games I want to analyze what
-        makes them fun and try making a brief stealth level by myself. Just like
-        other games, there are some fundamental elements in stealth games: a
-        start, a goal, game rules, and obstacles.
-        <br /><span class="element-title">start</span><br />
-        In stealth games, usually, the start point is a relatively safe place
-        distant from destination. No challenges at the beginning means players
-        have sufficient time to get prepared such as grabbing some equipments
-        and inspecting the level to make a plan. To make the game more
-        challenging, the players may not be able to come back once they set off,
-        so each run needs to be well prepared. <br />
-        <span class="element-title">goal</span><br />
-        The goal in stealth game is very diverse but has something in common:
-        mostly some fixed points (treasure, exit, important person, etc.) Some
-        games would ask the players to escape once they reach the goal (kill a
-        person probably), and the game pace could change a lot in the escape
-        phase, which adds excitement and up & downs to the emotion flow. <br />
-        <span class="element-title">rules</span><br />
-        The principle of designing rules for stealth games is never to make the
-        playable character too strong that they can even confront a group of
-        armed enemies. Giving ability to engage is dangerous in the sense that a
-        stealth experience may turn into Call of Duty. As a compensation, the
-        character is offered some skills or items so they can pass through
-        enemies unnoticed.<br />
-        <span class="element-title">obstacles</span><br />
-        There are usually a group of enemies either in fixed points or wandering
-        certain routes, trying to find and catch the playable character. They
-        outnumber the character so it is hard once got into combat, but for a
-        playable level their actions must be predictable so the players can have
-        strategy and plan ahead.
-      </div>
-      <div class="main-design-title">
-        <hr />
-        pitfalls
-      </div>
-      <div class="main-design-description">
-        <span class="element-title">god path</span><br />
-        The god path is a route by which the character have zero chance of being
-        noticed. It usually happens when all enemies' patrol routes don't
-        overlap with the character's route. This bad design could make the level
-        very boring as the players don't need to think, they just go and win.<br /><br />
-        Another example of god path is the unfair vantage point, where players
-        are allowed to attack enemy from distance while they cannot fight back.
-        Again, every game need to balance its challenge and reward. God path
-        avoids all challenges, thus causing a broken game setup.<br />
-        <span class="element-title">unpredictable AI</span><br />
-        Unpredictable AI means pre-scripted enemies don't follow a fixed path,
-        or have sudden turn back, or moves too fast. Unpredictable AI makes the
-        game hard in an annoying but not challenging way, as the random events
-        would kill every plan and mess up the level.<br />
-        <span class="element-title">forced gameplay</span><br />
-        Many stealth games let playable character have items or weapons. This is
-        nice as the players are granted a variety of ways to beat the level. But
-        this could also be a pain when some items are designed very specifically
-        for one level or even one point in level, and the players cannot beat
-        the level if they don't have that. It is always better to provide
-        possibility for trying new ways to explore than limiting the gameplay to
-        one answer.
+        <span class="element-title">what's gulag?</span><br />
+        As a Battle Royale game, Call of Duty: Warzone is praised for its
+        fast-paced and Call-of-Duty-esque feeling of gunfight. A player is put
+        into the gulag if and only after they get killed in the game for the
+        first time, so gulag is a chance for everyone to push back to the main
+        game - if they manage to win there.<br /><br />
+        A one versus one fight is prepared for everyone in the gulag, and some
+        special rules apply: the system will pick a gun (or not!) randomly for
+        both sides, and/or some equipments such as flash grenades or C4. The
+        health does not regenerate here, and each round only has 40 seconds,
+        with a "overtime" setting where players can also capture the flag in the
+        middle of the map to win.
+        <br />
+        Here's the link to the official
+        <span class="important"
+          ><a
+            href="https://www.callofduty.com/warzone/strategyguide/infil-tactics-in-the-warzone/CapturedPrisonerofWarzone/"
+            target="_blank"
+            >guide to gulag.</a
+          ></span
+        >
+        <br /><span class="element-title">why gulag?</span><br />
+        The gulag is designed, along with many other unique systems in Warzone,
+        in order that players can MAXIMIZE their playtime in the game and keep
+        excited. Similar to the main game where TTK (time to kill) is relatively
+        short compared to other Battle Royale games, gunfights in gulag also try
+        to make battle short and exciting. The higher the risk, the better the
+        reward.<br /><br />
+        I want to discuss how designers achieve their goals by looking into the
+        2d and 3d layout of the map.
+        <br /><span class="element-title">map: 2d</span><br />
+        According to the official guide, the 1v1 fight can take place randomly
+        at one of the following three maps.
+        <div class="element-image-flex">
+          <img src="/media/games/combat-zone/gulag-1.jpg" />
+          <img src="/media/games/combat-zone/gulag-2.jpg" />
+          <img src="/media/games/combat-zone/gulag-3.jpg" />
+        </div>
+        From 2d layouts we can find the three maps share some things in
+        common:<br />
+        - <span class="bold">Rigidly axial symmetric layout.</span> It's
+        probably the most important thing in any competitive games that both
+        sides play fairly, and the most straightforward thing is make a
+        symmetrical map so they play under the same circumstances. <br />
+        -
+        <span class="bold"
+          >Single-floor and small map with lots of obstacles blocking the
+          sight.</span
+        >
+        From the purpose of gulag, we know that designers want this combat to be
+        quick and decisive, which pushes the map to be simple and understandable
+        as possible. But being simple does not means being easy: the players
+        should be put into a challenging enough environment where they need to
+        use everything they're provided to win.<br />
+        -
+        <span class="bold"
+          >A perimeter balcony above where idle players can observe the
+          ground.</span
+        >
+        <br /><span class="element-title">map: 3d</span><br />
+        One very important design I found about the three gulag map is that,
+        most walls are so tall that players cannot crouch and peek enemies. They
+        have to move to the edge of the wall, and peek left/right, which adds to
+        the odds they get killed.<br />
+        This design again force players to take higher risk in the fight, by
+        moving closer to the enemy or exposing more part of the body.<br /><br />
+        In the gulag map, many factors work successfully together to make the
+        gunfight fast and intense.
       </div>
       <div class="main-design-title">
         <hr />
         game reference
       </div>
-      <div class="main-design-description">
-        <span class="element-title">Splinter Cell: Blacklist</span><br />
-        <div class="element-image-flex">
-          <img src="/media/games/stealth-level/stealth/blacklist.jpg" />
-          <img src="/media/games/stealth-level/stealth/blacklist2.jpg" />
-        </div>
-        Splinter Cell: Blacklist is the stealth game that I'm mostly getting
-        inspired from, and this stealth level project is like the re-creation of
-        one of its levels call Private Estate. A scenario set at night, Private
-        Estate serves as a great example of the use of light, enemy AI, and
-        exterior and interior design of a typical stealth level.
-        <br />
-        <span class="element-title">MGS V: Phantom Pain</span>
-        <div class="element-image">
-          <img src="/media/games/stealth-level/stealth/mgsv.jpg" />
-        </div>
-        Metal Gear Solid V: Phantom Pain is a critically claimed stealth title
-        from one of my favorite game director, Hideo Kojima. I like its
-        day-night system, which adds different fun and strategy to a single map.
-        Again, MGSV teaches a good lesson on how crucial lighting in dark
-        scenes.
-        <br />
-        <span class="element-title">Uncharted 4</span>
-        <div class="element-image">
-          <img src="/media/games/stealth-level/stealth/uncharted4.jpg" />
-        </div>
-        Although Uncharted 4 is not a stealth game, some of its levels cleverly
-        add stealth element to make the game feel diverse and interesting.
-        What's more, the way it tells a continuous story using level design is a
-        great source for learning. The picture above comes from "get out of the
-        orphanage" scenario in chapter 1, which shows the players a segment of
-        Nathan Drake's childhood.<br /><br />
-        This level did another point extremely well: make waiting time
-        interesting. Usually in stealth levels players need to wait for enemies
-        to pass or turn around, and the process can be tedious. Uncharted 4,
-        however, makes NPCs talk and act all the time, so that players can
-        concentrate and get information useful to understand the story. It's
-        indeed a clever move.
-      </div>
+      <div class="main-design-description"></div>
 
       <div class="main-title">
-        Planning
-      </div>
-      <div class="main-design-title">
-        <hr />
-        theme
-      </div>
-      <div class="main-design-description">
-        <div class="element-image">
-          <img src="/media/games/stealth-level/stealth/plan-1.png" />
-        </div>
+        Ideation
       </div>
       <div class="main-design-title">
         <hr />
         mechanics
       </div>
-      <div class="main-design-description">
-        <div class="element-image">
-          <img src="/media/games/stealth-level/stealth/plan-2.png" />
-        </div>
-      </div>
+      <div class="main-design-description">a</div>
       <div class="main-design-title">
         <hr />
-        layout reference
+        2d map
       </div>
-      <div class="main-design-description">
-        When designing, I studied pictures of many real world mansions to better
-        understand the layout.
-        <div class="element-image">
-          <img src="/media/games/stealth-level/stealth/ref-1.png" />
-        </div>
-      </div>
-      <div class="main-design-title">
-        <hr />
-        2d layout
-      </div>
-      <div class="main-design-description">
-        During design phase I used Adobe Illustrator to block out the level and
-        use some legends for the playable character, enemies and goal. I would
-        like to make 2 major scenes in the game: the outdoor scene and the
-        indoor scene. The first goal is set outside the mansion while the second
-        goal needs the character to sneak into the mansion and stealth in a more
-        constraint area.
-        <div class="element-image">
-          <img src="/media/games/stealth-level/stealth/2d.png" />
-        </div>
-      </div>
-
-      <div class="main-title">
-        Process
-      </div>
-      <div class="main-design-title">
-        <hr />
-        methodology
-      </div>
-      <div class="main-design-description">
-        <span class="element-title">macro -> micro</span><br />
-        I like to ponder the design from a macro perspective first, then zoom in
-        on the details. For this project, the game pace is the first thing
-        confirmed. When I was drawing the 2d map, I always design the large part
-        first (exterior & interior), then split each part into smaller pieces
-        (garage/living room/bedroom), then decide where to put the lighting,
-        then consider level dressing such as furniture.
-      </div>
-      <div class="main-design-title">
-        <hr />
-        3d modelling
-      </div>
-      <div class="main-design-description">
-        Putting 2D maps into a 3D world is not simply replacing lines with
-        cubes. I need to think how to translate the design faithfully and
-        efficiently:<br />
-        -Pay special attention to the height difference. Height difference would
-        matter a lot in determining the visibility, and engaging enemies from a
-        higher place is possible but is almost impossible from a lower place.<br />
-        -Lines in 3D world have height and thickness. Wall is a key component in
-        3D stealth games as it blocks the sight and gives space for players to
-        hide and ambush.<br />
-        <div class="element-image-flex">
-          <img src="/media/games/stealth-level/stealth/process-1.png" />
-          <img src="/media/games/stealth-level/stealth/process-2.png" />
-        </div>
-        <div class="element-image-flex">
-          <img src="/media/games/stealth-level/stealth/process-3.png" />
-          <img src="/media/games/stealth-level/stealth/process-4.png" />
-        </div>
-      </div>
-      <div class="main-design-title">
-        <hr />
-        level design
-      </div>
-      <div class="main-design-description">
-        <span class="element-title">mesh & color</span><br />
-        Although the purpose of this level is not to make an environment design
-        portfolio, I built the level in medium details, especially for places
-        that should attract more attention. Coloring the mesh is also important,
-        as it gives a sense of what function the mesh serves.<br /><br />
-        What is interesting is that, when I was blocking out the level and
-        testing, I found in real games, each floor in interior levels should
-        better be HIGHER than in real life, due to fact that the third-person
-        camera angle is usually higher than the player character. Translucent
-        material is another level component I played with this time. I used it
-        to make the mansion feel modern and living, also to help players see
-        through some part of the mansion and guide them.
-        <br /><span class="element-title">lighting</span><br />
-        Lighting plays an significant role in night scenes. In the level
-        lighting was used mostly to indicate important locations and direct the
-        players. I tried to use different colors for different purposes: yellow
-        means common places, white can be seen at the entrance of large area,
-        light yellow is used for enemies' flashlights.
-        <br /><span class="element-title">collectibles</span><br />
-        Collectibles are commonly used in games to reward those who have
-        curiosity and patience to explore every corner of the world. To fill the
-        world with more content, I also use collectibles to enrich some not very
-        eye-catching routes.
-      </div>
-      <div class="main-design-title">
-        <hr />
-        level construction
-      </div>
-      <div class="main-design-description">
-        I used Blueprint to do all the game logic, including enemy AI,
-        patrolling system, and game start/over. And it's also a step where I can
-        watch how level runs and adjust accordingly. The best part of all these
-        systems is their compatibility - Unreal Engine makes it easy to
-        transplant the systems to another game that needs them.
-        <br /><span class="element-title">patrol system</span><br />
-        <div class="element-image-flex">
-          <img src="/media/games/stealth-level/stealth/patrol-1.png" />
-          <img src="/media/games/stealth-level/stealth/patrol-2.png" />
-        </div>
-        <span class="element-title">enemy AI</span><br />
-        To create a highly customizable and robust AI system, I used a
-        combination of Unreal Engine's AI perception system, behavior tree, and
-        various Blueprints. Also to increase the visibility of AI sight, I used
-        enemies' flashlights to indicate their sight range, which proved to be
-        working well in playtests.
-        <div class="element-image-flex">
-          <img src="/media/games/stealth-level/stealth/ai-1.png" />
-          <img src="/media/games/stealth-level/stealth/ai-2.png" />
-        </div>
-        I think in a dynamic point of view. Enemies have vision cones and as
-        they move, they are observing different places. As I programmed the
-        whole game system, there are way more details that needs careful
-        thoughts.
-        <br /><span class="element-title">dialogue system</span><br />
-        Dialogue system in this game also plays as a guide that reminds the
-        player of where they are and what they should be doing.
-      </div>
-      <div class="main-design-title">
-        <hr />
-        playtesting
-      </div>
-      <div class="main-design-description">
-        I consider playtesting a crucial part of level design, especially when I
-        realized the magic it plays to bring a 6/10 level to 8 points. (or
-        higher!)
-        <div class="element-image">
-          <img src="/media/games/stealth-level/stealth/iteration-1.png" />
-        </div>
-        The first feedback from a professional includes changing the position of
-        vantage point and adding more direction along the level so the player
-        can keep track of where they are and know where is the destination. I
-        also noticed that enemy patrol routes are so easy that there's actually
-        "god path" which is mentioned earlier as a pitfall in stealth level. As
-        a result, I re-designed exterior area and enemy patrol routes.
-      </div>
-
-      <div class="main-title">
-        Post-Mortem
-      </div>
-      <div class="main-design-title">
-        <hr />
-        what went well
-      </div>
-      <div class="main-design-description">
-        <span class="element-title">atmosphere</span><br />
-        Almost every playtesters mentioned the intense atmosphere when playing,
-        which quite fits my expectation.
-        <br /><span class="element-title">using the engine</span><br />
-        Prior to the project (which is my first official UE project), I spent
-        about two weeks learning some basic stuff about Unreal Engine, all of
-        which eventually proved useful.
-      </div>
-      <div class="main-design-title">
-        <hr />
-        what didn't went well
-      </div>
-      <div class="main-design-description">
-        <span class="element-title">interior design</span><br />
-        Admittedly, designing indoor level almost took me twice the time of
-        outdoor part. I realized the composition became really different when I
-        wanted the guide the players in a narrow area. And setting obstacles was
-        also more difficult when designing the inside part.
-        <br /><span class="element-title">missing details</span><br />
-        Yes, I talked to myself and found that compared to enhancing the
-        details, I was more willing to think about the macro - feeling, level
-        flow, constructing logic... The level was definitely not perfect as I
-        sensed many details are still missing - and some of them might have been
-        a good guide or challenge.
-      </div>
-      <div class="main-design-title">
-        <hr />
-        special thanks
-      </div>
-      <div class="main-design-description">
-        I want to thank the following people:<br />
-        Ketul Majmudar, who helped answer many questions and gave valuable
-        professional feedback.<br />
-        My parents, who've been supporting me but asking for nothing.
-      </div>
-
       <div style="clear: both;"></div>
     </div>
   </body>
