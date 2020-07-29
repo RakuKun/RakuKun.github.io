@@ -48,7 +48,7 @@ var tmpl = CommentDoc(function () {
         <a
           class='entry'
           onclick="transitionToPage('../games/collection','var(--rurikon)')">
-          Collection
+          Mini Game Collection
         </a>
       </div>
       <div class='category'>
@@ -61,7 +61,7 @@ var tmpl = CommentDoc(function () {
         <br />
         <a
           class='entry'
-          onclick="transitionToPage('../analysis/bloodborne','var(--sohi)')">
+          onclick="transitionToPage('../analysis/level-analysis','var(--sohi)')">
           Level Analysis
         </a>
         <br />
