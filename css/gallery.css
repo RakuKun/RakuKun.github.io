@@ -39,19 +39,3 @@ body.fade-out {
 .element-title {
   color: var(--kurenai);
 }
-
-.photo {
-  display: block;
-  white-space: nowrap;
-  height: 75vh;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  margin: 4vh 0;
-}
-
-.photo img {
-  display: inline-block;
-  margin-right: 5vw;
-  height: 100%;
-  object-fit: contain;
-}
