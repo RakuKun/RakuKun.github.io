@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=0" />
+    <meta
+      name="description"
+      content="How to Create Side Quests for MMORPG by Liangzheng Luo."
+    />
+    <meta name="theme-color" content="#005DAF" />
+    <meta name="author" content="Liangzheng Luo" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Accessibility in Games - Liangzheng Luo</title>
+    <link rel="icon" type="image/png" href="/media/icon.png" />
+    <link href="/css/blog.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,500,500i,600,600i,700,700i&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <script type="module" src="/js/nav.js"></script>
+    <script type="module" src="/js/general.js"></script>
+    <div id="nav"></div>
+    <div id="back">
+      <a onclick="transitionToPage('../gallery/design','var(--kurenai)')">➙</a>
+    </div>
+    <div id="next">
+      <a onclick="transitionToPage('formulas','var(--shironeri)')">➙</a>
+    </div>
+
+    <div class="top" style="background-image: url()">
+      <div class="top-title" style="font-size: 5em">
+        Accessibility - Game For All
+      </div>
+      <div class="top-introduction">
+        Games should always be an opportunity to experience something beyond
+        everyday life for all people. This article discuss some successful
+        practices in designing an working accessibility system.
+      </div>
+      <div class="top-information">
+        <span style="color: var(--ro)">time</span> fall 2020 <br />
+      </div>
+    </div>
+
+    <div id="main">
+      <div class="main-title">For and From Accessibility</div>
+
+      <div class="main-text">
+        This article was written in September 2020, when the world was still
+        suffering from the Covid-19 pandemic. When I was staying home working
+        and playing video games, it occured to me some day that I needed game
+        more than ever to escape the dullness, and I think my situation applies
+        to many people in WFH status. On top of that, with the rapid revolution
+        in game systems' complexity, graphics, and multiplayer features, the
+        need for a working accessibility settings is of much prominence now.
+        Making sure that players with different cultural background, different
+        physical abilities are all able to enjoy the game is the fundamental
+        spirit of equity for a game studio. <br /><br />
+        I have been playing Naughty Dog's games and I am glad to find they
+        really put some effort into making accessible games. Here's the video
+        about
+        <span class="important"
+          ><a href="https://www.youtube.com/watch?v=Ls_CD4mB42s"
+            >Accessibility in Uncharted 4.</a
+          ></span
+        >
+        What's more, their accessibility system got polished and was almost
+        reinvented in The Last of Us 2, making it probably the most accessible
+        triple-A game so far. Here's their blog on
+        <span class="important"
+          ><a
+            href="https://www.naughtydog.com/blog/the_last_of_us_part_ii_accessibility_features_detailed"
+            >Accessibility in TLOU 2.</a
+          ></span
+        >
+      </div>
+      <div class="main-paragraph-title">Types of Accessibility</div>
+      <div class="main-text">
+        Building accessibility features for games could somehow refer to the
+        study in human-computer interaction field since the object of
+        interaction is kind of the same: an input hardware (mouse or controller)
+        and several output hardware (monitor, speaker and yes, controller).<br /><br />
+        There are several basic catagories of accessibility assets:<br />
+        - Vision accessibility<br />
+        - Hearing accessibility<br />
+        - Motion accessibility<br />
+        - Culture accessibility<br />
+      </div>
+      <div class="main-paragraph-title">Keep the Fun Factor</div>
+      <div class="main-text">
+        What I want to stress is that building an accessibility system for game
+        is more than doing that for a medical device or so. The designers should
+        keep in mind that the accessibility should not be at odds with creative
+        gameplay. With or without the accessibility feature the game still runs
+        for everyone and creates the same illusion where people are put on a
+        great journey that's mostly impossible in the real world. Because of the
+        importance of keeping the fun factor, people with disabilities should be
+        considered as a serious part in the playtesting.<br /><br />
+        It's also worth noting that a good accessibility system applies to all
+        players, not only those with actual disabilities. Sometimes people want
+        to use such function for nothing but simpler experience, sometimes they
+        are not so good at certain controls - designers should let people know
+        that such assistance is normal and really open to everyone.
+      </div>
+
+      <div class="main-title">Vision Accessibility</div>
+      <div class="main-text">
+        Vision accessibility includes color blindness, nearsightedness, and
+        other functions for bringing a better vision.
+      </div>
+      <div class="main-paragraph-title">Color Blindness</div>
+      <div class="main-text">
+        Most games work with colors (though in Ghost of Tsushima you can choose
+        to play in black and white) and luckily many of them already have a
+        solid system to assist people with color blindness. Some games do better
+        in providing different even customizable settings for different types of
+        color blindness: protanopia, deuteranopia, tritanopia and more. Here's
+        an example from Battlefield V. (The color is actually customizable in
+        RGB.)
+        <div class="element-image" style="width: 60%">
+          <img src="/media/blog/accessibility/color-blindness-1.jpg" />
+        </div>
+        However, most color blindness assist focuses on only the UI part,
+        leaving a huge space for improvement in environmental and character
+        design.
+      </div>
+      <div class="main-paragraph-title">Nearsightedness</div>
+      <div class="main-text">
+        In fact, Nearsightedness happens more than people would figure, because
+        games can make people nearsighted too! It sounds weird but for some
+        people whose first language is not English and are playing the game with
+        subtitles on like me, sometimes the font size is so small that I have to
+        move closer to the monitor in order to read them. I feel like I have
+        nearsightedness in those moments. Tweaking the UI still fixes most of
+        the problem. But again, for some game where enemies attacks you from
+        distance or where you need to stealth through the guards, it can really
+        be a nightmare if you cannot see them clearly in the screen. And night
+        environment is a natural obstacle for people to observe. There are
+        multiple ways to help with the trouble (and some are being used already
+        I'm sure):<br />
+        - A binocular functions in some game to compensate the sight loss.
+        <br />
+        - When you are running or hiding, the game camera automatically zooms in
+        a bit to help observe the environment.
+      </div>
+      <div class="main-paragraph-title">Other Tricks</div>
+      <div class="main-text">
+        One very interesting visual aid I found is using high contrast color to
+        actually help players not be distracted by environment.
+        <div class="element-image">
+          <img src="/media/blog/accessibility/high-contrast.jpg" />
+        </div>
+        Playing in such render mode makes me feel I'm hacking the game, not
+        actually experience it normally - I fail to enjoy the beauty of the
+        graphics, but it does help someone who's having trouble recognizing
+        stuff in normal render mode.<br /><br />
+        It feels more like a game feature, but in many game levels that run
+        completely in night scenes, it's not rare for the system to provide with
+        a thermal vision/night vision, like Sam's iconic night vision goggles in
+        Splinter Cells series.
+        <div class="element-image">
+          <img src="/media/blog/accessibility/night-vision.png" />
+        </div>
+        These tricks are more like accessibility features because they do
+        provide more information for the player - and that's not balanced for
+        the ones that don't use them.
+      </div>
+
+      <div class="main-title">Hearing Accessibility</div>
+      <div class="main-text">
+        Hearing accessibility is crucial for people in need. In order to
+        consider how to assist those players, we can first make a list of the
+        possible sounds in the game, and design accessibility features
+        accordingly:<br />
+        - <span class="bold">Dialogue:</span> subtitle can be useful and
+        implementable. The problem is that sometimes it does not offer enough
+        information. Another way is to pin a location/item on the map so
+        everybody can know without shouting out.<br />
+        - <span class="bold">Sound effects,</span> like gunfire or special item.
+        These sounds can actually be "shown" in the game if properly displayed
+        by a sound indicator, such as bullet trail, or a shooting direction UI.
+        <div class="element-image">
+          <img src="/media/blog/accessibility/threat-tracer.jpg" />
+        </div>
+        Another good way I find is to highlight the figure rims like The Last of
+        Us. When used well it doesn't break the game flow.
+        <div class="element-image-flex">
+          <img src="/media/blog/accessibility/listen-mode-1.jpg" />
+          <img src="/media/blog/accessibility/listen-mode-2.jpg" />
+        </div>
+        - <span class="bold">Environmental sound/music.</span> From a
+        storytelling perspective it's important to hear the grand composition,
+        but from a gameplay standpoint, it plays little role in helping define
+        where the enemy is, so normally games don't really visualize it, but
+        there are several nice try.<br /><br />
+        As you probably find, one principle for designing a hearing
+        accessibility feature is try to visualize the sound, as our vision
+        system is in fact able to receive more information than we think.
+      </div>
+
+      <div class="main-title">Motion Accessibility</div>
+      <div class="main-text">
+        Motion accessibility, in my opinion, is something that works for
+        everyone. Everyone can have motion sickness sometimes. Everyone has
+        their preferred input mode and presets that often differ from game to
+        game.<br /><br />
+        So talking about motion sickness, two camera aftereffects are really to
+        blame: camera shake and motion blur. Luckily most games allows players
+        to switch on/off or tweak the strength. The most common motion settings
+        that can be found in most games is the option to switch left/right
+        joystick or less commonly, to switch the left/right click on the
+        mouse.<br /><br />
+        In VR games the problem of motion sickness becomes more significant.
+        From many experiences building VR games, here's some of the takes I
+        think could work:<br />
+        - <span class="bold">Slow down!</span> A fun but true fact is that in VR
+        world we feel things faster than they actually move. So it's okay if we
+        really slow them down a little bit, because your brain is likely to
+        magnify the speed anyway. When things move too fast for the brain to
+        figure out what's happening, it starts a strike. <br />
+        - <span class="bold">Using a vignette mask.</span> The scientific theory
+        behind this is when human eyes receive less information at a time, they
+        are less likely to feel exhausted. <br />
+        - <span class="bold">Having something stay in the screen.</span> This
+        thing works as a "reference object" in the movement, and since it's
+        still to the player, it creates an illusion where you are not moving
+        that fast and things are not changing that quickly.
+      </div>
+
+      <div class="main-title">Culture Accessibility</div>
+      <div class="main-text">
+        It's not common but people from different culture may encounter
+        something in the game that causes confusion, for example, bad
+        subtitles.<br /><br />
+        Developers usually pay attention not to symbolize religion, or custom
+        habit in a way that not truthfully reflect the real world. What they
+        fail to acknowledge sometimes, is that when talking about a different
+        culture, there are much more things that are not in the common sense:
+        for western developers in a game based on Japanese history, not judging
+        people from a western moral standpoint is respectful. Ghost of Tsushima
+        did a good job inviting Japanese voice actors to record the dialogue,
+        but what is missing is that the mouth motion capture was done in English
+        dialogue, so when they speak Japanese it kind of stuck out like a sore
+        thumb.
+      </div>
+    </div>
+  </body>
+</html>

@@ -282,6 +282,7 @@ hr {
 }
 
 .element-image {
+  margin: auto;
   margin-top: 0.25em;
 }
 

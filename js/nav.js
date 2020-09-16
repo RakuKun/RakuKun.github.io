@@ -125,6 +125,12 @@ var tmpl = CommentDoc(function () {
         <br />
         <a
           class='entry'
+          onclick="transitionToPage('../blog/accessibility','var(--shironeri)')">
+          Accessibility - Game For All
+        </a>
+        <br />
+        <a
+          class='entry'
           onclick="transitionToPage('../blog/design-diary','var(--shironeri)')">
           Design Diary
         </a>
