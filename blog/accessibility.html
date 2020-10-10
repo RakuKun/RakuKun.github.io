@@ -24,10 +24,10 @@
     <script type="module" src="/js/general.js"></script>
     <div id="nav"></div>
     <div id="back">
-      <a onclick="transitionToPage('../gallery/design','var(--kurenai)')">➙</a>
+      <a onclick="transitionToPage('balance','var(--shironeri)')">➙</a>
     </div>
     <div id="next">
-      <a onclick="transitionToPage('formulas','var(--shironeri)')">➙</a>
+      <a onclick="transitionToPage('design-diary','var(--shironeri)')">➙</a>
     </div>
 
     <div class="top" style="background-image: url()">
@@ -202,31 +202,35 @@
 
       <div class="main-title">Motion Accessibility</div>
       <div class="main-text">
-        Motion accessibility, in my opinion, is something that works for
-        everyone. Everyone can have motion sickness sometimes. Everyone has
+        Motion accessibility, in my opinion, is something that should work for
+        everyone. Everybody can have motion sickness sometimes. Everybody has
         their preferred input mode and presets that often differ from game to
-        game.<br /><br />
-        So talking about motion sickness, two camera aftereffects are really to
-        blame: camera shake and motion blur. Luckily most games allows players
-        to switch on/off or tweak the strength. The most common motion settings
-        that can be found in most games is the option to switch left/right
-        joystick or less commonly, to switch the left/right click on the
-        mouse.<br /><br />
-        In VR games the problem of motion sickness becomes more significant.
-        From many experiences building VR games, here's some of the takes I
-        think could work:<br />
+        game, console to console.<br /><br />
+        When we talk about motion sickness, two camera effects are really to
+        blame: camera shake and motion blur. Luckily most games allow players to
+        switch on/off the function or tweak the strength. The most common motion
+        settings available in most games is the option to switch left/right
+        joystick, or to switch the left/right click on the mouse.<br /><br />
+        In VR games the problem of motion sickness becomes more salient. From
+        many experiences building VR games, here's some of the takes I think
+        could work:<br />
         - <span class="bold">Slow down!</span> A fun but true fact is that in VR
         world we feel things faster than they actually move. So it's okay if we
         really slow them down a little bit, because your brain is likely to
         magnify the speed anyway. When things move too fast for the brain to
         figure out what's happening, it starts a strike. <br />
-        - <span class="bold">Using a vignette mask.</span> The scientific theory
-        behind this is when human eyes receive less information at a time, they
-        are less likely to feel exhausted. <br />
-        - <span class="bold">Having something stay in the screen.</span> This
-        thing works as a "reference object" in the movement, and since it's
-        still to the player, it creates an illusion where you are not moving
-        that fast and things are not changing that quickly.
+        - <span class="bold">Use a vignette mask.</span> Vignette masks get rid
+        of some information in the screen's corners, helping players focus on
+        the center of the screen. The scientific theory behind this is when
+        human eyes receive less information at a time, they are less likely to
+        exhaust over time. <br />
+        <div class="element-image" style="width: 60%">
+          <img src="/media/blog/accessibility/vignette.jpg" />
+        </div>
+        - <span class="bold">Have something stay in the screen.</span> This
+        thing works as a "reference object" in the movement, and since its
+        position is fixed in the screen, it creates an illusion that you are not
+        moving that fast and things are not changing that quickly.
       </div>
 
       <div class="main-title">Culture Accessibility</div>
@@ -237,13 +241,15 @@
         Developers usually pay attention not to symbolize religion, or custom
         habit in a way that not truthfully reflect the real world. What they
         fail to acknowledge sometimes, is that when talking about a different
-        culture, there are much more things that are not in the common sense:
-        for western developers in a game based on Japanese history, not judging
-        people from a western moral standpoint is respectful. Ghost of Tsushima
-        did a good job inviting Japanese voice actors to record the dialogue,
-        but what is missing is that the mouth motion capture was done in English
-        dialogue, so when they speak Japanese it kind of stuck out like a sore
-        thumb.
+        culture, there are much more things that are not common sense: for
+        western developers on a game based on Japanese history, not judging and
+        designing people from a western moral standpoint is what it takes to
+        success. Ghost of Tsushima did a good job creating a loyal, fearless
+        ghost warrior from a story standpoint, and it's worth praising that they
+        invited Japanese voice actors to record the dialogue. What is missing to
+        me is that the mouth animation was still motion captured in English
+        dialogue, so when I turned to Japanese voice, it kind of stuck out like
+        a sore thumb.
       </div>
     </div>
   </body>

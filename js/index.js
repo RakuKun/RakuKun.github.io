@@ -40,10 +40,10 @@ function _scrollY(obj, slength) {
       main.style.backgroundColor = 'rgb(11, 52, 110)';
       break;
     case -200:
-      main.style.backgroundColor = 'rgb(237, 120, 74)';
+      main.style.backgroundColor = 'rgb(131, 138, 45)';
       break;
     case -300:
-      main.style.backgroundColor = 'rgb(203, 27, 69)';
+      main.style.backgroundColor = 'rgb(237, 120, 74)';
       break;
     case -400:
       main.style.backgroundColor = 'rgb(252, 250, 242)';
@@ -55,7 +55,7 @@ function _scrollY(obj, slength) {
   document.body.style.backgroundColor = main.style.backgroundColor;
   if (hold === false) {
     hold = true;
-    setTimeout(function() {
+    setTimeout(function () {
       hold = false;
     }, 1000);
     pan.style.transform = 'translateY(' + current + 'vh)';
@@ -90,7 +90,7 @@ function _swipe(obj) {
     stT; /*[start time]*/
   obj.addEventListener(
     'touchstart',
-    function(e) {
+    function (e) {
       var tchs = e.changedTouches[0];
       swdir = 'none';
       sX = tchs.pageX;
@@ -103,7 +103,7 @@ function _swipe(obj) {
 
   obj.addEventListener(
     'touchmove',
-    function(e) {
+    function (e) {
       e.preventDefault(); /*[prevent scrolling when inside DIV]*/
     },
     false
@@ -111,7 +111,7 @@ function _swipe(obj) {
 
   obj.addEventListener(
     'touchend',
-    function(e) {
+    function (e) {
       var tchs = e.changedTouches[0];
       dX = tchs.pageX - sX;
       dY = tchs.pageY - sY;
@@ -145,7 +145,7 @@ function registerChildren() {
   for (let i = 1; i < sections; i++) {
     main.children[0].children[0].children[i].addEventListener(
       'click',
-      function() {
+      function () {
         scdir = 'down';
         _scrollY(main, 100 * i);
       }
@@ -155,7 +155,7 @@ function registerChildren() {
 registerChildren();
 
 main.style.transform = 'translateY(0)';
-main.addEventListener('wheel', function(e) {
+main.addEventListener('wheel', function (e) {
   if (e.deltaY < 0) {
     scdir = 'up';
   } else scdir = 'down';
@@ -168,7 +168,7 @@ _swipe(main);
 
 var tops = document.querySelectorAll('.go-top');
 for (let i = 0; i < tops.length; i++) {
-  tops[i].addEventListener('click', function() {
+  tops[i].addEventListener('click', function () {
     scdir = 'top';
     _scrollY(main);
   });

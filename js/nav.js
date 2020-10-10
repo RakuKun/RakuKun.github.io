@@ -15,28 +15,22 @@ var tmpl = CommentDoc(function () {
     <div id='menu-page'>
       <div class='category'>
         <div class='entry-title'>Games</div>
-        <a
+         <a
           class='entry'
-          onclick="transitionToPage('../games/stealth-level','var(--rurikon)')">
-          Stealth Level Design
-        </a>
-        <br />
-        <a
-          class='entry'
-          onclick="transitionToPage('../games/combat-zone','var(--rurikon)')">
-          Multiplayer Combat Zone Design
-        </a>
-        <br />
-        <a
-          class='entry'
-          onclick="transitionToPage('../games/bvw','var(--rurikon)')">
-          Building Virtual Worlds
+          onclick="transitionToPage('../games/hyperpickle','var(--rurikon)')">
+          Project HyperPickle
         </a>
         <br />
         <a
           class='entry'
           onclick="transitionToPage('../games/ditto','var(--rurikon)')">
           Project Ditto
+        </a>
+        <br />
+        <a
+          class='entry'
+          onclick="transitionToPage('../games/bvw','var(--rurikon)')">
+          Building Virtual Worlds
         </a>
         <br />
         <a
@@ -84,24 +78,19 @@ var tmpl = CommentDoc(function () {
         </a>
       </div>
       <div class='category'>
-        <div class='entry-title'>Gallery</div>
+        <div class='entry-title'>Levels</div>
         <a
           class='entry'
-          onclick="transitionToPage('../gallery/art','var(--kurenai)')">
-          Art
+          onclick="transitionToPage('../levels/stealth-level','var(--koke)')">
+          Stealth Level
         </a>
         <br />
         <a
           class='entry'
-          onclick="transitionToPage('../gallery/photography','var(--kurenai)')">
-          Photography
+          onclick="transitionToPage('../levels/combat-zone','var(--koke)')">
+          Combat Zone Design
         </a>
         <br />
-        <a
-          class='entry'
-          onclick="transitionToPage('../gallery/design','var(--kurenai)')">
-          Design
-        </a>
       </div>
       <div class='category'>
         <div class='entry-title'>Blog</div>

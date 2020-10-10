@@ -27,8 +27,8 @@
       <a onclick="transitionToPage('balance','var(--shironeri)')">➙</a>
     </div>
 
-    <div class="top" style="background-image: url();">
-      <div class="top-title" style="font-size: 5em;">
+    <div class="top" style="background-image: url()">
+      <div class="top-title" style="font-size: 5em">
         Formulas in Combat Design
       </div>
       <div class="top-introduction">
@@ -39,22 +39,18 @@
         used and proven formulas (and their pros and cons) in combat system.
       </div>
       <div class="top-information">
-        <span style="color: var(--ro);">time</span> summer 2020 <br />
+        <span style="color: var(--ro)">time</span> summer 2020 <br />
       </div>
     </div>
 
     <div id="main">
-      <div class="main-title">
-        Attributes
-      </div>
+      <div class="main-title">Attributes</div>
       <div class="main-text">
         Before jumping into the formula part I think it's necessary to talk
         about the attributes involved in the combat system because they serve as
         the parameters in formulas.
       </div>
-      <div class="main-paragraph-title">
-        Attack
-      </div>
+      <div class="main-paragraph-title">Attack</div>
       <div class="main-text">
         Attack is one of the two core attributes in any formulas. A combat
         system cannot run without defining what attack is - from a complex
@@ -63,9 +59,7 @@
         attack is something that designers must clearly define because it
         practically affects everything in a combat.
       </div>
-      <div class="main-paragraph-title">
-        Health
-      </div>
+      <div class="main-paragraph-title">Health</div>
       <div class="main-text">
         Health serves as the second core attribute. Technically speaking, a
         combat is a continued process for multiple entities until someone's
@@ -73,9 +67,7 @@
         - in most games it's a integer while in one-shot-one-kill games it may
         be several lives a character possesses.
       </div>
-      <div class="main-paragraph-title">
-        Defense
-      </div>
+      <div class="main-paragraph-title">Defense</div>
       <div class="main-text">
         This is what makes combat system complicated but fun as well! Defense
         can counteract (at least) part of the impact an attack deals, and this
@@ -99,9 +91,7 @@
         name it.
       </div>
 
-      <div class="main-title">
-        Formula One: DMG = ATK - DEF
-      </div>
+      <div class="main-title">Formula One: DMG = ATK - DEF</div>
       <div class="main-text">
         This one has a extended version:<br />
         DMG = (ATK - DEF) * c, where c is a constant value provided by skill or
@@ -110,9 +100,7 @@
         (probably longer than any other formulas) thanks to its intuitive
         demonstration of the relationship between attack and defense.
       </div>
-      <div class="main-paragraph-title">
-        Pros
-      </div>
+      <div class="main-paragraph-title">Pros</div>
       <div class="main-text">
         Subtract Formula is arguably the most natural formula designers could
         think of. Given that the change of attack and defense results in linear
@@ -143,9 +131,7 @@
         counter chain like rock paper scissors. This is especially useful in
         some tactical games like Blizzard's StarCraft.
       </div>
-      <div class="main-paragraph-title">
-        Cons
-      </div>
+      <div class="main-paragraph-title">Cons</div>
       <div class="main-text">
         In extreme situation when the defense value is higher than the attack
         value, one gets literally invulnerable. This could ruin the attacking
@@ -159,9 +145,7 @@
         multiple times in the formula, just like they gets additional defense on
         the house.
       </div>
-      <div class="main-paragraph-title">
-        Usage
-      </div>
+      <div class="main-paragraph-title">Usage</div>
       <div class="main-text">
         From what I know, Subtract Formula and its variations are commonly used
         in earlier RPGs, turn-based tactical games and almost all FPS. Subtract
@@ -184,9 +168,7 @@
         other formula can compete to offer. Of course, this breaks the game and
         is very controversial over others' experience.
       </div>
-      <div class="main-title">
-        Formula Two: DMG = ATK * (100% - f(DEF))
-      </div>
+      <div class="main-title">Formula Two: DMG = ATK * (100% - f(DEF))</div>
       <div class="main-text">
         I want to call this Multiply Formula as the final damage is from attack
         multiplying a value influenced by the defense. Generically, f(DEF) =
@@ -196,9 +178,7 @@
         in f(DEF), but the sense of this formula is that attack is partly
         blocked but always deals some damage.
       </div>
-      <div class="main-paragraph-title">
-        Pros
-      </div>
+      <div class="main-paragraph-title">Pros</div>
       <div class="main-text">
         The biggest perk for the designers may be that despite the usage of
         multiplying, this formula actually makes calculating the combat ability
@@ -215,9 +195,7 @@
         change in DMG. Let's consider what this formula tells by changing the
         defense. <br />
       </div>
-      <div class="main-paragraph-title">
-        Cons
-      </div>
+      <div class="main-paragraph-title">Cons</div>
       <div class="main-text">
         Despite the fact that attacks alway deal damage, this could still result
         in disappointment if defense side has healers who can heal even more
@@ -238,16 +216,14 @@
         threshold works too; many games (MOBA especially) uses critical hit to
         increase the effect of attack.
       </div>
-      <div class="main-paragraph-title">
-        Usage
-      </div>
+      <div class="main-paragraph-title">Usage</div>
       <div class="main-text">
         Real Time Strategy (RTS) games later on tend to use Multiply Formula,
         for instance, the usual WarCraft 3 formula is DMG =
         ATK*[1-(0.06*DEF)/(1+0.06*DEF)], where DEF is shown as armor value. And
         there are various attack types that inflict different percent of damage
         based on the armor type.
-        <div class="element-image" style="width: 75%; margin: auto;">
+        <div class="element-image" style="width: 60%">
           <img src="/media/blog/formulas/multiply-wc3.png" />
         </div>
         Dota (and Dota 2), which originates from the original Warcraft, uses a
@@ -273,9 +249,7 @@
           <img src="/media/blog/formulas/multiply-r6.jpg" />
         </div>
       </div>
-      <div class="main-title">
-        Formula Three: DMG = ATK / DEF
-      </div>
+      <div class="main-title">Formula Three: DMG = ATK / DEF</div>
       <div class="main-text">
         This formula is called by me Divide Formula for that it puts DEF in
         divisor's place. This formula can actually be considered varied from
@@ -286,9 +260,7 @@
         These two variations are also widely being used and I think it's
         interesting to analyze them too.
       </div>
-      <div class="main-paragraph-title">
-        Pros
-      </div>
+      <div class="main-paragraph-title">Pros</div>
       <div class="main-text">
         Just like Multiply Formula, Divide Formula also avoids the situation
         where attacker cannot even break through the defense. ATK is a total
@@ -299,9 +271,7 @@
         attack and high defense. Even if someone has a very high ATK or DEF, the
         chance this guy breaks the whole game is rare.
       </div>
-      <div class="main-paragraph-title">
-        Cons
-      </div>
+      <div class="main-paragraph-title">Cons</div>
       <div class="main-text">
         Players generally would prefer increasing ATK over DEF because the
         marginal value of ATK increases, while the marginal value of defense
@@ -313,9 +283,7 @@
         discourage someone who want to invest a lot in leveling up their
         attributes.
       </div>
-      <div class="main-paragraph-title">
-        Variations
-      </div>
+      <div class="main-paragraph-title">Variations</div>
       <div class="main-text">
         Some game uses DMG = ATK^2 / DEF. One of the major problem is that
         players in this game would definitely pursue for higher attack since
@@ -332,9 +300,7 @@
         The nature of Divide Formula encourages players to invest more in attack
         and play in an aggressive way.
       </div>
-      <div class="main-paragraph-title">
-        Usage
-      </div>
+      <div class="main-paragraph-title">Usage</div>
       <div class="main-text">
         The origin version of Divide Formula is pretty rough that it's rarely
         applied to any games, but some of its variations are popular now. Some
@@ -343,9 +309,7 @@
         what I found the said damage formula for FFXV: Damage = (WeaponDMG ×
         (Attack − EnemyDefense) × 1.5 + (STR − EnemyVIT)×2)/25.
       </div>
-      <div class="main-title">
-        A Simple Conclusion
-      </div>
+      <div class="main-title">A Simple Conclusion</div>
       <div class="main-text">
         Video games have a proud history of more than 50 years and it's growing
         even faster today. The three formulas listed above, in my opinion, serve

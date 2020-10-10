@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, user-scalable=0" />
-    <meta name="description" content="Level Design by Liangzheng Luo." />
+    <meta name="description" content="Combat zone design by Liangzheng Luo." />
     <meta name="theme-color" content="#005DAF" />
     <meta name="author" content="Liangzheng Luo" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Combat Zone Design - Liangzheng Luo</title>
     <link rel="icon" type="image/png" href="/media/icon.png" />
-    <link href="/css/game.css" rel="stylesheet" type="text/css" />
+    <link href="/css/level.css" rel="stylesheet" type="text/css" />
     <link
       href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,500,500i,600,600i,700,700i&display=swap"
       rel="stylesheet"
@@ -21,17 +21,19 @@
     <script type="module" src="/js/general.js"></script>
     <div id="nav"></div>
     <div id="back">
-      <a onclick="transitionToPage('stealth-level','var(--rurikon)')">➙</a>
+      <a onclick="transitionToPage('stealth-level','var(--koke)')">➙</a>
     </div>
     <div id="next">
-      <a onclick="transitionToPage('bvw','var(--rurikon)')">➙</a>
+      <a onclick="transitionToPage('../analysis/bloodborne','var(--sohi)')"
+        >➙</a
+      >
     </div>
 
     <div
       class="top"
-      style="background-image: url(/media/games/combat-zone/title.png);"
+      style="background-image: url(/media/levels/combat-zone/title.png)"
     >
-      <div class="top-title" style="font-size: 5em;">
+      <div class="top-title" style="font-size: 5em">
         Multiplayer Combat Zone Design
       </div>
       <div class="top-introduction">
@@ -41,19 +43,17 @@
         and 2v2.
       </div>
       <div class="top-information">
-        <span style="color: var(--ro);">time</span> summer 2020 <br />
-        <span style="color: var(--ro);">length</span> 1 minute <br />
-        <span style="color: var(--ro);">software</span> Unreal Engine 4, Maya,
+        <span style="color: var(--ro)">time</span> summer 2020 <br />
+        <span style="color: var(--ro)">length</span> 1 minute <br />
+        <span style="color: var(--ro)">software</span> Unreal Engine 4, Maya,
         Illustrator
         <br />
-        <span style="color: var(--ro);">work</span> individual work
+        <span style="color: var(--ro)">work</span> individual work
       </div>
     </div>
 
     <div id="main">
-      <div class="main-title">
-        Inspiration
-      </div>
+      <div class="main-title">Inspiration</div>
       <div class="main-description">
         I have been watching some top streamers on Twitch playing Call of Duty:
         Warzone quite a bit recently. Among many interesting game mechanics, the
@@ -102,9 +102,9 @@
         According to the official guide, the 1v1 fight can take place randomly
         at one of the following three maps.
         <div class="element-image-flex">
-          <img src="/media/games/combat-zone/gulag-1.jpg" />
-          <img src="/media/games/combat-zone/gulag-2.jpg" />
-          <img src="/media/games/combat-zone/gulag-3.jpg" />
+          <img src="/media/levels/combat-zone/gulag-1.jpg" />
+          <img src="/media/levels/combat-zone/gulag-2.jpg" />
+          <img src="/media/levels/combat-zone/gulag-3.jpg" />
         </div>
         From 2d layouts we can find the three maps share some things in
         common:<br />
@@ -130,7 +130,7 @@
         in the jail, which is a really interesting design to keep them away from
         boredom. <br /><span class="element-title">map: 3d</span><br />
         <div class="element-image">
-          <img src="/media/games/combat-zone/gulag-3d.jpg" />
+          <img src="/media/levels/combat-zone/gulag-3d.jpg" />
         </div>
         One very important design I found about the three gulag map is that,
         most walls are so TALL that players cannot peek upwards, but have to
@@ -139,16 +139,14 @@
         by moving closer to the enemy or exposing a larger part of the body.<br /><br />
       </div>
 
-      <div class="main-title">
-        1v1: Ideation
-      </div>
+      <div class="main-title">1v1: Ideation</div>
       <div class="main-design-title">
         <hr />
         mechanics
       </div>
       <div class="main-design-description">
         <div class="element-image">
-          <img src="/media/games/combat-zone/mechanics.png" />
+          <img src="/media/levels/combat-zone/mechanics.png" />
         </div>
       </div>
       <div class="main-design-title">
@@ -157,7 +155,7 @@
       </div>
       <div class="main-design-description">
         <div class="element-image">
-          <img src="/media/games/combat-zone/ref.png" />
+          <img src="/media/levels/combat-zone/ref.png" />
         </div>
       </div>
       <div class="main-design-title">
@@ -166,13 +164,11 @@
       </div>
       <div class="main-design-description">
         <div class="element-image">
-          <img src="/media/games/combat-zone/2d.png" />
+          <img src="/media/levels/combat-zone/2d.png" />
         </div>
       </div>
 
-      <div class="main-title">
-        1v1: Production
-      </div>
+      <div class="main-title">1v1: Production</div>
       <div class="main-design-title">
         <hr />
         level design
@@ -194,17 +190,13 @@
         playtesting
       </div>
 
-      <div class="main-title">
-        2v2: Ideation
-      </div>
+      <div class="main-title">2v2: Ideation</div>
       <div class="main-design-description">
         2v2 map design will begin as soon as 1v1 is well finished, and more
         detail will release in the future!
       </div>
 
-      <div class="main-title">
-        Post-Mortem
-      </div>
+      <div class="main-title">Post-Mortem</div>
       <div class="main-design-title">
         <hr />
         what went well
@@ -214,7 +206,7 @@
         what didn't go well
       </div>
 
-      <div style="clear: both;"></div>
+      <div style="clear: both"></div>
     </div>
   </body>
 </html>
