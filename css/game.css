@@ -1,13 +1,10 @@
 @import './general.css';
 
 body {
-  font-family: 'Cormorant Garamond', serif;
   font-weight: 400;
-  margin: 0;
   transition: 1s ease-in-out;
   background-color: var(--rurikon);
   color: var(--shironeri);
-  letter-spacing: 1px;
   opacity: 1;
   transition: 0.5s ease-in-out;
 }

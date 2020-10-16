@@ -13,10 +13,6 @@
     <title>Project HyperPickle - Liangzheng Luo</title>
     <link rel="icon" type="image/png" href="/media/icon.png" />
     <link href="/css/game.css" rel="stylesheet" type="text/css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,500,500i,600,600i,700,700i&display=swap"
-      rel="stylesheet"
-    />
   </head>
 
   <body>
@@ -29,19 +25,19 @@
 
     <div
       class="top"
-      style="background-image: url(/media/games/ditto/title.png)"
+      style="background-image: url(/media/games/hyperpickle/title.png)"
     >
       <div class="top-title">Project HyperPickle (WIP)</div>
       <div class="top-introduction">
-        HyperPickle is a client project built for the picoCTF competition
-        launching in 2021, a two-week online cybersecurity competition. The team
-        is building a game that's oriented around delivering a fun, engaging
-        experience to attract people to join the competition. The game features
-        the ability to exchange resources and make friends with aliens while
-        exploring the interesting, diverse cosmos.
+        HyperPickle is a client project built for picoCTF 2021, a two-week
+        online cybersecurity competition. The team is building a game that's
+        oriented around delivering a fun, engaging experience to attract people
+        to join the competition. The game features the ability to exchange
+        resources and make friends with aliens while exploring the interesting,
+        diverse cosmos.
         <br /><br />
-        The team members are: JD He, Andrew McLamb, Aiden Sun, Evelyn Sun, Muzi
-        Wang, and me.<br /><br />
+        I am working with: JD He, Andrew McLamb, Aiden Sun, Evelyn Sun, and Muzi
+        Wang.<br /><br />
         Check our
         <span class="important"
           ><a
@@ -60,253 +56,79 @@
     </div>
 
     <div id="main">
+      <div class="main-title">Challenges and Solutions</div>
+      <div class="main-description">
+        This game is designed primarily for middle school and high school
+        students with little to intermediate knowledge in cybersecurity area.
+        The lack of knowledge required necessarily to answer picoCTF questions
+        used to be a major setback when progressing the game that was dependent
+        on such questions.<br /><br />
+        To address the solution, I present HyperPickle, a game that's oriented
+        around levels of progression, unique achievements and a space theme to
+        engage and encourage the contestants to answer questions with a high
+        entertainment value.
+      </div>
       <div class="main-title">Background</div>
       <div class="main-description">
-        Stadia is a cloud gaming service operated by Google, advertised to be
-        capable of streaming high-quality video games to players via the
-        company's numerous data centers across the globe. The service is
-        accessible through most smart ends like cell phones and PC, provided the
-        users are using a sufficiently high-speed Internet connection.<br /><br />
-        In March 2019, Stadia announced a platform exclusive feature called
-        State Share, which leverages cloud game hosting to enable players to
-        share a complete game state (not just a specified save state) instantly
-        to others. The goal for project Ditto is to explore the possibility of
-        this feature specifically for the discovery of new kinds of game design
-        patterns and new game genres that are inherently viral and require to
-        elaborate player cooperation across massive scale audience.
+        PicoCTF is a annual two-week cybersecurity online competition held by
+        the CMU CyLab. The competition has been popular among middle school to
+        college students across the globe, and the collaboration between the ETC
+        and CyLab has been successfully running for years with a game built each
+        year for the competition. Again, the same goal was assigned to our team,
+        but the difference is that we managed to dig further into client's
+        requirements.
       </div>
       <div class="main-title">Pre-production</div>
       <div class="main-description">
-        Pre-production witnessed our first two months during which we spent
-        about three weeks doing initial research and pitching ideas in the
-        ideation phase, and the rest five weeks developing paper and digital
-        prototypes.
+        The team has spent the first four weeks in the semester understanding
+        the project and getting prepared for full-production.
       </div>
       <div class="main-design-title">
         <hr />
         researching
       </div>
       <div class="main-design-description">
-        <span class="element-title">clarifying path</span><br />
-        As State Share is a relatively new technology with little reference and
-        tech demo publicly published, we started off by thinking the special
-        points of State Share and how it enables the potential the game
-        design.<br /><br />
-        After reading the post on Stadia's
-        <span class="important">
-          <a
-            onclick="transitionToPage('https:/stadia.dev/intl/en_us/blog/','var(--shironeri)')"
-            >developer website
-          </a>
-        </span>
-        ,we concluded some of its merits:<br />
-        1. State Share integrates well with Youtube streaming as it allows
-        viewers to jump into the same game as the streamers easily. This
-        broadens the way streamer and viewer can interact. <br />
-        2. State Share create the link along with last 30 seconds' gameplay, and
-        all information during that time will be included. The developers have
-        much freedom to decide which and how the information is to be used.<br />
-        3. State Share works with other Stadia features such as Crowd Play, and
-        Stadia team is working to bring more flexibility to its function.<br /><br />
-        What's more, during discussions with our client, Erin Hoffman-John, we
-        were assured that for most tech issues we could "fake" State Share in
-        Unity without really implementing the Stadia SDK. In that sense, we as
-        developers could concentrate on
-        <span class="bold"
-          >creating a game mechanism that centers State Share as core
-          gameplay.</span
-        >
-        <br /><span class="element-title">ideation</span><br />
-        After internal and client meetings we concluded ten possible ways of
-        implementing State Share, with a total over 30 different ideas.
-        <div class="element-image-flex">
-          <img src="/media/games/ditto/ideas-1.jpg" />
-          <img src="/media/games/ditto/ideas-2.jpg" />
-        </div>
-        We realized that we had too many ideas all of which seemed plausible.
-        Our next move was to narrow down ideas into several representative ones
-        each catagories its type. This time we got five ideas with more concrete
-        gameplay, ready for prototyping.
+        <span class="element-title">understanding the goal</span><br />
+        The salient point of working on a delivery project is to know the target
+        audience and understand the client’s requirements, so as to set goals
+        accordingly. During the communication, we got to know that the majority
+        of contestants who try the game will be middle to high school students
+        with little to intermediate cybersecurity knowledge, and our client
+        wanted the following: to engage them in the game, encourage them to
+        answer different challenges, and entertain them with fun, positive
+        content. We will not be, however, making an education game, or creating
+        the challenges ourselves.
+        <br /><span class="element-title">past projects</span><br />
+        The past picoCTF projects are great learning resources and the team all
+        played the 2019 game which is the only one then-available.<br />
+        Everything was fun till we were blocked by some of the harder challenges
+        without answering which, the game wouldn’t progress. Being blocked by a
+        single challenge and not able to experience the full story can be really
+        frustrating. Also, the unwillingness to jump out of comfort zone and try
+        challenges in different genre, as well as satisfying different taste,
+        especially female contestants who used to be the minority.
+        <br />
+        <span class="element-title">game study</span><br />
+      </div>
+      <div class="main-design-title">
+        <hr />
+        game pitches
+      </div>
+      <div class="main-design-description">
+        <span class="element-title">brainstorming!</span><br />
+        <span class="element-title">narrowing down</span><br />
       </div>
       <div class="main-design-title">
         <hr />
         prototyping
       </div>
       <div class="main-design-description">
-        <span class="element-title">paper prototype</span><br />
-        We each created one paper prototype from the five ideas as designing on
-        paper could expose the core mechanics well. The one I designed, "Bomb
-        Express" explores the concept "delivering the state".
-        <div class="element-image-flex">
-          <img src="/media/games/ditto/paper-1.jpg" />
-          <img src="/media/games/ditto/bomb-express.png" />
-        </div>
-        We realized that State Share serves better as an
-        <span class="bold">"amplifier"</span> for the existing experience, while
-        it does offer new possibilities for multiplayer mechanics. <br /><span
-          class="element-title"
-          >playtests</span
-        ><br />
-        It is also very important to run playtests as many as possible. For
-        paper prototypes we have run 3 rounds of playtests, the first and second
-        being internal testing, and the third time we invited some EA
-        individuals whose experience is very valuable to improve our design.
-        Here are some suggestions from the playtesters: <br />
-        1. Think of State Share as a core feature without which the gameplay
-        would change a lot. <br />
-        2. Be careful about the theme: is the fiction suitable for all ages?
-        Will the game mechanism ask for some private information such as living
-        location? <br />
-        3. Some of our paper prototypes have issues on replayability as they are
-        puzzle driven. This can be difficult as State Share is designed for a
-        relatively large number of people so spoilers may have an impact on the
-        game.<br />
-        4. Online multiplayer games are challenging but seems more promising,
-        while unsynchronized gameplay is easier to do digital prototypes.
-        <br /><span class="element-title">learnings</span><br />
-        From feedbacks, follow-up discussions and client meetings, we have drawn
-        up three design criteria:<br />
-        - Asymmetrical gameplay is suitable for streamer and audience and well
-        conveys State Share’s idea.<br />
-        - Having a persistent world (like MMO games) is state sharable and could
-        let players feel more immersed.<br />
-        - To make a multiplicative distribution rather than transferring a
-        single branch to new players.<br /><br />
-        Now that we were pretty clear about how to keep moving forward, we
-        stepped into the digital prototyping phase.
-        <br /><span class="element-title">digital prototype</span><br />
-        We built a digital prototype for the Virus vs. Cell theme which utilized
-        State Share well as the core mechanism - without State Share the game
-        will be unplayable. <br /><br />
-        My major job was designing and modelling levels for the prototype. I
-        spent some time researching levels in LocoRoco for inspiration.
-        <div class="element-image">
-          <img src="/media/games/ditto/pvp-level-1.png" />
-        </div>
-        <span class="element-title">moving forward</span><br />
-        While developing the digital prototype, we came up with another paper
-        prototype: growing a treehouse. After discussing with our client, we
-        realized that we are in fact building two types of games, the first one
-        being skill-based game (Virus vs. Cells), and the second one being
-        expressive game (treehouse). Having no more than eight weeks for
-        developing a high fidelity prototype, we wanted to move forward with the
-        Virus vs. Cell one since we believed it had a more feasible scope. This
-        did not mean the time spent on treehouse prototype was meaningless: we
-        recorded it in the design documentation in case anyone is interested in
-        the future.
+        <span class="element-title">tech vs. design</span><br />
+        <span class="element-title">core gameplay loop</span><br />
       </div>
-      <div class="main-title">Production and Pivoting</div>
-      <div class="main-description">
-        The second half of the semester was pretty dramatic: we experienced some
-        setback adjusting the project to work-from-home style, but were also
-        granted a chance to pivot the game's theme and gameplay. The final
-        product is called: Immunoo!
-      </div>
-      <div class="main-design-title">
-        <hr />
-        Changing to PVE
-      </div>
-      <div class="main-design-description">
-        We experienced a pivoting in the foci of project soon after the second
-        half of the semester began. From then on, the game would focus on its
-        PVE content rather than PVP, asking designers to come up with new ways
-        to let players call their friends to join the game. The original theme,
-        Virus vs. Cell remained intact, but we did want the players to play as
-        the guarding cells in the human body to experience the excitement and
-        sense of achievement while fighting the evil, chaotic viruses.<br /><br />
-        During internal meetings, we realized the limitation in time and decided
-        that we should start from a single scene, a single type of player, and a
-        single type of enemy: the player will act as white blood cell trying to
-        wipe out viruses inside a man's heart, the feeling of gameplay should be
-        cute and dangerous.<br /><br />
-        As the game and level designer on the team, after determining several
-        environmental effects in the level, I started working on the level
-        layout.
-      </div>
-      <div class="main-design-title">
-        <hr />
-        Level Design
-      </div>
-      <div class="main-design-description">
-        <span class="element-title">level mechanics</span><br />
-        Since the game happens inside the heart, we wanted to use some unique
-        environmental mechanics to propel the players into challenges. Then the
-        rhythm bloodstream came to mind: both the virus and the white blood cell
-        will move with the blood stream. However, the virus will be largely
-        influenced by the blood flow, while the white blood cell will have some
-        control over its movement. This could make the "chase" part fun and
-        strategic, and made controlling the level flow easier.<br /><br />
-        The game should still highlight the interaction between players because
-        they now can see each other in the game, and fit the spirit of State
-        Share.
-        <br /><span class="element-title">level layout</span><br />
-        Inspired by our client’s suggestion, we use a method called IPM
-        (Introduce, Practice, Master) as a principle in designing the levels.
-        All chambers are designed for multiplayer experience, with increasing
-        demands for skill mastery from players. The increasing difficulty mainly
-        means more enemies and more complex mechanics in the later chambers. The
-        following shows the final level layout:
-        <div class="element-image-flex">
-          <img src="/media/games/ditto/chamber-1.png" />
-          <img src="/media/games/ditto/chamber-2.png" />
-        </div>
-        <div class="element-image-flex">
-          <img src="/media/games/ditto/chamber-3.png" />
-          <img src="/media/games/ditto/chamber-4.png" />
-        </div>
-        The last chamber was designed to be the boss fight room, with a
-        preparation room in front of it which technically serves as a place for
-        players to invite their friends/audience and team up before entering the
-        boss room.<br /><br />
 
-        The boss fight’s mechanics are partly different from previous experience
-        because we wanted to make it feel more intense and highlight the
-        connection between each player and the necessity of sharing and helping
-        others. The powerful mother virus is in invulnerable at the beginning,
-        players will have to eat all the surrounding child viruses in order to
-        make it vulnerable and surround it again to disintegrate and “kill” it.
-      </div>
-      <div class="main-design-title">
-        <hr />
-        Level Dressing
-      </div>
-      <div class="main-design-description">
-        As the 3D artist, I was responsible for creating all 3D assets for the
-        level. Working with 2D artist, I converted what was believed as
-        "cuteness" to 3D, bringing a unified art style for the game.
-        <div class="element-image">
-          <img src="/media/games/ditto/level-dressing.png" />
-        </div>
-        I used Blender to prepare 3D models.
-      </div>
-      <div class="main-design-title">
-        <hr />
-        Future Updates
-      </div>
-      <div class="main-design-description">
-        The team has thought over the future updates for the game if possible.
-        We created different environment effects, enemies, unique skills that
-        can be applied to different parts of human body.
-        <div class="element-image-flex">
-          <img src="/media/games/ditto/stomach.png" />
-          <img src="/media/games/ditto/lungs.png" />
-        </div>
-        <div class="element-image-flex">
-          <img src="/media/games/ditto/kidney.png" />
-          <img src="/media/games/ditto/brain.png" />
-        </div>
-      </div>
-      <div class="main-title">Post-Mortem</div>
-      <div class="main-description">
-        This is my first client project at the ETC. The project involved lots of
-        researching, prototyping, and rounds of iteration, which I enjoyed doing
-        as the process always inspires me to be a better game designer.
-        <br /><br />
-        The project was not flawless, of course. We could have done more if the
-        schedule was not interrupted by the outbreak, and we lost some
-        productivity due to work-from-home. Many features we designed were still
-        on the paper because we didn't have time to implement them.
-      </div>
+      <div class="main-title">Production</div>
+      <div class="main-description"></div>
       <div style="clear: both"></div>
     </div>
   </body>

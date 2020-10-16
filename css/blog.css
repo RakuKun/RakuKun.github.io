@@ -1,7 +1,6 @@
 @import './general.css';
 
 body {
-  font-family: 'Cormorant Garamond', serif;
   margin: 0;
   transition: 1s ease-in-out;
   background-color: var(--shironeri);
@@ -9,10 +8,6 @@ body {
   letter-spacing: 0.5px;
   opacity: 1;
   transition: 0.5s ease-in-out;
-}
-
-#main {
-  font-weight: 500;
 }
 
 body.fade-out {
@@ -53,14 +48,13 @@ body.fade-out {
 .main-paragraph-title {
   clear: both;
   text-align: center;
-  font-size: 2.5em;
+  font-size: 2.5rem;
   font-weight: 600;
   padding: 2vh 0;
 }
 
 .main-text {
   width: 61.8%;
-  font-size: 1.5em;
   line-height: 1.5;
   margin: auto;
   letter-spacing: 0;

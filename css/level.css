@@ -1,9 +1,7 @@
 @import './general.css';
 
 body {
-  font-family: 'Cormorant Garamond', serif;
   font-weight: 400;
-  margin: 0;
   transition: 1s ease-in-out;
   background-color: var(--koke);
   color: var(--shironeri);
