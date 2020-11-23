@@ -56,7 +56,7 @@ var tmpl = CommentDoc(function () {
         <a
           class='entry'
           onclick="transitionToPage('../analysis/level-analysis','var(--sohi)')">
-          Level Analysis
+          Level Design Analysis
         </a>
         <br />
         <a
@@ -88,7 +88,7 @@ var tmpl = CommentDoc(function () {
         <a
           class='entry'
           onclick="transitionToPage('../levels/combat-zone','var(--koke)')">
-          Combat Zone Design
+          FPS Combat Zone
         </a>
         <br />
       </div>

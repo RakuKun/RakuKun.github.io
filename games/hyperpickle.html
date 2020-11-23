@@ -20,7 +20,7 @@
     <script type="module" src="/js/general.js"></script>
     <div id="nav"></div>
     <div id="next">
-      <a onclick="transitionToPage('bvw','var(--rurikon)')">➙</a>
+      <a onclick="transitionToPage('ditto','var(--rurikon)')">➙</a>
     </div>
 
     <div
@@ -29,15 +29,15 @@
     >
       <div class="top-title">Project HyperPickle (WIP)</div>
       <div class="top-introduction">
-        HyperPickle is a client project built for picoCTF 2021, a two-week
-        online cybersecurity competition. The team is building a game that's
-        oriented around delivering a fun, engaging experience to attract people
-        to join the competition. The game features the ability to exchange
-        resources and make friends with aliens while exploring the interesting,
-        diverse cosmos.
+        HyperPickle is a client project built for picoCTF (Capture The Flag)
+        2021, a two-week online cybersecurity competition. The team is building
+        a game that's oriented around delivering a fun, engaging experience to
+        attract people to join the competition. The game features the ability to
+        exchange resources and make friends with inhabitants on other planets
+        while exploring the interesting, diverse cosmos.
         <br /><br />
-        I am working with: JD He, Andrew McLamb, Aiden Sun, Evelyn Sun, and Muzi
-        Wang.<br /><br />
+        I am lucky to be working with: JD He, Andrew McLamb, Aiden Sun, Evelyn
+        Sun, and Muzi Wang.<br /><br />
         Check our
         <span class="important"
           ><a
@@ -49,35 +49,42 @@
       </div>
       <div class="top-information">
         <span style="color: var(--ro)">time</span> fall 2020 <br />
-        <span style="color: var(--ro)">platform</span> Unity <br />
+        <span style="color: var(--ro)">platform</span> Unity (WebGL) <br />
         <span style="color: var(--ro)">role</span> co-producer, game designer,
-        writer
+        graphic designer
       </div>
     </div>
 
     <div id="main">
-      <div class="main-title">Challenges and Solutions</div>
+      <div class="main-title">Background and Challenges</div>
       <div class="main-description">
-        This game is designed primarily for middle school and high school
-        students with little to intermediate knowledge in cybersecurity area.
-        The lack of knowledge required necessarily to answer picoCTF questions
-        used to be a major setback when progressing the game that was dependent
-        on such questions.<br /><br />
-        To address the solution, I present HyperPickle, a game that's oriented
-        around levels of progression, unique achievements and a space theme to
-        engage and encourage the contestants to answer questions with a high
-        entertainment value.
-      </div>
-      <div class="main-title">Background</div>
-      <div class="main-description">
-        PicoCTF is a annual two-week cybersecurity online competition held by
-        the CMU CyLab. The competition has been popular among middle school to
+        <span class="important"
+          ><a
+            href="https://www.etc.cmu.edu/projects/hyperpickle/"
+            target="_blank"
+            >PicoCTF</a
+          ></span
+        >
+        is an annual two-week-long cybersecurity online competition held by the
+        CMU CyLab. The competition has been popular among middle school to
         college students across the globe, and the collaboration between the ETC
         and CyLab has been successfully running for years with a game built each
-        year for the competition. Again, the same goal was assigned to our team,
-        but the difference is that we managed to dig further into client's
-        requirements.
+        year for the competition. <br /><br />
+        The games were designed primarily for middle school and high school
+        students with little to intermediate knowledge in cybersecurity area.
+        The lack of knowledge required necessarily to answer picoCTF challenges
+        used to be a major setback when they were progressing the games that
+        were dependent on challenges.<br /><br />
+        To address the solution, I present Project HyperPickle, a game that uses
+        idle elements within a resource management gameplay, all oriented around
+        encouraging CTF contestants to try the challenges.<br /><br />
+        I had two roles: as the co-producer, I was managing weekly sprints as
+        well as communicating with our clients and the faculty, also I was in
+        charge of the project website; as the game designer, I worked closely
+        with programmers and artists to implement all game's systems and was in
+        charge of user experience for the game.
       </div>
+
       <div class="main-title">Pre-production</div>
       <div class="main-description">
         The team has spent the first four weeks in the semester understanding
@@ -98,17 +105,34 @@
         answer different challenges, and entertain them with fun, positive
         content. We will not be, however, making an education game, or creating
         the challenges ourselves.
-        <br /><span class="element-title">past projects</span><br />
+        <br /><span class="element-title">design challenges</span><br />
         The past picoCTF projects are great learning resources and the team all
         played the 2019 game which is the only one then-available.<br />
         Everything was fun till we were blocked by some of the harder challenges
         without answering which, the game wouldn’t progress. Being blocked by a
         single challenge and not able to experience the full story can be really
-        frustrating. Also, the unwillingness to jump out of comfort zone and try
-        challenges in different genre, as well as satisfying different taste,
-        especially female contestants who used to be the minority.
-        <br />
-        <span class="element-title">game study</span><br />
+        frustrating. In summary, all design problems we faced included:<br />
+        - challenges being frustrating obstacles, not the motivation;<br />
+        - unwillingness to jump out of comfort zone and try challenges in
+        different genre;<br />
+        - to satisfy different tastes, especially female contestants who used to
+        be the minority.
+        <br /><span class="element-title">game psychology study</span><br />
+        In the meantime, I was also studying several game genres and looked into
+        the psychological effects these games possess that keep players engaged
+        for a relatively long time (<span class="important"
+          ><a
+            href="https://docs.google.com/document/d/1DUOpZ5LgG3ZOwC4otPuJW1USBzd5dPXfkFtePVV56HU/edit"
+            target="_blank"
+            >game study documentation</a
+          ></span
+        >). <br />
+        <div class="element-image">
+          <img src="/media/games/hyperpickle/game-study-1.png" />
+        </div>
+        <div class="element-image">
+          <img src="/media/games/hyperpickle/game-study-2.png" />
+        </div>
       </div>
       <div class="main-design-title">
         <hr />
@@ -116,19 +140,163 @@
       </div>
       <div class="main-design-description">
         <span class="element-title">brainstorming!</span><br />
-        <span class="element-title">narrowing down</span><br />
-      </div>
-      <div class="main-design-title">
-        <hr />
-        prototyping
-      </div>
-      <div class="main-design-description">
-        <span class="element-title">tech vs. design</span><br />
-        <span class="element-title">core gameplay loop</span><br />
+        I helped the team facilitate the brainstorming process by focusing on
+        the game challenges mentioned above, with the notion that knowing
+        clearly what we would be doing in mind helps with the efficiency: we
+        kept evaluating every idea before speaking them out!<br />
+        The team pitched dozens of rough sketches which could be further
+        categorized into a few genre: collection games, linear storytelling with
+        light puzzle elements, walk simulator, and even deck-building games.<br />
+        I suggested we looked at our pitches in a critical way: for this project
+        it's really not about how novel the gameplay is, but if the gameplay
+        meets the requirements and if it's doable in a semester.
+        <br /><span class="element-title">narrowing down</span><br />
+        Having absorbed design principles of existing games, I suggested that we
+        could start off with solutions and build story and detailed game
+        mechanics based on that, just like adding flesh to the skeleton.<br />
+        At this stage we wanted to try different approaches that were showing
+        some potential. Instead of doing paper prototyping, thanks to our
+        programming resources, we quickly built several digital prototypes in
+        Unity and started to check the "fun" factor. Communicating with our
+        clients, and considering the team's skills, we decided to make our game
+        less story-heavy, but instead to use game content's traits of strong
+        progression to achieve our design goal.
+        <br /><span class="element-title">planning for production</span><br />
+        By the end of fourth week into the semester, our vision of the game has
+        been clear: we are making a resource management game that uses light
+        idle element to nudge players to try picoCTF challenges, and the
+        motivation comes from progressions and advancing stories.
       </div>
 
       <div class="main-title">Production</div>
+      <div class="main-design-title">
+        <hr />
+        system design
+      </div>
+      <div class="main-design-description">
+        As suggested by the order of this article, I used bottom-up design
+        approach for this game, and the reason was pretty straight-forward: for
+        this game we were more like solving a problem: how to motivate the
+        players to engage in the contest? Bottom-up helps build a mechanism that
+        would well justify our solutions.
+        <br /><span class="element-title">addressing the problem, again</span
+        ><br />
+        <span class="element-title">core gameplay loop</span><br />
+        <div class="element-image">
+          <img src="/media/games/hyperpickle/gameplay-loop.png" />
+        </div>
+        <span class="element-title">economy</span><br />
+        Creating a balanced, compelling economy for such a resource management
+        game is practically the salient task for game designers. Making full use
+        of picoCTF contest as a motivation in the game soon became my solution
+        for the problem: the tokens obtained from answering challenges would be
+        functioning as a mobile game premium currency, that can be used to help
+        play the game more efficiently (so players will want it), but not as a
+        block impeding the normal game process.
+        <div class="element-image">
+          <img src="/media/games/hyperpickle/economy.png" />
+        </div>
+        <span class="element-title">game systems</span><br />
+        When designing the game systems, I used the MDA framework which helped
+        me clarify the interconnections of systems and evaluate their efficacy
+        in the later stage.
+        <div class="element-image">
+          <img src="/media/games/hyperpickle/systems.png" />
+        </div>
+      </div>
+      <div class="main-design-title">
+        <hr />
+        story
+      </div>
+      <div class="main-design-description">
+        I created the game's story using the traditional "5W1H" framework. I
+        paid special attention to its complexity and understandability to suit
+        middle and high school students. <br />
+        <div class="element-image">
+          <img src="/media/games/hyperpickle/story.png" />
+        </div>
+      </div>
+      <div class="main-design-title">
+        <hr />
+        visual design
+      </div>
+      <div class="main-design-description">
+        As the team doesn't have a dedicated UI designer onboard, I took the
+        responsibility and worked closely with the programmer and artists on the
+        team to implement visual elements in the game.<br />
+        <span class="element-title">visuals vs. text</span><br />
+        Our game has a complex resource management system. Instead of using
+        texts everywhere, I suggested using icons for them to keep the interface
+        clean and organized. Also to enhance the visual unity, we replaced
+        resource name texts with icons in most systems' UI. <br /><br />
+        There's tradeoff for that too, of course, that it's hard for new players
+        to recognize and remember those icons. To get around the problem, I
+        suggested using mouse hover text to show the resource's name as it's
+        pretty natural for people to hover their mouse over something they don't
+        understand.
+        <div class="element-image">
+          <img src="/media/games/hyperpickle/ui-1.jpg" />
+        </div>
+      </div>
+
+      <div class="main-title">Testing & Iteration</div>
       <div class="main-description"></div>
+      <div class="main-design-title">
+        <hr />
+        playtesting
+      </div>
+      <div class="main-design-description">
+        I made the playtesting plan and work with the team and our clients to do
+        three rounds of playtesting with different purposes:<br />
+        - Usability playtest: this smaller scaled playtest was mainly to find
+        game glitches, check if the player understands the goal, and if the UI
+        in the game is working as expected.<br />
+        - Game components playtest: in this larger playtest, we invited people
+        outside and inside the ETC to try out the full game build, asking if
+        they understand the main mechanics of the game, and if they feel the
+        economy (thr most important part) was balanced.<br />
+        - Challenge playtest: in this final playtest before handing off the game
+        to our clients, we let many players try the polished build running on
+        the website, and use real 2019 CTF challenges, as if in the real
+        contest, to determine if the game system successfully motivated the
+        players to try challenges while they are in the travel.<br /><br />
+        All three playtests proved to be successful in terms of massive feedback
+        and suggestions that truly played a big part in our efforts to improve
+        the game.
+      </div>
+      <div class="main-design-title">
+        <hr />
+        user experience
+      </div>
+      <div class="main-design-description">
+        <span class="element-title">tutorials</span><br />
+        We realized the importance of adding tutorials in the game after the
+        first round of playtesting. I tried multiple approaches to do this,
+        including: <br />
+        - A compulsory go-through of game systems in the onboarding section;<br />
+        - Pure text tutorial, also during onboarding;<br />
+        - Step-to-step how-to tutorial images, with a question mark indicating
+        in the main game UI that indicates its helpfulness.<br /><br />
+        With playtesters' and clients' feedback, we decided to use the third
+        solution, because it's less forceful and saves space for story in the
+        onboarding section, which would be an important plus for our middle to
+        high school players.<br />
+        While designing the tutorial images, I also paid attention to its
+        readability and color theme. Here are the two tutorial images in the
+        game.
+        <div class="element-image">
+          <img src="/media/games/hyperpickle/tutorial-1.jpg" />
+          <img src="/media/games/hyperpickle/tutorial-2.jpg" />
+        </div>
+        The semi-transparent black background covers the most UI, only opposing
+        the part the helper text is explaining.
+      </div>
+
+      <div class="main-title">Post Mortem</div>
+      <div class="main-description">
+        Will update after Dec 14, when the team will be delivering our final
+        presentation.
+      </div>
       <div style="clear: both"></div>
     </div>
   </body>
