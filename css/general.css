@@ -108,6 +108,7 @@ body {
   left: 5vw;
   top: 8vh;
   font-size: 2rem;
+  font-weight: 600;
 }
 
 #menu {
@@ -206,7 +207,6 @@ body {
   transition: 1s ease-in-out;
   padding: 0 8vw 10vh 8vw;
   font-weight: 400;
-  letter-spacing: 0;
   word-spacing: 0.1em;
 }
 
