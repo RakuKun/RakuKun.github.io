@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=0" />
+    <meta
+      name="description"
+      content="How to Create Side Quests for MMORPG by Liangzheng Luo."
+    />
+    <meta name="theme-color" content="#005DAF" />
+    <meta name="author" content="Liangzheng Luo" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>On Dynamic Difficulty Adjustment - Liangzheng Luo</title>
+    <link rel="icon" type="image/png" href="/media/icon.png" />
+    <link href="/css/blog.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <script type="module" src="/js/nav.js"></script>
+    <script type="module" src="/js/general.js"></script>
+    <div id="nav"></div>
+    <div id="back">
+      <a onclick="transitionToPage('design-diary','var(--shironeri)')">➙</a>
+    </div>
+    <div id="next">
+      <a onclick="transitionToPage('photography','var(--shironeri)')">➙</a>
+    </div>
+
+    <div class="top" style="background-image: url()">
+      <div class="top-title">On Dynamic Difficulty Adjustment</div>
+      <div class="top-introduction">
+        Dynamic Difficulty Adjustment is shaping how people play games in a way
+        few have ever imagined: it’s changing how players perceive, evaluate,
+        and even judge themselves in the game. However, they face some inherent
+        challenges for which, as I argue in this article, higher transparency to
+        users and the ability to be optional should be seriously considered.
+      </div>
+      <div class="top-information">
+        <span style="color: var(--ro)">time</span> winter 2020 <br />
+      </div>
+    </div>
+
+    <div id="main">
+      <div class="main-title">Part 1: A Lawsuit</div>
+      <div class="main-text">
+        <div class="element-image">
+          <img src="/media/blog/dda/lawsuit.png" />
+        </div>
+        Gamers know Electronic Arts (EA) well for its annual releases of EA
+        Sports. However, in recent years things have changed. In November 2020,
+        a lawsuit was filed against EA for its alleged use of the Dynamic
+        Difficulty Adjustment system in three of its EA Sports franchises --
+        Madden NFL, FIFA, and NHL that can be traced back to 2017, the year when
+        EA publicized a patent exactly called Dynamic Difficulty Adjustment [2].
+        The plaintiffs said that EA uses this technology to push players into
+        purchasing more loot boxes in the form of Player Packs, saying that it
+        effectively makes even high stat players not play as well as they
+        should. Despite EA’s consistent denial of its use of DDA to manipulate
+        the players actions on spending real dollars to buy in-game boost-up
+        packs, it’s admittedly a fact that DDA is in a big reputation maelstrom
+        now - and the lack of transparency and choices from player’s end, is at
+        least partly to blame.<br /><br />
+        But before diving into the moral and efficacy problems, a clarification
+        of what is Dynamic Difficulty Adjustment and how it works in a game
+        would be helpful.<br /><br />
+        Most commonly used in electronic video games, Dynamic Difficulty
+        Adjustment (DDA), is an AI-based system that allows the change of
+        attributes and behaviors within the game in runtime, adaptively changing
+        a game to make it easier or harder. It automatically collects the
+        in-game user data and measures the player performance and changes the
+        game difficulty to match the player’s skills, while the process of
+        adaptation should not be clearly perceived by the players. Its work flow
+        can be separated into three parts: The first step needed to implement a
+        DDA system is an evaluation of the player’s performance which may
+        include determining variables in the game, data collection, setting up
+        reference points, and data analysis. Next the system uses models such as
+        metrics, probabilistic methods, dynamic scripting to achieve the DDA.
+        Finally, the system keeps analyzing the efficacy and adjusting till it
+        reaches a “balanced” difficulty curve [3].
+      </div>
+
+      <div class="main-title">Part 2: The Curtain of Distrust</div>
+      <div class="main-text">
+        Dynamic Difficulty Adjustment (DDA) is not, at least academically, a new
+        thing. Back in 2005, a paper by Hunicke has talked about the use of DDA
+        and its effectiveness in boosting the player performance while
+        maintaining the sense of agency and accomplishment [4]. In recent years,
+        although it’s still a myth how many games have used or are using the DDA
+        system, the discussion of DDA is getting noticeably more and more heated
+        [5]. Despite the fact that Electronic Arts (EA) never officially
+        acknowledged its use of DDA, in 2017 there’s a paper from researchers
+        from EA detailing the use of a DDA framework targeting at maximizing a
+        player’s engagement in a level-based game [6].<br /><br />
+        But why do developers make DDA perform undetected in the first place?
+        Some argue that players will feel being “cheated” if the difficulty of
+        the game is adjusted during or across play sessions, which harms its
+        efficacy and ultimately user experience in the game, and it kind of
+        became a common practice. But many people just don’t like being
+        manipulated by “algorithms” rather than being defeated by a real
+        human.<br /><br />
+        However, despite the proven effectiveness of such a system in real-world
+        applications, there’s a gap between players and games that have to be
+        filled: trust. Complaints on EA Sports games have shown that (regardless
+        of whether DDA is actually being used) the trust factor can dramatically
+        affect how players perceive the game’s system as helpful or evil, and
+        eventually impact their user experience. A highly in-theory effective
+        system will not perform well if the users don’t trust it - when a ill
+        human-AI system is established, users tend to doubt every decision the
+        system made for them, and possibly go the opposite way or even ditch the
+        system. On the opposite end, the system’s benefits will be realized when
+        the technology succeeds to foster appropriate user reliance.<br /><br />
+        One of the many ways proven by experiments that automated systems (and
+        DDA) can use to obtain user’s trust is to build up the system with
+        higher transparency to its users [7]. What is necessary to address here
+        is, transparency is not equal to “disclosing everything” which almost
+        all for-profit companies will shy away from. Among multiple ways to
+        achieve higher transparency, a limited but appropriate disclosure of
+        logic-based explanations for the recommendations was found effective
+        and, in my opinion, feasible for video games. According to a paper on
+        how the disclosure of DDA in the game will affect the player’s
+        attributes, the full awareness of DDA proved to be a plus for
+        low-performing players in competence but reduced their autonomy, which
+        again certifies the fact that to what extent the use of DDA should be
+        exposed [8].
+      </div>
+
+      <div class="main-title">Part 3: The Nature of Flow</div>
+      <div class="main-text">
+        As mentioned before, Dynamic Difficulty Adjustment is not a new thing
+        but gains popularity in recent years. Its theoretical base can be traced
+        back to the Flow theory in the late 90s [9]. Flow, as a psychological
+        term, means an “optimal experience, where we feel a sense of
+        exhilaration, a deep sense of enjoyment that is long cherished” as
+        explained in the original article.
+        <div class="element-image" style="width: 50%">
+          <img src="/media/blog/dda/flow.png" />
+        </div>
+        Games are a booming industry: it’s not rare for a game to sell to dozens
+        of millions of people, who have, of course, varying levels of skills.
+        For developers, a realistic problem is how to handle such a diverse
+        player background. This is where the concept of Dynamic Difficulty
+        Adjustment came into play, initially. For many years it’s believed that
+        the flow experience in video games can be achieved through proper
+        implementation of the DDA system, thanks to the system’s ability to
+        observe, adapt, and influence player’s in-game performance. <br /><br />
+        The point that flow theory didn’t cover is the disconnection between the
+        player’s in-game performance and actual competence. Several studies have
+        shown that regardless of the player’s skill level, while the unaware use
+        of DDA did improve their performance in the game, there’s little
+        evidence of an increased competence rating. In other words, a
+        low-performing (assisted) player may have an improved score when
+        assisted, but they may still come last in the match ranking. Especially
+        in online multiplayer video games, such disconnection creates an
+        illusion that it’s in fact something in the game not the improvements in
+        the player skills that boosted the performance, which again lowers the
+        player trust in the game and jeopardizes the overall user experience: no
+        one wants to play a game that’s running like a black box. This evidence
+        is also supported by another paper on DDA’s impact of making players
+        overconfident, while risking player’s motivation because the use of DDA
+        was not perceived [10]. <br /><br />
+
+        The second inherent flaw of DDA is the learning process. Every model
+        takes time and data to “learn” how the user is doing in the game, and
+        the realistic problem of running secretly is that once the process of
+        evaluation gets longer than expected or doesn’t produce a good
+        adjustment dataset, it’s likely that the player will notice the
+        unreasonable difficulty and start to doubt the game’s fairness. Also,
+        for players with higher skills, the use of DDA is more likely to make
+        the level harder or their opponents stronger, which in some cases
+        lower’s the user experience: for everyone there’s a threshold of
+        possible skills, if the algorithm fails to realize that, the outcome
+        will not be optimal.<br /><br />
+
+        Another solution besides transparency is being optional, in other words,
+        exposing some parameters to the users and/or letting players choose if
+        they want to turn the system on. I am not alone with this choice. An
+        experiment conducted in 2017 showed that while system-oriented DDA and
+        player-oriented DDA (which player can directly control the difficulty)
+        both improved the overall user experience, player-oriented DDA proved to
+        grant the more sense of control than system-oriented DDA [11].
+      </div>
+
+      <div class="main-title">Part 4: Devil's Advocate</div>
+      <div class="main-text">
+        The argument over Dynamic Difficulty Adjustment among players is highly
+        controversial. Admittedly, given the heat of researching findings in
+        DDA, there may be finer ways (such as Behaviors Trees and Finite-State
+        Machines to the Dynamic Scripting approach) that can enhance the user
+        experience. The biggest challenge of making the DDA transparent is that
+        it reportedly has a negative impact on player’s autonomy in the game.
+        Also, the question of if any adaptation of DDA can actually boost the
+        user’s competence remains unclear, leaving a negative mood on its
+        usability especially in multiplayer games. My response to this, however,
+        would be to combine other useful tools to compensate for the negative
+        side of DDA, such as user-generated content, or even to use AI teammates
+        to boost the sense of autonomy.
+        <div class="element-image" style="width: 50%">
+          <img src="/media/blog/dda/interface.png" />
+        </div>
+        What’s more, it’s not only a user experience problem. DDA’s usage and
+        detail algorithms vary largely from cases to cases, developers to
+        developers, in which in most cases we don’t have exact knowledge on how
+        it works in games. And how do we evaluate the user experience in
+        different games? Studies have shown that user experience evaluation is
+        dependent on multiple variables, how can we decide an algorithm precise
+        enough to weigh the player experience in different games [12]? Or is
+        that even possible? <br /><br />
+        The last challenge is that designing a player-oriented DDA system is a
+        daunting task no matter what kind of game it’s designed for. Developing
+        such controllable DDA might meet unexpected challenges in terms of
+        complexity, and need further research on more categories of game
+        applications, where excessive tuning and testing will be required to
+        ensure its efficacy. Exposing parameters to users can be out of control,
+        especially in multiplayer games where numerous players compete with each
+        other. This will require the developers to again, consider the side
+        effect of the DDA system before implementing that into the real
+        application. While in the future articles may continue to discuss the
+        effectiveness of DDA, it might be valuable to switch the focus on the
+        real world applications.
+      </div>
+
+      <div class="main-title">Conclusions</div>
+      <div class="main-text">
+        Before many people realized, Dynamic Difficulty Adjustment has been a
+        popular topic among AI systems in games. Now that its use gets more
+        controversial, it’s time for the user designers to think twice and try
+        making the use more transparent and optional, which I believe will
+        benefit the relationship between the game and players, and ultimately
+        enhance most user experience. Thank you, now is my turn to play the
+        game.
+      </div>
+
+      <div class="main-title">References</div>
+      <div class="main-text">
+        [1]
+        https://www.gamesindustry.biz/articles/2020-11-11-ea-faces-yet-another-class-action-lawsuit-over-alleged-use-of-dynamic-difficulty-adjustment<br />
+
+        [2] https://patents.google.com/patent/US20170259177A1/en<br />
+
+        [3] Sepulveda, G.K., Besoain, F. and Barriga, N.A., 2019, November.
+        Exploring Dynamic Difficulty Adjustment in Videogames. In 2019 IEEE
+        CHILEAN Conference on Electrical, Electronics Engineering, Information
+        and Communication Technologies (CHILECON) (pp. 1-6). IEEE.<br />
+
+        [4] Hunicke, R., 2005, June. The case for dynamic difficulty adjustment
+        in games. In Proceedings of the 2005 ACM SIGCHI International Conference
+        on Advances in computer entertainment technology (pp. 429-433).<br />
+
+        [5] Zohaib, M., 2018. Dynamic difficulty adjustment (DDA) in computer
+        games: A review. Advances in Human-Computer Interaction, 2018.<br />
+
+        [6] Xue, S., Wu, M., Kolen, J., Aghdaie, N. and Zaman, K.A., 2017,
+        April. Dynamic difficulty adjustment for maximized engagement in digital
+        games. In Proceedings of the 26th International Conference on World Wide
+        Web Companion (pp. 465-471).<br />
+
+        [7] Lyons, J.B., Sadler, G.G., Koltai, K., Battiste, H., Ho, N.T.,
+        Hoffmann, L.C., Smith, D., Johnson, W. and Shively, R., 2017. Shaping
+        trust through transparent design: theoretical and experimental
+        guidelines. In Advances in human factors in robots and unmanned systems
+        (pp. 127-136). Springer, Cham.<br />
+
+        [8] Baldwin, A., Johnson, D. and Wyeth, P.A., 2014. The effect of
+        multiplayer dynamic difficulty adjustment on the player experience of
+        video games. In CHI'14 Extended Abstracts on Human Factors in Computing
+        Systems (pp. 1489-1494).<br />
+
+        [9] Csikszentmihalyi, M., 1997. Flow and the psychology of discovery and
+        invention. HarperPerennial, New York, 39.<br />
+
+        [10] Constant, T. and Levieux, G., 2019, May. Dynamic difficulty
+        adjustment impact on players' confidence. In Proceedings of the 2019 CHI
+        conference on human factors in computing systems (pp. 1-12).<br />
+
+        [11] Ang, D. and Mitchell, A., 2017, October. Comparing Effects of
+        Dynamic Difficulty Adjustment Systems on Video Game Experience. In
+        Proceedings of the Annual Symposium on Computer-Human Interaction in
+        Play (pp. 317-327).<br />
+
+        [12] Vermeeren, A.P., Law, E.L.C., Roto, V., Obrist, M., Hoonhout, J.
+        and Väänänen-Vainio-Mattila, K., 2010, October. User experience
+        evaluation methods: current state and development needs. In Proceedings
+        of the 6th Nordic conference on human-computer interaction: Extending
+        boundaries (pp. 521-530).<br />
+      </div>
+    </div>
+  </body>
+</html>

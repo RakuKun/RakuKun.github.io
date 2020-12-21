@@ -9,7 +9,7 @@ var cursor = {
   $dot: document.querySelector('#cursor'),
   $outline: document.querySelector('#cursor-outline'),
 
-  init: function() {
+  init: function () {
     this.dotSize = this.$dot.offsetWidth;
     this.outlineSize = this.$outline.offsetWidth;
 
@@ -17,39 +17,39 @@ var cursor = {
     this.animateDotOutline();
   },
 
-  setupEventListeners: function() {
+  setupEventListeners: function () {
     var self = this;
 
     function registerMouseEvent(el) {
-      el.addEventListener('mouseover', function() {
+      el.addEventListener('mouseover', function () {
         self.cursorEnlarged = true;
         self.toggleCursorSize();
       });
-      el.addEventListener('mouseout', function() {
+      el.addEventListener('mouseout', function () {
         self.cursorEnlarged = false;
         self.toggleCursorSize();
       });
     }
     // Anchor hovering
-    document.querySelectorAll('a').forEach(function(el) {
+    document.querySelectorAll('a').forEach(function (el) {
       registerMouseEvent(el);
     });
 
-    document.querySelectorAll('.top').forEach(function(el) {
+    document.querySelectorAll('.top').forEach(function (el) {
       registerMouseEvent(el);
     });
 
     // Click events
-    document.addEventListener('mousedown', function() {
+    document.addEventListener('mousedown', function () {
       self.cursorEnlarged = true;
       self.toggleCursorSize();
     });
-    document.addEventListener('mouseup', function() {
+    document.addEventListener('mouseup', function () {
       self.cursorEnlarged = false;
       self.toggleCursorSize();
     });
 
-    document.addEventListener('mousemove', function(e) {
+    document.addEventListener('mousemove', function (e) {
       // Show the cursor
       self.cursorVisible = true;
       self.toggleCursorVisibility();
@@ -62,14 +62,14 @@ var cursor = {
     });
 
     // Hide/show cursor
-    document.addEventListener('mouseenter', function(e) {
+    document.addEventListener('mouseenter', function (e) {
       self.cursorVisible = true;
       self.toggleCursorVisibility();
       self.$dot.style.opacity = 1;
       self.$outline.style.opacity = 1;
     });
 
-    document.addEventListener('mouseleave', function(e) {
+    document.addEventListener('mouseleave', function (e) {
       self.cursorVisible = true;
       self.toggleCursorVisibility();
       self.$dot.style.opacity = 0;
@@ -77,7 +77,7 @@ var cursor = {
     });
   },
 
-  animateDotOutline: function() {
+  animateDotOutline: function () {
     var self = this;
 
     self._x += (self.endX - self._x) / self.delay;
@@ -88,7 +88,7 @@ var cursor = {
     requestAnimationFrame(this.animateDotOutline.bind(self));
   },
 
-  toggleCursorSize: function() {
+  toggleCursorSize: function () {
     var self = this;
 
     if (self.cursorEnlarged) {
@@ -100,7 +100,7 @@ var cursor = {
     }
   },
 
-  toggleCursorVisibility: function() {
+  toggleCursorVisibility: function () {
     var self = this;
 
     if (self.cursorVisible) {
@@ -110,19 +110,19 @@ var cursor = {
       self.$dot.style.opacity = 0;
       self.$outline.style.opacity = 0;
     }
-  }
+  },
 };
 
 cursor.init();
 
-window.transitionToPage = function(href, color) {
+window.transitionToPage = function (href, color) {
   if (color) {
     document.body.style.backgroundColor = color;
   } else {
     document.body.style.backgroundColor = 'var(--ro)';
   }
   document.body.style.opacity = 0;
-  setTimeout(function() {
+  setTimeout(function () {
     window.location.href = href;
   }, 500);
 };
@@ -145,7 +145,7 @@ function RegisterMenu() {
   var menuPage = document.getElementById('menu-page');
   if (menu) {
     menuPage.style.display = 'none';
-    menu.onclick = function() {
+    menu.onclick = function () {
       if (menuPage.style.display == 'none') {
         menuPage.style.display = 'flex';
       } else {
@@ -156,3 +156,14 @@ function RegisterMenu() {
 }
 
 RegisterMenu();
+
+document.addEventListener('keydown', function (event) {
+  var menuPage = document.getElementById('menu-page');
+  if (menuPage) {
+    if (event.key == 'Escape') {
+      if (menuPage.style.display == 'flex') {
+        menuPage.style.display = 'none';
+      }
+    }
+  }
+});

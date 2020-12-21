@@ -7,7 +7,7 @@ var tmpl = CommentDoc(function () {
     <span id="cursor-outline"></span>
     <span id="cursor"></span>
     <div id='home'>
-      <a onclick="transitionToPage('../')"> ◯ </a>
+      <a onclick="transitionToPage('/')"> ◯ </a>
     </div>
     <div id='menu'>
       <a> ≡ </a>
@@ -17,123 +17,129 @@ var tmpl = CommentDoc(function () {
         <div class='entry-title'>Games</div>
          <a
           class='entry'
-          onclick="transitionToPage('../games/hyperpickle','var(--rurikon)')">
+          onclick="transitionToPage('/games/hyperpickle','var(--rurikon)')">
           Project HyperPickle
         </a>
         <br />
         <a
           class='entry'
-          onclick="transitionToPage('../games/ditto','var(--rurikon)')">
+          onclick="transitionToPage('/games/ditto','var(--rurikon)')">
           Project Ditto
         </a>
         <br />
         <a
           class='entry'
-          onclick="transitionToPage('../games/bvw','var(--rurikon)')">
+          onclick="transitionToPage('/games/bvw','var(--rurikon)')">
           Building Virtual Worlds
         </a>
         <br />
         <a
           class='entry'
-          onclick="transitionToPage('../games/cosmos','var(--rurikon)')">
+          onclick="transitionToPage('/games/cosmos','var(--rurikon)')">
           Cosmos
         </a>
         <br />
         <a
           class='entry'
-          onclick="transitionToPage('../games/collection','var(--rurikon)')">
+          onclick="transitionToPage('/games/collection','var(--rurikon)')">
           Mini Game Collection
-        </a>
-      </div>
-      <div class='category'>
-        <div class='entry-title'>Analysis</div>
-        <a
-          class='entry'
-          onclick="transitionToPage('../analysis/bloodborne','var(--sohi)')">
-          Bloodborne: Story in Levels
-        </a>
-        <br />
-        <a
-          class='entry'
-          onclick="transitionToPage('../analysis/level-analysis','var(--sohi)')">
-          Level Design Analysis
-        </a>
-        <br />
-        <a
-          class='entry'
-          onclick="transitionToPage('../analysis/slay-the-spire','var(--sohi)')">
-          Slay the Spire: Engagement and Balancing
-        </a>
-        <br />
-        <a
-          class='entry'
-          onclick="transitionToPage('../analysis/inside','var(--sohi)')">
-          INSIDE: Visual Language
-        </a>
-        <br />
-        <a
-          class='entry'
-          onclick="transitionToPage('../analysis/the-plan','var(--sohi)')">
-          The Plan: An Experiment
         </a>
       </div>
       <div class='category'>
         <div class='entry-title'>Levels</div>
         <a
           class='entry'
-          onclick="transitionToPage('../levels/stealth-level','var(--koke)')">
+          onclick="transitionToPage('/levels/stealth-level','var(--koke)')">
           Stealth Level
         </a>
         <br />
         <a
           class='entry'
-          onclick="transitionToPage('../levels/combat-zone','var(--koke)')">
+          onclick="transitionToPage('/levels/combat-zone','var(--koke)')">
           FPS Combat Zone
         </a>
         <br />
         <a
           class='entry'
-          onclick="transitionToPage('../levels/linear-narrative','var(--koke)')">
+          onclick="transitionToPage('/levels/linear-narrative','var(--koke)')">
           Linear Narrative Level
         </a>
         <br />
+        <a
+          class='entry'
+          onclick="transitionToPage('/levels/level-analysis','var(--sohi)')">
+          Level Design Analysis
+        </a>
+        <br />
+      </div>
+      <div class='category'>
+        <div class='entry-title'>Analysis</div>
+        <a
+          class='entry'
+          onclick="transitionToPage('/analysis/bloodborne','var(--sohi)')">
+          Bloodborne: Story in Levels
+        </a>
+        <br />
+        <a
+          class='entry'
+          onclick="transitionToPage('/analysis/slay-the-spire','var(--sohi)')">
+          Slay the Spire: Engagement and Balancing
+        </a>
+        <br />
+        <a
+          class='entry'
+          onclick="transitionToPage('/analysis/inside','var(--sohi)')">
+          INSIDE: Visual Language
+        </a>
+        <br />
+        <a
+          class='entry'
+          onclick="transitionToPage('/analysis/the-plan','var(--sohi)')">
+          The Plan: An Experiment
+        </a>
       </div>
       <div class='category'>
         <div class='entry-title'>Blog</div>
         <a
           class='entry'
-          onclick="transitionToPage('../blog/quest-mmorpg','var(--shironeri)')">
+          onclick="transitionToPage('/blog/quest-mmorpg','var(--shironeri)')">
           Creating Quests for MMORPG
         </a>
         <br />
         <a
           class='entry'
-          onclick="transitionToPage('../blog/formulas','var(--shironeri)')">
+          onclick="transitionToPage('/blog/formulas','var(--shironeri)')">
           Formulas in Combat Design
         </a>
         <br />
         <a
           class='entry'
-          onclick="transitionToPage('../blog/balance','var(--shironeri)')">
+          onclick="transitionToPage('/blog/balance','var(--shironeri)')">
           Balancing a Game
         </a>
         <br />
         <a
           class='entry'
-          onclick="transitionToPage('../blog/accessibility','var(--shironeri)')">
+          onclick="transitionToPage('/blog/accessibility','var(--shironeri)')">
           Accessibility - Game For All
         </a>
         <br />
         <a
           class='entry'
-          onclick="transitionToPage('../blog/design-diary','var(--shironeri)')">
+          onclick="transitionToPage('/blog/design-diary','var(--shironeri)')">
           Design Diary
         </a>
         <br />
         <a
           class='entry'
-          onclick="transitionToPage('../blog/another-inferno','var(--shironeri)')">
-          Another Inferno
+          onclick="transitionToPage('/blog/dda','var(--shironeri)')">
+          On Dynamic Difficulty Adjustment
+        </a>
+        <br />
+        <a
+          class='entry'
+          onclick="transitionToPage('/blog/photography','var(--shironeri)')">
+          Photography
         </a>
       </div>
     </div>
