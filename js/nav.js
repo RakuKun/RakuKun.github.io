@@ -67,7 +67,7 @@ var tmpl = CommentDoc(function () {
         <br />
         <a
           class='entry'
-          onclick="transitionToPage('/levels/level-analysis','var(--sohi)')">
+          onclick="transitionToPage('/levels/level-analysis','var(--koke)')">
           Level Design Analysis
         </a>
         <br />
