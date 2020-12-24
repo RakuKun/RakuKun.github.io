@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#005DAF" />
     <meta name="author" content="Liangzheng Luo" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Stealth Level Design - Liangzheng Luo</title>
+    <title>Stealth Level - Liangzheng Luo</title>
     <link rel="icon" type="image/png" href="/media/icon.png" />
     <link href="/css/level.css" rel="stylesheet" type="text/css" />
   </head>
@@ -17,9 +17,7 @@
     <script type="module" src="/js/general.js"></script>
     <div id="nav"></div>
     <div id="back">
-      <a onclick="transitionToPage('/games/collection','var(--rurikon)')"
-        >➙</a
-      >
+      <a onclick="transitionToPage('/games/collection','var(--rurikon)')">➙</a>
     </div>
     <div id="next">
       <a onclick="transitionToPage('combat-zone','var(--koke)')">➙</a>
@@ -31,14 +29,15 @@
     >
       <div class="top-title">Stealth Level Design</div>
       <div class="top-introduction">
-        This stealth level marks my first work with Unreal Engine 4. In this
+        This stealth level marks my first work in Unreal Engine 4. In this
         project I tried to answer three core questions: What a stealth level
         flow should be like? How to use visual elements to guide the player? How
-        to design a level with limited interior space?
+        to design a level with limited interior space?<br /><br />
+        <a href="#planning" class="link">Jump to Game Production</a>
       </div>
       <div class="top-information">
         <span style="color: var(--ro)">time</span> summer 2020 <br />
-        <span style="color: var(--ro)">length</span> 8-10 minutes <br />
+        <span style="color: var(--ro)">length</span> 6-8 minutes <br />
         <span style="color: var(--ro)">software</span> Unreal Engine 4, Maya,
         Illustrator
         <br />
@@ -47,7 +46,7 @@
     </div>
 
     <div id="main">
-      <div class="main-title">Stealth Design Theory</div>
+      <div class="main-title">Gameplay Video</div>
       <div class="main-video">
         <iframe
           name="Stealth Level"
@@ -58,12 +57,15 @@
         >
         </iframe>
       </div>
+
+      <div class="main-title">Stealth Game Design</div>
       <div class="main-description">
         Stealth games have become a serious game genre since the Metal Gear
-        Solid series came out. Its (mostly seen) third person perspective
-        gameplay, combined with dramatic plot and the thrilling feeling taking
-        down enemies, fascinates players who want something different from a
-        shoot-'em-up.
+        Solid series came out. The (most commonly) third-person perspective
+        gameplay, combined with the thrilling feeling of puzzle solving and
+        storytelling, fascinates players who want something different from a
+        shoot-'em-up. In this section I'll summarize some general points to make
+        a stealth level good.
         <br />
       </div>
       <div class="main-design-title">
@@ -71,37 +73,48 @@
         element analysis
       </div>
       <div class="main-design-description">
-        I began the project by analyzing the basic chassis of stealth games.
-        Just like other games, some fundamental elements in stealth games should
-        be underlined: a start, a goal, game rules, and obstacles.
+        To me a "game" is consisted of four core elements, and this level I
+        built is no exception.
         <br /><span class="element-title">start</span><br />
-        Usually the start point in a stealth level is a relatively safe place
-        distant from destination. Being a safe place means players have
-        sufficient time to get prepared such as grabbing some equipments and
-        inspecting the level for a plan. To make the game more challenging, I
-        used the method of backgating: disallowing players to return to the
-        spawn place once they left. <br />
+        Usually the start point in a stealth level is a safe area distant from
+        destination. Starting there means that players have sufficient time to
+        get prepared, i.e. grabbing some equipments and inspecting the level
+        layout for a plan. <br />
+        <span style="font-style: italic"
+          >To make my level more challenging, I used the method of blocking:
+          disallowing players to return to the same place they just left. <br
+        /></span>
         <span class="element-title">goal</span><br />
-        The goals in stealth game feels very diverse but are mechanically the
-        same: to find some fixed target (treasure, exit, VIP, etc.). Some games
-        would ask the players to escape once they finish the first goal, and the
+        The goals in a typical stealth game can vary a lot but are mechanically
+        the same: to find some fixed targets (treasure, exit, VIP, etc.). Some
+        games ask the players to escape once they finish the first goal, and the
         game pace could change a lot in the escape phase, adding excitement and
-        new anxiety to the emotion flow.
-        <br />
+        new anxiety to the emotion flow.<br />
+        <span style="font-style: italic"
+          >The goals in my level are "to find something" but feel different as I
+          changed the pace and emotion flow through the level construction. <br
+        /></span>
         <span class="element-title">rules</span><br />
-        The principle of designing rules for stealth games is never to make the
-        playable character too strong that they can confront a group of armed
-        enemies like CoD. As a compensation, the character is offered some
-        skills or items to help cope with enemies unnoticed. The enemy AI, which
-        is another important factor in game difficulty, needs to be at a fair
-        level to make their actions reasonable and acceptable.<br />
+        The principal rule for stealth games is never to make the playable
+        character too strong to a point where they can confront a group of armed
+        enemies like CoD. The game is "stealth" when most progress can be done
+        without alarming too many enemies. As a compensation, the character can
+        be offered some skills or items to help navigate or deal with enemies
+        safely. The enemy AI, another important factor in control of the game
+        difficulty, needs to be at a reasonable, and acceptable level.<br />
+        <span style="font-style: italic"
+          >In my level I didn't allow the character to kill people, to make my
+          level flow under control and traditional. <br
+        /></span>
         <span class="element-title">obstacles</span><br />
-        There are usually a group of enemies on certain patrol routes, trying to
-        find and catch the player character. They outnumber the character so it
-        is hard once a combat is triggered. For a playable level the enemies'
-        action must be predictable so the players can have a strategy and plan
-        ahead. On the other hand, players need to use the environment to take
-        cover, so many blocking volumes should be in the level too.
+        Obstacles can be anything that stand in the way of the process. There
+        are a group of enemies with certain patrol routes, trying to find and
+        catch the playable character. They outnumber the character, so the
+        player won't want to ignite a all-out gunfight. Also for the
+        playability, enemies' actions should be predictable for the player side
+        to plan out a strategy in advance. On the other hand, players need to
+        use the environment for cover, so many blocking volumes should be in the
+        level too.
       </div>
       <div class="main-design-title">
         <hr />
@@ -109,73 +122,100 @@
       </div>
       <div class="main-design-description">
         <span class="element-title">god path</span><br />
-        The god path is a route by which the character have zero chance of being
-        noticed. It usually happens when all enemies' patrol routes don't
-        overlap with the character's route. This bad design could make the level
-        very boring as the players don't need to think, they just go and win.<br /><br />
-        Another example of god path is the unfair vantage point, where players
-        are allowed to attack enemy from distance while they cannot fight back.
-        Again, every game need to balance its challenge and reward. God path
-        avoids all challenges, thus causing a broken game setup.<br />
+        A god path is a route by which the playable character has zero chance of
+        being noticed. A typical god path is formed when all enemies' patrol
+        routes don't overlap with each other, or don't cover a bit of the
+        necessary player route. This bad design could make the level very boring
+        as the players can proceed and win without even trying.<br /><br />
+        Another example of god path is the unfair vantage point, where the
+        character is allowed to shoot enemies down from distance while they
+        cannot fight back. Again, every game need to balance its challenge and
+        reward. God path avoids all challenges, thus causing a broken game
+        setup.<br />
         <span class="element-title">unpredictable AI</span><br />
         Unpredictable AI means pre-scripted enemies don't follow a fixed path,
         or have sudden turn back, or moves too fast. Unpredictable AI makes the
-        game hard in an annoying but not challenging way, as the random events
-        would kill every plan and mess up the level.<br />
+        game hard in an annoying way as the random events would kill every plan
+        and mess up the level. It's the opposite of god path, making the game
+        too hard for players.<br />
         <span class="element-title">forced gameplay</span><br />
-        Many stealth games let playable character have items or weapons. This is
-        nice as the players are granted a variety of ways to beat the level. But
-        this could also be a pain when some items are designed very specifically
-        for one level or even one point in level, and the players cannot beat
-        the level if they don't have that. It is always better to provide
-        possibility for trying new ways to explore than limiting the gameplay to
-        one answer.
+        Many stealth games allow the character to choose preferred equipments.
+        This is nice as the players are granted a variety of ways to beat the
+        level. But this could also be a pain when some items are designed very
+        specifically for a level or even a point in the level, which the players
+        have to use to proceed. It's fine to introduce some mechanics within a
+        tutorial level, but designers should provide the opportunity to explore
+        new ways rather than to limit the gameplay to one answer.
       </div>
       <div class="main-design-title">
         <hr />
-        game reference
+        game references
       </div>
       <div class="main-design-description">
-        <span class="element-title">Splinter Cell: Blacklist</span><br />
+        <span class="element-title">Tom Clancy's Splinter Cell: Blacklist</span
+        ><br />
         <div class="element-image-flex">
           <img src="/media/levels/stealth-level/blacklist.jpg" />
           <img src="/media/levels/stealth-level/blacklist2.jpg" />
         </div>
-        Splinter Cell: Blacklist is the stealth game that I'm mostly getting
-        inspired from, and this stealth level project is like the re-creation of
-        one of its levels called Private Estate. A scenario set at night,
-        Private Estate serves as a great example of the use of light, enemy AI,
-        and guiding players in a typical stealth level.
+        Tom Clancy's Splinter Cell: Blacklist is the game that I'm mostly
+        getting inspired from when doing this project. Among its many levels,
+        the Private Estate level serves as a great example of the use of light,
+        and visual guiding in a scenario set at night. Also this level
+        introduces multiple goals step by step that help push the story.
         <br />
-        <span class="element-title">MGS V: Phantom Pain</span>
+        <span class="element-title">Metal Gear Solid V: The Phantom Pain</span>
         <div class="element-image">
           <img src="/media/levels/stealth-level/mgsv.jpg" />
         </div>
-        Metal Gear Solid V: Phantom Pain is a critically claimed stealth title
-        from one of my favorite game director, Hideo Kojima. I especially like
-        its day-night system, which adds another layer of fun and strategy to
-        the same map. Again, MGSV teaches a good lesson on how crucial lighting
-        in dark scenes.
+        Metal Gear Solid V: The Phantom Pain is a critically claimed stealth
+        title from one of my favorite game directors, Hideo Kojima-san. I
+        especially like its day-night system, which adds another layer of fun
+        and strategy to the same map. In addition, MGSV also teaches a good
+        lesson on the use of light as a visual aid in night scenes, as shown in
+        the picture above.
         <br />
-        <span class="element-title">Uncharted 4</span>
+        <span class="element-title">Uncharted 4: A Thief's End</span>
         <div class="element-image">
           <img src="/media/levels/stealth-level/uncharted4.jpg" />
         </div>
-        Although Uncharted 4 is not a stealth game, some of its levels cleverly
-        add stealth element to make the game feel diverse and interesting.
-        What's more, the way it tells a continuous story using level design is a
-        great source for learning. The picture above comes from "get out of the
-        orphanage" scenario in chapter 1, which shows the players a segment of
-        Nathan Drake's childhood.<br /><br />
-        This level did another point extremely well: making wait time
-        interesting. As usually seen in stealth levels, at some points players
-        have to wait till enemies pass by or turn around, and the process can be
+        Although Uncharted 4: A Thief's End is not a game built around its
+        stealth system, some of its levels cleverly added stealth element to
+        change the pacing and interest curve. What's more, the way in which it
+        told a complete story using levels is a great learning resource. The
+        picture above came from "get out of the orphanage" scenario in chapter
+        1, where the game showed a fragment of Nathan Drake's childhood as a
+        reflection of his forming personality.<br /><br />
+        This level did another point extremely well:
+        <span style="font-style: italic"
+          >making the wait time interesting.</span
+        >
+        As usually seen in stealth levels, at some points players have to wait
+        till enemies pass by or turn around and the waiting process can be
         tedious. Uncharted 4, however, makes NPCs talk and do things all the
-        time, so that players can stay at a high interest level and get useful
-        information to push the story. It's indeed a clever trick.
+        time, so that while players wait, they still stay at a high interest
+        level and get useful information to understand the story.
+      </div>
+      <div class="main-design-title">
+        <hr />
+        article references
+      </div>
+      <div class="main-design-description">
+        <a
+          href="https://www.gamasutra.com/blogs/JobyeKarmaker/20160819/279550/A_Look_Back_Splinter_Cell_Blacklists_Benghazi_Level.php"
+          class="link"
+          target="_blank"
+          >A Look Back: Splinter Cell Blacklist's Benghazi Level</a
+        ><br />
+        <a
+          href="http://www.mikebarclay.co.uk/my-level-design-guidelines/"
+          class="link"
+          target="_blank"
+          >Michael Barclay's Level Design Guidelines</a
+        >
       </div>
 
-      <div class="main-title">Planning</div>
+      <div class="main-title" id="planning">Planning</div>
       <div class="main-design-title">
         <hr />
         theme
@@ -199,11 +239,8 @@
         layout reference
       </div>
       <div class="main-design-description">
-        When designing, I studied pictures of many real world mansions to better
-        understand the mansion layout and design elements. Simply studying the
-        pictures was gratifying.
         <div class="element-image">
-          <img src="/media/levels/stealth-level/ref.png" />
+          <img src="/media/levels/stealth-level/ref.jpg" />
         </div>
       </div>
       <div class="main-design-title">
@@ -211,13 +248,22 @@
         2d layout
       </div>
       <div class="main-design-description">
-        Prior to grayboxing, I used Adobe Illustrator to lay out the map in 2d.
-        Some of the more important things I wanted to clarify in 2d map are:<br />
-        - determining the critical path;
-        <br />- double-confirming the goal of the level;<br />
-        - assuring that the level is well paced.
+        Prior to greyboxing, I used Adobe Illustrator to lay out the map in 2d.
+        Some of the more important things I wanted to clarify in 2d map were:<br />
+        - to determine the general player path;<br />
+        - to double-confirm the goal of the level;<br />
+        - to provide metrics for 3d meshes.
         <div class="element-image">
           <img src="/media/levels/stealth-level/2d.png" />
+        </div>
+      </div>
+      <div class="main-design-title">
+        <hr />
+        pacing
+      </div>
+      <div class="main-design-description">
+        <div class="element-image">
+          <img src="/media/levels/stealth-level/pace.png" />
         </div>
       </div>
 
@@ -360,6 +406,24 @@
       </div>
 
       <div class="main-title">Post-Mortem</div>
+      <div class="main-design-title">
+        <hr />
+        answers to the three questions
+      </div>
+      <div class="main-design-description">
+        <span style="font-style: italic"
+          >What a stealth level flow should be like?</span
+        ><br />
+        Yes!<br /><br />
+        <span style="font-style: italic"
+          >How to use visual elements to guide the player?</span
+        ><br />
+        Yes<br /><br />
+        <span style="font-style: italic"
+          >How to design a level with limited interior space?</span
+        ><br />
+        Yes!
+      </div>
       <div class="main-design-title">
         <hr />
         what went well
