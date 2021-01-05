@@ -115,6 +115,7 @@ body {
   transform: translateX(-50%);
   font-size: 2.5rem;
   z-index: 2;
+  font-weight: 600;
 }
 
 #menu-page {
@@ -124,7 +125,6 @@ body {
   align-content: center;
   padding: 0 10vw;
   height: 100vh;
-  color: var(--shironeri);
   white-space: nowrap;
   z-index: 1;
 }
@@ -271,11 +271,22 @@ hr {
 .element-image {
   margin: auto;
   margin-top: 0.25em;
+  position: relative;
 }
 
 .element-image img {
   width: 100%;
-  height: 100%;
+  height: auto;
+}
+
+.element-image .img-top {
+  opacity: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.element-image:hover .img-top {
+  opacity: 1;
 }
 
 .element-image-flex {

@@ -33,11 +33,17 @@
         project I tried to answer three core questions: What a stealth level
         flow should be like? How to use visual elements to guide the player? How
         to design a level with limited interior space?<br /><br />
-        <a href="#planning" class="link">Jump to Game Production</a>
+        <a href="#planning" class="link">Jump to Game Production</a><br />
+        <a
+          href="https://drive.google.com/drive/folders/1Pu4ibbW7Ms6zl_WeGc8CxX7aI3FLEJAP?usp=sharing"
+          target="_blank"
+          class="link"
+          >Runnable Build</a
+        >
       </div>
       <div class="top-information">
         <span style="color: var(--ro)">time</span> summer 2020 <br />
-        <span style="color: var(--ro)">length</span> 6-8 minutes <br />
+        <span style="color: var(--ro)">length</span> 7-9 minutes <br />
         <span style="color: var(--ro)">software</span> Unreal Engine 4, Maya,
         Illustrator
         <br />
@@ -46,11 +52,11 @@
     </div>
 
     <div id="main">
-      <div class="main-title">Gameplay Video</div>
+      <div class="main-title">Gameplay Footage</div>
       <div class="main-video">
         <iframe
           name="Stealth Level"
-          src="https://www.youtube.com/embed/c9JqCXeSUcs"
+          src="https://www.youtube.com/embed/7pjNObDFCqk"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope"
           allowfullscreen
@@ -123,7 +129,7 @@
       <div class="main-design-description">
         <span class="element-title">god path</span><br />
         A god path is a route by which the playable character has zero chance of
-        being noticed. A typical god path is formed when all enemies' patrol
+        being caught. A typical god path is formed when all enemies' patrol
         routes don't overlap with each other, or don't cover a bit of the
         necessary player route. This bad design could make the level very boring
         as the players can proceed and win without even trying.<br /><br />
@@ -227,7 +233,7 @@
       </div>
       <div class="main-design-title">
         <hr />
-        mechanics
+        mechanics & metrics
       </div>
       <div class="main-design-description">
         <div class="element-image">
@@ -243,18 +249,21 @@
           <img src="/media/levels/stealth-level/ref.jpg" />
         </div>
       </div>
-      <div class="main-design-title">
+      <div class="main-design-title" id="2d">
         <hr />
         2d layout
       </div>
       <div class="main-design-description">
         Prior to greyboxing, I used Adobe Illustrator to lay out the map in 2d.
-        Some of the more important things I wanted to clarify in 2d map were:<br />
-        - to determine the general player path;<br />
-        - to double-confirm the goal of the level;<br />
-        - to provide metrics for 3d meshes.
+        Some of the more important things I wanted to clarify in this 2d draft
+        map were:<br />
+        - to determine the general player routes;<br />
+        - to double-confirm the goal of the level was emphasized;<br />
+        - to provide metric reference for 3d meshes.<br />
+        HOVER OVER THE IMAGE TO SEE THE FINAL 2D MAP.
         <div class="element-image">
-          <img src="/media/levels/stealth-level/2d.png" />
+          <img src="/media/levels/stealth-level/2d-2.png" class="img-top" />
+          <img src="/media/levels/stealth-level/2d-1.png" />
         </div>
       </div>
       <div class="main-design-title">
@@ -274,12 +283,11 @@
       </div>
       <div class="main-design-description">
         <span class="element-title">macro -> micro</span><br />
-        I like to ponder the design from a macro perspective first, then zoom in
-        on the details. For this project, the game pace is the first thing
-        confirmed. When I was drawing the 2d map, I always design the large part
-        first (exterior & interior), then split each part into smaller pieces
-        (garage/living room/bedroom), then decide where to put the lighting,
-        then consider level dressing such as furniture.
+        I like to look over my design from a macro perspective first, then zoom
+        in on the detail. For example, when I was designing the 2d map, I always
+        did the larger part first (floors, exterior walls, open areas), then
+        split each part into smaller pieces (garage, living room, bedroom), then
+        decide where to put the lighting as well as other decors like furniture.
       </div>
       <div class="main-design-title">
         <hr />
@@ -287,7 +295,7 @@
       </div>
       <div class="main-design-description">
         Putting 2D maps into a 3D world is not simply replacing lines with
-        cubes. I need to think how to translate the design faithfully and
+        cuboids. I needed to think how to convert the design faithfully and
         efficiently:<br />
         -Pay special attention to the height difference. Height difference would
         matter a lot in determining the visibility, and engaging enemies from a
@@ -307,102 +315,111 @@
         level design
       </div>
       <div class="main-design-description">
-        <span class="element-title">patrol patterns</span><br />
-        I've concluded three types of possible enemy patrol patterns, and
-        analyzed how to implement them in levels.
+        <span class="element-title">patrol patterns</span>
         <div class="element-image">
           <img src="/media/levels/stealth-level/patrol-patterns.png" />
         </div>
-        <span class="element-title">mesh & color</span><br />
-        Although the purpose of this level is not to make an environment design
-        portfolio, I built the level in medium detail, especially in places that
-        should attract more attention. <br /><br />
-        What is interesting is that, when I was blocking out the level and
-        testing, I found in real practices, each floor in interior levels should
-        better be HIGHER than in real life, due to fact that the position of
-        third-person camera is usually higher than the player character, which
-        makes the surroundings look lower.<br /><br />
-        I paid special attention to the colors being used on meshes. For a level
-        design project, I guess the prior job for color is not really to make a
-        level "real", but to make it MEANINGFUL. Every color should tell the
-        player clearly its purpose: maybe it's to attract attention as a focal
-        point; maybe it's to indicate of a place where special item hides; maybe
-        to convey faithfully a mood of the scene.<br /><br />
-        Translucent material is another component I played with this time. I
-        used it on pieces of mansion window glass to make the mansion feel
-        artistically modern and alive, but also to help players see through some
-        part of the mansion and guide them. An example is the glass in front of
-        stairs so players can see that the first moment they enter the
-        mansion.<br />
+        For most situations, I used the setup in the middle to balance the
+        playability and challenge.
+        <br /><span class="element-title">mesh & color</span><br />
+        Although the purpose of this level was not to make an environmental art
+        portfolio, I built the level in medium detail, focusing on items that
+        should attract more attention.
+        <div class="element-image-flex">
+          <img src="/media/levels/stealth-level/level-design-1.jpg" />
+          <img src="/media/levels/stealth-level/level-design-2.png" />
+        </div>
         <span class="element-title">lighting</span><br />
-        Lights plays a significant role in scenes at night. In my level lighting
-        was used mostly to indicate important locations and hence direct the
-        players. Lights can also affect the mood of a place: less lighting
-        suggests a potentially dangerous place while bright lighting invigorate
-        people to explore.
+        Lights play a significant role in scenes at night. In my level, lighting
+        was used mostly to indicate important locations and hence could direct
+        the players. Lights can also affect the mood of a place: dim lighting
+        suggests a potentially dangerous place while brighter lighting
+        invigorates people to explore.<br /><br />
+        Also to increase the visibility of AI sight, I used enemies' flashlights
+        to indicate their sight range, which proved to be working well in
+        playtests.
         <br /><span class="element-title">collectibles</span><br />
-        One of my principles of using collectibles is that I didn't use them to
-        attract players, but to reward those who have curiosity and patience to
-        explore every corner of the world. So they serve as a result of
-        exploration.
+        One of my principles of using collectibles was not to attract players,
+        but to reward those who had more curiosity and patience to explore every
+        corner of the world, so they served more as a result of exploration.
       </div>
       <div class="main-design-title">
         <hr />
         level construction
       </div>
       <div class="main-design-description">
-        I used Blueprint to do all game logic, and it's also a point where I can
-        watch how level runs and adjust parameters accordingly.
+        I used Blueprint to for all game logics and parameter adjustments.
         <br /><span class="element-title">patrol system</span><br />
-        <div class="element-image-flex">
-          <img src="/media/levels/stealth-level/patrol-1.png" />
-          <img src="/media/levels/stealth-level/patrol-2.png" />
+        <div class="element-image">
+          <img src="/media/levels/stealth-level/patrol.png" />
         </div>
         <span class="element-title">enemy AI</span><br />
-        To create a highly customizable and robust AI system, I used a
-        combination of Unreal Engine's AI perception system, behavior tree, and
-        various Blueprints. Also to increase the visibility of AI sight, I used
-        enemies' flashlights to indicate their sight range, which proved to be
-        working well in playtests.
-        <div class="element-image-flex">
-          <img src="/media/levels/stealth-level/ai-1.png" />
-          <img src="/media/levels/stealth-level/ai-2.png" />
+        I designed in a dynamic point of view. Enemies have vision cones and as
+        they move, they are observing different places, and that's why I created
+        a customizable and robust enemy AI system with a combination of AI
+        perception system, behavior tree, and various Blueprints.
+        <div class="element-image">
+          <img src="/media/levels/stealth-level/ai.png" />
         </div>
-        I think in a dynamic point of view. Enemies have vision cones and as
-        they move, they are observing different places. As I programmed the
-        whole game system, there are way more details that needs careful
-        thoughts.
-        <br /><span class="element-title">interactive system</span><br />
-        Having a consistent input system for interaction is essential in
+        <span class="element-title">interaction system</span><br />
+        Having a consistent system for handling interactions is essential for
         eliminating confusions. Players are given the capability of interacting
-        with various objects including enemies, doors, collectibles and intels,
-        for which only two keys (interact, attack) will be required.
+        with various objects including doors, collectibles and intels, for which
+        only one key was needed.
         <br /><span class="element-title">dialogue system</span><br />
-        Dialogue system in this game also plays as a guide that reminds the
-        player of where they are and what they should be doing.
+        The customizable dialogue system in the game also played as a guide that
+        reminded the player of where they were and what they should be doing at
+        each stage. Also dialogue was used as a feedback when the player got a
+        collectible or required item.
       </div>
       <div class="main-design-title">
         <hr />
         playtesting
       </div>
       <div class="main-design-description">
-        I consider playtesting a crucial part of level design, especially when I
-        realized the magic it plays to bring a 6/10 level to 8 points. (or
-        higher!)
         <div class="element-image">
           <img src="/media/levels/stealth-level/iteration-1.png" />
         </div>
-        The first feedback from a professional includes making better use of the
-        vantage point and adding more guide along the level so the player can
-        keep track of where they are and where is the destination. I also
-        noticed that enemy patrol routes are so easy that there's actually "god
-        path" which is mentioned earlier as a pitfall in stealth levels. To
-        solve the problem, I re-designed enemies' patrol routes and also created
-        more obstacles.
-        <div class="element-image-flex">
+        <span class="element-title">better directing</span><br />
+        The first playtest feedback from a professional included making better
+        use of the vantage point and adding more guide along the level so the
+        player could better navigate in this dark map. I also noticed that enemy
+        patrol routes were so simple that there was actually "god path" as
+        mentioned earlier as a pitfall in stealth levels.<br /><br />
+        To solve the problem, I moved start point to a higher place, added more
+        lighting, re-designed enemies' patrol routes and also put into thr level
+        more covers.
+        <div class="element-image">
           <img src="/media/levels/stealth-level/iteration-2.png" />
-          <img src="/media/levels/stealth-level/iteration-3.png" />
         </div>
+        <span class="element-title">no killing</span><br />
+        After the second playtesting with one of my peer designers, I made the
+        decision that killing enemies would no longer be allowed. The current
+        framework still was far from a "real" enemy AI, and killing every enemy
+        from the back was in fact a piece of cake and could easily spoil the
+        fun. No killing would force players to plan stealth routes more
+        carefully, and prevented any dangerous game-breaking actions.
+        <br /><span class="element-title">safety and danger</span><br />
+        There has to be some completely safe area (even it looks very close to
+        enemy routes) and some area that enemies constantly check in (usually
+        more important/knot location) so you cannot stay safe forever.
+        <div class="element-image">
+          <img src="/media/levels/stealth-level/area.jpg" />
+        </div>
+        <span class="element-title">avoid dead end</span><br />
+        One big takeaway was to try not to design an empty room with only one
+        way in/out, i.e. a dead end is not good. From the level design
+        perspective, having an interconnected mansion also helped with the unity
+        of the level.
+        <div class="element-image">
+          <img src="/media/levels/stealth-level/dead-end.png" />
+        </div>
+        <span class="element-title">multiple paths</span><br />
+        I realized as a designer I should allow interesting choices, because
+        providing players with more than one route to the goal can make the game
+        more interesting and cater to different skill levels. The work in this
+        part can be found in the dashed lines in the
+        <a href="#2d" class="link">final 2d map.</a>
       </div>
 
       <div class="main-title">Post-Mortem</div>
@@ -414,38 +431,65 @@
         <span style="font-style: italic"
           >What a stealth level flow should be like?</span
         ><br />
-        Yes!<br /><br />
+        As described in pace section, a typical stealth level flow has some
+        similarities as a story-driven level because story-wise, the three-act
+        structure is still working behind as a fundamental. But being a stealth
+        level specifically means something different.<br /><br />
+        Depending on the openness of the level (linear, semi-open, open-ended),
+        a stealth level may set different challenge points in different
+        locations, thus switching the state of flow of
+        exploring/planning/fighting as needed. <br /><br />
         <span style="font-style: italic"
           >How to use visual elements to guide the player?</span
         ><br />
-        Yes<br /><br />
-        <span style="font-style: italic"
+        In this level in particular set at night, I found lighting the strongest
+        guiding element over colors and shapes. Moving things such as enemies
+        (and their flashlights) were also a big anchor point that players would
+        keep away from.<br /><br />
+        Of course, in a level abundant of sunshine, artificial lighting may not
+        stand out that much as in a dark scene. Colors and shapes may contribute
+        more to the player's interest. In addition, there's a lot more things
+        that can guide the player: voiceover, HUD, marks on the map, etc. A good
+        game makes use of many kinds of guiding but still offers a lot of
+        freedom to the players.
+        <br /><br /><span style="font-style: italic"
           >How to design a level with limited interior space?</span
         ><br />
-        Yes!
+        It's a question I was struggling to answer. The reality is always a
+        great reference, but for a game to be functional and fun, we cannot just
+        copy and paste the interior structure from a real mansion. I've already
+        discussed some points such as dead ends and player path choices
       </div>
       <div class="main-design-title">
         <hr />
         what went well
       </div>
       <div class="main-design-description">
-        For the three core questions raised at the beginning of the process, I
-        think I did first two of them well, while still have much to learn.
-        <br /><span class="element-title">level flow</span><br />
-        Rome is not built in a day.
-        <br /><span class="element-title">atmosphere</span><br />
-        Almost every playtesters mentioned the intense atmosphere when playing,
-        which quite fits my expectation.
+        <span class="element-title">atmosphere</span><br />
+        Almost every playtester mentioned the intense atmosphere when playing,
+        which quite fit my expectation. The word "atmosphere" itself, though, is
+        a high-level game metric as in the MDA framework because it is the
+        emotional consequence from many different inputs: level blockouts, art,
+        even dialogue.
+        <br /><span class="element-title">iterating</span><br />
+        Iterating really helped me build a better level. Testing the level all
+        by myself was dangerous: it's very easy to omit some more important
+        things because of the subjective blindness, that I would consider many
+        detail deserved and flawless. Asking a naive guest to try out the level
+        was the best way to work around this. During weeks of iterations, I
+        learned new insights on level design and was able to implement that new
+        knowledge into the level I was making.
         <br /><span class="element-title">using the engine</span><br />
-        Prior to the project (which is my first official UE project), I spent
-        about two weeks learning some basic stuff about Unreal Engine, all of
-        which eventually proved useful. The best part of all these systems is
-        their compatibility - Unreal Engine makes it easy to transplant the
-        systems to another game that needs them.
+        Prior to this project, I spent about two weeks learning basic stuff
+        about Unreal Engine 4, all of which eventually proved to be useful. The
+        best part of all these systems was their compatibility - Unreal made it
+        easy to transplant the systems to another game that needed them. I could
+        reuse some systems such as AI Perception and Patrolling in my next
+        possible project.
       </div>
       <div class="main-design-title">
         <hr />
-        what didn't go well
+        what could be improved
       </div>
       <div class="main-design-description">
         <span class="element-title">interior design</span><br />
@@ -457,8 +501,8 @@
         Yes, I talked to myself and found that compared to enhancing the
         details, I was more willing to think about the macro - feeling, level
         flow, constructing logic... The level was definitely not perfect as I
-        sensed many details are still missing - and some of them might have been
-        a good guide or challenge.
+        sensed many details were still missing - and some of them might have
+        been a good guide or challenge.
       </div>
       <div class="main-design-title">
         <hr />
@@ -466,9 +510,10 @@
       </div>
       <div class="main-design-description">
         I want to thank the following people:<br />
-        Ketul Majmudar, who helped answer many questions and gave valuable
+        Ketul Majmudar, who answered many questions and gave valuable
         professional feedback.<br />
-        My parents, who've been supporting me but asking for nothing.
+        Ziheng Xiao, who playtested my level and offered lots of useful
+        feedback.
       </div>
 
       <div style="clear: both"></div>
