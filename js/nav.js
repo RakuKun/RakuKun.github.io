@@ -120,6 +120,12 @@ var tmpl = CommentDoc(function () {
         <br />
         <a
           class='entry'
+          onclick="transitionToPage('/blog/hanzo','var(--shironeri)')">
+          Hanzo in HotS: MOBA Hero Design
+        </a>
+        <br />
+        <a
+          class='entry'
           onclick="transitionToPage('/blog/accessibility','var(--shironeri)')">
           Accessibility - Game For All
         </a>
@@ -134,12 +140,6 @@ var tmpl = CommentDoc(function () {
           class='entry'
           onclick="transitionToPage('/blog/dda','var(--shironeri)')">
           On Dynamic Difficulty Adjustment
-        </a>
-        <br />
-        <a
-          class='entry'
-          onclick="transitionToPage('/blog/photography','var(--shironeri)')">
-          Photography
         </a>
       </div>
     </div>

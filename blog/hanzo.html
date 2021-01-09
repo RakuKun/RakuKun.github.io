@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=0" />
+    <meta
+      name="description"
+      content="Hanzo and MOBA Hero Design by Liangzheng Luo."
+    />
+    <meta name="theme-color" content="#005DAF" />
+    <meta name="author" content="Liangzheng Luo" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Hanzo and MOBA Hero Design - Liangzheng Luo</title>
+    <link rel="icon" type="image/png" href="/media/icon.png" />
+    <link href="/css/blog.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <script type="module" src="/js/nav.js"></script>
+    <script type="module" src="/js/general.js"></script>
+    <div id="nav"></div>
+    <div id="back">
+      <a onclick="transitionToPage('balance','var(--shironeri)')">➙</a>
+    </div>
+    <div id="next">
+      <a onclick="transitionToPage('accessibility','var(--shironeri)')">➙</a>
+    </div>
+
+    <div class="top">
+      <div class="top-title">Hanzo in HotS and MOBA Hero Design</div>
+      <div class="top-introduction">
+        In this article I will try to discuss why I think Hanzo is a
+        well-designed hero in Heroes of the Storm...<br />
+        ...And more generally, what is a good hero design in MOBA games.
+      </div>
+      <div class="top-information">
+        <span style="color: var(--ro)">time</span> winter 2020 <br />
+      </div>
+    </div>
+
+    <div id="main">
+      <div class="main-title">Hanzo in Heroes of the Storm</div>
+      <div class="main-text">
+        "One shot, one kill."<br /><br />
+        I liked playing Hanzo a lot when I was a (really!) active Heroes of the
+        Storm (HotS) player who got introduced to the game when playing him in
+        Overwatch. Despite that I played Hanzo very badly in Overwatch mostly
+        because of my bad FPS aiming skill, miraculously I got used to Hanzo's
+        playstyle in HotS relatively quickly, which eventually pushed me to be a
+        well-rounded ranged assassin player in HotS. <br /><br />
+        And as a game designer I think that Hanzo is a really well-designed hero
+        as in HotS. His design fits the word "elegant". In the following
+        paragraphs I will be trying to use my personally-adjusted MDA Framework
+        to list out the supporting points, as well as more generally, what are
+        the major metrics for evaluating a MOBA hero's design from a designer's
+        perspective.
+      </div>
+
+      <div class="main-title">Mechanics</div>
+      <div class="main-text">
+        On the mechanic level, a hero's design can be broken down to skills and
+        stats, as these are the fundamental attributes of the hero that have a
+        direct impact on how players will play them. I will start with Hanzo's
+        skillset.
+        <div class="element-image">
+          <img src="/media/blog/hanzo/hanzo-1.jpg" />
+        </div>
+        In Heroes of the Storm, Hanzo is a Ranged Assassin. The Ranged Assassin
+        role, once is described in HotS as following:
+        <span style="font-style: italic"
+          >Ranged Assassin heroes are fragile damage dealers that are able to
+          attack their enemies from a safer distance.</span
+        >
+        And Hanzo specifically, was described in a single sentence as:
+        <span style="font-style: italic"
+          >"A ranged Assassin who specializes in scouting and taking out enemies
+          from a distance."</span
+        ><br /><br />
+        Hanzo's design perfectly fits both of the descriptions. His Q, W, and
+        two ultimates all can deal significant amount of damage from a distance,
+        and his Basic Attack (BA) deals second highest damage among HotS's
+        heroes' BAs. His E skill provides a temporary zone of vision for the
+        team. Long range attacks also mean a great poke ability. <br /><br />
+        On the other hand, Hanzo is a fragile hero. his basic HP is low and
+        falls in the typical Ranged Assassin's range but he still gets a
+        long-cooldown escape skill that can rid him out of danger sometimes. He
+        also gets no self-sustain ability and thus relies heavily on healers for
+        HP. Having some weakness in a hero is absolutely important because only
+        that gives the chance for opponents to find a way to counteract his
+        advantages.<br /><br />
+        <div class="element-image">
+          <img src="/media/blog/hanzo/hanzo-2.png" />
+        </div>
+        The second thing designers can use to evaluate a hero's balance design
+        are pick rate and win rate, among casual/low rank/high rank
+        (professional) matches. It's dangerous to say a hero's too strong or
+        weak while not putting them in a specific environment. Hanzo was a hero
+        that's universally picked as the choice for team's damage dealer
+        especially in higher ranked matches for his good performance with
+        skilled players. His win rate is not that high though, on the other
+        hand, as several batches had already made him a pretty balanced hero.
+        Hanzo's win rate is lower when we look at it in every match in all
+        tiers, which again proves that Hanzo is not an easy hero - to play him
+        well you need to practice his skills a lot.
+        <div class="element-image">
+          <img src="/media/blog/hanzo/balance-metrics.png" />
+        </div>
+        On top of stats, "balance" in MOBA games in terms of win rates, as I
+        always believe, are only two situations. The first are the so-called
+        newbie-friendly heroes. They are easy to learn, easy to master, have
+        pretty balanced win rates among different tiers. Pro players may also
+        use them in competitive games for their trustworthy consistency. The
+        second is easy-to-learn-hard-to-master heroes like Hanzo. They are
+        definitely challenging for new players, but have the potential to
+        outperform in terms of win rate when used by skillful players. This kind
+        of heroes are popular in competitive matches because pro players have
+        rich experiences to compensate for the risk.
+      </div>
+
+      <div class="main-title">Dynamics</div>
+      <div class="main-text">
+        The dynamic level in this topic specifically, in my opinion, is how the
+        hero's design fit into the game's other systems and therefore
+        ultimately, leverage the fun factor. In HotS there are two aspects:
+        Terrains and Talents.<br /><br />
+        Hanzo's W and Trait skill makes full use of HotS's Terrain system. Most
+        heroes cannot see over, or go through terrain so it's a tactically
+        important part of the battleground. Hanzo's W skill, Scatter Arrow can
+        collide with terrain and structures, splitting into extra arrows. His
+        Trait allows him to jump over terrain. Not only these skills is hard to
+        use well, but more importantly, they leverage the player's awareness of
+        Terrain, which will eventually deepen their understanding of the game's
+        systems. A skilled Hanzo player understands terrain's geometry well and
+        can use this extra knowing as their advantage against some other heroes
+        that have skills that interact with the terrain. It's a virtuous circle.
+        What I'd like to address here is that such design doesn't always mean
+        developing a new system exclusively for the character; it's about how
+        the character "blend in" the game environment.
+        <div class="element-image">
+          <img src="/media/blog/hanzo/hanzo-3.jpg" />
+        </div>
+        Hanzo's Talent choices are incredibly diverse and fun to learn. In
+        short, Talents in Heroes of the Storm are unique perks that players
+        choose to unlock for their heroes at some certain levels in game.
+        <div class="element-image">
+          <img src="/media/blog/hanzo/talents-1.png" />
+        </div>
+        Hanzo's Talents allow three totally different playstyles. The Q build
+        makes Hanzo a true poker and also grants him good waveclear ability. The
+        W build is the hardest among three builds, but enables Hanzo to be the
+        main carry on the team thanks to its cooldown reduction and consistent
+        damage output. The Basic Attack build takes Talents that dramatically
+        improve Hanzo's sustained damage. This build has its own risk as Hanzo
+        will lose the Talent's bonus attack speed upon dying.
+        <div class="element-image">
+          <img src="/media/blog/hanzo/talents-2.png" />
+        </div>
+        Hanzo's Heroic Abilities (ults), allows players to make Hanzo a pure
+        damage machine or have some control ability. These Talents altogether
+        makes Hanzo really an interesting hero to play, and to learn. It's
+        always a challenging task for a MOBA game to keep player's freshness
+        even when they've already played for 2000 hours - while there are many
+        heroes in a MOBA game, designing a brand new hero is always a tough task
+        for the developers. Therefore, making a hero' learning process rewarding
+        and enjoyable is a good solution to work around the problem. Hanzo's
+        design ensures that it will take some time to master this hero - perhaps
+        hundred of matches, but learning to play him is fun and exciting,
+        because again, you're in fact learning to play in three drastically
+        different Ranged Assassin playstyles!
+      </div>
+      <div class="main-title">Aesthetics</div>
+      <div class="main-text">
+        In the MDA Framework, Aesthetics are the emotional level that directly
+        influence the player. Hanzo is originally an Overwatch character before
+        he went into Heroes of the Storm, and "Preciseness" is the word that
+        best described him. All(!) of his skills in HotS are skillshots
+        (abilities that fire a projectile from the source in the chosen
+        direction), making Hanzo a very easy-to-learn-hard-to-master hero: a bad
+        player might miss every shot except for Basic Attacks, while an
+        experienced player can make full use of each skill and inflict damage on
+        target heroes. His W skill, Scatter Arrow is a juxtaposition of the
+        identically named skill in Overwatch (but was later removed) that uses
+        the Terrain as its core mechanism. In short, playing Hanzo in HotS feels
+        much like playing him in Overwatch, even though the two games are
+        mechanically so different. Elegantly lethal and precise. It's the design
+        work that has helped reach such a success.>
+        <div class="element-image">
+          <img src="/media/blog/hanzo/hanzo.jpg" />
+        </div>
+        In addition to that, Hanzo's gameplay in HotS also involves lots of
+        interesting player-player interactions. All of his level 1 Talents are
+        quests of which the conditions are to use the skill (or BA) to hit enemy
+        heroes a certain times. To me this is far more interesting than "kill
+        100 minions to power up the skill" which can be done more mindlessly. To
+        do Hanzo's missions the player need to be more aggressive in laning,
+        which could result in exposing the hero to a dangerous situation.
+        Hanzo's skills like E skill and Dragon's Arrow have big tactical
+        usefulness in terms of gaining sight and stunning enemies, thus making a
+        perfect team combo possible. <br /><br />
+      </div>
+      <div class="main-title">Conclusion</div>
+      <div class="main-text">
+        I think Hanzo in Heroes of the Storm is the best result of transplanting
+        a hero from another universe, and is successfully designed in almost
+        every aspect. In this article I used the MDA Framework to do the
+        analysis, and the following metrics, in my opinion, proves to be useful
+        to evaluate the design of a character in MOBA games:<br />
+        Mechanics:<br />
+        - Does the character's design, working together, fit their described
+        role?<br />
+        - Are the character's stats/numbers well balanced, not too strong or too
+        weak?<br />
+        Dynamics: <br />
+        - Does the character's abilities come in harmony with the game's other
+        systems? <br />
+        - Is it fun to learn to play the character?<br />
+        - Do players have diverse choices on how they can develop the
+        character?<br />
+        Aesthetics:<br />
+        - Does the design fits the character's backstory and the settings of the
+        game?<br />
+        - Does the design encourage interesting player-player interaction?
+      </div>
+    </div>
+  </body>
+</html>
