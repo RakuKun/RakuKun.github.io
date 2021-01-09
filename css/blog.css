@@ -35,22 +35,10 @@ body.fade-out {
   color: var(--ro);
 }
 
-.main-title {
-  color: var(--ro);
-}
-
 .main-information {
   background-color: var(--ro);
   border: 1em solid var(--ro);
   color: var(--ro);
-}
-
-.main-paragraph-title {
-  clear: both;
-  text-align: center;
-  font-weight: 500;
-  font-size: 2rem;
-  padding: 2vh 0;
 }
 
 .main-text {
