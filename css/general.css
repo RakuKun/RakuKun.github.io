@@ -71,7 +71,7 @@ html {
 }
 
 body {
-  font-size: 1.25rem;
+  font-size: 1vw;
   font-weight: 400;
   margin: 0;
   line-height: 1.5;
@@ -113,7 +113,7 @@ body {
   right: 5vw;
   top: 8vh;
   transform: translateX(-50%);
-  font-size: 2.5rem;
+  font-size: 3rem;
   z-index: 2;
   font-weight: 600;
 }
@@ -123,26 +123,25 @@ body {
   position: fixed;
   flex-wrap: wrap;
   align-content: center;
-  padding: 0 10vw;
+  padding: 0 15vw;
   height: 100vh;
   white-space: nowrap;
   z-index: 1;
 }
 
 .category {
-  margin: -2.5vh 2.5vw 5vh 2.5vw;
+  margin: -2.5vh 2vw 5vh 2vw;
   width: 40%;
   max-height: 40%;
 }
 
 .entry-title {
-  font-size: 6rem;
+  font-size: 5vw;
   font-weight: 500;
 }
 
 .entry {
-  display: inline-block;
-  font-size: 2rem;
+  font-size: 1.5vw;
 }
 
 #back {
@@ -193,7 +192,7 @@ body {
 
 .top-information {
   background-color: var(--shironeri);
-  border: 1em solid var(--shironeri);
+  border: 1.5rem solid var(--shironeri);
   position: absolute;
   bottom: 10vh;
 }
@@ -202,7 +201,7 @@ body {
   transition: 1s ease-in-out;
   padding: 0 8vw 10vh 8vw;
   font-weight: 400;
-  word-spacing: 0.1em;
+  word-spacing: 0.1rem;
 }
 
 .main-title {
@@ -219,7 +218,7 @@ body {
   max-width: 60%;
   margin: 2vh auto;
   background-color: var(--shironeri);
-  border: 1em solid var(--shironeri);
+  border: 1rem solid var(--shironeri);
 }
 
 hr {
@@ -255,7 +254,7 @@ hr {
 
 .main-design-description {
   float: left;
-  padding-top: 1.5em;
+  padding-top: 2rem;
   width: 61.8%;
 }
 
