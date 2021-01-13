@@ -116,12 +116,12 @@ body {
 #menu {
   user-select: none;
   position: fixed;
-  right: 5vw;
+  right: 4vw;
   top: 8vh;
   transform: translateX(-50%);
   font-size: 3rem;
   z-index: 2;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 #menu-page {
