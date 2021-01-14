@@ -33,13 +33,12 @@
       <div class="top-title">FPS Combat Zone (WIP)</div>
       <div class="top-introduction">
         Designing an engaging multiplayer FPS combat experience has alway been a
-        very interesting topic to me. This page covers some of my thoughts and
-        experiments of designing small-scale (preferably 1v1 and 2v2)
-        multiplayer combat zones.
+        very interesting topic to me. This page covers the process of designing
+        both a symmetrical and an asymmetrical 1v1 FPS combat level.
       </div>
       <div class="top-information">
         <span style="color: var(--ro)">time</span> winter 2020 <br />
-        <span style="color: var(--ro)">length</span> 2 minutes <br />
+        <span style="color: var(--ro)">length</span> 1 minute <br />
         <span style="color: var(--ro)">software</span> Unreal Engine 4, Maya,
         Illustrator
         <br />
@@ -50,25 +49,25 @@
     <div id="main">
       <div class="main-title">Inspiration</div>
       <div class="main-description">
-        I was spending quite a bit time in my summer 2020 vacation watching some
-        top streamers on Twitch playing Call of Duty: Warzone (battle royale).
-        Among many interesting game mechanics, the desperate 1v1 gunfight in a
-        fictional gulag attracts me most for its dramatically fast-paced combat
-        and the cruel rule that only the winner can step back into the
-        battlefield again.
+        I was spending quite a bit time during my summer and winter 2020
+        vacations watching some top streamers on Twitch playing Call of Duty:
+        Warzone (battle royale). Among many interesting game mechanics, the
+        desperate 1v1 gunfight in a fictional gulag attracted me most for its
+        dramatically fast-paced combat and the cruel rule that only the winner
+        can step back into the battlefield again.
         <br />
       </div>
       <div class="main-design-title">
         <hr />
-        analysis
+        system analysis
       </div>
       <div class="main-design-description">
         <span class="element-title">what's gulag?</span><br />
         As a Battle Royale game, Call of Duty: Warzone is praised for its
-        fast-paced and Call-of-Duty-esque feeling of gunfight. A player is put
-        into the gulag if and only after they get killed in the game for the
-        first time, so gulag is a chance for everyone to push back to the main
-        game - if they manage to win there.<br /><br />
+        fast-paced and the consistent Call-of-Duty feeling. A player is put into
+        the gulag if and only after they get killed in the game for the first
+        time, and the gulag is a chance for them to push back to the main game -
+        if they manage to win their opponents.<br /><br />
         A one versus one fight is prepared for everyone in the gulag, and some
         special rules apply: the system will pick a gun (or not!) randomly for
         both sides, and/or some equipments such as flash grenades or C4. The
@@ -94,37 +93,69 @@
         In the gulag map, many factors work successfully together to make the
         gunfight fast and intense. I want to discuss how designers achieve their
         goals by looking into the 2d and 3d layout of the map.
-        <br /><span class="element-title">map: 2d</span><br />
-        According to the official guide, the 1v1 fight can take place randomly
-        at one of the following three maps.
+      </div>
+      <div class="main-design-title">
+        <hr />
+        level analysis
+      </div>
+      <div class="main-design-description">
+        <span class="element-title">symmetrical maps: 2d</span><br />
+        When Warzone was first released, according to the official guide, the
+        1v1 gunfight can take place randomly at one of the following three maps.
         <div class="element-image-flex">
           <img src="/media/levels/combat-zone/gulag-1.jpg" />
           <img src="/media/levels/combat-zone/gulag-2.jpg" />
           <img src="/media/levels/combat-zone/gulag-3.jpg" />
         </div>
+        The three maps do have different layouts.<br />
+        The first map has the walls on both left and right side of the u-shaped
+        wall offer a great cover when players are trying to engage in a
+        long-range gunfight. However, trying to capture the flag in this map
+        will be a bit scary since the flag is located totally in the open.
+        Crossing the middle lane would be a bold action.<br />
+        The second map features a circular stall in the middle which could be
+        used to cut down sightlines for a close-range combat. This map is also
+        if the player wants to play more defensively - the rectangular walls
+        offers covers for long-range gunfights.<br />
+        The third map offers the longest sightlines through a very narrow aisle
+        on top and bottom and the map, making it a great map for long-range
+        fights. On the other side, the blocks in the mioddle also provide the
+        close-range combat option if the players have shotguns.<br /><br />
         From 2d layouts we can find the three maps share some things in
         common:<br />
-        - <span class="bold">Rigidly axial symmetric layout.</span> It's
-        probably the most important thing in any competitive games that both
-        sides play fairly, and the most straightforward thing is make a
-        symmetrical map so they play under the same circumstances. <br />
-        -
+        <span class="bold">- Rigidly axial symmetric layouts.</span> The
+        Symmetric map layouts ensure that both sides are in a strictly equal
+        competitive environment, and the win or lose is really only depending on
+        individual skills. However, such maps may be a little bit short in terms
+        of tactical strategies, because both sides ideally will do the same
+        actions and it's really up to their shooting skills.<br />
         <span class="bold"
-          >Single-floor and small map with lots of obstacles blocking the
+          >- Single-floor, small map with lots of obstacles blocking the
           sight.</span
         >
-        From the purpose of gulag, we know that designers want this combat to be
-        quick and decisive, which pushes the map to be simple and understandable
-        as possible. But being simple does not means being easy: the players
-        should be put into a challenging enough environment where they need to
-        use everything they're provided to win.<br />
-        -
+        From the purpose of the Gulag, we know that designers want this combat
+        to be quick and decisive, which pushes the map to be simple and
+        understandable as possible. But being simple does not means being easy:
+        the players should be put into a challenging enough environment where
+        they need to use everything they're provided to win.<br />
         <span class="bold"
-          >A perimeter balcony above where idle prisoners can observe the
+          >- Option for both long-range and close-range combats. </span
+        >In the Gulag the players are given randomly the same
+        pistols/shotguns/rifles etc., and all three map layouts fit most
+        weapons. The blockouts have some long sightlines and at the same time
+        put the flag in the very middle of the map, making capturing the flag
+        probably the most dangerous thingto do there. The flags are more likely
+        to be used as baits if one side wants to trigger a close-range gunfight
+        and put the enemy in a relatively passive position. <br />
+        <span class="bold"
+          >- A perimeter balcony above where idle players can observe the
           ground. </span
         >No doubt this design gives advantage to the players who have teammates
-        in the jail, which is a really interesting design to keep them away from
-        boredom. <br /><span class="element-title">map: 3d</span><br />
+        in the same jail. It is a really interesting design to keep players from
+        the waiting boredom that allows some teamworking in an uncommon
+        situation. <br />
+
+        <span class="element-title">symmetrical maps: 3d</span><br />
         <div class="element-image">
           <img src="/media/levels/combat-zone/gulag-3d.jpg" />
         </div>
@@ -132,17 +163,49 @@
         most walls are so TALL that players cannot peek upwards, but have to
         peek left/right, which adds to the odds they get killed.<br />
         This design again forces the players to take higher risks in the fight,
-        by moving closer to the enemy or exposing a larger part of the body.<br /><br />
+        by moving closer to the enemy or exposing a larger part of the body.
+        <br /><span class="element-title">asymmetrical map</span>
+        <div class="element-image-flex">
+          <img src="/media/levels/combat-zone/gulag-4.jpg" />
+          <img src="/media/levels/combat-zone/gulag-5.png" />
+        </div>
+        On December 16th, As part of the Season One content from Black Ops Cold
+        War, the game introduced two new maps for the Gulag, including an
+        asymmetrically-designed map: Verdansk. This map is very interesting
+        because it broke the convention of symmetrical maps used for the Gulag,
+        and therefore, the gunfights will be a bit more tactical there. I drew
+        the 2d map above myself according to the 3d map.<br /><br />
+        Among all possibilities, there are three paths divided by a truck and an
+        empty container with holes, and the players spawn at the opposite
+        corners on the map. For the blue player, the natural strategy would be
+        going right along the container and peek through the holes, as that's a
+        safer way than to go to the other side of the truck, and the fact that
+        most right-handed players tend to go to the right side. For the red
+        player, again going all the way along the truck is dangerous and the
+        chances are high to meet the opponent in the middle way, which leads to
+        a 50-50 gunfight that's essentially on who aims better. However, peeking
+        through the holes is in a bit favor of the blue player who has just a
+        bit better sight than the red player. But the situation could be
+        different with a different weapon, i.e. having a shotgun, because then
+        the blue player could run earlier to the cover and shoot before the red
+        player kills them.<br /><br />
+        But at a larger sense, this map is still pretty balanced because of the
+        covers and spawn positions that are not favoring either side. After all,
+        in the Gulag in Warzone, every kill happens so fast that if one wants to
+        win, they must get their shots in. Having an asymmetrical map just adds
+        some fun to the both sides and sometimes people just like to blame on
+        objective things: "this map is in favor of my opponent and that's why I
+        lost!"
       </div>
 
-      <div class="main-title">1v1: Ideation</div>
+      <div class="main-title">Ideation</div>
       <div class="main-design-title">
         <hr />
-        mechanics
+        metrics
       </div>
       <div class="main-design-description">
         <div class="element-image">
-          <img src="/media/levels/combat-zone/mechanics.png" />
+          <img src="/media/levels/combat-zone/metrics.png" />
         </div>
       </div>
       <div class="main-design-title">
@@ -154,6 +217,8 @@
           <img src="/media/levels/combat-zone/ref.png" />
         </div>
       </div>
+
+      <div class="main-title">1v1: Symmetrical</div>
       <div class="main-design-title">
         <hr />
         2d map
@@ -162,14 +227,6 @@
         <div class="element-image">
           <img src="/media/levels/combat-zone/2d.png" />
         </div>
-      </div>
-
-      <div class="main-title">1v1: Production</div>
-      <div class="main-design-title">
-        <hr />
-        level design
-      </div>
-      <div class="main-design-description">
         Different from the stealth level, the environment in combat levels are
         wholly done inside of Unreal Engine, as I believe this could bring
         better flexibility for iterating purpose.
@@ -186,8 +243,12 @@
         playtesting
       </div>
 
-      <div class="main-title">2v2: Ideation</div>
+      <div class="main-title">1v1: Asymmetrical</div>
       <div class="main-design-description">
+        <div class="main-design-title">
+          <hr />
+          2d map
+        </div>
         2v2 map design will begin as soon as 1v1 is well finished, and more
         detail will release in the future!
       </div>

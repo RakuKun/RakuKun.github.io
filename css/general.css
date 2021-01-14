@@ -117,7 +117,7 @@ body {
   user-select: none;
   position: fixed;
   right: 4vw;
-  top: 8vh;
+  top: 7vh;
   transform: translateX(-50%);
   font-size: 3rem;
   z-index: 2;
@@ -260,7 +260,7 @@ hr {
 
 .main-design-description {
   float: left;
-  padding-top: 2rem;
+  padding-top: 1.5rem;
   width: 61.8%;
 }
 
