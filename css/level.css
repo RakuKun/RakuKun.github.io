@@ -1,7 +1,6 @@
 @import './general.css';
 
 body {
-  font-weight: 400;
   transition: 1s ease-in-out;
   background-color: var(--koke);
   color: var(--shironeri);

@@ -32,9 +32,11 @@
     >
       <div class="top-title">FPS Combat Zone (WIP)</div>
       <div class="top-introduction">
-        Designing an engaging multiplayer FPS combat experience has alway been a
+        Designing engaging multiplayer FPS combat experiences have alway been a
         very interesting topic to me. This page covers the process of designing
-        both a symmetrical and an asymmetrical 1v1 FPS combat level.
+        both a symmetrical and an asymmetrical 1v1 FPS combat level using
+        concepts like choke points, covers, lines of sight, and combat
+        distances.
       </div>
       <div class="top-information">
         <span style="color: var(--ro)">time</span> winter 2020 <br />
@@ -175,25 +177,49 @@
         because it broke the convention of symmetrical maps used for the Gulag,
         and therefore, the gunfights will be a bit more tactical there. I drew
         the 2d map above myself according to the 3d map.<br /><br />
-        Among all possibilities, there are three paths divided by a truck and an
-        empty container with holes, and the players spawn at the opposite
-        corners on the map. For the blue player, the natural strategy would be
+        <span class="element-title">routes and choke points</span><br />
+        Among all possibilities, there are ultimately three player routes
+        divided by a truck and an empty container with holes, and the players
+        spawn at the opposite corners on the map. The following images describe
+        the choke points in the upper and lower routes.
+        <div class="element-image-flex">
+          <img src="/media/levels/combat-zone/gulag-path-1.png" />
+          <img src="/media/levels/combat-zone/gulag-path-2.png" />
+        </div>
+        For the first route: for the blue player, the natural strategy would be
         going right along the container and peek through the holes, as that's a
         safer way than to go to the other side of the truck, and the fact that
-        most right-handed players tend to go to the right side. For the red
-        player, again going all the way along the truck is dangerous and the
-        chances are high to meet the opponent in the middle way, which leads to
-        a 50-50 gunfight that's essentially on who aims better. However, peeking
-        through the holes is in a bit favor of the blue player who has just a
-        bit better sight than the red player. But the situation could be
-        different with a different weapon, i.e. having a shotgun, because then
-        the blue player could run earlier to the cover and shoot before the red
-        player kills them.<br /><br />
-        But at a larger sense, this map is still pretty balanced because of the
-        covers and spawn positions that are not favoring either side. After all,
-        in the Gulag in Warzone, every kill happens so fast that if one wants to
-        win, they must get their shots in. Having an asymmetrical map just adds
-        some fun to the both sides and sometimes people just like to blame on
+        most right-handed players tend to go to the right side. The red player
+        arrives just a bit earlier at the choke point and can pre-aim the blue
+        player. For one-shot weapons like shotgun, the win is really just on who
+        fires earlier. However, peeking through the holes is in a bit favor of
+        the blue player who has just a bit better sight than the red player,
+        making this path balanced with long-range weapons. <br />
+        The the second route: either side wants to take the risk of traversing
+        all the way along the truck and as the chances are high to meet the
+        opponent in the middle way, which leads to a 50-50 gunfight that's
+        essentially on who aims better, so the engagement there would be from
+        long distance. It will takes some time for the blue player to get to the
+        edge of the truck while the red player can almost aim at the spawn
+        point, so naturally it will be a bit in favor of the red player.
+        <div class="element-image-flex">
+          <img src="/media/levels/combat-zone/gulag-path-3.png" />
+        </div>
+        The third route seems to be the most balanced situation where both sides
+        just choose to go middle and take advantage of the covers there while
+        engaged in a mid-range combat. The real problem is, the covers are too
+        low, essentially exposing half of the player's body. In the real world
+        scenario, players would more likely to use the truck/container as their
+        cover and again fight from distance.<br /><br />
+
+        There is choke point in each player path. Holes on two sides of the
+        empty container make this area a choke point in this small map. The cars
+        and trucks can turn into choke points in some combat. But at a larger
+        sense, this map is still pretty balanced because the covers and spawn
+        positions are not favoring either side. After all, in the Gulag in
+        Warzone, every kill happens so fast that if one wants to win, they must
+        get their shots in. Having an asymmetrical map definitely adds some
+        freshness to the both sides and sometimes people just like to blame on
         objective things: "this map is in favor of my opponent and that's why I
         lost!"
       </div>
@@ -228,12 +254,14 @@
         <div class="element-image">
           <img src="/media/levels/combat-zone/2d.png" />
         </div>
-        So my standard for designing a small 1v1 gunfight map are mainly
+        My standard for designing a small 1v1 gunfight map are mainly
         twofold:<br />
         - to allow both long-range and close-range combats to suit different
         guns. This means there should be long lanes that offer great sightlines
         as well as close-range covers.<br />
         - to encourage some strategies such as smoke-and-flank, baiting.
+        Additionally, the flag needs to be placed at a obvious but dangerous
+        place, effectively making the capturing process more breathtaking.
       </div>
       <div class="main-design-title">
         <hr />
@@ -260,8 +288,8 @@
         2d map
       </div>
       <div class="main-design-description">
-        2v2 map design will begin as soon as 1v1 is well finished, and more
-        detail will release in the future!
+        1v1 asymmetrical map design will begin as soon as 1v1 is well finished,
+        and more detail will release in the future!
       </div>
 
       <div class="main-title">Post-Mortem</div>
