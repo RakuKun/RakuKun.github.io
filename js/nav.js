@@ -132,8 +132,8 @@ var tmpl = CommentDoc(function () {
         <br />
         <a
           class='entry'
-          onclick="transitionToPage('/blog/design-diary','var(--shironeri)')">
-          Design Diary
+          onclick="transitionToPage('/blog/coding','var(--shironeri)')">
+          Code Pieces
         </a>
         <br />
         <a

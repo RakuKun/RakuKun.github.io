@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=0" />
+    <meta name="description" content="Code pieces written by Liangzheng Luo." />
+    <meta name="theme-color" content="#005DAF" />
+    <meta name="author" content="Liangzheng Luo" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Code Pieces - Liangzheng Luo</title>
+    <link rel="icon" type="image/png" href="/media/icon.png" />
+    <link href="/css/blog.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <script type="module" src="/js/nav.js"></script>
+    <script type="module" src="/js/general.js"></script>
+    <div id="nav"></div>
+    <div id="back">
+      <a onclick="transitionToPage('accessibility','var(--shironeri)')">➙</a>
+    </div>
+    <div id="next">
+      <a onclick="transitionToPage('dda','var(--shironeri)')">➙</a>
+    </div>
+
+    <div class="top" style="background-image: url()">
+      <div class="top-title">Code Pieces</div>
+      <div class="top-introduction">
+        Besides being a designer for years of game development, I have been also
+        writing code whenever it's necessary. C# in Unity and Blueprint in
+        Unreal are my strongest tools, and this page will show case some of my
+        coding experiences in in-game functions and developer tools. (open image
+        in new tab for better legibility at any time) <br />
+      </div>
+      <div class="top-information">
+        <span style="color: var(--ro)">time</span> fall 2018 - <br />
+      </div>
+    </div>
+
+    <div id="main">
+      <div class="main-title">C# (Unity)</div>
+      <div class="main-paragraph-title">Editor Scripting</div>
+      <div class="main-text">
+        In some of my projects I used editor script for a more customizable,
+        expandable, and understandable in-engine editor user interface.
+      </div>
+      <div class="main-paragraph-title">Simple Vertex Shader</div>
+      <div class="main-text">
+        In a game project with development time being only a week, I took some
+        of programmer's responsibility and wrote shader code for a water
+        splashing effect in the game.
+        <div class="photo" style="height: 60vh">
+          <img src="/media/blog/code/shader-1.png" />
+          <img src="/media/blog/code/shader-2.png" />
+        </div>
+      </div>
+
+      <div class="main-title">Blueprint (Unreal)</div>
+      <div class="main-paragraph-title">In-game Logic</div>
+      <div class="main-text">
+        In the stealth level I actually wrote the whole win-lose logic for the
+        whole level with level scripts, mostly of them were realized by triggers
+        and event functions.<br />
+        I wrote a complete AI behavior tree and its supporting code with
+        Blueprint in the stealth level. The code was transferred to my linear
+        story telling level later. The image below describes how an AI system
+        works on the go in Unreal.
+        <div class="element-image">
+          <img src="/media/blog/code/ai-system.png" />
+        </div>
+      </div>
+      <div class="main-paragraph-title">Delayed Foreach Loop</div>
+      <div class="main-text">
+        I expanded the Engine's default delay function to make delayed foreach
+        loops available.
+        <div class="element-image">
+          <img src="/media/blog/code/delayed-loop.png" />
+        </div>
+      </div>
+      <div class="main-paragraph-title">Node-based Shader</div>
+      <div class="main-text">
+        In order to display the enemy detection UI in the stealth level, I
+        implemented all the resources I created with Unreal's node-based
+        material shader.<br />
+        <div class="element-image">
+          <img src="/media/blog/code/detection-1.png" />
+          <img src="/media/blog/code/detection-2.png" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
