@@ -76,6 +76,12 @@ var tmpl = CommentDoc(function () {
         <div class='entry-title'>Analysis</div>
         <a
           class='entry'
+          onclick="transitionToPage('/analysis/combat-systems','var(--sohi)')">
+          Combat Systems
+        </a>
+        <br />
+        <a
+          class='entry'
           onclick="transitionToPage('/analysis/bloodborne','var(--sohi)')">
           Bloodborne: Story in Levels
         </a>

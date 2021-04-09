@@ -40,12 +40,12 @@
           href="https://drive.google.com/drive/folders/1Nl8XkPt1mPIpkKTUBZTUkcxrq4MAboyM?usp=sharing"
           target="_blank"
           class="link"
-          >Download Runnable Build</a
+          >Download Runnable Build (P for spectator mode)</a
         >
       </div>
       <div class="top-information">
         <span style="color: var(--ro)">time</span> spring 2021 <br />
-        <span style="color: var(--ro)">length</span> 45-60 minutes <br />
+        <span style="color: var(--ro)">length</span> 40-50 minutes <br />
         <span style="color: var(--ro)">software</span> Unreal Engine 4, Maya,
         Illustrator
         <br />
@@ -55,7 +55,7 @@
 
     <div id="main">
       <div class="element-image">
-        <img src="/media/levels/linear-narrative/screenshot.png" />
+        <img src="/media/levels/linear-narrative/screenshot.jpg" />
       </div>
 
       <div class="main-title">Linear Narrative Design Theory</div>
@@ -107,8 +107,8 @@
         keep the pacing of story intact (they won't dig for 5 minutes for
         something that doesn't help with the story). That being said, most
         treasures as I figured in Uncharted 4 are put in places near, even just
-        on main player paths, and getting them doesn't require extra skills:
-        follow a YouTube walkthrough and everyone is guaranteed for 100%
+        on main player paths, and getting them doesn't require extremely fine
+        skills: a YouTube walkthrough would almost guaranteed for 100%
         collection rate.<br />
         Most players get "some" treasures under whatever difficulty. But why is
         it so hard for most players to get ALL treasures in their first run? I
@@ -206,7 +206,53 @@
         whole area again and again.
         <br /><span class="element-title">difficulty curve</span><br />
         As explained in the level design analysis, a good level should be having
-        smooth but increasing levels of difficulty.
+        smooth but increasing levels of difficulty, and a typical example of
+        that will be combat difficulties. There are three major areas that serve
+        mainly as combat areas, and I controlled their difficulty curve by
+        manipulating area scales, enemies, and covers, three of the most
+        important factor that could determine the combat experience. Details are
+        in the next section.
+      </div>
+      <div class="main-design-title">
+        <hr />
+        combat design
+      </div>
+      <div class="main-design-description">
+        This part is dedicated to my thoughts of combat design in a
+        linear-narrative level. The section titles actually followed the
+        chronicle order of my thought process.
+        <br /><span class="element-title">defining goals</span><br />
+        I split the goals into three aspects: story-wise, gameplay-wise, and
+        emotion-wise. I have prepared a full combat layout document in
+        <a
+          class="link"
+          href="https://docs.google.com/document/d/1wP5OOJDj0QLY9lc73yQCnGHdrxJ2L_HbHR7P-f_X5-s/edit?usp=sharing"
+          target="_blank"
+        >
+          this link.</a
+        >
+        <br /><span class="element-title">traversing routes</span><br />
+        When working on larger combat areas, I would flesh out the character's
+        possible traversing routes (even roughly) before getting knee-deep in
+        creating specific meshes or putting in enemies.
+        <div class="element-image">
+          <img src="/media/levels/linear-narrative/combat-routes.jpg" />
+        </div>
+        <span class="element-title">stealth and patrolling</span><br />
+        The nature of this level raised a challenge for me: to design a combat
+        zone that allows both stealth and all-out gunfight experiences, and
+        either of them are exciting in its unique way. My approach to this was
+        to design enemies' AI for patrolling based on the planned traversing
+        routes.
+        <br /><span class="element-title">covers</span><br />
+        After I got enemies' basics set up, I spend much time iteraing the
+        covers that are supposed to enable both combat and stealth. Too many
+        covers will make the level not only too easy but scatted, not having a
+        focal point; too few covers could possibly ruin the experience and are
+        awkward for the artistic feeling as well.
+        <div class="element-image">
+          <img src="/media/levels/linear-narrative/covers.jpg" />
+        </div>
       </div>
       <div class="main-design-title">
         <hr />
@@ -245,12 +291,18 @@
         people to playtest each large area (four in total) once I finished them,
         and absorbed some really good insights of how to polish the user
         experience from both a level designer and producer perspective.
-        <span class="element-title">2d overview map</span><br />
+        <span class="element-title">map overview records</span><br />
         Compared to text explanation, a illustrated map that's self-explanatory
         would be more friendly.
         <div class="element-image">
-          <img src="/media/levels/linear-narrative/2d-explanation.jpg" />
+          <img src="/media/levels/linear-narrative/2d-explanation-1.jpg" />
         </div>
+        <span class="element-title">combat adjustments</span><br />
+        After the second playthrough, I was suggested to further clarify the
+        combat layout by providing more details on how the player is supposed to
+        react in each area, and how I could design enemies based on that. As a
+        consequence, I put more blockings and environmental objects in, in an
+        effort to ease out the difficulty curve.
       </div>
 
       <div style="clear: both"></div>

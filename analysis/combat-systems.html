@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=0" />
+    <meta name="description" content="Bloodborne analysis by Liangzheng Luo." />
+    <meta name="theme-color" content="#005DAF" />
+    <meta name="author" content="Liangzheng Luo" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Combat Systems - Liangzheng Luo</title>
+    <link rel="icon" type="image/png" href="/media/icon.png" />
+    <link href="/css/analysis.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <script type="module" src="/js/nav.js"></script>
+    <script type="module" src="/js/general.js"></script>
+    <div id="nav"></div>
+    <div id="back">
+      <a onclick="transitionToPage('/levels/level-analysis','var(--koke)')"
+        >➙</a
+      >
+    </div>
+    <div id="next">
+      <a onclick="transitionToPage('slay-the-spire','var(--sohi)')">➙</a>
+    </div>
+
+    <div
+      class="top"
+      style="background-image: url(/media/analysis/combat-systems/)"
+    >
+      <div class="top-title">Combat Systems: Three Games as Examples (WIP)</div>
+      <div class="top-introduction">
+        Of all types of game fantasies, brawling with enemies controlling
+        fictional characters has really stood out and pushed the envelope of
+        many new game mechanics. Melee combat systems are regarded as a core
+        part of a considerable amount of games with lots of supporting gameplay
+        systems revolving around it. This article will break down the combat
+        systems of three typical action games: Bloodborne, the new God of War,
+        and Monster Hunter: World.
+      </div>
+      <div class="top-information">
+        <span style="color: var(--ro)">time</span> spring 2021
+      </div>
+    </div>
+
+    <div id="main">
+      <div class="main-title">Overview</div>
+      <div class="main-description">
+        Analyzing the combat system in any of contemporary action games feels
+        like a daunting task. I find it useful in many times to apply the MDA
+        Framework that starts with breaking down the verbs of in-game actions
+        that convey certain degree of feelings, and then goes deeper on combat
+        system's components, and ultimately the base level of how everything is
+        integrated into a complete system.<br /><br />
+        In this section I'll be mainly using the examples of the three games
+        mentioned above, not only because I'm most familiar with these games,
+        and they represent different ways to approach the same goal: make the
+        combat system fun and challenging.
+      </div>
+      <div class="main-design-title">
+        <hr />
+        defining success
+      </div>
+      <div class="main-design-description">
+        Many great action games feature its combat system as a fundamental
+        selling point. However, nowadays many players are being more aware of
+        the "integration" of the game, reminding us developers the importance of
+        making everything fit in. That's to say, a good combat system should be
+        in harmony of the game's other systems that altogether creates the
+        illusion of being in the game world.
+      </div>
+      <div class="main-design-title">
+        <hr />
+        verbs and feelings
+      </div>
+      <div class="main-design-description">
+        <span class="element-title">difficulty curve</span><br />
+        Just like the soul series made by From Software, the level of Bloodborne
+        is beautiful and challenging as well. Waking up in a vast world with few
+        hints for where to go next already is already harsh for any players, let
+        alone there are numbers of monsters along the way that can kill you in
+        three or four blows. <br />
+        The way Bloodborne does the tutorial is a quite linear map at the
+        beginning where enemies are deadly but also easy to deal with. And
+        whatever players do, they will eventually come to a stage where they
+        need to face the first storyline boss. It is almost unavoidable that
+        many deaths are to come, but that will be a very important lesson for
+        players to accept failures and get familiar with the map. It is just
+        fair that players use life - usually not very valuable in the early game
+        - to learn some basic rules and routines. As the story moves on, the
+        game offers more options to choose from and as players have better
+        equipment, higher level and more combat experience, it will not be so
+        overwhelming. The game in this way ask players in a polite way to think
+        carefully and choose a route they feel comfortable, leaving space to
+        choose for both new players and veterans.
+        <br /><span class="element-title">level's functions</span><br />
+        The levels have functions. One of the key things in Bloodborne's map is
+        the shortcut which drastically reduces the time needed to travel between
+        places. This can have several positive results. <br />
+        First, from a feedback perspective, shortcut could ease the negative
+        feeling of death because once opened the players don't have to fight
+        unnecessary monsters, they can just speedrun. <br />
+        Second, from a goal perspective, shortcuts serve as small goals for
+        players in their run. Due to the difficulty most people cannot finish
+        bosses in one shot, so opening a shortcut whenever entering a new area
+        becomes a preferable choice for players. This design as well in the
+        experience aspect intrigues player's curiosity and keeps their eyes
+        open. <br />
+        Third, From Software decompose the large world into smaller areas and
+        use shortcuts to connect them all, making them feel larger than they
+        really are. Doors, hidden ladders, stairways just make Bloodborne a real
+        3-dimensional world connecting the lower and higher places.<br />
+        Last but not least, shortcuts are also event triggers for dynamically
+        loading map. It takes several seconds to play the open door animation,
+        leaving time to load the map of next area.
+        <br /><span class="element-title">3-dimensional world</span><br />
+        <div class="element-image-flex">
+          <img src="/media/analysis/bloodborne/shortcut-1.PNG" />
+          <img src="/media/analysis/bloodborne/shortcut-2.PNG" />
+        </div>
+        Bloodborne makes players "WOW" when they finish a long journey and climb
+        a ladder just to find themselves right where they wake up! What is more,
+        developers still retain control of the level design as the actions the
+        character can do are relatively limited, for instance, they can only
+        take a leap forward after dashing. So designers can predict where
+        players are going. In this way, the level design work is highly
+        goal-oriented and risk-controlled.
+        <br /><span class="element-title">being gothic</span><br />
+        I believe that art style should serve the game settings and
+        storytelling. The gothic, triangular tops of buildings help establish
+        navigational landmarks which is friendly to players in a misty world.
+        lamps' warm color and the reflection of moonlight on the ground also
+        serves as path indicator.
+      </div>
+      <div class="main-design-title">
+        <hr />
+        system design
+      </div>
+      <div class="main-design-description">
+        <span class="element-title">combat system</span><br />
+        In the game, Gothic buildings, people's clothing and firearms indicate
+        that Bloodborne is based on a Victorian world, a time of technology
+        innovation and city lores. Bloodborne offers a much faster combat pace
+        for both player and enemy and its combat system is high risk & high
+        reward.<br />
+        Unlike Soul Series, in Bloodborne there is only a type of wood shield
+        available for blocking, so in most cases people do parry and dodge to
+        avoid taking damage, which is more time-sensitive and feels more
+        intense. Pistol parry, a very effective way to make enemies stunned and
+        leave space for high-damage visceral attacking, needs to be done very
+        precisely at the moment enemies attack, or the enemy will use their
+        attacks to punish the player harshly.
+        <div class="element-image">
+          <img src="/media/analysis/bloodborne/health.png" alt="Health bar" />
+        </div>
+        Another very interesting setting is the Rally mechanism. It is a
+        risk/reward combat mechanic that after being hit by an enemy, players
+        may jump back in the action and attack the opponent to quickly refill
+        any lost health before the health bar actually depletes the amount. The
+        tricky thing is that any follow-up attacks you take will negate the
+        chance to regain the former losing health. So timing is crucial to the
+        execution of this mechanic. This setting really challenges the players
+        as attacking back boldly but also avoiding getting another hit is a hard
+        lesson for everyone.
+        <div class="element-image-flex">
+          <img
+            src="/media/analysis/bloodborne/beast-blood-pellet.jpg"
+            alt="Blood Beast Pellet"
+          />
+          <img src="/media/analysis/bloodborne/beasthood.PNG" alt="Beasthood" />
+        </div>
+        There is an item especially designed to increase the intensity of
+        fighting: Beast Blood Pellet, which when used boosts player's beast
+        status. Beast status increases physical damage and damage taken as well,
+        in order to keep the damage boost you have to continue attacking so the
+        meter doesn't fall. Due to this design, attacking in beasthood really
+        has a feeling of someone slowly turning into a blood-thirsty beast.
+        <br />All the designs in combat system share a same clear goal: to
+        promote a much more aggressive style for combat where the meaning of
+        Bloodborne is revealed: We encounter powerful enemies, get killed by
+        them, kill them back, and finally the hunter outwears are stained with
+        blood. <br /><span class="element-title">Insight</span><br />
+        <i
+          >"The Insight stat represents the depth of inhuman knowledge. Needed
+          to ring special bell, but induces frenzy."</i
+        ><br />
+        Insight is a key attribute which affects lots of in-game events and
+        player's other attributes, and I really want to talk about it since it
+        is the core setting of Bloodborne. Basically the higher Insight
+        character possesses, the more they are exposed to inhuman knowledge, and
+        the more this world reveals itself. If Blood Echo is the currency to buy
+        more for the character, Insight is the currency for knowing about
+        Bloodborne's world.
+        <div class="element-image">
+          <img src="/media/analysis/bloodborne/lesser-amygdala.jpg" />
+        </div>
+        One example: when Insight reaches 40, Lesser Amygdala become visible in
+        the Cathedral Ward and other areas. The game uses such explicit way to
+        demonstrate Insight's power: it is really affecting how the character
+        and player observes the world, far beyond changing some attribute's
+        value.
+      </div>
+
+      <div class="main-title">Balancing</div>
+      <div class="main-description">
+        Bloodborne has very stylized From Software's way of storytelling and
+        narrative design.
+      </div>
+      <div class="main-design-title">
+        <hr />
+        story
+      </div>
+      <div class="main-design-description">
+        <span class="element-title">world</span><br />
+        <i>"The Night, and the Dream, were long..."</i>
+        <br />Even till today, there is no universally acknowledged explanation
+        for even all three endings. One reason is Bloodborne's world setting is
+        highly fantastic and hybrid. Nevertheless, people do agree on the fact
+        that its backstory is constructed upon Cthulhu Mythos but with much
+        unique setting. This game takes place in Yharnam, a city plagued
+        diseases, blood craze and death. The disease in the city transforms
+        human victims into bestial creatures. The player acts as one of the
+        Hunters and hunts down those horrifying creatures while exploring the
+        buried backstory of Yharnam. <br />
+        <span class="element-title">theme</span><br />
+        In my perspective, the theme of Bloodborne, if there must be just one,
+        is mankind's evolution.
+        <div class="element-image">
+          <img
+            src="/media/analysis/bloodborne/moon-presence.jpg"
+            alt="Moon Presence"
+          />
+        </div>
+        We could analyze its theme by looking into three endings which is all
+        related to a secret endboss, the Moon Presence.<br />
+        1. In "Yharnam Sunrise", the character "lives the hunt" and awakens in
+        real world where Yharnam embraces a new morning. This is the easiest
+        ending as there is no need to fight any boss further than Mergo's
+        Wetnurse. The character finishes the mission assigned and makes a fair
+        deal with the watcher of the hunter's dream and leaves. Everything is
+        back on track as if nothing really happened during that night.<br />
+        2. In "Honouring Wishes", the character is "captivated by the Moon
+        Presence" and takes over Gehrman's place to "watch over the hunter's
+        dream". This ending shows the condition where the character wants to
+        fight against the current situation and get rid of someone else's
+        control, but they are just not strong enough to finish it and become the
+        next miserable watcher. <br />
+        3. In "Childhood's Beginning", the character defeats the Moon Presence
+        and "became an infant Great One, lifting humanity into its next
+        childhood". This end is only possible after the character has consumed
+        at least three pieces of One Third of Umbilical Cord which gives human
+        the power of Great Ones.<br />
+        <div class="element-image-flex">
+          <img src="/media/analysis/bloodborne/endings.png" />
+        </div>
+        As the description tells, the three endings are basically stats that
+        identifies the character's (and player's) acknowledge of the essence of
+        this world and the willingness to change it.
+      </div>
+      <div class="main-design-title">
+        <hr />
+        narrative design
+      </div>
+      <div class="main-design-description">
+        <span class="element-title">storytelling</span><br />
+        Bloodborne's story is hard to understand partly because of its way of
+        storytelling. Bloodborne never "tells" the details of a story. For most
+        times, it gives player a start and a goal, and do the rest of
+        storytelling sorely in environment, dialogues, and item descriptions.
+        One must be very patient and careful not to omit the little evidence of
+        the possible existence of backstory. And it only gives fragments of the
+        story, so the work of putting fragmented information together into a
+        story is left to players. In this sense, the story of Bloodborne is very
+        open as everyone has their own explanation: this is just how I
+        understand from the incomplete information provided.
+      </div>
+      <div class="main-design-title">
+        <hr />
+        document
+      </div>
+      <div class="main-design-description">
+        I have written a narrative analysis document for Bloodborne. It is
+        originally prepared for GDC Game Narrative Review, and is available
+        <span class="link">
+          <a
+            href="/media/analysis/bloodborne/game-narrative-review.pdf"
+            target="_blank"
+            >Here.</a
+          >
+        </span>
+      </div>
+      <div style="clear: both"></div>
+    </div>
+  </body>
+</html>
