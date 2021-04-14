@@ -55,14 +55,14 @@ var tmpl = CommentDoc(function () {
         <br />
         <a
           class='entry'
-          onclick="transitionToPage('/levels/combat-zone','var(--koke)')">
-          FPS Combat Zone
+          onclick="transitionToPage('/levels/linear-narrative','var(--koke)')">
+          Linear Narrative Level
         </a>
         <br />
         <a
           class='entry'
-          onclick="transitionToPage('/levels/linear-narrative','var(--koke)')">
-          Linear Narrative Level
+          onclick="transitionToPage('/levels/combat-zone','var(--koke)')">
+          FPS Combat Zone
         </a>
         <br />
         <a
