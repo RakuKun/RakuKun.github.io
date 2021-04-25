@@ -35,8 +35,8 @@ var tmpl = CommentDoc(function () {
         <br />
         <a
           class='entry'
-          onclick="transitionToPage('/games/cosmos','var(--rurikon)')">
-          Cosmos
+          onclick="transitionToPage('/games/board-games','var(--rurikon)')">
+          Board Games
         </a>
         <br />
         <a
@@ -76,12 +76,6 @@ var tmpl = CommentDoc(function () {
         <div class='entry-title'>Analysis</div>
         <a
           class='entry'
-          onclick="transitionToPage('/analysis/combat-systems','var(--sohi)')">
-          Combat Systems
-        </a>
-        <br />
-        <a
-          class='entry'
           onclick="transitionToPage('/analysis/bloodborne','var(--sohi)')">
           Bloodborne: Story in Levels
         </a>
@@ -109,7 +103,7 @@ var tmpl = CommentDoc(function () {
         <a
           class='entry'
           onclick="transitionToPage('/blog/quest-mmorpg','var(--shironeri)')">
-          Creating Quests for MMORPG
+          Quest Design in MMORPG
         </a>
         <br />
         <a
