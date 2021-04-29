@@ -19,7 +19,9 @@
   <body>
     <span id="cursor-outline"></span>
     <span id="cursor"></span>
+    <script type="module" src="/js/nav.js"></script>
     <script type="module" src="/js/general.js"></script>
+    <div id="nav"></div>
 
     <div class="main" style="background-image: url(/media/about/title.jpg)">
       <div class="main-title">
@@ -46,9 +48,10 @@
           ></span
         ><br />
         I am currently a graduate student in CMU's Entertainment Technology
-        Center, with a concentration on game design. My skills span from game
-        ideation to extensive playtesting. My undergraduate specializations are
-        in 3D modelling and game development.<br /><br />
+        Center, with a concentration on game and level design. My skills span
+        from user research, game ideation all the way to playtesting. My
+        undergraduate specializations are in 3D modelling and game
+        development.<br /><br />
         My most admired game so far is <span class="tohoh">Bloodborne.</span
         ><br />
         My favorite film so far is
@@ -57,15 +60,15 @@
       </div>
     </div>
 
-    <div id="bottom">
-      <div id="back">
-        <a onclick="transitionToPage('/')"> ◯ </a>
-      </div>
-      <div id="next">
-        <a onclick="transitionToPage('/games/hyperpickle','var(--rurikon)')"
-          >ᐳ</a
-        >
-      </div>
+    <div id="home">
+      <a onclick="transitionToPage('/')" title="Home Page"> ◯ </a>
+    </div>
+    <div id="next">
+      <a
+        onclick="transitionToPage('/games/hyperpickle','var(--rurikon)')"
+        title="Project HyperPickle"
+        >ᐳ</a
+      >
     </div>
   </body>
 </html>

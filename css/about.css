@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  font-family: 'Cormorant Garamond', serif;
   transition: 1s ease-in-out;
   background-color: var(--tohoh);
   color: var(--shironeri);
@@ -54,18 +55,12 @@ body.fade-out {
   font-size: 1.5rem;
 }
 
+#menu-page {
+  background-color: rgba(12, 12, 12, 0.75);
+}
+
 @media only screen and (max-width: 1600px) {
   .main-description {
     line-height: 1.25;
   }
-}
-
-.tohoh {
-  color: var(--tohoh);
-}
-
-#bottom {
-  clear: both;
-  height: 10vh;
-  position: relative;
 }

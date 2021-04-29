@@ -7,10 +7,10 @@ var tmpl = CommentDoc(function () {
     <span id="cursor-outline"></span>
     <span id="cursor"></span>
     <div id='home'>
-      <a onclick="transitionToPage('/')"> ◯ </a>
+      <a onclick="transitionToPage('/')" title="Home Page"> ◯ </a>
     </div>
     <div id='menu'>
-      <a> ≡ </a>
+      <a title="Content Menu"> ≡ </a>
     </div>
     <div id='menu-page'>
       <div class='category'>
